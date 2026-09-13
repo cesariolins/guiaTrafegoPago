@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Template — Briefing e onboarding — Tráfego Pago</title>
+<link rel="stylesheet" href="../assets/estilo.css">
+<script>
+/* Roda antes do primeiro pixel, senão a página pisca no tema errado.
+   Sem argumento, alterna. localStorage em try/catch: file:// pode bloquear. */
+function tema(t){var h=document.documentElement;
+t=t||(h.dataset.tema=='escuro'?'claro':'escuro');h.dataset.tema=t;
+try{localStorage.setItem('tema',t)}catch(e){}}
+try{var _t=localStorage.getItem('tema')}catch(e){}
+document.documentElement.dataset.tema=_t||(matchMedia('(prefers-color-scheme:dark)').matches?'escuro':'claro');
+</script>
+</head>
+<body>
+<input type="checkbox" id="abrir-menu" hidden>
+<label for="abrir-menu" class="botao-menu" aria-label="Abrir menu">☰</label>
+<label for="abrir-menu" class="fundo-menu"></label>
+<button class="botao-tema" onclick="tema()" aria-label="Alternar tema claro/escuro"
+        title="Alternar tema claro/escuro"><span class="i-claro">🌙</span><span class="i-escuro">☀️</span></button>
+
+<aside>
+  <a class="marca" href="../index.html">Tráfego Pago<small>do zero ao primeiro cliente</small></a>
+  <ul class="topo"><li><a href="../index.html"><i>🏠</i>Início</a></li></ul><p class="bloco">Fundamento</p><ul><li><a href="../fase-00-fundamentos.html"><i>🧭</i>00 · Fundamentos</a></li><li><a href="../fase-01-matematica.html"><i>🧮</i>01 · A matemática</a></li><li><a href="../fase-02-infraestrutura.html"><i>🔧</i>02 · Infraestrutura</a></li></ul><p class="bloco">Execução técnica</p><ul><li><a href="../fase-03-meta-ads.html"><i>📱</i>03 · Meta Ads</a></li><li><a href="../fase-04-google-ads.html"><i>🔍</i>04 · Google Ads</a></li><li><a href="../fase-05-tiktok-kwai.html"><i>🎵</i>05 · TikTok e Kwai</a></li><li><a href="../fase-06-criativo-copy-oferta.html"><i>🎨</i>06 · Criativo e oferta</a></li><li><a href="../fase-07-mensuracao.html"><i>📊</i>07 · Mensuração</a></li><li><a href="../fase-08-otimizacao-escala.html"><i>📈</i>08 · Otimização e escala</a></li></ul><p class="bloco">O negócio</p><ul><li><a href="../fase-09-vender-o-servico.html"><i>💼</i>09 · Vender o serviço</a></li><li><a href="../fase-10-contrato-legal.html"><i>⚖️</i>10 · Contrato e legal</a></li><li><a href="../fase-11-operacao-rotina.html"><i>🔄</i>11 · Operação e rotina</a></li><li><a href="../fase-12-problemas-reais.html"><i>🚨</i>12 · Problemas reais</a></li></ul><p class="bloco">Templates</p><ul><li><a href="../templates/proposta-comercial.html"><i>📄</i>Proposta comercial</a></li><li><a href="../templates/contrato-modelo.html"><i>📑</i>Contrato modelo</a></li><li><a href="../templates/briefing-onboarding.html" class="ativo"><i>📋</i>Briefing e onboarding</a></li><li><a href="../templates/relatorio-mensal.html"><i>📊</i>Relatório mensal</a></li><li><a href="../templates/auditoria-de-conta.html"><i>🔎</i>Auditoria de conta</a></li><li><a href="../templates/scripts-de-venda.html"><i>💬</i>Scripts de venda</a></li></ul><p class="bloco">Ferramenta</p><ul><li><a href="../planilhas/calculadora-viabilidade.html"><i>🧮</i>Calculadora</a></li></ul>
+</aside>
+
+<main>
+  <article><h1>Template — Briefing e onboarding</h1>
+<blockquote>
+<p>Preencha na reunião de kickoff, com o cliente junto. <strong>Não mande para ele preencher sozinho</strong> — ele preenche mal, você perde a chance de ouvir as respostas e some a oportunidade de mostrar competência.</p>
+<p>Duração: 60–90 minutos.</p>
+</blockquote>
+<hr />
+<h2>PARTE 1 — Mensagem de solicitação de acessos</h2>
+<p><em>Envie logo após a assinatura do contrato. Copie, cole, preencha.</em></p>
+<pre><code>Oi [Nome]! Vamos começar 🚀
+
+Para eu estruturar tudo, preciso de acesso às suas contas.
+IMPORTANTE: não me mande senha nenhuma — o processo correto
+é me dar acesso como parceiro, que é mais seguro pra você
+e mantém tudo no seu nome.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+META (Facebook e Instagram)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Entre em business.facebook.com
+2. Configurações do Negócio → Usuários → Parceiros
+3. &quot;Adicionar&quot; → &quot;Conceder acesso a um parceiro&quot;
+4. Cole este ID:  [SEU ID DE BM]
+5. Marque os ativos:
+   ✓ Conta de anúncios → Gerenciar campanhas
+   ✓ Página → Criar conteúdo + Anúncios
+   ✓ Conjunto de dados (pixel) → Ver e gerenciar
+   ✓ Catálogo (se tiver)
+6. Confirmar
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GOOGLE ADS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Me passa o ID da sua conta (10 dígitos, formato 123-456-7890),
+que fica no canto superior direito do painel. Eu envio a
+solicitação e você aprova.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SITE / GOOGLE ANALYTICS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• Acesso de editor no Google Analytics para: [seu e-mail]
+• Acesso ao painel do site (ou contato de quem cuida dele)
+
+Se travar em algum passo, me chama que eu faço uma chamada
+rápida com você compartilhando a tela. Leva 10 minutos. 🙂
+</code></pre>
+<p><strong>Se o cliente não tem Business Manager:</strong> faça a chamada de vídeo e crie junto com ele, <strong>no e-mail dele</strong>. 15 minutos que evitam meses de problema.</p>
+<hr />
+<h2>PARTE 2 — Briefing do negócio</h2>
+<h3>Identificação</h3>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Resposta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Empresa</td>
+<td></td>
+</tr>
+<tr>
+<td>Contato principal / decisor</td>
+<td></td>
+</tr>
+<tr>
+<td>WhatsApp</td>
+<td></td>
+</tr>
+<tr>
+<td>E-mail</td>
+<td></td>
+</tr>
+<tr>
+<td>Site</td>
+<td></td>
+</tr>
+<tr>
+<td>Instagram</td>
+<td></td>
+</tr>
+<tr>
+<td>Cidade e região de atuação</td>
+<td></td>
+</tr>
+<tr>
+<td>Tempo de mercado</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h3>O negócio</h3>
+<p><strong>1. Me conta com suas palavras o que vocês fazem.</strong></p>
+<pre><code>
+</code></pre>
+<p><strong>2. Quais serviços/produtos vocês querem vender mais?</strong> <em>(prioridade 1, 2, 3)</em></p>
+<pre><code>1.
+2.
+3.
+</code></pre>
+<p><strong>3. Qual é o serviço mais lucrativo?</strong> <em>(nem sempre é o mesmo de cima — vale a pena confrontar)</em></p>
+<pre><code>
+</code></pre>
+<p><strong>4. Quem é o cliente ideal?</strong> <em>(idade, perfil, momento de vida, o que ele busca)</em></p>
+<pre><code>
+</code></pre>
+<p><strong>5. Por que o cliente escolhe vocês e não o concorrente?</strong></p>
+<pre><code>
+</code></pre>
+<p><strong>6. Quem são os 3 principais concorrentes?</strong></p>
+<pre><code>1.                    Instagram/site:
+2.
+3.
+</code></pre>
+<h3>💰 Os números (Fase 01 — não pule nenhum)</h3>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Pergunta</th>
+<th>Resposta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ticket médio da primeira compra</td>
+<td>R$</td>
+</tr>
+<tr>
+<td>Margem de contribuição aproximada</td>
+<td>%</td>
+</tr>
+<tr>
+<td>De cada 10 contatos, quantos fecham</td>
+<td></td>
+</tr>
+<tr>
+<td>O cliente volta? Quantas vezes por ano</td>
+<td></td>
+</tr>
+<tr>
+<td>Faturamento mensal médio atual</td>
+<td>R$</td>
+</tr>
+<tr>
+<td>Meta de faturamento</td>
+<td>R$</td>
+</tr>
+<tr>
+<td><strong>Quantos clientes novos vocês conseguem ATENDER por mês</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>⚠️ A última pergunta é a que evita desastre. Se ele só atende 15 e você entrega 40, o problema vira seu.</p>
+</blockquote>
+<p><strong>Cálculo na hora (faça na frente dele):</strong></p>
+<pre><code>Margem por cliente:      R$ ________
+CPA máximo:              R$ ________
+CPA alvo (30–50%):       R$ ________
+CPL alvo:                R$ ________
+Verba para bater a meta: R$ ________
+</code></pre>
+<h3>Marketing atual</h3>
+<p><strong>7. Como os clientes chegam hoje?</strong> <em>(% aproximado)</em></p>
+<pre><code>Indicação ____%   Instagram ____%   Google ____%
+Passagem ____%    Outros: ______________________
+</code></pre>
+<p><strong>8. Já fizeram tráfego pago antes?</strong></p>
+<pre><code>☐ Nunca
+☐ Sim — com quem, por quanto tempo, quanto investiram:
+
+   O que funcionou:
+
+   O que não funcionou:
+
+   ⭐ Por que terminou:
+
+</code></pre>
+<blockquote>
+<p>A última resposta é a mais valiosa da reunião inteira. Ela te diz exatamente qual medo você precisa desarmar e qual erro não repetir.</p>
+</blockquote>
+<p><strong>9. Vocês impulsionam post pelo aplicativo hoje?</strong></p>
+<pre><code>☐ Sim, gastando aproximadamente R$ ______/mês
+☐ Não
+</code></pre>
+<h3>Atendimento (a parte que decide o resultado)</h3>
+<p><strong>10. Quem responde os contatos que chegam?</strong></p>
+<pre><code>
+</code></pre>
+<p><strong>11. Em quanto tempo, em média?</strong></p>
+<pre><code>
+</code></pre>
+<p><strong>12. Por onde preferem receber?</strong></p>
+<pre><code>☐ WhatsApp   ☐ Telefone   ☐ Formulário   ☐ Instagram Direct
+</code></pre>
+<p><strong>13. Existe algum controle de quantos contatos viram cliente?</strong></p>
+<pre><code>☐ Sim, como: ______________________
+☐ Não  →  ⭐ oportunidade: ajude-o a montar. Vira projeto.
+</code></pre>
+<p><strong>14. Tem horário ou dia em que ninguém atende?</strong></p>
+<pre><code>
+</code></pre>
+<h3>Oferta</h3>
+<p><strong>15. Qual a melhor oferta de entrada que vocês podem fazer?</strong> <em>(algo valioso para o cliente e barato para vocês)</em></p>
+<pre><code>
+</code></pre>
+<p><strong>16. Trabalham com parcelamento? Qual condição?</strong></p>
+<pre><code>
+</code></pre>
+<p><strong>17. Existe alguma promoção ou condição especial no momento?</strong></p>
+<pre><code>
+</code></pre>
+<p><strong>18. Tem alguma sazonalidade?</strong> <em>(meses fortes e fracos)</em></p>
+<pre><code>
+</code></pre>
+<h3>Restrições</h3>
+<p><strong>19. O que NÃO pode ser dito ou mostrado nos anúncios?</strong></p>
+<pre><code>
+</code></pre>
+<p><strong>20. Existe alguma regulamentação do setor a observar?</strong> <em>(CFM, CFO, OAB, ANVISA...)</em></p>
+<pre><code>
+</code></pre>
+<p><strong>21. Alguém precisa aprovar os criativos antes de irem ao ar?</strong></p>
+<pre><code>☐ Não, pode publicar direto
+☐ Sim: ______________  Prazo de aprovação: ______
+</code></pre>
+<h3>Materiais disponíveis</h3>
+<pre><code>☐ Fotos do local e da equipe
+☐ Fotos de produtos/serviços
+☐ Vídeos
+☐ Depoimentos de clientes
+☐ Logo em alta resolução
+☐ Manual de marca / cores
+☐ Site ou landing page
+☐ Lista de clientes (para público semelhante)
+</code></pre>
+<p><strong>O que falta e precisa ser produzido:</strong></p>
+<pre><code>
+</code></pre>
+<hr />
+<h2>PARTE 3 — Alinhamento de expectativa</h2>
+<blockquote>
+<p><strong>Leia isto em voz alta na reunião e depois mande por escrito no grupo.</strong> Este é o momento que mais reduz cancelamento precoce.</p>
+</blockquote>
+<pre><code>[Nome], antes de ligar as campanhas, quero alinhar o que
+esperar de cada fase:
+
+SEMANA 1 — Estruturação. Nada no ar ainda. Estou montando
+conta, rastreamento e criativos.
+
+SEMANAS 2-3 — Fase de aprendizado. As campanhas sobem e os
+números vão OSCILAR MUITO — custo alto em alguns dias, baixo
+em outros. Isso é esperado e faz parte do processo, não é
+sinal de problema.
+
+SEMANA 4 — Primeira leitura confiável do custo real por lead.
+
+MÊS 2 — Otimização com dado na mão.
+
+MÊS 3 — Aqui a gente avalia de verdade se está valendo a
+pena e quanto dá para escalar.
+
+Combinado?
+</code></pre>
+<h3>Combinados operacionais</h3>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Definição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Canal de comunicação</td>
+<td></td>
+</tr>
+<tr>
+<td>Horário de atendimento</td>
+<td></td>
+</tr>
+<tr>
+<td>Dia do relatório mensal</td>
+<td></td>
+</tr>
+<tr>
+<td>Dia da reunião mensal</td>
+<td></td>
+</tr>
+<tr>
+<td>Dia do pagamento</td>
+<td></td>
+</tr>
+<tr>
+<td>Quem aprova criativos</td>
+<td></td>
+</tr>
+<tr>
+<td>Prazo para o cliente enviar material</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>PARTE 4 — Checklist de estruturação</h2>
+<pre><code>ACESSOS
+□ Meta: parceria aceita
+□ Google Ads: vínculo aprovado
+□ GA4: acesso de editor
+□ Site: acesso ou contato do responsável
+
+ESTRUTURA
+□ Conta de anúncios identificada (ou criada)
+□ ⭐ Conta reserva criada (contingência)
+□ Domínio verificado no Meta
+□ Cliente é administrador do próprio BM
+□ Meio de pagamento cadastrado e validado
+
+MENSURAÇÃO
+□ GTM instalado
+□ Pixel do Meta + eventos
+□ CAPI configurada
+□ Conversões do Google Ads
+□ GA4 vinculado ao Google Ads
+□ ⭐ Testado o fluxo completo EU MESMO
+□ ⭐ Verificado se há pixel duplicado
+
+PREPARO
+□ Briefing preenchido
+□ Oferta definida
+□ 5 criativos produzidos (ângulos diferentes)
+□ 3 copies escritas
+□ Landing page ou formulário pronto e testado
+□ Padrão de UTM definido
+□ Dashboard no Looker Studio montado
+
+ORGANIZAÇÃO
+□ Pasta do cliente criada
+□ 00-acessos-e-ids.md preenchido
+□ 05-registro-de-decisoes.md iniciado
+
+ALINHAMENTO
+□ Expectativa alinhada por escrito no grupo
+□ Combinados operacionais definidos
+□ Data da primeira reunião marcada
+</code></pre></article>
+  <nav class="paginacao"><a class="nav-ant" href="../templates/contrato-modelo.html"><span>← Anterior</span>Contrato modelo</a><a class="nav-prox" href="../templates/relatorio-mensal.html"><span>Próximo →</span>Relatório mensal</a></nav>
+  <footer class="rodape">Curso de tráfego pago · conteúdo de setembro de 2026</footer>
+</main>
+</body>
+</html>

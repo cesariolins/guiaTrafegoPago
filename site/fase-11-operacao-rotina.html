@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fase 11 — Operação e rotina — Tráfego Pago</title>
+<link rel="stylesheet" href="assets/estilo.css">
+<script>
+/* Roda antes do primeiro pixel, senão a página pisca no tema errado.
+   Sem argumento, alterna. localStorage em try/catch: file:// pode bloquear. */
+function tema(t){var h=document.documentElement;
+t=t||(h.dataset.tema=='escuro'?'claro':'escuro');h.dataset.tema=t;
+try{localStorage.setItem('tema',t)}catch(e){}}
+try{var _t=localStorage.getItem('tema')}catch(e){}
+document.documentElement.dataset.tema=_t||(matchMedia('(prefers-color-scheme:dark)').matches?'escuro':'claro');
+</script>
+</head>
+<body>
+<input type="checkbox" id="abrir-menu" hidden>
+<label for="abrir-menu" class="botao-menu" aria-label="Abrir menu">☰</label>
+<label for="abrir-menu" class="fundo-menu"></label>
+<button class="botao-tema" onclick="tema()" aria-label="Alternar tema claro/escuro"
+        title="Alternar tema claro/escuro"><span class="i-claro">🌙</span><span class="i-escuro">☀️</span></button>
+
+<aside>
+  <a class="marca" href="index.html">Tráfego Pago<small>do zero ao primeiro cliente</small></a>
+  <ul class="topo"><li><a href="index.html"><i>🏠</i>Início</a></li></ul><p class="bloco">Fundamento</p><ul><li><a href="fase-00-fundamentos.html"><i>🧭</i>00 · Fundamentos</a></li><li><a href="fase-01-matematica.html"><i>🧮</i>01 · A matemática</a></li><li><a href="fase-02-infraestrutura.html"><i>🔧</i>02 · Infraestrutura</a></li></ul><p class="bloco">Execução técnica</p><ul><li><a href="fase-03-meta-ads.html"><i>📱</i>03 · Meta Ads</a></li><li><a href="fase-04-google-ads.html"><i>🔍</i>04 · Google Ads</a></li><li><a href="fase-05-tiktok-kwai.html"><i>🎵</i>05 · TikTok e Kwai</a></li><li><a href="fase-06-criativo-copy-oferta.html"><i>🎨</i>06 · Criativo e oferta</a></li><li><a href="fase-07-mensuracao.html"><i>📊</i>07 · Mensuração</a></li><li><a href="fase-08-otimizacao-escala.html"><i>📈</i>08 · Otimização e escala</a></li></ul><p class="bloco">O negócio</p><ul><li><a href="fase-09-vender-o-servico.html"><i>💼</i>09 · Vender o serviço</a></li><li><a href="fase-10-contrato-legal.html"><i>⚖️</i>10 · Contrato e legal</a></li><li><a href="fase-11-operacao-rotina.html" class="ativo"><i>🔄</i>11 · Operação e rotina</a></li><li><a href="fase-12-problemas-reais.html"><i>🚨</i>12 · Problemas reais</a></li></ul><p class="bloco">Templates</p><ul><li><a href="templates/proposta-comercial.html"><i>📄</i>Proposta comercial</a></li><li><a href="templates/contrato-modelo.html"><i>📑</i>Contrato modelo</a></li><li><a href="templates/briefing-onboarding.html"><i>📋</i>Briefing e onboarding</a></li><li><a href="templates/relatorio-mensal.html"><i>📊</i>Relatório mensal</a></li><li><a href="templates/auditoria-de-conta.html"><i>🔎</i>Auditoria de conta</a></li><li><a href="templates/scripts-de-venda.html"><i>💬</i>Scripts de venda</a></li></ul><p class="bloco">Ferramenta</p><ul><li><a href="planilhas/calculadora-viabilidade.html"><i>🧮</i>Calculadora</a></li></ul>
+</aside>
+
+<main>
+  <article><h1>Fase 11 — Operação e rotina</h1>
+<blockquote>
+<p><strong>Pré-requisito:</strong> primeiro cliente fechado (ou prestes a fechar).</p>
+</blockquote>
+<hr />
+<h2>A realidade que ninguém conta</h2>
+<p>Conseguir cliente é difícil. <strong>Manter cliente é mais difícil ainda.</strong></p>
+<p>A rotatividade média no mercado de gestão de tráfego é alta — muita gente troca de gestor a cada 4–8 meses. Isso significa que você pode vender bem e mesmo assim ficar correndo atrás do próprio rabo, repondo o que perde.</p>
+<blockquote>
+<p><strong>A matemática da retenção:</strong> manter um cliente por 24 meses em vez de 6 quadruplica o faturamento dele sem uma única venda nova. Retenção é a alavanca mais barata do seu negócio.</p>
+</blockquote>
+<p>E aqui está o que quase ninguém entende:</p>
+<blockquote>
+<h2>Cliente não cancela por resultado ruim. Cancela por SILÊNCIO.</h2>
+</blockquote>
+<p>Cliente com resultado mediano e comunicação excelente renova. Cliente com resultado ótimo e comunicação ruim cancela — porque ele não sabe que o resultado é ótimo.</p>
+<p><strong>Comunicação é entrega.</strong> Trate como tal.</p>
+<hr />
+<h2>1. Onboarding: os primeiros 30 dias</h2>
+<p>O período que define toda a relação. Erre aqui e você passa o contrato inteiro remando contra.</p>
+<h3>Semana 1 — Estruturar e alinhar expectativa</h3>
+<pre><code>□ Contrato assinado e primeiro pagamento confirmado
+□ Reunião de kickoff (60–90 min)
+□ Briefing completo preenchido
+□ Acessos recebidos (parceria, não senha — Fase 02)
+□ Auditoria do que já existe
+□ Pixel/tags instalados e validados
+□ Grupo de WhatsApp criado com regras combinadas
+□ ⭐ ALINHAMENTO DE EXPECTATIVA (leia abaixo)
+</code></pre>
+<h3>⭐ A conversa de alinhamento — a mais importante de todas</h3>
+<p>Faça na primeira semana, antes de qualquer campanha ir ao ar. Escrita, no grupo, para ficar registrada:</p>
+<blockquote>
+<p><em>"[Nome], antes da gente ligar as campanhas, quero alinhar o que esperar de cada fase — assim você não se assusta e nem fica ansioso à toa.</em></p>
+<p><strong><em>Semana 1:</em></strong> <em>estruturação. Nada no ar ainda. Estou montando conta, rastreamento e criativos.</em></p>
+<p><strong><em>Semanas 2 e 3:</em></strong> <em>fase de aprendizado. As campanhas sobem e os números vão oscilar bastante — custo alto em alguns dias, baixo em outros. </em><em>Isso é esperado e faz parte do processo.</em><em> Não é sinal de problema.</em></p>
+<p><strong><em>Semana 4:</em></strong> <em>primeira leitura confiável. Aqui a gente já sabe o custo real por lead.</em></p>
+<p><strong><em>Mês 2:</em></strong> <em>otimização com dado na mão.</em></p>
+<p><strong><em>Mês 3:</em></strong> <em>é quando a gente consegue avaliar de verdade se está valendo a pena, e quanto dá para escalar.</em></p>
+<p><em>Combinado? Qualquer dúvida no meio do caminho, me chama."</em></p>
+</blockquote>
+<p><strong>Por que isso funciona:</strong> você acabou de comprar 30 dias de paciência e eliminou a pergunta "e aí, já vendeu?" no dia 3. Cliente ansioso é cliente que cancela cedo — e a ansiedade dele é culpa de quem não explicou.</p>
+<h3>Semana 2 — Lançar</h3>
+<pre><code>□ Campanhas no ar
+□ Avisar o cliente: &quot;subiu hoje, agora é aprendizado&quot;
+□ Monitorar diariamente (sem mexer)
+□ Testar o fluxo você mesmo: clicar, preencher, ver se chega
+</code></pre>
+<h3>Semana 3 — Primeiros ajustes</h3>
+<pre><code>□ Primeira otimização real
+□ Pausar criativos ruins, subir novos
+□ Mandar um update curto ao cliente
+</code></pre>
+<h3>Semana 4 — Primeiro relatório</h3>
+<pre><code>□ Relatório completo
+□ Reunião de 30 min
+□ Plano do mês 2
+□ ⭐ Perguntar: &quot;quantos desses leads viraram cliente?&quot;
+</code></pre>
+<hr />
+<h2>2. A rotina semanal (multi-cliente)</h2>
+<p>Com 5+ clientes, sem processo você afunda. O modelo que funciona:</p>
+<pre><code>SEGUNDA — Análise (manhã)
+  Checagem de todas as contas
+  Análise semanal cliente a cliente
+  Lista de ações da semana
+
+TERÇA — Otimização
+  Executar os ajustes
+  Google: termos de pesquisa e negativas
+  Subir criativos novos
+
+QUARTA — Produção
+  Criativos e copy
+  Editar o que os clientes mandaram
+  Solicitar material da próxima leva
+
+QUINTA — Cliente
+  Reuniões
+  Relatórios
+  Respostas e alinhamentos
+
+SEXTA — Negócio
+  ⭐ PROSPECÇÃO (bloqueio inegociável)
+  Estudo e testes
+  Financeiro e organização
+</code></pre>
+<blockquote>
+<p>🔒 <strong>Bloqueie a sexta para prospecção mesmo com a agenda cheia.</strong> O erro clássico: você fecha 4 clientes, fica ocupado, para de prospectar, perde 2 clientes em três meses e volta à estaca zero. <strong>Prospecção não é o que você faz quando falta cliente — é o que evita que falte.</strong></p>
+</blockquote>
+<h3>Regra de capacidade</h3>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Clientes</th>
+<th>Situação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1–4</td>
+<td>Sobra tempo. Use para estudar e prospectar.</td>
+</tr>
+<tr>
+<td>5–8</td>
+<td>Zona saudável. Processo apertado, mas funciona.</td>
+</tr>
+<tr>
+<td>9–12</td>
+<td>Limite. Precisa de automação e templates afiados.</td>
+</tr>
+<tr>
+<td>13+</td>
+<td>Ou você delega, ou a qualidade cai e você perde clientes.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Quando chegar em 8–10, a decisão é:</strong> contratar alguém, ou <strong>aumentar o preço e reduzir o número de clientes</strong>. A segunda opção costuma ser mais lucrativa e menos estressante.</p>
+<hr />
+<h2>3. Comunicação: o que realmente retém</h2>
+<h3>As regras</h3>
+<pre><code>✅ Responder em até 4h no horário comercial
+✅ Update proativo semanal (mesmo curto, mesmo sem novidade)
+✅ Avisar problema ANTES que ele pergunte
+✅ Falar em linguagem de negócio, nunca em jargão
+✅ Registrar decisões por escrito
+❌ Sumir por duas semanas &quot;porque está tudo rodando bem&quot;
+❌ Responder 23h de domingo (cria expectativa impossível)
+❌ Dar prints do gerenciador como se fossem relatório
+</code></pre>
+<h3>O update semanal de 30 segundos</h3>
+<p>Toda sexta. Curto. Formato fixo:</p>
+<pre><code>📊 Resumo da semana
+
+Investido: R$ 780
+Leads: 19 (semana anterior: 15)
+CPL: R$ 41 (meta: R$ 50) ✅
+
+O que fiz: pausei 2 criativos com desempenho fraco e
+subi 2 novos com o ângulo de &quot;parcelamento&quot;, que está
+performando melhor.
+
+Próxima semana: testar o público de remarketing.
+
+Como estão os retornos aí? Algum lead virou consulta?
+</code></pre>
+<p><strong>Custa 3 minutos. Vale meses de retenção.</strong></p>
+<p>A última pergunta é a mais importante: mantém o cliente engajado, te dá o dado de conversão, e transforma a conversa de "custo" em "retorno".</p>
+<h3>A técnica do problema antecipado</h3>
+<p>Quando algo dá errado, <strong>você avisa primeiro</strong>. Sempre.</p>
+<pre><code>❌ Cliente descobre sozinho → &quot;por que ninguém me avisou?&quot;
+   → quebra de confiança
+
+✅ Você avisa antes → &quot;puxa, obrigado por avisar&quot;
+   → confiança reforçada
+</code></pre>
+<blockquote>
+<p><em>"[Nome], te aviso antes que você veja: o anúncio novo foi reprovado pela política do Meta. Já entrei com recurso e ajustei o texto de um segundo criativo que sobe ainda hoje, então não vamos ficar sem veiculação. Te atualizo amanhã."</em></p>
+</blockquote>
+<p>Mesmo problema, percepção oposta. <strong>A má notícia dada por você é competência; descoberta por ele é negligência.</strong></p>
+<hr />
+<h2>4. O relatório mensal</h2>
+<p>Template em <a href="templates/relatorio-mensal.html"><code>templates/relatorio-mensal.md</code></a>.</p>
+<h3>Os princípios</h3>
+<p><strong>1. Resultado de negócio primeiro, métrica de mídia depois.</strong></p>
+<pre><code>❌ &quot;CTR de 2,3%, CPM de R$ 18,40, 1.240 cliques&quot;
+✅ &quot;47 novos contatos, R$ 41 por contato, 9 fechamentos
+    = R$ 22.500 em vendas sobre R$ 1.900 investidos&quot;
+</code></pre>
+<p><strong>2. Comparação sempre.</strong> Número solto não diz nada. Compare com o mês anterior e com a meta.</p>
+<p><strong>3. Três seções, nesta ordem:</strong></p>
+<pre><code>O QUE ACONTECEU    → números, com comparação
+O QUE EU FIZ       → decisões e por quê
+O QUE VEM AGORA    → plano do próximo mês
+</code></pre>
+<p><strong>4. Uma página.</strong> Relatório de 15 páginas não é lido, e você gasta 3 horas produzindo algo que ninguém abre.</p>
+<p><strong>5. Seja honesto quando for ruim.</strong> Mês ruim relatado com honestidade e plano de ação mantém a confiança. Mês ruim maquiado destrói a relação quando ele descobrir — e ele descobre.</p>
+<hr />
+<h2>5. A reunião mensal</h2>
+<p>30 minutos, estrutura fixa:</p>
+<pre><code>5 min   — Resultados (você apresenta)
+10 min  — O que funcionou e o que não funcionou
+5 min   — ⭐ &quot;Como estão os leads do lado de vocês?&quot;
+5 min   — Plano do próximo mês
+5 min   — Alinhamentos e novidades do negócio dele
+</code></pre>
+<h3>A pergunta que muda tudo</h3>
+<blockquote>
+<p><em>"Das 47 pessoas que entraram em contato este mês, quantas viraram cliente?"</em></p>
+</blockquote>
+<p>Se ele não sabe, <strong>esse é o seu próximo projeto</strong>. Ajude-o a montar um controle simples — uma planilha basta.</p>
+<p>Por quê:
+1. Sem esse dado, você otimiza para lead em vez de dinheiro
+2. Com esse dado, você prova seu valor em reais, não em CPL
+3. <strong>É a base para você pedir aumento de fee</strong>
+4. Você deixa de ser fornecedor de mídia e vira parceiro de crescimento</p>
+<h3>Perguntas que geram trabalho novo (e receita)</h3>
+<pre><code>• Tem algum serviço de vocês que está parado e poderia vender mais?
+• Vocês têm alguma sazonalidade que a gente deveria preparar?
+• Como está a capacidade de atendimento? Dá para aumentar o volume?
+• Tem algum concorrente novo incomodando?
+</code></pre>
+<p>Cada uma dessas pode virar uma campanha nova, um projeto extra, ou um aumento de verba.</p>
+<hr />
+<h2>6. Aumentando o fee de um cliente existente</h2>
+<p>O caminho mais rápido para crescer sem vender mais: <strong>cobrar mais de quem já confia em você.</strong></p>
+<h3>Quando pedir</h3>
+<ul>
+<li>✅ Depois de 6+ meses de resultado consistente</li>
+<li>✅ Quando o escopo cresceu de fato (nova plataforma, mais campanhas, mais criativos)</li>
+<li>✅ Quando a verba dele aumentou muito e seu trabalho junto</li>
+<li>✅ Na renovação anual</li>
+</ul>
+<h3>Como pedir</h3>
+<blockquote>
+<p><em>"[Nome], quero conversar sobre a renovação. Nesses 8 meses a gente saiu de 20 para 52 leads por mês e o custo por lead caiu de R$ 78 para R$ 41. Pelo que você me passou, isso virou algo em torno de R$ 40 mil a mais de faturamento por mês.</em></p>
+<p><em>O escopo também cresceu: começamos só com Meta e hoje rodamos Google, remarketing e produção de 8 criativos por mês, contra 4 no início.</em></p>
+<p><em>Para o próximo ciclo, meu valor passa de R$ 1.500 para R$ 2.300. Continua sendo uma fração pequena do retorno, e me permite manter o nível de dedicação que a conta pede.</em></p>
+<p><em>Faz sentido pra você?"</em></p>
+</blockquote>
+<p><strong>A estrutura:</strong> resultado entregue → escopo aumentado → novo valor → comparação com o retorno. Nessa ordem.</p>
+<p><strong>Se ele recusar:</strong> ofereça manter o valor com escopo reduzido. Isso mostra que o preço tem lógica, não é chute. Muitos aceitam o aumento depois dessa proposta.</p>
+<hr />
+<h2>7. Demitindo cliente</h2>
+<p>Sim, isso existe, e é uma decisão de negócio saudável.</p>
+<h3>Quando demitir</h3>
+<ul>
+<li>🚩 Atrasa pagamento sistematicamente</li>
+<li>🚩 Desrespeita você ou sua equipe</li>
+<li>🚩 Não cumpre a parte dele (não responde leads, não manda material) e culpa você</li>
+<li>🚩 Consome 3x mais tempo que os outros pelo mesmo valor</li>
+<li>🚩 Exige o impossível mesmo depois de alinhamentos repetidos</li>
+<li>🚩 Te faz trabalhar fora da lei ou da política das plataformas</li>
+</ul>
+<h3>Como demitir sem queimar ponte</h3>
+<blockquote>
+<p><em>"[Nome], depois de analisar nossa operação, cheguei à conclusão de que não sou a pessoa certa para o momento de vocês. Vou encerrar nossa parceria respeitando o aviso prévio de 30 dias do contrato.</em></p>
+<p><em>Vou deixar tudo documentado e organizado para quem assumir, e posso indicar dois profissionais que acredito que se encaixam melhor no perfil de vocês. Obrigado pelo período que trabalhamos juntos."</em></p>
+</blockquote>
+<p>Sem acusação, sem desabafo, sem lista de mágoas. <strong>Profissional até o fim.</strong></p>
+<blockquote>
+<p><strong>O tempo que um cliente tóxico consome é tempo que não vai para um cliente bom.</strong> Demitir o pior cliente costuma aumentar o faturamento — porque libera a energia que estava sendo drenada.</p>
+</blockquote>
+<hr />
+<h2>8. Organização que salva tempo</h2>
+<h3>Pasta por cliente (padrão fixo)</h3>
+<pre><code>CLIENTES/[Nome]/
+├── 00-acessos-e-ids.md        IDs de BM, conta, pixel, MCC, GA4
+├── 01-briefing.md             preenchido no kickoff
+├── 02-contrato-e-nf/
+├── 03-criativos/
+│   ├── aprovados/
+│   ├── em-producao/
+│   └── material-bruto-cliente/
+├── 04-relatorios/
+└── 05-registro-de-decisoes.md  ⭐
+</code></pre>
+<p><strong>O <code>05-registro-de-decisoes.md</code></strong> é o arquivo que mais te salva. Uma linha por decisão:</p>
+<pre><code>12/09 — Pausei o criativo &quot;video-dor-v2&quot; (CPL R$ 89 vs média R$ 41)
+15/09 — Subi verba de R$ 40 → R$ 48/dia (CPL estável há 5 dias)
+19/09 — Cliente avisou que o dentista de implante sai de férias
+        em outubro. Reduzir verba desse serviço a partir do dia 25.
+</code></pre>
+<p>Quando o cliente perguntar em janeiro "por que a gente parou de anunciar implante em outubro?", você tem a resposta em 5 segundos. Isso é autoridade.</p>
+<h3>Templates que você precisa ter prontos</h3>
+<ul>
+<li>[ ] Mensagem de solicitação de acesso</li>
+<li>[ ] Briefing de onboarding</li>
+<li>[ ] Roteiro de gravação para o cliente (Fase 06)</li>
+<li>[ ] Modelo de update semanal</li>
+<li>[ ] Modelo de relatório mensal</li>
+<li>[ ] Modelo de proposta</li>
+<li>[ ] Contrato</li>
+<li>[ ] Checklist de otimização semanal</li>
+</ul>
+<p>Tudo em <code>templates/</code>. <strong>Cada template poupa 30–60 min por uso.</strong> Com 8 clientes, isso é um dia inteiro por mês.</p>
+<hr />
+<h2>✅ Tarefas da Fase 11</h2>
+<ol>
+<li><strong>Monte seu processo de onboarding</strong> completo, semana a semana</li>
+<li><strong>Escreva sua mensagem de alinhamento de expectativa</strong> (seção 1) e salve — você vai usar em todo cliente</li>
+<li><strong>Monte sua rotina semanal</strong> e bloqueie a sexta-feira para prospecção</li>
+<li><strong>Crie seu modelo de update semanal</strong></li>
+<li><strong>Monte a estrutura de pastas</strong> padrão e crie um cliente-teste</li>
+<li><strong>Comece o <code>registro-de-decisoes.md</code></strong> da sua campanha atual hoje</li>
+</ol>
+<hr />
+<h2>Checagem de entendimento</h2>
+<ol>
+<li>Por que a comunicação retém mais que o resultado?</li>
+<li>Cliente manda mensagem no sábado à noite. Você responde?</li>
+<li>Você tem 9 clientes, está afogado, e recebe uma boa indicação. O que faz?</li>
+</ol>
+<details>
+<summary>Respostas</summary>
+<p><strong>1.</strong> Porque o cliente <strong>não consegue avaliar o resultado sozinho</strong> — ele não sabe se R$ 41 de CPL é bom ou ruim no nicho dele. O que ele avalia é a sensação de estar no controle e bem acompanhado. Resultado mediano bem comunicado parece competência; resultado ótimo em silêncio parece abandono. Na dúvida, o silêncio é interpretado como "não está acontecendo nada".</p>
+<p><strong>2.</strong> Só se for emergência real (conta bloqueada, verba disparando). Responder rotineiramente fora do horário cria uma expectativa que você não sustenta — e quando você parar, vai parecer descaso. Combine os horários de atendimento no onboarding e respeite-os. Profissional tem horário.</p>
+<p><strong>3.</strong> Duas opções saudáveis: (a) <strong>aceitar e aumentar seu preço</strong> para os próximos, usando a demanda como sinal de que você está barato — e depois demitir o pior cliente da carteira; (b) <strong>indicar para um colega e cobrar comissão de indicação</strong>. O que você não faz é aceitar e entregar mal para 10 clientes — é assim que se perde 3 de uma vez e a reputação junto.</p>
+</details>
+<hr />
+<p><strong>Próxima:</strong> <a href="fase-12-problemas-reais.html">Fase 12 — Problemas reais</a></p></article>
+  <nav class="paginacao"><a class="nav-ant" href="fase-10-contrato-legal.html"><span>← Anterior</span>10 · Contrato e legal</a><a class="nav-prox" href="fase-12-problemas-reais.html"><span>Próximo →</span>12 · Problemas reais</a></nav>
+  <footer class="rodape">Curso de tráfego pago · conteúdo de setembro de 2026</footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fase 03 — Meta Ads — Tráfego Pago</title>
+<link rel="stylesheet" href="assets/estilo.css">
+<script>
+/* Roda antes do primeiro pixel, senão a página pisca no tema errado.
+   Sem argumento, alterna. localStorage em try/catch: file:// pode bloquear. */
+function tema(t){var h=document.documentElement;
+t=t||(h.dataset.tema=='escuro'?'claro':'escuro');h.dataset.tema=t;
+try{localStorage.setItem('tema',t)}catch(e){}}
+try{var _t=localStorage.getItem('tema')}catch(e){}
+document.documentElement.dataset.tema=_t||(matchMedia('(prefers-color-scheme:dark)').matches?'escuro':'claro');
+</script>
+</head>
+<body>
+<input type="checkbox" id="abrir-menu" hidden>
+<label for="abrir-menu" class="botao-menu" aria-label="Abrir menu">☰</label>
+<label for="abrir-menu" class="fundo-menu"></label>
+<button class="botao-tema" onclick="tema()" aria-label="Alternar tema claro/escuro"
+        title="Alternar tema claro/escuro"><span class="i-claro">🌙</span><span class="i-escuro">☀️</span></button>
+
+<aside>
+  <a class="marca" href="index.html">Tráfego Pago<small>do zero ao primeiro cliente</small></a>
+  <ul class="topo"><li><a href="index.html"><i>🏠</i>Início</a></li></ul><p class="bloco">Fundamento</p><ul><li><a href="fase-00-fundamentos.html"><i>🧭</i>00 · Fundamentos</a></li><li><a href="fase-01-matematica.html"><i>🧮</i>01 · A matemática</a></li><li><a href="fase-02-infraestrutura.html"><i>🔧</i>02 · Infraestrutura</a></li></ul><p class="bloco">Execução técnica</p><ul><li><a href="fase-03-meta-ads.html" class="ativo"><i>📱</i>03 · Meta Ads</a></li><li><a href="fase-04-google-ads.html"><i>🔍</i>04 · Google Ads</a></li><li><a href="fase-05-tiktok-kwai.html"><i>🎵</i>05 · TikTok e Kwai</a></li><li><a href="fase-06-criativo-copy-oferta.html"><i>🎨</i>06 · Criativo e oferta</a></li><li><a href="fase-07-mensuracao.html"><i>📊</i>07 · Mensuração</a></li><li><a href="fase-08-otimizacao-escala.html"><i>📈</i>08 · Otimização e escala</a></li></ul><p class="bloco">O negócio</p><ul><li><a href="fase-09-vender-o-servico.html"><i>💼</i>09 · Vender o serviço</a></li><li><a href="fase-10-contrato-legal.html"><i>⚖️</i>10 · Contrato e legal</a></li><li><a href="fase-11-operacao-rotina.html"><i>🔄</i>11 · Operação e rotina</a></li><li><a href="fase-12-problemas-reais.html"><i>🚨</i>12 · Problemas reais</a></li></ul><p class="bloco">Templates</p><ul><li><a href="templates/proposta-comercial.html"><i>📄</i>Proposta comercial</a></li><li><a href="templates/contrato-modelo.html"><i>📑</i>Contrato modelo</a></li><li><a href="templates/briefing-onboarding.html"><i>📋</i>Briefing e onboarding</a></li><li><a href="templates/relatorio-mensal.html"><i>📊</i>Relatório mensal</a></li><li><a href="templates/auditoria-de-conta.html"><i>🔎</i>Auditoria de conta</a></li><li><a href="templates/scripts-de-venda.html"><i>💬</i>Scripts de venda</a></li></ul><p class="bloco">Ferramenta</p><ul><li><a href="planilhas/calculadora-viabilidade.html"><i>🧮</i>Calculadora</a></li></ul>
+</aside>
+
+<main>
+  <article><h1>Fase 03 — Meta Ads</h1>
+<blockquote>
+<p><strong>Pré-requisito:</strong> Fases 00, 01 e 02 executadas.
+<strong>Tempo:</strong> 3 semanas (com campanha rodando).
+<strong>Verba:</strong> R$ 300.</p>
+</blockquote>
+<hr />
+<h2>Por que Meta primeiro</h2>
+<ul>
+<li>É onde está a maior parte dos seus clientes potenciais (pequeno e médio negócio brasileiro)</li>
+<li>Entrada barata: R$ 6/dia já roda</li>
+<li>Resultado visível rápido</li>
+<li>O ciclo de aprendizado é curto — você erra e vê o erro em 48 horas</li>
+<li>Vender Meta é mais fácil: o dono do negócio já usa Instagram e entende o que você está falando</li>
+</ul>
+<p>Google tem intenção mais quente e ticket maior, mas exige mais base técnica. Ordem certa: Meta → Google → TikTok.</p>
+<hr />
+<h2>1. O Gerenciador de Anúncios: tour rápido</h2>
+<p>Acesse: <strong>adsmanager.facebook.com</strong></p>
+<pre><code>┌─────────────────────────────────────────────────┐
+│  [Conta selecionada ▾]           [+ Criar]      │
+├─────────────────────────────────────────────────┤
+│  CAMPANHAS  │  CONJUNTOS  │  ANÚNCIOS           │  ← as 3 abas
+├─────────────────────────────────────────────────┤
+│  Nome | Veiculação | Orçamento | Gasto | Result │
+│  ...                                             │
+└─────────────────────────────────────────────────┘
+</code></pre>
+<p>Três coisas para configurar antes de qualquer outra:</p>
+<p><strong>1. Período.</strong> Canto superior direito. Padrão vem "Máximo". Troque para <strong>Últimos 7 dias</strong> — é a janela em que você toma decisão.</p>
+<p><strong>2. Colunas.</strong> Botão <code>Colunas ▾</code> → <code>Personalizar colunas</code>. O padrão do Meta é inútil. Monte a sua e salve como "Minha visão":</p>
+<pre><code>Nome │ Veiculação │ Valor gasto │ Impressões │ CPM │
+Cliques no link │ CPC │ CTR │ Resultados │ Custo por resultado │
+Frequência
+</code></pre>
+<p>Salve. Você vai usar isso todo dia pelos próximos anos.</p>
+<p><strong>3. Detalhamento (Breakdown).</strong> Botão <code>Detalhamento ▾</code>. Permite quebrar por idade, gênero, posicionamento, dispositivo. É a sua lupa de diagnóstico.</p>
+<hr />
+<h2>2. Os objetivos de campanha</h2>
+<p>O Meta trabalha com 6 objetivos. A escolha aqui determina <strong>para quem</strong> o algoritmo procura — e é o erro nº 1 do iniciante.</p>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Objetivo</th>
+<th>O algoritmo procura</th>
+<th>Use quando</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Reconhecimento</strong></td>
+<td>Quem vê e lembra</td>
+<td>Marca grande, branding. <strong>Você quase nunca usa.</strong></td>
+</tr>
+<tr>
+<td><strong>Tráfego</strong></td>
+<td>Quem clica em link</td>
+<td>Blog, conteúdo. ⚠️ Armadilha — ver abaixo</td>
+</tr>
+<tr>
+<td><strong>Engajamento</strong></td>
+<td>Quem curte/comenta/manda mensagem</td>
+<td>Campanha de WhatsApp, prova social inicial</td>
+</tr>
+<tr>
+<td><strong>Cadastros (Leads)</strong></td>
+<td>Quem preenche formulário</td>
+<td>🎯 <strong>Serviço local, B2B, alto ticket</strong></td>
+</tr>
+<tr>
+<td><strong>Promoção de app</strong></td>
+<td>Quem instala app</td>
+<td>Só se o cliente tem app</td>
+</tr>
+<tr>
+<td><strong>Vendas</strong></td>
+<td>Quem compra</td>
+<td>🎯 <strong>E-commerce, infoproduto</strong></td>
+</tr>
+</tbody>
+</table></div>
+<h3>🚨 A armadilha do objetivo "Tráfego"</h3>
+<p>Esta é a lição mais cara para iniciante. Leia duas vezes.</p>
+<p>Você escolhe <strong>Tráfego</strong> porque quer gente no site. Faz sentido, né? O Meta então otimiza para <strong>cliques</strong> — e vai atrás das pessoas que mais clicam em anúncios. Adivinha quem clica muito em anúncio e nunca compra? Curioso, criança, pessoa com dedo solto.</p>
+<p>Resultado: você recebe 400 cliques a R$ 0,25 (parece ótimo!) e <strong>zero vendas</strong>.</p>
+<p>Se você tivesse escolhido <strong>Vendas</strong> ou <strong>Cadastros</strong>, o CPC seria R$ 1,80 — e você teria 12 conversões.</p>
+<blockquote>
+<p><strong>A regra que você nunca esquece:</strong></p>
+<h3>Sempre otimize para a AÇÃO QUE VOCÊ QUER, nunca para um passo anterior.</h3>
+<p>Quer venda? Objetivo Vendas. Quer lead? Objetivo Cadastros. O algoritmo entrega literalmente o que você pede — o problema é quando você pede a coisa errada.</p>
+</blockquote>
+<p><strong>A única exceção legítima:</strong> conta nova, pixel sem nenhum dado, e você precisa de volume inicial para alimentar o algoritmo. Mesmo assim, rode Tráfego por no máximo 5–7 dias e migre.</p>
+<hr />
+<h2>3. Escolhendo o modelo de campanha</h2>
+<p>Combine tipo de negócio + destino:</p>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Negócio</th>
+<th>Objetivo</th>
+<th>Destino</th>
+<th>Por quê</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clínica, dentista, estética</td>
+<td>Cadastros</td>
+<td><strong>Formulário instantâneo</strong></td>
+<td>Não sai do app, converte mais</td>
+</tr>
+<tr>
+<td>Advogado, contador, consultor</td>
+<td>Cadastros</td>
+<td>Formulário ou WhatsApp</td>
+<td>Precisa qualificar</td>
+</tr>
+<tr>
+<td>Restaurante, comércio local</td>
+<td>Engajamento</td>
+<td><strong>WhatsApp</strong> ou Alcance local</td>
+<td>Decisão rápida</td>
+</tr>
+<tr>
+<td>Academia, curso presencial</td>
+<td>Cadastros</td>
+<td>Formulário</td>
+<td>Precisa agendar visita</td>
+</tr>
+<tr>
+<td>E-commerce</td>
+<td><strong>Vendas</strong></td>
+<td>Site (com pixel)</td>
+<td>Compra direta</td>
+</tr>
+<tr>
+<td>Infoproduto</td>
+<td><strong>Vendas</strong></td>
+<td>Landing page</td>
+<td>Precisa da página de venda</td>
+</tr>
+<tr>
+<td>Imobiliária, alto ticket</td>
+<td>Cadastros</td>
+<td>Landing page com formulário</td>
+<td>Qualificação pesada</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Formulário instantâneo vs. Landing page vs. WhatsApp</h3>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th></th>
+<th>Formulário instantâneo</th>
+<th>Landing page</th>
+<th>WhatsApp</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPL</td>
+<td>🟢 Mais barato (30–50% menos)</td>
+<td>🔴 Mais caro</td>
+<td>🟡 Médio</td>
+</tr>
+<tr>
+<td>Qualidade do lead</td>
+<td>🔴 Menor (fácil demais)</td>
+<td>🟢 Maior</td>
+<td>🟢 Alta (já quer falar)</td>
+</tr>
+<tr>
+<td>Precisa de site</td>
+<td>Não</td>
+<td>Sim</td>
+<td>Não</td>
+</tr>
+<tr>
+<td>Velocidade de montagem</td>
+<td>🟢 Minutos</td>
+<td>🔴 Horas/dias</td>
+<td>🟢 Minutos</td>
+</tr>
+<tr>
+<td>Melhor para</td>
+<td>Volume, ticket baixo/médio</td>
+<td>Alto ticket, qualificação</td>
+<td>Serviço local, venda consultiva</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>💡 <strong>Truque para o formulário instantâneo:</strong> dentro dele, troque a opção <strong>"Mais volume"</strong> por <strong>"Maior intenção"</strong>. Isso adiciona uma tela de revisão antes do envio. O volume cai ~20%, a qualidade sobe muito mais que isso. Adicione também <strong>1 ou 2 perguntas personalizadas</strong> ("Qual tratamento você procura?") — filtra curioso e já entrega informação para o vendedor. É a diferença entre entregar 40 leads ruins e 28 bons.</p>
+</blockquote>
+<hr />
+<h2>4. Sua primeira campanha — passo a passo</h2>
+<p>Cenário: <strong>clínica de estética, captação de leads via formulário, R$ 20/dia.</strong></p>
+<h3>Passo 1 — Criar</h3>
+<p>Gerenciador → <strong>+ Criar</strong> → objetivo <strong>Cadastros</strong> → <strong>Continuar</strong>.</p>
+<p>Se aparecer a escolha entre "Campanha manual" e "Advantage+", escolha <strong>manual</strong> por enquanto. Você precisa entender as alavancas antes de terceirizá-las para a IA.</p>
+<h3>Passo 2 — Nível Campanha</h3>
+<pre><code>Nome da campanha:  [LEAD] Estetica - Botox - Set26
+Categoria especial: Nenhuma          ← atenção: emprego, crédito e imóvel
+                                        obrigam a marcar aqui, por lei
+Orçamento CBO:      Desativado       ← por ora, orçamento no conjunto
+Teste A/B:          Desativado
+</code></pre>
+<p><strong>Padrão de nomenclatura.</strong> Parece detalhe; não é. Com 6 clientes e 40 campanhas, nomenclatura ruim custa horas.</p>
+<pre><code>[OBJETIVO] Nicho - Oferta - MêsAno
+Conjunto:  Publico | Idade | Local
+Anúncio:   Formato - Ângulo - v1
+</code></pre>
+<h3>Passo 3 — Nível Conjunto (aqui mora o trabalho)</h3>
+<pre><code>Nome:        Amplo | 25-55 | Curitiba 10km
+
+Conversão
+  Local da conversão:      Formulário instantâneo
+  Evento de conversão:     Lead
+
+Orçamento
+  Orçamento diário:        R$ 20,00
+  Programação:             Contínuo
+
+Público
+  Local:      Curitiba + 10km          ← sempre &quot;Pessoas que moram aqui&quot;
+  Idade:      25 – 55
+  Gênero:     Todos
+  Detalhado:  (VAZIO)                  ← sim, vazio. Leia abaixo.
+  Advantage+ público:  ATIVADO
+
+Posicionamentos
+  Advantage+ (automático)              ← deixe automático
+</code></pre>
+<h3>🔑 Por que o público vai VAZIO — a mudança de 2026</h3>
+<p>Este é o ponto onde a maioria dos cursos está desatualizada.</p>
+<p>Você aprendeu (ou vai ouvir por aí) que precisa escolher interesses: "estética", "beleza", "autocuidado". <strong>Em 2026, isso na maioria dos casos piora o resultado.</strong></p>
+<p>O que aconteceu:
+- O Meta <strong>removeu as exclusões de segmentação detalhada</strong> — campanhas antigas que usavam essas opções pararam de veicular em 15 de janeiro de 2026
+- O sistema de IA da Meta ficou melhor em encontrar compradores do que você em descrever compradores
+- Desde fevereiro de 2026, campanhas de vendas, leads e apps nascem com <strong>Advantage+ Creative totalmente ativado</strong></p>
+<p><strong>Como pensar agora:</strong></p>
+<pre><code>Antes (2020–2023)              Agora (2026)
+─────────────────              ────────────
+Você diz QUEM procurar    →    Você diz O QUE é sucesso
+Interesse + comportamento →    Evento de conversão limpo
+Testa 8 públicos          →    Testa 8 criativos
+Diferencial = segmentação →    Diferencial = criativo + dado
+</code></pre>
+<p><strong>Quando ainda vale restringir:</strong>
+- Público muito pequeno (cidade de 20 mil habitantes) — aí a geografia já é o filtro
+- Nicho extremamente específico (equipamento industrial B2B)
+- Retargeting (que é público personalizado, não interesse)
+- Exigência legal (Categoria Especial)</p>
+<p><strong>Teste, não acredite em mim:</strong> rode um conjunto amplo e um conjunto com interesses, mesmo criativo, mesma verba, 7 dias. Anote o resultado no caderno. Na maioria dos casos em 2026, o amplo ganha. Quando não ganhar, você aprendeu algo específico do seu nicho — e isso vale mais que qualquer regra geral.</p>
+<h3>Passo 4 — Nível Anúncio</h3>
+<pre><code>Nome:            IMG - Dor de rotina - v1
+Identidade:      [Página do Facebook] + [Instagram]
+Formato:         Imagem única
+Criativo:        (sua peça)
+Texto principal: (copy — Fase 06)
+Título:          Até 40 caracteres
+Descrição:       Opcional
+Chamada:         Saiba mais / Cadastre-se
+Formulário:      [criar novo]
+
+Advantage+ Creative:   ⚠️ decisão importante — ver 4.1
+</code></pre>
+<h3>4.1 Advantage+ Creative: o que deixar ligado</h3>
+<p>Desde fevereiro de 2026, isso vem <strong>ligado por padrão</strong> em campanhas novas de vendas, leads e apps. A IA aplica ajustes visuais, gera variações de texto, muda proporção, corta imagem e até adiciona música — cada pessoa vê uma combinação diferente.</p>
+<p>Minha recomendação prática:</p>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Recurso</th>
+<th>Ligar?</th>
+<th>Motivo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ajustes de brilho/contraste, proporção</td>
+<td>✅ Sim</td>
+<td>Adapta para cada posicionamento. Ganho real.</td>
+</tr>
+<tr>
+<td>Variações de texto geradas por IA</td>
+<td>⚠️ Só depois de validar</td>
+<td>A IA pode gerar copy que quebra tom de voz ou faz promessa fora da política</td>
+</tr>
+<tr>
+<td>Música gerada / adicionada</td>
+<td>❌ Não no início</td>
+<td>Costuma destoar da peça</td>
+</tr>
+<tr>
+<td>Sobreposição de texto / templates</td>
+<td>⚠️ Teste</td>
+<td>Às vezes cobre elemento importante da imagem</td>
+</tr>
+<tr>
+<td>Expansão de imagem por IA</td>
+<td>⚠️ Teste</td>
+<td>Ótimo às vezes, grotesco outras. <strong>Sempre confira a prévia.</strong></td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>⚠️ <strong>Regra de ouro:</strong> antes de publicar, abra a <strong>prévia em todos os posicionamentos</strong>. A IA já produziu peça com o rosto do cliente esticado, texto cortado no meio e logo deformado. Você é responsável pelo que sai no ar — inclusive pelo que a IA gerou.</p>
+<p><strong>Para cliente de setor regulado</strong> (saúde, finanças, jurídico), desligue as variações de texto por IA. Um texto que promete resultado médico gerado automaticamente é problema seu, não do Meta.</p>
+</blockquote>
+<h3>Passo 5 — Publicar</h3>
+<p>Revise:
+- [ ] Objetivo é o da <strong>ação final</strong>, não de um passo anterior
+- [ ] Localização é "pessoas que <strong>moram</strong> neste local"
+- [ ] Verba diária está correta (não mensal)
+- [ ] Prévia checada em todos os posicionamentos
+- [ ] Formulário testado por você mesmo
+- [ ] Link com <strong>UTM</strong> (Fase 07)</p>
+<p><strong>Publicar.</strong> Aprovação leva de minutos a 24 h.</p>
+<hr />
+<h2>5. A fase de aprendizado — e a regra do não-mexer</h2>
+<p>Depois de publicar, o conjunto entra em <strong>"Em aprendizado"</strong>.</p>
+<p>O algoritmo está testando combinações para descobrir quem converte. Durante essa fase os resultados são <strong>instáveis</strong> e <strong>não representativos</strong>.</p>
+<pre><code>Dia 1-2   ████░░░░░░  Resultado ruim, CPL alto. NORMAL.
+Dia 3-5   ███████░░░  Começa a estabilizar
+Dia 6-7   █████████░  Número confiável aparece
+</code></pre>
+<p>Ele sai do aprendizado com aproximadamente <strong>50 conversões em 7 dias</strong> naquele conjunto.</p>
+<h3>🚫 As regras do não-mexer</h3>
+<p><strong>Nos primeiros 3–4 dias, não faça NADA.</strong> Nem olhe muito.</p>
+<p>Qualquer edição significativa <strong>reinicia a fase de aprendizado</strong> e queima a verba já gasta em aprendizado perdido. Reiniciam o aprendizado:
+- Mudar público
+- Mudar o evento de conversão
+- Mudar orçamento em mais de ~20%
+- Trocar ou pausar o criativo principal
+- Editar o anúncio</p>
+<p><strong>Isso é o erro nº 1 do iniciante ansioso.</strong> Ele mexe todo dia, o aprendizado reinicia todo dia, a campanha nunca estabiliza, e ele conclui que "Meta Ads não funciona".</p>
+<blockquote>
+<p>💬 <strong>Como explicar isso ao cliente no dia 2</strong> (e você vai precisar, porque ele vai te cobrar):</p>
+<p><em>"Estamos nos primeiros dias de calibração. Nesse período o sistema testa combinações e os números oscilam muito — é esperado e faz parte do processo. O número confiável aparece a partir do dia 5. Vou te mandar a primeira leitura real na sexta."</em></p>
+<p>Dizer isso <strong>antes</strong> dele perguntar é o que separa quem parece no controle de quem parece perdido. Coloque no onboarding: avise no dia 1 que os dias 1–4 serão feios.</p>
+</blockquote>
+<h3>Verba mínima para sair do aprendizado</h3>
+<pre><code>Verba diária mínima ≈ CPA alvo × 3
+</code></pre>
+<p>CPL alvo de R$ 25? Mínimo ~R$ 75/dia para o conjunto estabilizar direito. Com R$ 20/dia ele vai funcionar, mas oscilando mais — o que é aceitável para negócio local pequeno, desde que <strong>você e o cliente saibam disso</strong>.</p>
+<hr />
+<h2>6. Orçamento: CBO ou ABO?</h2>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th></th>
+<th><strong>ABO</strong> (orçamento no conjunto)</th>
+<th><strong>CBO / Advantage+</strong> (orçamento na campanha)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Quem decide a divisão</td>
+<td>Você</td>
+<td>O algoritmo</td>
+</tr>
+<tr>
+<td>Controle</td>
+<td>🟢 Total</td>
+<td>🔴 Baixo</td>
+</tr>
+<tr>
+<td>Para testar</td>
+<td>🟢 Ideal</td>
+<td>🔴 Ruim (mata o perdedor cedo demais)</td>
+</tr>
+<tr>
+<td>Para escalar</td>
+<td>🟡 Trabalhoso</td>
+<td>🟢 Ideal</td>
+</tr>
+<tr>
+<td>Verba baixa (&lt; R$ 50/dia)</td>
+<td>🟢 Melhor</td>
+<td>🔴 Concentra tudo em um conjunto</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Regra prática:</strong>
+- <strong>Testando</strong> (descobrindo o que funciona) → <strong>ABO</strong>, verba igual em cada conjunto
+- <strong>Escalando</strong> (já sabe o que funciona) → <strong>CBO</strong>, deixa a IA distribuir</p>
+<p>Você está começando. Use <strong>ABO</strong>.</p>
+<hr />
+<h2>7. Estrutura de conta recomendada para 2026</h2>
+<p>Esqueça as estruturas complexas de 2021, com 12 conjuntos por campanha. Hoje é assim:</p>
+<h3>Para serviço local (verba R$ 600–3.000/mês)</h3>
+<pre><code>📁 [LEAD] Clinica - Captacao - Set26          ABO
+    └── 📂 Amplo | 25-55 | Cidade+10km        R$ 20/dia
+          ├── 📄 VID - Dor cotidiana - v1
+          ├── 📄 VID - Depoimento - v1
+          ├── 📄 IMG - Oferta direta - v1
+          ├── 📄 IMG - Prova social - v1
+          └── 📄 CAR - Antes/Depois* - v1     *cuidado com política de saúde
+
+📁 [LEAD] Clinica - Remarketing - Set26       (só quando houver volume)
+    └── 📂 Engajou 30d + Visitou site 30d     R$ 8/dia
+          └── 📄 IMG - Oferta com urgência
+</code></pre>
+<p><strong>Um conjunto. Vários criativos.</strong> É isso.</p>
+<p>Por quê? Porque em 2026 o teste que importa é de <strong>criativo</strong>, não de público. Cinco criativos no mesmo conjunto competem entre si e o algoritmo concentra verba no vencedor — que é exatamente o que você quer.</p>
+<h3>Para e-commerce (verba R$ 3.000+/mês)</h3>
+<pre><code>📁 [VENDAS] Loja - Aquisicao - Set26          CBO R$ 100/dia
+    ├── 📂 Amplo | 18-65 | Brasil
+    └── 📂 Lookalike 1% compradores
+
+📁 [VENDAS] Loja - Remarketing - Set26        ABO R$ 30/dia
+    └── 📂 Visitou 14d + Carrinho 7d (excl. compradores 30d)
+
+📁 [VENDAS] Loja - Catalogo/DPA - Set26       R$ 40/dia
+    └── 📂 Remarketing dinâmico de produto
+</code></pre>
+<h3>O princípio: consolide</h3>
+<pre><code>❌ ERRADO                          ✅ CERTO
+15 campanhas × 1 conjunto          1–3 campanhas
+× 1 anúncio cada                   1–2 conjuntos cada
+                                   5–8 anúncios cada
+Verba fragmentada                  Verba concentrada
+Nenhum conjunto aprende            Algoritmo aprende rápido
+</code></pre>
+<p><strong>Verba fragmentada = nenhum conjunto atinge volume de aprendizado = tudo performa mal.</strong> Essa é a causa raiz de metade das contas ruins que você vai auditar.</p>
+<hr />
+<h2>8. Lendo os números: o que fazer com cada cenário</h2>
+<p>Depois de 5–7 dias, o diagnóstico:</p>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>CTR</th>
+<th>CPL</th>
+<th>Diagnóstico</th>
+<th>Ação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🟢 Alto (&gt;2%)</td>
+<td>🟢 Bom</td>
+<td>Funcionando</td>
+<td><strong>Escale</strong> (+20% a cada 2–3 dias)</td>
+</tr>
+<tr>
+<td>🟢 Alto</td>
+<td>🔴 Alto</td>
+<td>Atrai mas não converte</td>
+<td>Problema no <strong>formulário ou na página</strong>, não no anúncio</td>
+</tr>
+<tr>
+<td>🔴 Baixo (&lt;1%)</td>
+<td>🔴 Alto</td>
+<td>Criativo ou oferta fracos</td>
+<td><strong>Troque o criativo.</strong> Não mexa em público.</td>
+</tr>
+<tr>
+<td>🔴 Baixo</td>
+<td>🟢 Bom</td>
+<td>Nicho de baixo volume, mas quem clica compra</td>
+<td>Mantenha. Teste criativo novo em paralelo.</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Os três diagnósticos por Detalhamento</h3>
+<p>Use <code>Detalhamento ▾</code> para achar o vazamento:</p>
+<ol>
+<li><strong>Por posicionamento</strong> — Reels custando 4x mais que Feed? Considere excluir. Mas cuidado: em 2026 o Advantage+ automático geralmente ganha do manual no total. Só exclua com diferença grande e sustentada.</li>
+<li><strong>Por idade e gênero</strong> — 80% dos leads vêm de 35–44? Crie um conjunto focado ali <strong>em paralelo</strong>, sem matar o amplo.</li>
+<li><strong>Por dispositivo</strong> — desktop convertendo muito pior? Provavelmente a landing page está quebrada no mobile (ou vice-versa). Isso é problema de site, não de anúncio.</li>
+</ol>
+<hr />
+<h2>9. Escalando sem quebrar</h2>
+<p>Você achou o vencedor. Agora não estrague.</p>
+<h3>Escala vertical (aumentar verba)</h3>
+<pre><code>✅ +20% a cada 2–3 dias        → algoritmo se adapta
+❌ dobrar de uma vez           → reinicia aprendizado, CPL dispara
+</code></pre>
+<p>Paciência aqui é dinheiro. Um conjunto estável em R$ 50/dia que você dobra para R$ 100 costuma voltar a R$ 50 de performance — e você perde 4 dias reconstruindo.</p>
+<h3>Escala horizontal (mais frentes)</h3>
+<ul>
+<li>Duplicar o conjunto vencedor para <strong>outra região</strong></li>
+<li>Novos criativos com o <strong>mesmo ângulo</strong> que venceu</li>
+<li>Novo público (lookalike dos convertidos)</li>
+<li>Outra plataforma (é aqui que entra Google — Fase 04)</li>
+</ul>
+<h3>Sinais de que você chegou no teto</h3>
+<ul>
+<li>📈 Frequência subindo acima de 3–4 com CPL subindo junto → público saturado</li>
+<li>📉 Mesma verba, menos resultado, várias semanas → fadiga de criativo</li>
+<li>💸 CPM subindo constantemente → competição ou qualidade caindo</li>
+</ul>
+<p><strong>Solução quase sempre é criativo novo.</strong> Não é "mexer na campanha".</p>
+<hr />
+<h2>10. Os 10 erros que queimam a verba do iniciante</h2>
+<ol>
+<li><strong>Objetivo Tráfego quando queria venda</strong> → o erro mais caro de todos</li>
+<li><strong>Mexer na campanha todo dia</strong> → aprendizado nunca termina</li>
+<li><strong>Desligar no dia 2</strong> → você pagou o aprendizado e jogou fora antes de colher</li>
+<li><strong>Verba fragmentada</strong> em 12 conjuntos de R$ 5</li>
+<li><strong>Um criativo só</strong> → sem material para o algoritmo otimizar</li>
+<li><strong>Público restrito demais</strong> em 2026 → estrangula o alcance sem ganho</li>
+<li><strong>Não instalar o pixel</strong> → algoritmo cego, e você também</li>
+<li><strong>Landing page lenta</strong> → paga o clique, perde a pessoa</li>
+<li><strong>Não checar a prévia</strong> do Advantage+ → anúncio deformado no ar</li>
+<li><strong>Prometer resultado sem fazer a conta da Fase 01</strong> → o erro que te custa o cliente, não a verba</li>
+</ol>
+<hr />
+<h2>✅ Tarefas da Fase 03</h2>
+<p><strong>Semana 1 — Preparação (R$ 0)</strong>
+1. Configure suas colunas personalizadas e salve
+2. Escolha o negócio de teste (o seu, de parente, de amigo)
+3. Faça a conta da Fase 01 para ele: CPA máximo, CPL alvo
+4. Produza <strong>5 criativos diferentes</strong> (Canva/CapCut). Ângulos diferentes, não cores diferentes.
+5. Escreva 3 variações de copy</p>
+<p><strong>Semana 2 — Rodando (R$ 150)</strong>
+6. Suba a campanha: 1 campanha, 1 conjunto amplo, 5 anúncios, R$ 20/dia
+7. <strong>Não mexa em nada por 4 dias.</strong> Anote no caderno o que você sentiu vontade de mexer.
+8. Dia 5: primeira análise. Preencha no caderno: CPM, CPC, CTR, CPL, frequência.</p>
+<p><strong>Semana 3 — Otimizando (R$ 150)</strong>
+9. Pause os 2 criativos piores. Suba 2 novos com o ângulo do vencedor.
+10. Rode mais 7 dias
+11. <strong>Documente tudo como case:</strong> prints do gerenciador, números de antes e depois, o que você aprendeu</p>
+<p>O item 11 é o mais importante. <strong>Esse documento é o que você vai mostrar ao seu primeiro cliente.</strong> Sem ele, você é só mais um dizendo que sabe.</p>
+<hr />
+<h2>Checagem de entendimento</h2>
+<ol>
+<li>Cliente quer vendas no site. Você escolhe Tráfego porque o CPC é mais barato. O que vai acontecer?</li>
+<li>Dia 3, CPL está R$ 90 e a meta é R$ 40. Qual a decisão correta?</li>
+<li>CTR 3,2% (ótimo) e CPL R$ 120 (péssimo). Onde está o problema e onde você NÃO deve mexer?</li>
+</ol>
+<details>
+<summary>Respostas</summary>
+<p><strong>1.</strong> O Meta vai buscar "clicadores" — pessoas com histórico de clicar em anúncio, não de comprar. Você terá CPC baixo, muito tráfego e conversão próxima de zero. O CPC barato é uma ilusão: o que importa é o custo por <strong>venda</strong>.</p>
+<p><strong>2.</strong> Nada. Dia 3 é fase de aprendizado, o número não é confiável. Qualquer edição reinicia o aprendizado e piora a situação. Espere o dia 5–7. (Exceção: erro grave de setup — link quebrado, formulário com erro, criativo errado no ar. Aí corrija imediatamente.)</p>
+<p><strong>3.</strong> O anúncio está fazendo o trabalho dele (CTR alto = criativo e oferta atraem). O vazamento está <strong>depois do clique</strong>: formulário longo, página lenta, oferta na página diferente da prometida no anúncio, ou preço revelado só lá. <strong>Não mexa no criativo nem no público</strong> — você estaria quebrando a única parte que está funcionando.</p>
+</details>
+<hr />
+<p><strong>Próxima:</strong> <a href="fase-04-google-ads.html">Fase 04 — Google Ads</a> — onde está a intenção de compra.</p></article>
+  <nav class="paginacao"><a class="nav-ant" href="fase-02-infraestrutura.html"><span>← Anterior</span>02 · Infraestrutura</a><a class="nav-prox" href="fase-04-google-ads.html"><span>Próximo →</span>04 · Google Ads</a></nav>
+  <footer class="rodape">Curso de tráfego pago · conteúdo de setembro de 2026</footer>
+</main>
+</body>
+</html>

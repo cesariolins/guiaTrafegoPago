@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Templates — Tráfego Pago</title>
+<link rel="stylesheet" href="../assets/estilo.css">
+<script>
+/* Roda antes do primeiro pixel, senão a página pisca no tema errado.
+   Sem argumento, alterna. localStorage em try/catch: file:// pode bloquear. */
+function tema(t){var h=document.documentElement;
+t=t||(h.dataset.tema=='escuro'?'claro':'escuro');h.dataset.tema=t;
+try{localStorage.setItem('tema',t)}catch(e){}}
+try{var _t=localStorage.getItem('tema')}catch(e){}
+document.documentElement.dataset.tema=_t||(matchMedia('(prefers-color-scheme:dark)').matches?'escuro':'claro');
+</script>
+</head>
+<body>
+<input type="checkbox" id="abrir-menu" hidden>
+<label for="abrir-menu" class="botao-menu" aria-label="Abrir menu">☰</label>
+<label for="abrir-menu" class="fundo-menu"></label>
+<button class="botao-tema" onclick="tema()" aria-label="Alternar tema claro/escuro"
+        title="Alternar tema claro/escuro"><span class="i-claro">🌙</span><span class="i-escuro">☀️</span></button>
+
+<aside>
+  <a class="marca" href="../index.html">Tráfego Pago<small>do zero ao primeiro cliente</small></a>
+  <ul class="topo"><li><a href="../index.html"><i>🏠</i>Início</a></li></ul><p class="bloco">Fundamento</p><ul><li><a href="../fase-00-fundamentos.html"><i>🧭</i>00 · Fundamentos</a></li><li><a href="../fase-01-matematica.html"><i>🧮</i>01 · A matemática</a></li><li><a href="../fase-02-infraestrutura.html"><i>🔧</i>02 · Infraestrutura</a></li></ul><p class="bloco">Execução técnica</p><ul><li><a href="../fase-03-meta-ads.html"><i>📱</i>03 · Meta Ads</a></li><li><a href="../fase-04-google-ads.html"><i>🔍</i>04 · Google Ads</a></li><li><a href="../fase-05-tiktok-kwai.html"><i>🎵</i>05 · TikTok e Kwai</a></li><li><a href="../fase-06-criativo-copy-oferta.html"><i>🎨</i>06 · Criativo e oferta</a></li><li><a href="../fase-07-mensuracao.html"><i>📊</i>07 · Mensuração</a></li><li><a href="../fase-08-otimizacao-escala.html"><i>📈</i>08 · Otimização e escala</a></li></ul><p class="bloco">O negócio</p><ul><li><a href="../fase-09-vender-o-servico.html"><i>💼</i>09 · Vender o serviço</a></li><li><a href="../fase-10-contrato-legal.html"><i>⚖️</i>10 · Contrato e legal</a></li><li><a href="../fase-11-operacao-rotina.html"><i>🔄</i>11 · Operação e rotina</a></li><li><a href="../fase-12-problemas-reais.html"><i>🚨</i>12 · Problemas reais</a></li></ul><p class="bloco">Templates</p><ul><li><a href="../templates/proposta-comercial.html"><i>📄</i>Proposta comercial</a></li><li><a href="../templates/contrato-modelo.html"><i>📑</i>Contrato modelo</a></li><li><a href="../templates/briefing-onboarding.html"><i>📋</i>Briefing e onboarding</a></li><li><a href="../templates/relatorio-mensal.html"><i>📊</i>Relatório mensal</a></li><li><a href="../templates/auditoria-de-conta.html"><i>🔎</i>Auditoria de conta</a></li><li><a href="../templates/scripts-de-venda.html"><i>💬</i>Scripts de venda</a></li></ul><p class="bloco">Ferramenta</p><ul><li><a href="../planilhas/calculadora-viabilidade.html"><i>🧮</i>Calculadora</a></li></ul>
+</aside>
+
+<main>
+  <article><h1>Templates</h1><p>Documentos prontos para preencher e usar.</p><ul class="cartoes"><li><a href="proposta-comercial.html"><i>📄</i>Proposta comercial</a></li><li><a href="contrato-modelo.html"><i>📑</i>Contrato modelo</a></li><li><a href="briefing-onboarding.html"><i>📋</i>Briefing e onboarding</a></li><li><a href="relatorio-mensal.html"><i>📊</i>Relatório mensal</a></li><li><a href="auditoria-de-conta.html"><i>🔎</i>Auditoria de conta</a></li><li><a href="scripts-de-venda.html"><i>💬</i>Scripts de venda</a></li></ul></article>
+  
+  <footer class="rodape">Curso de tráfego pago · conteúdo de setembro de 2026</footer>
+</main>
+</body>
+</html>

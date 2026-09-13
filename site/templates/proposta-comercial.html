@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Template — Proposta comercial — Tráfego Pago</title>
+<link rel="stylesheet" href="../assets/estilo.css">
+<script>
+/* Roda antes do primeiro pixel, senão a página pisca no tema errado.
+   Sem argumento, alterna. localStorage em try/catch: file:// pode bloquear. */
+function tema(t){var h=document.documentElement;
+t=t||(h.dataset.tema=='escuro'?'claro':'escuro');h.dataset.tema=t;
+try{localStorage.setItem('tema',t)}catch(e){}}
+try{var _t=localStorage.getItem('tema')}catch(e){}
+document.documentElement.dataset.tema=_t||(matchMedia('(prefers-color-scheme:dark)').matches?'escuro':'claro');
+</script>
+</head>
+<body>
+<input type="checkbox" id="abrir-menu" hidden>
+<label for="abrir-menu" class="botao-menu" aria-label="Abrir menu">☰</label>
+<label for="abrir-menu" class="fundo-menu"></label>
+<button class="botao-tema" onclick="tema()" aria-label="Alternar tema claro/escuro"
+        title="Alternar tema claro/escuro"><span class="i-claro">🌙</span><span class="i-escuro">☀️</span></button>
+
+<aside>
+  <a class="marca" href="../index.html">Tráfego Pago<small>do zero ao primeiro cliente</small></a>
+  <ul class="topo"><li><a href="../index.html"><i>🏠</i>Início</a></li></ul><p class="bloco">Fundamento</p><ul><li><a href="../fase-00-fundamentos.html"><i>🧭</i>00 · Fundamentos</a></li><li><a href="../fase-01-matematica.html"><i>🧮</i>01 · A matemática</a></li><li><a href="../fase-02-infraestrutura.html"><i>🔧</i>02 · Infraestrutura</a></li></ul><p class="bloco">Execução técnica</p><ul><li><a href="../fase-03-meta-ads.html"><i>📱</i>03 · Meta Ads</a></li><li><a href="../fase-04-google-ads.html"><i>🔍</i>04 · Google Ads</a></li><li><a href="../fase-05-tiktok-kwai.html"><i>🎵</i>05 · TikTok e Kwai</a></li><li><a href="../fase-06-criativo-copy-oferta.html"><i>🎨</i>06 · Criativo e oferta</a></li><li><a href="../fase-07-mensuracao.html"><i>📊</i>07 · Mensuração</a></li><li><a href="../fase-08-otimizacao-escala.html"><i>📈</i>08 · Otimização e escala</a></li></ul><p class="bloco">O negócio</p><ul><li><a href="../fase-09-vender-o-servico.html"><i>💼</i>09 · Vender o serviço</a></li><li><a href="../fase-10-contrato-legal.html"><i>⚖️</i>10 · Contrato e legal</a></li><li><a href="../fase-11-operacao-rotina.html"><i>🔄</i>11 · Operação e rotina</a></li><li><a href="../fase-12-problemas-reais.html"><i>🚨</i>12 · Problemas reais</a></li></ul><p class="bloco">Templates</p><ul><li><a href="../templates/proposta-comercial.html" class="ativo"><i>📄</i>Proposta comercial</a></li><li><a href="../templates/contrato-modelo.html"><i>📑</i>Contrato modelo</a></li><li><a href="../templates/briefing-onboarding.html"><i>📋</i>Briefing e onboarding</a></li><li><a href="../templates/relatorio-mensal.html"><i>📊</i>Relatório mensal</a></li><li><a href="../templates/auditoria-de-conta.html"><i>🔎</i>Auditoria de conta</a></li><li><a href="../templates/scripts-de-venda.html"><i>💬</i>Scripts de venda</a></li></ul><p class="bloco">Ferramenta</p><ul><li><a href="../planilhas/calculadora-viabilidade.html"><i>🧮</i>Calculadora</a></li></ul>
+</aside>
+
+<main>
+  <article><h1>Template — Proposta comercial</h1>
+<blockquote>
+<p><strong>Como usar:</strong> substitua <code>[colchetes]</code>. Máximo 2 páginas. Envie em PDF por WhatsApp ou e-mail e <strong>ligue no dia seguinte</strong>.</p>
+<p><strong>Regra de ouro:</strong> use as palavras que o cliente usou na reunião. Se ele disse "quero encher a agenda", escreva "encher a agenda", não "aumentar taxa de ocupação".</p>
+</blockquote>
+<hr />
+<h2>PROPOSTA DE GESTÃO DE TRÁFEGO PAGO</h2>
+<p><strong>Para:</strong> [Nome do negócio] — A/C [Nome do decisor]
+<strong>De:</strong> [Seu nome / empresa]
+<strong>Data:</strong> [dd/mm/aaaa] · <strong>Validade:</strong> 7 dias</p>
+<hr />
+<h3>1. O que eu entendi da nossa conversa</h3>
+<p>[Escreva 3–5 linhas com o problema DELE, nas palavras DELE.]</p>
+<blockquote>
+<p><em>Exemplo: Hoje a [Clínica X] recebe pacientes principalmente por indicação, o que traz um fluxo bom mas imprevisível — há semanas cheias e semanas vazias. O objetivo é ter um canal previsível de novos pacientes para implante, sem depender de indicação, e preencher os horários ociosos de terça e quarta.</em></p>
+</blockquote>
+<hr />
+<h3>2. A conta que fizemos juntos</h3>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ticket médio</td>
+<td>R$ [valor]</td>
+</tr>
+<tr>
+<td>Margem por cliente</td>
+<td>R$ [valor]</td>
+</tr>
+<tr>
+<td>Fecha 1 a cada</td>
+<td>[N] contatos</td>
+</tr>
+<tr>
+<td><strong>Custo máximo saudável por contato</strong></td>
+<td><strong>R$ [valor]</strong></td>
+</tr>
+<tr>
+<td>Meta de novos clientes/mês</td>
+<td>[N]</td>
+</tr>
+<tr>
+<td>Contatos necessários</td>
+<td>[N]</td>
+</tr>
+<tr>
+<td><strong>Verba de mídia recomendada</strong></td>
+<td><strong>R$ [valor]/mês</strong></td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>Com base nos números do seu negócio e no benchmark do setor. É uma projeção de trabalho, não uma garantia de resultado.</p>
+</blockquote>
+<hr />
+<h3>3. O que será feito</h3>
+<p><strong>Estruturação inicial</strong> <em>(primeiras 2 semanas)</em>
+- Auditoria e organização das contas de anúncio
+- Instalação e validação de rastreamento (pixel, API de conversões, conversões do Google)
+- Definição da oferta e do posicionamento das campanhas
+- Produção dos criativos iniciais</p>
+<p><strong>Gestão mensal</strong>
+- [N] campanhas ativas em [Meta Ads / Google Ads]
+- Produção de [N] criativos novos por mês
+- Otimização semanal (públicos, criativos, lances, palavras negativas)
+- Dashboard com acesso permanente e atualização automática
+- Relatório mensal + reunião de 30 minutos
+- Suporte via WhatsApp em horário comercial</p>
+<hr />
+<h3>4. O que NÃO está incluso</h3>
+<p>Para deixar claro desde o início:</p>
+<ul>
+<li>Verba de mídia (paga diretamente por você às plataformas)</li>
+<li>Criação de site ou landing page <em>(posso orçar à parte)</em></li>
+<li>Produção de fotos e vídeos profissionais</li>
+<li>Gestão de redes sociais e conteúdo orgânico</li>
+<li>Atendimento e follow-up dos contatos gerados</li>
+</ul>
+<hr />
+<h3>5. Investimento</h3>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Setup inicial <em>(uma única vez)</em></td>
+<td>R$ [valor]</td>
+</tr>
+<tr>
+<td>Gestão mensal</td>
+<td>R$ [valor]/mês</td>
+</tr>
+<tr>
+<td>Verba de mídia recomendada</td>
+<td>R$ [valor]/mês <em>(pago por você direto à plataforma)</em></td>
+</tr>
+<tr>
+<td><strong>Total do 1º mês</strong></td>
+<td><strong>R$ [valor]</strong></td>
+</tr>
+<tr>
+<td><strong>Meses seguintes</strong></td>
+<td><strong>R$ [valor]</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Condições</strong>
+- Fidelidade mínima: 90 dias <em>(tempo técnico necessário para as campanhas saírem da fase de aprendizado e gerarem dado confiável)</em>
+- Após 90 dias: renovação mensal, com 30 dias de aviso prévio
+- Pagamento: [Pix / boleto] até o dia [N] de cada mês
+- Nota fiscal emitida sobre o honorário de gestão</p>
+<hr />
+<h3>6. Cronograma</h3>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Período</th>
+<th>O que acontece</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Semana 1</td>
+<td>Estruturação, acessos e rastreamento</td>
+</tr>
+<tr>
+<td>Semana 2</td>
+<td>Campanhas no ar — <strong>fase de aprendizado</strong></td>
+</tr>
+<tr>
+<td>Semanas 3–4</td>
+<td>Otimização. Primeira leitura confiável dos números.</td>
+</tr>
+<tr>
+<td>Mês 2</td>
+<td>Otimização com dado consolidado</td>
+</tr>
+<tr>
+<td>Mês 3</td>
+<td>Avaliação de resultado e plano de escala</td>
+</tr>
+</tbody>
+</table></div>
+<p>⚠️ <strong>Importante:</strong> os primeiros 10 a 15 dias apresentam oscilação grande nos custos. Isso é parte do processo de calibração das plataformas e não indica problema.</p>
+<hr />
+<h3>7. Sobre o trabalho</h3>
+<p>[Seu case mais relevante, em 3 linhas. Se ainda não tem cliente, use o resultado do seu próprio teste — com números reais.]</p>
+<blockquote>
+<p><em>Exemplo: Em [mês], estruturei a captação de uma clínica de estética em Curitiba. Em 14 dias, 23 contatos a R$ 12 cada, com 4 agendamentos confirmados a partir de uma verba de R$ 280.</em></p>
+</blockquote>
+<hr />
+<h3>8. Próximo passo</h3>
+<p>Se fizer sentido, me avise por WhatsApp que eu envio o contrato para assinatura. Conseguimos iniciar a estruturação em até [N] dias úteis.</p>
+<p>Qualquer dúvida, me chama.</p>
+<p><strong>[Seu nome]</strong>
+[WhatsApp] · [e-mail] · [site/Instagram]</p>
+<hr />
+<h2>📌 Notas para você (apague antes de enviar)</h2>
+<p><strong>Checklist antes de mandar:</strong>
+- [ ] Todos os <code>[colchetes]</code> substituídos
+- [ ] Usei as palavras que ele usou na reunião
+- [ ] A conta da seção 2 bate com o que calculei ao vivo
+- [ ] Nenhuma promessa de resultado em lugar nenhum
+- [ ] Cabe em 2 páginas
+- [ ] Salvei como PDF com nome profissional: <code>Proposta - [Cliente] - [Mês].pdf</code></p>
+<p><strong>Follow-up:</strong>
+- Dia seguinte ao envio: ligue. <em>"Oi [nome], mandei a proposta ontem. Conseguiu dar uma olhada? Tem alguma dúvida que eu possa esclarecer?"</em>
+- Se não responder em 3 dias: mais uma mensagem. Depois disso, pare e volte em 30 dias.</p>
+<p><strong>Se pedir desconto:</strong> reduza o escopo junto com o preço. Nunca desconto puro.</p></article>
+  <nav class="paginacao"><a class="nav-ant" href="../fase-12-problemas-reais.html"><span>← Anterior</span>12 · Problemas reais</a><a class="nav-prox" href="../templates/contrato-modelo.html"><span>Próximo →</span>Contrato modelo</a></nav>
+  <footer class="rodape">Curso de tráfego pago · conteúdo de setembro de 2026</footer>
+</main>
+</body>
+</html>

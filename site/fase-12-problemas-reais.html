@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fase 12 — Problemas reais — Tráfego Pago</title>
+<link rel="stylesheet" href="assets/estilo.css">
+<script>
+/* Roda antes do primeiro pixel, senão a página pisca no tema errado.
+   Sem argumento, alterna. localStorage em try/catch: file:// pode bloquear. */
+function tema(t){var h=document.documentElement;
+t=t||(h.dataset.tema=='escuro'?'claro':'escuro');h.dataset.tema=t;
+try{localStorage.setItem('tema',t)}catch(e){}}
+try{var _t=localStorage.getItem('tema')}catch(e){}
+document.documentElement.dataset.tema=_t||(matchMedia('(prefers-color-scheme:dark)').matches?'escuro':'claro');
+</script>
+</head>
+<body>
+<input type="checkbox" id="abrir-menu" hidden>
+<label for="abrir-menu" class="botao-menu" aria-label="Abrir menu">☰</label>
+<label for="abrir-menu" class="fundo-menu"></label>
+<button class="botao-tema" onclick="tema()" aria-label="Alternar tema claro/escuro"
+        title="Alternar tema claro/escuro"><span class="i-claro">🌙</span><span class="i-escuro">☀️</span></button>
+
+<aside>
+  <a class="marca" href="index.html">Tráfego Pago<small>do zero ao primeiro cliente</small></a>
+  <ul class="topo"><li><a href="index.html"><i>🏠</i>Início</a></li></ul><p class="bloco">Fundamento</p><ul><li><a href="fase-00-fundamentos.html"><i>🧭</i>00 · Fundamentos</a></li><li><a href="fase-01-matematica.html"><i>🧮</i>01 · A matemática</a></li><li><a href="fase-02-infraestrutura.html"><i>🔧</i>02 · Infraestrutura</a></li></ul><p class="bloco">Execução técnica</p><ul><li><a href="fase-03-meta-ads.html"><i>📱</i>03 · Meta Ads</a></li><li><a href="fase-04-google-ads.html"><i>🔍</i>04 · Google Ads</a></li><li><a href="fase-05-tiktok-kwai.html"><i>🎵</i>05 · TikTok e Kwai</a></li><li><a href="fase-06-criativo-copy-oferta.html"><i>🎨</i>06 · Criativo e oferta</a></li><li><a href="fase-07-mensuracao.html"><i>📊</i>07 · Mensuração</a></li><li><a href="fase-08-otimizacao-escala.html"><i>📈</i>08 · Otimização e escala</a></li></ul><p class="bloco">O negócio</p><ul><li><a href="fase-09-vender-o-servico.html"><i>💼</i>09 · Vender o serviço</a></li><li><a href="fase-10-contrato-legal.html"><i>⚖️</i>10 · Contrato e legal</a></li><li><a href="fase-11-operacao-rotina.html"><i>🔄</i>11 · Operação e rotina</a></li><li><a href="fase-12-problemas-reais.html" class="ativo"><i>🚨</i>12 · Problemas reais</a></li></ul><p class="bloco">Templates</p><ul><li><a href="templates/proposta-comercial.html"><i>📄</i>Proposta comercial</a></li><li><a href="templates/contrato-modelo.html"><i>📑</i>Contrato modelo</a></li><li><a href="templates/briefing-onboarding.html"><i>📋</i>Briefing e onboarding</a></li><li><a href="templates/relatorio-mensal.html"><i>📊</i>Relatório mensal</a></li><li><a href="templates/auditoria-de-conta.html"><i>🔎</i>Auditoria de conta</a></li><li><a href="templates/scripts-de-venda.html"><i>💬</i>Scripts de venda</a></li></ul><p class="bloco">Ferramenta</p><ul><li><a href="planilhas/calculadora-viabilidade.html"><i>🧮</i>Calculadora</a></li></ul>
+</aside>
+
+<main>
+  <article><h1>Fase 12 — Problemas reais</h1>
+<blockquote>
+<p>Sua sala de emergência. Não leia tudo agora — leia a seção 1 e volte aqui quando o problema aparecer.
+<strong>Todos estes problemas vão acontecer com você.</strong> A diferença entre o profissional e o amador não é evitá-los, é ter protocolo.</p>
+</blockquote>
+<hr />
+<h2>🚨 1. Conta de anúncios bloqueada</h2>
+<p>O problema nº 1 da profissão. Vai acontecer.</p>
+<h3>Primeiro: identifique o tipo</h3>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Sintoma</th>
+<th>Gravidade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Anúncio reprovado</strong></td>
+<td>Só um anúncio, resto roda</td>
+<td>🟢 Leve</td>
+</tr>
+<tr>
+<td><strong>Conta de anúncios restrita</strong></td>
+<td>Conta específica parada</td>
+<td>🟡 Média</td>
+</tr>
+<tr>
+<td><strong>Business Manager restrito</strong></td>
+<td>Todas as contas do BM paradas</td>
+<td>🔴 Grave</td>
+</tr>
+<tr>
+<td><strong>Perfil pessoal restrito</strong></td>
+<td>Você perde acesso a tudo</td>
+<td>🔴 Grave</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Protocolo de resposta</h3>
+<p><strong>Passo 1 — Nas primeiras 2 horas</strong></p>
+<pre><code>□ NÃO crie conta nova, NÃO crie BM novo, NÃO tente contornar
+  (isso confirma o padrão suspeito e derruba o que sobrou)
+□ Leia a notificação exata. Qual política foi citada?
+□ Print de tudo
+□ AVISE O CLIENTE IMEDIATAMENTE (seção abaixo)
+□ Ative a conta reserva, se você criou uma (Fase 02)
+</code></pre>
+<p><strong>Passo 2 — Recurso</strong></p>
+<pre><code>□ Central de Qualidade da Conta: facebook.com/accountquality
+□ Solicitar análise
+□ Se houver campo de texto, escreva de forma objetiva:
+  - Qual o negócio e o que ele vende (legítimo, com site)
+  - Que você revisou as políticas
+  - O que foi corrigido especificamente
+□ Verificação de identidade, se solicitada
+□ Chat de suporte, se disponível na conta
+</code></pre>
+<p><strong>Modelo de texto para recurso:</strong></p>
+<pre><code>Somos [nome da empresa], [ramo], atuando em [cidade] desde [ano].
+Nosso site é [url] e nossa atividade é [descrição objetiva].
+
+Revisamos as Políticas de Publicidade e identificamos que
+[descreva o possível motivo]. Já corrigimos [ação específica].
+
+Solicitamos a reanálise da conta. Estamos à disposição para
+enviar qualquer documentação necessária.
+</code></pre>
+<p><strong>Objetivo, factual, sem drama.</strong> Quem lê (ou o sistema que lê) não responde a apelo emocional.</p>
+<p><strong>Passo 3 — Enquanto espera</strong></p>
+<pre><code>□ Migrar para a conta reserva do mesmo BM
+□ Se o BM inteiro caiu: o cliente cria uma nova estrutura
+  no nome dele, você recebe acesso de parceiro
+□ Redirecionar verba para Google, se houver conta lá
+□ Update diário ao cliente, mesmo sem novidade
+</code></pre>
+<h3>Como comunicar ao cliente</h3>
+<blockquote>
+<p><em>"[Nome], preciso te avisar de um problema: a conta de anúncios foi restrita pelo Meta hoje de manhã. Isso acontece com alguma frequência no mercado e geralmente é revertido, mas o prazo depende exclusivamente deles.</em></p>
+<p><em>O que já fiz: entrei com recurso às 9h e ativei a conta reserva que a gente deixou preparada justamente para isso. As campanhas voltam ao ar hoje ainda, com verba reduzida nos primeiros dias por segurança.</em></p>
+<p><em>Te atualizo todo dia até resolver."</em></p>
+</blockquote>
+<p><strong>O que essa mensagem faz:</strong> avisa antes de ele descobrir, mostra que existe um plano pronto, e demonstra que você <strong>previu</strong> essa possibilidade. Isso é competência visível.</p>
+<blockquote>
+<p>📄 Este é o momento em que a <strong>cláusula de risco de plataforma</strong> do contrato (Fase 10) te protege. Sem ela, você vira o culpado por uma decisão de um algoritmo da Meta.</p>
+</blockquote>
+<h3>Prevenção (releia a Fase 02)</h3>
+<pre><code>✅ Conta reserva criada e nunca usada
+✅ Aquecimento gradual de conta nova
+✅ Perfil pessoal real, com 2FA
+✅ Sem VPN, sem troca de dispositivo constante
+✅ Políticas lidas antes de escrever a copy
+✅ Cliente como segundo administrador do BM
+</code></pre>
+<hr />
+<h2>2. Anúncio reprovado</h2>
+<p><strong>Não é bloqueio.</strong> É rotina. Não entre em pânico.</p>
+<pre><code>1. Leia o motivo específico da reprovação
+2. Se você entende o motivo → corrija e republique
+3. Se você NÃO entende → solicite revisão (o sistema erra bastante)
+4. Se reprovar de novo → reescreva por outro ângulo
+</code></pre>
+<p><strong>Causas mais comuns:</strong></p>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Causa</th>
+<th>Correção</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Afirma condição pessoal ("você está acima do peso")</td>
+<td>Reescrever falando do método, não da pessoa</td>
+</tr>
+<tr>
+<td>Promete resultado ("emagreça 10kg")</td>
+<td>Trocar por jornada/possibilidade</td>
+</tr>
+<tr>
+<td>Antes e depois de corpo</td>
+<td>Remover. Usar depoimento em vez de imagem comparativa</td>
+</tr>
+<tr>
+<td>Categoria especial não declarada (emprego, crédito, imóvel)</td>
+<td>Marcar a categoria na campanha</td>
+</tr>
+<tr>
+<td>Texto em excesso na imagem</td>
+<td>Reduzir</td>
+</tr>
+<tr>
+<td>Página de destino inconsistente com o anúncio</td>
+<td>Alinhar promessa</td>
+</tr>
+</tbody>
+</table></div>
+<p>⚠️ <strong>Muitas reprovações seguidas na mesma conta escalam para restrição.</strong> Se você levou 3 reprovações na semana, <strong>pare e revise sua abordagem inteira</strong> em vez de continuar tentando.</p>
+<hr />
+<h2>3. A campanha não performa</h2>
+<p>O diagnóstico em ordem. <strong>Siga a ordem</strong> — não pule para o passo 4 sem checar o 1.</p>
+<h3>Passo 1 — É problema técnico?</h3>
+<pre><code>□ O pixel está disparando? (Pixel Helper)
+□ Existe pixel duplicado?
+□ O evento de conversão é o correto?
+□ O link funciona? (teste você mesmo, no celular)
+□ A página carrega rápido no 4G?
+□ O formulário envia de verdade? (preencha você)
+□ O WhatsApp está recebendo?
+</code></pre>
+<p><strong>Metade dos "não performa" morre aqui.</strong> Um formulário quebrado faz a campanha parecer um desastre.</p>
+<h3>Passo 2 — É tempo insuficiente?</h3>
+<pre><code>□ Passaram 7 dias completos?
+□ A verba diária é ≥ 3× o CPA alvo?
+□ Saiu da fase de aprendizado?
+□ Alguém mexeu na campanha nesse período?
+</code></pre>
+<h3>Passo 3 — Onde exatamente vaza?</h3>
+<p>Use a tabela da <a href="fase-01-matematica.html#4-o-funil-em-números">Fase 01</a>:</p>
+<pre><code>CTR baixo               → criativo ou oferta
+CTR ok, sem lead        → página ou formulário
+Leads, sem venda        → qualidade do lead ou atendimento
+Tudo ok, CPL alto       → matemática do nicho
+</code></pre>
+<h3>Passo 4 — É a oferta?</h3>
+<p>Se você já testou <strong>3 ângulos de criativo diferentes</strong> e nada mudou, o problema não é criativo. <strong>É a oferta.</strong></p>
+<p>Volte à <a href="fase-06-criativo-copy-oferta.html">Fase 06</a> e reconstrua com os 7 componentes, junto com o cliente. Isso é trabalho de consultoria e você deve tratá-lo como tal.</p>
+<h3>Passo 5 — É o negócio?</h3>
+<p>A conversa difícil, mas honesta:
+- O preço está fora do mercado?
+- O produto tem problema real?
+- O atendimento demora demais?
+- A capacidade de entrega é insuficiente?</p>
+<blockquote>
+<p><strong>Quando o problema é o negócio, dizer isso com dados é a coisa mais valiosa que você pode fazer.</strong> Você pode perder o contrato — ou ganhar um cliente para a vida. Na minha experiência, a segunda opção é mais comum do que se imagina. Ninguém mais teve coragem de falar.</p>
+</blockquote>
+<hr />
+<h2>4. Cliente insatisfeito</h2>
+<h3>O protocolo</h3>
+<p><strong>1. Ouça primeiro. Não se defenda.</strong></p>
+<blockquote>
+<p><em>"Entendo sua frustração. Me conta especificamente o que está te incomodando?"</em></p>
+</blockquote>
+<p><strong>2. Separe percepção de dado.</strong>
+Muitas vezes a insatisfação é de <strong>expectativa</strong>, não de resultado. Ele achava que teria 50 clientes e teve 12 — mas 12 era o realista desde o início e ninguém disse isso a ele (o que é falha da venda, não da operação).</p>
+<p><strong>3. Traga os números.</strong></p>
+<blockquote>
+<p><em>"Deixa eu te mostrar o que aconteceu: em 60 dias foram 94 contatos a R$ 38 cada. A meta que a gente traçou era R$ 50, então estamos melhores que o previsto no custo. O que eu preciso entender é o que acontece depois — quantos desses 94 viraram cliente?"</em></p>
+</blockquote>
+<p><strong>4. Assuma o que é seu. Sem rodeio.</strong>
+Se você errou, admita direto e apresente a correção. Cliente perdoa erro admitido; não perdoa erro escondido.</p>
+<p><strong>5. Proponha um plano com prazo.</strong></p>
+<blockquote>
+<p><em>"Proposta: 30 dias focados em [ação específica]. Se no dia 30 a gente não tiver [meta clara], eu mesmo vou te dizer que não é comigo e a gente encerra sem multa."</em></p>
+</blockquote>
+<p><strong>Essa última frase salva mais contratos do que qualquer argumento.</strong> Ela demonstra confiança e remove a sensação de estar preso.</p>
+<hr />
+<h2>5. Cliente que não paga</h2>
+<p>Siga o protocolo da <a href="fase-10-contrato-legal.html#4-cobrança-e-inadimplência">Fase 10</a>. Sem exceção emocional.</p>
+<pre><code>Dia 1   → mensagem leve (&quot;deve ter passado batido&quot;)
+Dia 5   → cobrança formal por escrito
+Dia 10  → aviso de suspensão + suspender de fato
+Dia 30  → rescisão + cobrança formal
+</code></pre>
+<p><strong>Suspenda de verdade.</strong> O cliente que sabe que você não suspende nunca vai priorizar seu pagamento.</p>
+<p>⚠️ <strong>Nunca use a conta do cliente como refém</strong> — não apague campanhas, não delete criativos, não sabote. Suspenda o <strong>seu</strong> serviço (pare de otimizar, pare de produzir) e comunique formalmente. A diferença é jurídica e ética.</p>
+<hr />
+<h2>6. Cliente que não responde os leads</h2>
+<p>A causa nº 1 de "o tráfego não funcionou".</p>
+<h3>Como provar</h3>
+<p>Não acuse. <strong>Demonstre.</strong></p>
+<pre><code>1. Envie você mesmo um lead de teste, em horário comercial
+2. Cronometre a resposta
+3. Leve o dado para a reunião
+</code></pre>
+<blockquote>
+<p><em>"Enviei um lead de teste na terça às 14h. A resposta chegou quarta às 11h — 21 horas depois.</em></p>
+<p><em>Isso importa muito: lead respondido nos primeiros minutos converte várias vezes mais que lead respondido no dia seguinte. A pessoa que preencheu o formulário provavelmente preencheu o de mais dois concorrentes também, e quem responde primeiro leva.</em></p>
+<p><em>Sugestão: vamos testar 15 dias com resposta em até 10 minutos no horário comercial. Se a taxa de fechamento não melhorar, aí o problema é meu e eu ataco de outro jeito."</em></p>
+</blockquote>
+<p><strong>Você não culpou ninguém. Propôs um experimento.</strong> Se funcionar, você salvou o contrato e virou consultor. Se não funcionar, você eliminou uma variável e ganhou credibilidade.</p>
+<h3>Soluções práticas para oferecer</h3>
+<ul>
+<li>Notificação instantânea de lead novo (integração simples via automação)</li>
+<li>Mensagem automática de primeiro contato enquanto o humano não responde</li>
+<li>Planilha ou CRM simples para não perder ninguém</li>
+<li>Definir <strong>um</strong> responsável, com horário</li>
+</ul>
+<blockquote>
+<p>Cada um desses pode ser um <strong>serviço adicional cobrável</strong>.</p>
+</blockquote>
+<hr />
+<h2>7. Erros que VOCÊ vai cometer</h2>
+<h3>Gastou muito mais do que devia</h3>
+<p>Aconteceu: você configurou R$ 500/dia em vez de R$ 50 e só percebeu no dia seguinte.</p>
+<pre><code>1. Pause imediatamente
+2. Documente exatamente o que aconteceu
+3. AVISE O CLIENTE NA HORA — antes que ele veja a fatura
+4. Assuma o erro sem desculpa elaborada
+5. Proponha reparação: descontar do seu fee, ou compensar
+   com verba do próximo mês
+</code></pre>
+<blockquote>
+<p><em>"[Nome], errei e preciso te avisar antes que você veja a fatura. Configurei a verba errada ontem e a campanha gastou R$ 380 em vez de R$ 50. Já pausei e corrigi. Vou descontar os R$ 330 de diferença do meu honorário deste mês. Desculpa pelo transtorno."</em></p>
+</blockquote>
+<p><strong>Isso dói e custa dinheiro. E salva o contrato.</strong> Cliente que descobre sozinho um erro escondido nunca mais confia.</p>
+<p><strong>Prevenção:</strong> ao subir campanha, confira a verba <strong>duas vezes</strong>. E revise o gasto acumulado todo dia de manhã — é para isso que serve a checagem diária de 10 minutos.</p>
+<h3>Perdeu um cliente</h3>
+<p>Faça o <strong>post-mortem</strong> por escrito:</p>
+<pre><code>□ Ele saiu por resultado, comunicação, preço ou mudança no negócio dele?
+□ Eu poderia ter previsto? Quando apareceu o primeiro sinal?
+□ O que eu faria diferente?
+</code></pre>
+<p><strong>Anote. Padrões aparecem.</strong> Se três clientes saíram no mês 4, você tem um problema de processo no mês 3 — provavelmente comunicação, não técnica.</p>
+<h3>Prometeu o que não entregou</h3>
+<p>Assuma, renegocie, e <strong>ajuste seu discurso de venda</strong>. Se você prometeu demais uma vez, provavelmente está prometendo demais sistematicamente. Volte à <a href="fase-09-vender-o-servico.html">Fase 09</a>.</p>
+<hr />
+<h2>8. Concorrência: quando alguém entra pesado no leilão</h2>
+<p><strong>Sintomas:</strong> CPM subindo, CPL subindo, alcance caindo, sem mudança da sua parte.</p>
+<p><strong>Verifique:</strong> Biblioteca de Anúncios do nicho na sua região. Apareceu alguém novo anunciando pesado?</p>
+<p><strong>O que fazer:</strong></p>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>❌ Não faça</th>
+<th>✅ Faça</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Brigar por lance (ninguém ganha)</td>
+<td>Diferenciar a <strong>oferta</strong></td>
+</tr>
+<tr>
+<td>Copiar o concorrente</td>
+<td>Atacar ângulo que ele não usa</td>
+</tr>
+<tr>
+<td>Baixar preço do cliente</td>
+<td>Explorar formato que ele ignora (vídeo, se ele só usa foto)</td>
+</tr>
+<tr>
+<td>Entrar em pânico</td>
+<td>Reforçar remarketing (público que já é seu)</td>
+</tr>
+</tbody>
+</table></div>
+<p>E avise o cliente <strong>antes</strong> que ele pergunte por que o custo subiu. Mostre o print da Biblioteca de Anúncios do concorrente. Isso transforma um problema numa demonstração de domínio do mercado.</p>
+<hr />
+<h2>9. Quando VOCÊ é o problema</h2>
+<p>Duas situações reais que ninguém fala:</p>
+<h3>Síndrome do impostor</h3>
+<p>Você vai sentir que não sabe o suficiente para cobrar. Todo mundo sente.</p>
+<p><strong>A referência não é a perfeição — é o mercado.</strong> O mercado está cheio de gente cobrando R$ 500 e entregando campanha com objetivo errado e pixel não instalado. Se você fez as Fases 00 a 08 de verdade, <strong>você já está acima da média.</strong></p>
+<p>E o cliente não está comprando onisciência. Está comprando alguém que cuide daquilo por ele com método. Você tem método.</p>
+<h3>Quando considerar mudar de rota</h3>
+<p>Sinais honestos de que algo precisa mudar:
+- 12+ meses de dedicação real e nenhum cliente pagante
+- Você odeia a parte comercial e se recusa sistematicamente a prospectar
+- A ansiedade com dinheiro dos outros está afetando sua saúde</p>
+<p><strong>Isso não é fracasso.</strong> Pode significar que o caminho é outro dentro do mesmo mercado: trabalhar CLT como analista de mídia numa agência, focar em produção de criativo, ou em CRO e mensuração. São carreiras boas, com menos pressão comercial e a mesma base técnica que você construiu.</p>
+<hr />
+<h2>📋 Cartão de emergência</h2>
+<p>Cole na parede:</p>
+<pre><code>CONTA BLOQUEADA
+  1. Não crie nada novo    2. Recurso  3. Avise o cliente
+  4. Conta reserva         5. Update diário
+
+CAMPANHA NÃO PERFORMA
+  1. Técnico (pixel/link)  2. Tempo (7d?)  3. Onde vaza?
+  4. Oferta                5. O negócio
+
+CLIENTE BRAVO
+  1. Ouça  2. Dados  3. Assuma o que é seu
+  4. Plano com prazo e saída
+
+ERREI FEIO
+  1. Pause  2. Avise ANTES  3. Assuma  4. Repare
+
+NÃO PAGA
+  Dia 1 lembrete → Dia 5 formal → Dia 10 suspende → Dia 30 rescinde
+</code></pre>
+<hr />
+<h2>✅ Tarefas da Fase 12</h2>
+<ol>
+<li><strong>Monte seu kit de emergência:</strong> conta reserva, backup de criativos, documento de IDs</li>
+<li><strong>Escreva seus modelos de mensagem</strong> para: conta bloqueada, erro próprio, cliente insatisfeito</li>
+<li><strong>Imprima o cartão de emergência</strong></li>
+<li><strong>Revise as políticas de anúncio</strong> do seu nicho</li>
+<li><strong>Crie seu arquivo <code>post-mortem.md</code></strong> — você vai preencher com o tempo e ele vai te ensinar mais que qualquer curso</li>
+</ol>
+<hr />
+<p><strong>Fim do Bloco III.</strong></p>
+<p>Volte ao <a href="index.html">README</a> para o mapa completo, ou vá para os <a href="templates/index.html">templates</a>.</p></article>
+  <nav class="paginacao"><a class="nav-ant" href="fase-11-operacao-rotina.html"><span>← Anterior</span>11 · Operação e rotina</a><a class="nav-prox" href="templates/proposta-comercial.html"><span>Próximo →</span>Proposta comercial</a></nav>
+  <footer class="rodape">Curso de tráfego pago · conteúdo de setembro de 2026</footer>
+</main>
+</body>
+</html>

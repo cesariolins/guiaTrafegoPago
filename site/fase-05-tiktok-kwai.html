@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fase 05 — TikTok Ads e Kwai — Tráfego Pago</title>
+<link rel="stylesheet" href="assets/estilo.css">
+<script>
+/* Roda antes do primeiro pixel, senão a página pisca no tema errado.
+   Sem argumento, alterna. localStorage em try/catch: file:// pode bloquear. */
+function tema(t){var h=document.documentElement;
+t=t||(h.dataset.tema=='escuro'?'claro':'escuro');h.dataset.tema=t;
+try{localStorage.setItem('tema',t)}catch(e){}}
+try{var _t=localStorage.getItem('tema')}catch(e){}
+document.documentElement.dataset.tema=_t||(matchMedia('(prefers-color-scheme:dark)').matches?'escuro':'claro');
+</script>
+</head>
+<body>
+<input type="checkbox" id="abrir-menu" hidden>
+<label for="abrir-menu" class="botao-menu" aria-label="Abrir menu">☰</label>
+<label for="abrir-menu" class="fundo-menu"></label>
+<button class="botao-tema" onclick="tema()" aria-label="Alternar tema claro/escuro"
+        title="Alternar tema claro/escuro"><span class="i-claro">🌙</span><span class="i-escuro">☀️</span></button>
+
+<aside>
+  <a class="marca" href="index.html">Tráfego Pago<small>do zero ao primeiro cliente</small></a>
+  <ul class="topo"><li><a href="index.html"><i>🏠</i>Início</a></li></ul><p class="bloco">Fundamento</p><ul><li><a href="fase-00-fundamentos.html"><i>🧭</i>00 · Fundamentos</a></li><li><a href="fase-01-matematica.html"><i>🧮</i>01 · A matemática</a></li><li><a href="fase-02-infraestrutura.html"><i>🔧</i>02 · Infraestrutura</a></li></ul><p class="bloco">Execução técnica</p><ul><li><a href="fase-03-meta-ads.html"><i>📱</i>03 · Meta Ads</a></li><li><a href="fase-04-google-ads.html"><i>🔍</i>04 · Google Ads</a></li><li><a href="fase-05-tiktok-kwai.html" class="ativo"><i>🎵</i>05 · TikTok e Kwai</a></li><li><a href="fase-06-criativo-copy-oferta.html"><i>🎨</i>06 · Criativo e oferta</a></li><li><a href="fase-07-mensuracao.html"><i>📊</i>07 · Mensuração</a></li><li><a href="fase-08-otimizacao-escala.html"><i>📈</i>08 · Otimização e escala</a></li></ul><p class="bloco">O negócio</p><ul><li><a href="fase-09-vender-o-servico.html"><i>💼</i>09 · Vender o serviço</a></li><li><a href="fase-10-contrato-legal.html"><i>⚖️</i>10 · Contrato e legal</a></li><li><a href="fase-11-operacao-rotina.html"><i>🔄</i>11 · Operação e rotina</a></li><li><a href="fase-12-problemas-reais.html"><i>🚨</i>12 · Problemas reais</a></li></ul><p class="bloco">Templates</p><ul><li><a href="templates/proposta-comercial.html"><i>📄</i>Proposta comercial</a></li><li><a href="templates/contrato-modelo.html"><i>📑</i>Contrato modelo</a></li><li><a href="templates/briefing-onboarding.html"><i>📋</i>Briefing e onboarding</a></li><li><a href="templates/relatorio-mensal.html"><i>📊</i>Relatório mensal</a></li><li><a href="templates/auditoria-de-conta.html"><i>🔎</i>Auditoria de conta</a></li><li><a href="templates/scripts-de-venda.html"><i>💬</i>Scripts de venda</a></li></ul><p class="bloco">Ferramenta</p><ul><li><a href="planilhas/calculadora-viabilidade.html"><i>🧮</i>Calculadora</a></li></ul>
+</aside>
+
+<main>
+  <article><h1>Fase 05 — TikTok Ads e Kwai</h1>
+<blockquote>
+<p><strong>Pré-requisito:</strong> Fases 03 e 04.
+<strong>Tempo:</strong> 1 semana.
+<strong>Verba:</strong> opcional. Só rode se sobrar do orçamento.</p>
+</blockquote>
+<hr />
+<h2>Leitura honesta antes de começar</h2>
+<p>Esta fase é curta de propósito. TikTok é a <strong>terceira prioridade</strong>, não a primeira.</p>
+<p><strong>Por que não priorizar agora:</strong>
+- Pouquíssimo cliente de serviço local pede TikTok
+- O criativo exige produção de vídeo nativo — mais trabalho por real investido
+- Menos maduro em mensuração e atribuição que Meta e Google
+- Público comprador de alto ticket ainda está mais no Meta</p>
+<p><strong>Por que você precisa saber mesmo assim:</strong>
+- <strong>CPM significativamente mais barato</strong> que Meta — em alguns nichos, metade do preço
+- Cliente vai perguntar. Saber responder com propriedade é autoridade.
+- Para certos nichos (moda, beleza, food, produto visual, público 18–30) <strong>funciona muito bem</strong>
+- É um diferencial de proposta: "eu também rodo TikTok" te separa do gestor genérico
+- Quando o CPM do Meta sobe (Black Friday, eleição), o TikTok vira válvula de escape</p>
+<p><strong>A regra:</strong> domine Meta, aprenda Google, <strong>conheça</strong> TikTok. Nesta ordem.</p>
+<hr />
+<h2>1. Quando TikTok vale a pena</h2>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>✅ Vale</th>
+<th>❌ Não vale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Público 18–35</td>
+<td>Público 45+</td>
+</tr>
+<tr>
+<td>Produto visual (moda, beleza, food, decoração)</td>
+<td>B2B, industrial, serviço técnico</td>
+</tr>
+<tr>
+<td>Ticket baixo/médio, decisão rápida</td>
+<td>Alto ticket com ciclo longo</td>
+</tr>
+<tr>
+<td>Cliente consegue produzir vídeo com frequência</td>
+<td>Cliente só tem foto de banco de imagem</td>
+</tr>
+<tr>
+<td>Verba a partir de R$ 1.500/mês</td>
+<td>Verba &lt; R$ 1.000 (concentre no Meta)</td>
+</tr>
+<tr>
+<td>Objetivo: volume e descoberta</td>
+<td>Objetivo: colher demanda existente</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Teste de decisão em 10 segundos:</strong> o cliente consegue gravar 4 vídeos por mês com o celular? Se não, TikTok não é para ele — e insistir só vai gerar frustração dos dois lados.</p>
+<hr />
+<h2>2. Diferenças práticas em relação ao Meta</h2>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th></th>
+<th>Meta</th>
+<th>TikTok</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Formato que funciona</td>
+<td>Imagem ainda performa</td>
+<td><strong>Só vídeo vertical.</strong> Imagem é ignorada.</td>
+</tr>
+<tr>
+<td>Estética</td>
+<td>Produção polida aceita</td>
+<td><strong>Anúncio que parece anúncio morre.</strong> Precisa parecer conteúdo.</td>
+</tr>
+<tr>
+<td>Primeiro segundo</td>
+<td>Importa</td>
+<td><strong>Decide tudo.</strong> Você tem ~1,5s</td>
+</tr>
+<tr>
+<td>Duração ideal</td>
+<td>Varia</td>
+<td>9–21 segundos na maioria dos casos</td>
+</tr>
+<tr>
+<td>Vida útil do criativo</td>
+<td>3–6 semanas</td>
+<td><strong>1–3 semanas.</strong> Fadiga muito mais rápida</td>
+</tr>
+<tr>
+<td>Áudio</td>
+<td>Maioria assiste sem som</td>
+<td><strong>Áudio é parte do criativo.</strong> Som e trend importam</td>
+</tr>
+</tbody>
+</table></div>
+<h3>A regra que define TikTok</h3>
+<blockquote>
+<h2>Se parece anúncio, ninguém assiste. Se parece conteúdo, vende.</h2>
+</blockquote>
+<p>O criativo vencedor no TikTok geralmente é:
+- Gravado no celular, vertical, sem produção
+- Alguém falando direto para a câmera
+- Legenda queimada no vídeo
+- Corte rápido nos primeiros 2 segundos
+- Trilha ou áudio em alta na plataforma</p>
+<p>Um vídeo institucional caro e bem produzido costuma performar <strong>pior</strong> que um vídeo do dono do negócio falando no estoque da loja. Isso é contraintuitivo para o cliente — prepare-se para essa conversa.</p>
+<hr />
+<h2>3. Setup rápido</h2>
+<ol>
+<li><strong>ads.tiktok.com</strong> → criar conta Business</li>
+<li>Instale o <strong>TikTok Pixel</strong> (via Google Tag Manager — Fase 07)</li>
+<li>Configure os eventos: <code>CompletePayment</code>, <code>SubmitForm</code>, <code>ViewContent</code></li>
+<li>Ative a <strong>Events API</strong> (equivalente da CAPI do Meta) se o cliente tiver e-commerce</li>
+</ol>
+<h3>Estrutura de campanha</h3>
+<p>Mesma lógica de três níveis:</p>
+<pre><code>📁 CAMPANHA — objetivo
+    └── 📂 GRUPO DE ANÚNCIOS — público, verba, posicionamento
+          └── 📄 ANÚNCIO — o vídeo
+</code></pre>
+<p><strong>Objetivos principais:</strong> Tráfego, Geração de leads, Conversões, Vendas no catálogo.</p>
+<p><strong>Segmentação:</strong> mesma filosofia de 2026 — vá amplo. Deixe a IA trabalhar. Use <code>Smart Performance Campaign</code> (equivalente ao Advantage+) quando quiser simplificar.</p>
+<p><strong>Verba mínima:</strong> o TikTok costuma exigir mínimos por grupo de anúncios (algo em torno de R$ 100/dia na conversão, variável). Isso por si só já exclui cliente de verba pequena.</p>
+<hr />
+<h2>4. Spark Ads: o recurso que mais vale a pena</h2>
+<p><strong>Spark Ads</strong> permite impulsionar um post orgânico real — do perfil do cliente ou de um creator (com autorização).</p>
+<p>Por que é o melhor formato do TikTok:
+- Mantém curtidas, comentários e compartilhamentos reais → prova social embutida
+- Parece conteúdo, não anúncio (que é a regra da seção 2)
+- Direciona para o perfil, gerando seguidores além da conversão
+- Costuma ter custo por resultado melhor que anúncio criado do zero</p>
+<p><strong>Fluxo:</strong> cliente posta orgânico → você identifica o que teve melhor retenção → impulsiona como Spark Ad.</p>
+<blockquote>
+<p><strong>Isso vira um serviço vendável:</strong> <em>"eu monitoro seus posts orgânicos e impulsiono os que já provaram que funcionam"</em>. É fácil de explicar, barato de executar, e o cliente enxerga o valor.</p>
+</blockquote>
+<hr />
+<h2>5. Kwai Ads — o nicho negligenciado</h2>
+<p>Kwai tem presença forte no Brasil, especialmente:
+- Fora dos grandes centros urbanos
+- Classes C e D
+- Público 25–45</p>
+<p><strong>Quando considerar:</strong> produto de ticket baixo, apelo popular, alcance nacional, verba que precisa render muito CPM.</p>
+<p><strong>Vantagem:</strong> CPM baixíssimo e concorrência muito menor — quase ninguém anuncia lá.</p>
+<p><strong>Desvantagem:</strong> plataforma menos madura, menos recursos de mensuração, suporte fraco.</p>
+<p><strong>Veredito honesto:</strong> não é prioridade, mas é <strong>uma ótima carta na manga</strong> para cliente com produto popular e verba apertada. Saber que existe já te diferencia.</p>
+<hr />
+<h2>6. A decisão de alocação entre plataformas</h2>
+<p>Quando o cliente pergunta "onde eu invisto?", esta tabela responde:</p>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Verba mensal</th>
+<th>Alocação recomendada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Até R$ 1.500</td>
+<td><strong>100% Meta.</strong> Fragmentar mata o aprendizado em todas.</td>
+</tr>
+<tr>
+<td>R$ 1.500–3.000</td>
+<td>70% Meta / 30% Google (marca + principais serviços)</td>
+</tr>
+<tr>
+<td>R$ 3.000–8.000</td>
+<td>50% Meta / 40% Google / 10% teste (TikTok)</td>
+</tr>
+<tr>
+<td>R$ 8.000+</td>
+<td>40% Meta / 40% Google / 20% TikTok e Demand Gen</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p><strong>O princípio:</strong> cada plataforma precisa de verba suficiente para sair da fase de aprendizado. <strong>Três plataformas com verba insuficiente performam pior que uma plataforma bem alimentada.</strong> Essa frase já ganhou discussão com cliente para mim — use.</p>
+</blockquote>
+<hr />
+<h2>✅ Tarefas da Fase 05</h2>
+<ol>
+<li>Crie a conta no TikTok Ads (mesmo sem rodar) — conhecer a interface é parte do trabalho</li>
+<li>Passe 20 minutos no <strong>TikTok Creative Center</strong> (gratuito, público) vendo os anúncios de melhor performance do Brasil. Anote o padrão dos 3 primeiros segundos.</li>
+<li>Escreva no caderno: dos negócios que você conhece, quais se beneficiariam de TikTok e quais não? <strong>Justifique.</strong> Essa justificativa é o que você vai falar na reunião.</li>
+<li><em>(Opcional)</em> Se sobrar verba: grave 3 vídeos verticais de 15s do seu negócio de teste e rode R$ 100 no TikTok. Compare o CPM com o do Meta.</li>
+</ol>
+<hr />
+<h2>Checagem de entendimento</h2>
+<ol>
+<li>Cliente com clínica de implante dentário, ticket R$ 4.000, quer anunciar no TikTok porque "está todo mundo lá". O que você responde?</li>
+<li>Por que o vídeo institucional bem produzido costuma performar pior que o vídeo caseiro no TikTok?</li>
+</ol>
+<details>
+<summary>Respostas</summary>
+<p><strong>1.</strong> Não é um "não", é um "ainda não". Alto ticket com ciclo de decisão longo converte mal em plataforma de descoberta rápida, e o público de implante tende a ser mais velho que o núcleo do TikTok. Proposta: consolidar Meta e Google primeiro (onde está a intenção), e reservar de 10% a 15% da verba para testar TikTok <strong>depois</strong> que a base estiver estável — com vídeos de autoridade, não de oferta. Você não recusou o cliente, você sequenciou. E ancorou uma verba maior no futuro.</p>
+<p><strong>2.</strong> Porque o usuário do TikTok está em modo de consumo de conteúdo, não de propaganda. Produção polida sinaliza "isto é um anúncio" no primeiro quadro, e o dedo desce antes do segundo 2. O vídeo caseiro passa pelo filtro mental e ganha os 3 segundos necessários para a mensagem entrar.</p>
+</details>
+<hr />
+<p><strong>Próxima:</strong> <a href="fase-06-criativo-copy-oferta.html">Fase 06 — Criativo, copy e oferta</a> — o que decide 80% do resultado em 2026.</p></article>
+  <nav class="paginacao"><a class="nav-ant" href="fase-04-google-ads.html"><span>← Anterior</span>04 · Google Ads</a><a class="nav-prox" href="fase-06-criativo-copy-oferta.html"><span>Próximo →</span>06 · Criativo e oferta</a></nav>
+  <footer class="rodape">Curso de tráfego pago · conteúdo de setembro de 2026</footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Template — Contrato de prestação de serviços — Tráfego Pago</title>
+<link rel="stylesheet" href="../assets/estilo.css">
+<script>
+/* Roda antes do primeiro pixel, senão a página pisca no tema errado.
+   Sem argumento, alterna. localStorage em try/catch: file:// pode bloquear. */
+function tema(t){var h=document.documentElement;
+t=t||(h.dataset.tema=='escuro'?'claro':'escuro');h.dataset.tema=t;
+try{localStorage.setItem('tema',t)}catch(e){}}
+try{var _t=localStorage.getItem('tema')}catch(e){}
+document.documentElement.dataset.tema=_t||(matchMedia('(prefers-color-scheme:dark)').matches?'escuro':'claro');
+</script>
+</head>
+<body>
+<input type="checkbox" id="abrir-menu" hidden>
+<label for="abrir-menu" class="botao-menu" aria-label="Abrir menu">☰</label>
+<label for="abrir-menu" class="fundo-menu"></label>
+<button class="botao-tema" onclick="tema()" aria-label="Alternar tema claro/escuro"
+        title="Alternar tema claro/escuro"><span class="i-claro">🌙</span><span class="i-escuro">☀️</span></button>
+
+<aside>
+  <a class="marca" href="../index.html">Tráfego Pago<small>do zero ao primeiro cliente</small></a>
+  <ul class="topo"><li><a href="../index.html"><i>🏠</i>Início</a></li></ul><p class="bloco">Fundamento</p><ul><li><a href="../fase-00-fundamentos.html"><i>🧭</i>00 · Fundamentos</a></li><li><a href="../fase-01-matematica.html"><i>🧮</i>01 · A matemática</a></li><li><a href="../fase-02-infraestrutura.html"><i>🔧</i>02 · Infraestrutura</a></li></ul><p class="bloco">Execução técnica</p><ul><li><a href="../fase-03-meta-ads.html"><i>📱</i>03 · Meta Ads</a></li><li><a href="../fase-04-google-ads.html"><i>🔍</i>04 · Google Ads</a></li><li><a href="../fase-05-tiktok-kwai.html"><i>🎵</i>05 · TikTok e Kwai</a></li><li><a href="../fase-06-criativo-copy-oferta.html"><i>🎨</i>06 · Criativo e oferta</a></li><li><a href="../fase-07-mensuracao.html"><i>📊</i>07 · Mensuração</a></li><li><a href="../fase-08-otimizacao-escala.html"><i>📈</i>08 · Otimização e escala</a></li></ul><p class="bloco">O negócio</p><ul><li><a href="../fase-09-vender-o-servico.html"><i>💼</i>09 · Vender o serviço</a></li><li><a href="../fase-10-contrato-legal.html"><i>⚖️</i>10 · Contrato e legal</a></li><li><a href="../fase-11-operacao-rotina.html"><i>🔄</i>11 · Operação e rotina</a></li><li><a href="../fase-12-problemas-reais.html"><i>🚨</i>12 · Problemas reais</a></li></ul><p class="bloco">Templates</p><ul><li><a href="../templates/proposta-comercial.html"><i>📄</i>Proposta comercial</a></li><li><a href="../templates/contrato-modelo.html" class="ativo"><i>📑</i>Contrato modelo</a></li><li><a href="../templates/briefing-onboarding.html"><i>📋</i>Briefing e onboarding</a></li><li><a href="../templates/relatorio-mensal.html"><i>📊</i>Relatório mensal</a></li><li><a href="../templates/auditoria-de-conta.html"><i>🔎</i>Auditoria de conta</a></li><li><a href="../templates/scripts-de-venda.html"><i>💬</i>Scripts de venda</a></li></ul><p class="bloco">Ferramenta</p><ul><li><a href="../planilhas/calculadora-viabilidade.html"><i>🧮</i>Calculadora</a></li></ul>
+</aside>
+
+<main>
+  <article><h1>Template — Contrato de prestação de serviços</h1>
+<blockquote>
+<p>⚠️ <strong>LEIA ANTES DE USAR</strong></p>
+<p>Este é um <strong>modelo de referência de mercado</strong>, não uma peça jurídica pronta. Leve-o a um advogado para revisão e adaptação ao seu caso — uma revisão de contrato simples custa pouco e você usa o mesmo documento por anos.</p>
+<p>As cláusulas marcadas com ⭐ são as que mais protegem você. Não as remova sem entender a consequência.</p>
+</blockquote>
+<hr />
+<h1>CONTRATO DE PRESTAÇÃO DE SERVIÇOS DE GESTÃO DE TRÁFEGO PAGO</h1>
+<p><strong>CONTRATADA:</strong> [Razão social], CNPJ [nº], com sede em [endereço], neste ato representada por [nome].</p>
+<p><strong>CONTRATANTE:</strong> [Razão social ou nome], CNPJ/CPF [nº], com sede em [endereço], neste ato representada por [nome].</p>
+<p>As partes acima têm entre si justo e contratado o seguinte:</p>
+<hr />
+<h2>CLÁUSULA 1 — DO OBJETO</h2>
+<p>1.1. O presente contrato tem por objeto a prestação, pela CONTRATADA, de serviços de planejamento, criação, veiculação, gestão e otimização de campanhas de publicidade digital paga nas plataformas [Meta Ads / Google Ads / outras], em favor do CONTRATANTE.</p>
+<p>1.2. <strong>Escopo mensal dos serviços:</strong>
+- a) Estruturação e manutenção das campanhas nas plataformas contratadas
+- b) Produção de até [N] peças criativas por mês
+- c) Redação dos textos publicitários
+- d) Otimização periódica de públicos, criativos, lances e palavras-chave
+- e) Configuração e monitoramento de ferramentas de mensuração
+- f) Relatório mensal de desempenho
+- g) 1 (uma) reunião mensal de alinhamento, de até 60 minutos
+- h) Suporte por [canal], em dias úteis, das [hh] às [hh]</p>
+<h2>⭐ CLÁUSULA 2 — DO QUE NÃO ESTÁ COMPREENDIDO</h2>
+<p>2.1. Não integram o objeto deste contrato, salvo contratação específica e adicional:
+- a) Criação, desenvolvimento, hospedagem ou manutenção de sites e landing pages
+- b) Produção audiovisual ou fotográfica profissional
+- c) Gestão de perfis em redes sociais e produção de conteúdo orgânico
+- d) Atendimento, qualificação, follow-up ou negociação com os contatos gerados
+- e) Criação de identidade visual, logotipo ou material gráfico impresso
+- f) Verba de mídia destinada às plataformas
+- g) Implementação de sistemas de CRM, automação ou integrações customizadas
+- h) Consultoria jurídica, contábil ou de adequação regulatória do CONTRATANTE</p>
+<h2>⭐ CLÁUSULA 3 — DA NATUREZA DA OBRIGAÇÃO</h2>
+<p>3.1. Os serviços objeto deste contrato constituem <strong>obrigação de meio, e não de resultado</strong>.</p>
+<p>3.2. A CONTRATADA compromete-se a empregar diligência, técnica adequada e as melhores práticas de mercado na execução dos serviços, <strong>não sendo responsável por garantir</strong> volume de leads, número de vendas, faturamento, taxa de conversão ou retorno financeiro específico.</p>
+<p>3.3. As partes reconhecem expressamente que o desempenho das campanhas depende de fatores alheios ao controle da CONTRATADA, incluindo, sem limitação: qualidade, preço e adequação do produto ou serviço ofertado; capacidade e agilidade do atendimento comercial do CONTRATANTE; atuação da concorrência; dinâmica dos leilões publicitários; alterações de políticas, algoritmos e funcionamento das plataformas; e condições de mercado.</p>
+<p>3.4. Eventuais projeções, estimativas ou metas apresentadas têm caráter meramente indicativo, baseadas em referências de mercado, <strong>não constituindo promessa, garantia ou obrigação de resultado</strong>.</p>
+<h2>⭐ CLÁUSULA 4 — DA VERBA DE MÍDIA</h2>
+<p>4.1. A verba destinada à veiculação dos anúncios é de <strong>responsabilidade exclusiva do CONTRATANTE</strong>, custeada diretamente por ele junto às plataformas, mediante meio de pagamento cadastrado em seu próprio nome.</p>
+<p>4.2. A verba de mídia <strong>não integra</strong> a remuneração da CONTRATADA, não transita por suas contas e não compõe a base de cálculo de seus honorários ou de sua nota fiscal.</p>
+<p>4.3. O CONTRATANTE declara ciência de que <strong>tributos incidentes sobre a veiculação de publicidade digital são debitados da própria verba pelas plataformas</strong>, de modo que o valor efetivamente investido em mídia é inferior ao valor aportado.</p>
+<p>4.4. A verba de mídia inicialmente acordada é de R$ [valor] mensais, podendo ser alterada mediante acordo entre as partes.</p>
+<p>4.5. A ausência de meio de pagamento válido ou a recusa da cobrança pelas plataformas suspende a veiculação, sem qualquer responsabilidade da CONTRATADA.</p>
+<h2>⭐ CLÁUSULA 5 — DA TITULARIDADE DOS ATIVOS</h2>
+<p>5.1. Permanecem de <strong>titularidade exclusiva do CONTRATANTE</strong>: as contas de anúncio, o Business Manager ou conta de administrador, as páginas e perfis, os pixels e conjuntos de dados, os públicos personalizados, os catálogos, os domínios, o site e todos os dados de clientes e visitantes.</p>
+<p>5.2. A CONTRATADA atuará mediante <strong>acesso concedido</strong> pelo CONTRATANTE, na condição de parceira, o qual poderá ser revogado a qualquer tempo, especialmente ao término deste contrato.</p>
+<p>5.3. As peças criativas produzidas pela CONTRATADA no âmbito deste contrato poderão ser utilizadas pelo CONTRATANTE durante sua vigência e após o término, para as finalidades publicitárias aqui previstas.</p>
+<h2>CLÁUSULA 6 — DA REMUNERAÇÃO E DO PAGAMENTO</h2>
+<p>6.1. <strong>Taxa de estruturação inicial:</strong> R$ [valor], devida integralmente antes do início dos serviços, em parcela única.</p>
+<p>6.2. <strong>Honorário mensal de gestão:</strong> R$ [valor], devido até o dia [N] de cada mês, <strong>de forma antecipada</strong> ao mês de prestação.</p>
+<p>6.3. Forma de pagamento: [Pix / boleto / transferência] para [dados].</p>
+<p>6.4. A CONTRATADA emitirá nota fiscal de serviços referente exclusivamente ao honorário de gestão.</p>
+<p>6.5. <strong>Do atraso:</strong> o inadimplemento sujeita o CONTRATANTE a multa de 2% (dois por cento) sobre o valor devido, acrescida de juros de 1% (um por cento) ao mês, calculados pro rata die.</p>
+<p>6.6. <strong>Da suspensão:</strong> decorridos 10 (dez) dias corridos de atraso, a CONTRATADA poderá suspender a prestação dos serviços, mediante comunicação prévia, sem que isso configure inadimplemento de sua parte e sem prejuízo da cobrança dos valores devidos.</p>
+<p>6.7. <strong>Do reajuste:</strong> os valores serão reajustados anualmente pelo [IPCA / IGP-M] ou por acordo entre as partes.</p>
+<h2>⭐ CLÁUSULA 7 — DAS OBRIGAÇÕES DO CONTRATANTE</h2>
+<p>7.1. Constituem obrigações do CONTRATANTE:
+- a) Conceder e manter os acessos necessários à execução dos serviços
+- b) Manter meio de pagamento válido e com limite suficiente nas plataformas
+- c) Fornecer, em prazo razoável, informações, materiais e aprovações solicitados
+- d) <strong>Atender e responder os contatos gerados pelas campanhas em prazo compatível com a natureza do negócio</strong>
+- e) Comunicar previamente alterações relevantes no negócio (preços, promoções, capacidade de atendimento, interrupção de serviços)
+- f) Assegurar que os produtos, serviços, preços e informações divulgados sejam verídicos, lícitos e estejam em conformidade com a legislação aplicável e com as políticas das plataformas
+- g) Manter em seu site Política de Privacidade e mecanismo de consentimento de cookies em conformidade com a legislação de proteção de dados</p>
+<p>7.2. O descumprimento das obrigações previstas nesta cláusula poderá comprometer o desempenho das campanhas, <strong>não sendo a CONTRATADA responsabilizada</strong> por resultados afetados por tais circunstâncias.</p>
+<h2>⭐ CLÁUSULA 8 — DOS RISCOS DE PLATAFORMA</h2>
+<p>8.1. A CONTRATADA <strong>não se responsabiliza</strong> por bloqueios, restrições ou suspensões de contas, perfis ou páginas; reprovações de anúncios; alterações unilaterais de políticas, algoritmos, formatos ou funcionalidades; instabilidades, falhas técnicas ou indisponibilidade das plataformas; nem por variações de custo decorrentes da dinâmica dos leilões publicitários.</p>
+<p>8.2. Ocorrendo qualquer das hipóteses acima, a CONTRATADA empreenderá os esforços tecnicamente cabíveis para o restabelecimento da operação, <strong>sem garantia de prazo ou de êxito</strong>, dado que a decisão é exclusiva das plataformas.</p>
+<p>8.3. As hipóteses desta cláusula não configuram inadimplemento contratual da CONTRATADA nem ensejam devolução de honorários.</p>
+<h2>CLÁUSULA 9 — DA PROTEÇÃO DE DADOS (LGPD)</h2>
+<p>9.1. Para os fins da Lei nº 13.709/2018 (LGPD), o CONTRATANTE figura como <strong>Controlador</strong> e a CONTRATADA como <strong>Operadora</strong> dos dados pessoais tratados no âmbito deste contrato.</p>
+<p>9.2. A CONTRATADA tratará os dados pessoais exclusivamente conforme as instruções do CONTRATANTE e para as finalidades deste contrato, obrigando-se a adotar medidas técnicas e administrativas de segurança compatíveis.</p>
+<p>9.3. O CONTRATANTE é responsável por assegurar base legal adequada para o tratamento, incluindo a obtenção de consentimento quando exigido, e por manter em seu site a Política de Privacidade e os mecanismos de consentimento pertinentes.</p>
+<p>9.4. Ao término do contrato, a CONTRATADA eliminará ou devolverá ao CONTRATANTE os dados pessoais em sua posse, salvo obrigação legal de retenção.</p>
+<p>9.5. As partes comunicarão uma à outra, sem demora injustificada, qualquer incidente de segurança de que tenham conhecimento.</p>
+<h2>CLÁUSULA 10 — DA CONFIDENCIALIDADE</h2>
+<p>10.1. As partes obrigam-se a manter sigilo sobre todas as informações estratégicas, comerciais, financeiras e técnicas a que tiverem acesso em razão deste contrato.</p>
+<p>10.2. A obrigação de confidencialidade subsiste por 2 (dois) anos após o término do contrato.</p>
+<h2>⭐ CLÁUSULA 11 — DO USO DO CASE</h2>
+<p>11.1. O CONTRATANTE autoriza a CONTRATADA a mencionar a existência da parceria e a utilizar dados de desempenho das campanhas, de forma [☐ identificada / ☐ anonimizada], em materiais de divulgação, portfólio, propostas comerciais e redes sociais.</p>
+<p>11.2. Dados sensíveis ou estratégicos expressamente indicados pelo CONTRATANTE como confidenciais não serão divulgados.</p>
+<p>11.3. Esta autorização pode ser revogada a qualquer tempo mediante comunicação por escrito.</p>
+<h2>CLÁUSULA 12 — DO PRAZO, RENOVAÇÃO E RESCISÃO</h2>
+<p>12.1. <strong>Prazo mínimo:</strong> 90 (noventa) dias, contados de [data / assinatura], prazo técnico reconhecido pelas partes como necessário para a calibração e a geração de dados estatisticamente relevantes.</p>
+<p>12.2. Findo o prazo mínimo, o contrato renova-se automaticamente por períodos mensais sucessivos.</p>
+<p>12.3. <strong>Rescisão após o prazo mínimo:</strong> por qualquer das partes, mediante aviso prévio por escrito de 30 (trinta) dias.</p>
+<p>12.4. <strong>Rescisão antes do prazo mínimo</strong> por iniciativa do CONTRATANTE, sem justa causa: multa equivalente a [50%] do valor dos honorários remanescentes até o término do prazo mínimo.</p>
+<p>12.5. <strong>Rescisão imediata por justa causa</strong>, por qualquer das partes, em caso de: inadimplemento superior a 30 dias; violação de confidencialidade; exigência de conduta ilícita ou contrária às políticas das plataformas; ou descumprimento reiterado das obrigações contratuais.</p>
+<p>12.6. <strong>Do encerramento:</strong> a CONTRATADA entregará relatório final consolidado e documentação do estado das campanhas, e removerá seus acessos em até 5 (cinco) dias úteis.</p>
+<h2>CLÁUSULA 13 — DISPOSIÇÕES GERAIS</h2>
+<p>13.1. Este contrato não estabelece vínculo empregatício, societário ou de exclusividade entre as partes.</p>
+<p>13.2. Alterações somente terão validade se formalizadas por escrito e assinadas por ambas as partes. Comunicações por [e-mail / WhatsApp] entre os representantes indicados são consideradas válidas para fins operacionais.</p>
+<p>13.3. A tolerância quanto ao descumprimento de qualquer cláusula não implica novação ou renúncia de direitos.</p>
+<p>13.4. Fica eleito o foro da comarca de [cidade/UF] para dirimir controvérsias oriundas deste contrato.</p>
+<p>E por estarem justas e contratadas, as partes assinam o presente instrumento.</p>
+<p>[Cidade], [dd] de [mês] de [aaaa].</p>
+<p><br></p>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>__________________________</td>
+<td>__________________________</td>
+</tr>
+<tr>
+<td><strong>CONTRATADA</strong></td>
+<td><strong>CONTRATANTE</strong></td>
+</tr>
+<tr>
+<td>[Nome]</td>
+<td>[Nome]</td>
+</tr>
+</tbody>
+</table></div>
+<p><br></p>
+<p><strong>Testemunhas:</strong></p>
+<ol>
+<li>
+<p>______________________ CPF: ________________</p>
+</li>
+<li>
+<p>______________________ CPF: ________________</p>
+</li>
+</ol>
+<hr />
+<h2>📌 Notas de uso (apague antes de enviar)</h2>
+<p><strong>Assinatura:</strong> use uma plataforma de assinatura eletrônica gratuita ou de baixo custo. Assinatura eletrônica com registro de IP e data tem validade jurídica e evita a fricção de imprimir e escanear.</p>
+<p><strong>Coerência é tudo:</strong> se sua proposta ou sua conversa de venda prometeu resultado ("garanto 30 leads"), a Cláusula 3 pode não te proteger — a promessa da negociação pode ser considerada parte do acordo. <strong>Venda obrigação de meio e assine obrigação de meio.</strong></p>
+<p><strong>Antes de enviar ao cliente:</strong>
+- [ ] Advogado revisou pelo menos uma vez
+- [ ] Todos os <code>[colchetes]</code> preenchidos
+- [ ] Escopo da Cláusula 1.2 bate exatamente com a proposta
+- [ ] Valores da Cláusula 6 batem com a proposta
+- [ ] Marquei a opção correta na Cláusula 11</p></article>
+  <nav class="paginacao"><a class="nav-ant" href="../templates/proposta-comercial.html"><span>← Anterior</span>Proposta comercial</a><a class="nav-prox" href="../templates/briefing-onboarding.html"><span>Próximo →</span>Briefing e onboarding</a></nav>
+  <footer class="rodape">Curso de tráfego pago · conteúdo de setembro de 2026</footer>
+</main>
+</body>
+</html>

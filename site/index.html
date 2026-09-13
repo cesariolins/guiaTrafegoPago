@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tráfego Pago: do zero ao primeiro cliente pagante</title>
+<link rel="stylesheet" href="assets/estilo.css">
+<script>
+/* Roda antes do primeiro pixel, senão a página pisca no tema errado.
+   Sem argumento, alterna. localStorage em try/catch: file:// pode bloquear. */
+function tema(t){var h=document.documentElement;
+t=t||(h.dataset.tema=='escuro'?'claro':'escuro');h.dataset.tema=t;
+try{localStorage.setItem('tema',t)}catch(e){}}
+try{var _t=localStorage.getItem('tema')}catch(e){}
+document.documentElement.dataset.tema=_t||(matchMedia('(prefers-color-scheme:dark)').matches?'escuro':'claro');
+</script>
+</head>
+<body>
+<input type="checkbox" id="abrir-menu" hidden>
+<label for="abrir-menu" class="botao-menu" aria-label="Abrir menu">☰</label>
+<label for="abrir-menu" class="fundo-menu"></label>
+<button class="botao-tema" onclick="tema()" aria-label="Alternar tema claro/escuro"
+        title="Alternar tema claro/escuro"><span class="i-claro">🌙</span><span class="i-escuro">☀️</span></button>
+
+<aside>
+  <a class="marca" href="index.html">Tráfego Pago<small>do zero ao primeiro cliente</small></a>
+  <ul class="topo"><li><a href="index.html" class="ativo"><i>🏠</i>Início</a></li></ul><p class="bloco">Fundamento</p><ul><li><a href="fase-00-fundamentos.html"><i>🧭</i>00 · Fundamentos</a></li><li><a href="fase-01-matematica.html"><i>🧮</i>01 · A matemática</a></li><li><a href="fase-02-infraestrutura.html"><i>🔧</i>02 · Infraestrutura</a></li></ul><p class="bloco">Execução técnica</p><ul><li><a href="fase-03-meta-ads.html"><i>📱</i>03 · Meta Ads</a></li><li><a href="fase-04-google-ads.html"><i>🔍</i>04 · Google Ads</a></li><li><a href="fase-05-tiktok-kwai.html"><i>🎵</i>05 · TikTok e Kwai</a></li><li><a href="fase-06-criativo-copy-oferta.html"><i>🎨</i>06 · Criativo e oferta</a></li><li><a href="fase-07-mensuracao.html"><i>📊</i>07 · Mensuração</a></li><li><a href="fase-08-otimizacao-escala.html"><i>📈</i>08 · Otimização e escala</a></li></ul><p class="bloco">O negócio</p><ul><li><a href="fase-09-vender-o-servico.html"><i>💼</i>09 · Vender o serviço</a></li><li><a href="fase-10-contrato-legal.html"><i>⚖️</i>10 · Contrato e legal</a></li><li><a href="fase-11-operacao-rotina.html"><i>🔄</i>11 · Operação e rotina</a></li><li><a href="fase-12-problemas-reais.html"><i>🚨</i>12 · Problemas reais</a></li></ul><p class="bloco">Templates</p><ul><li><a href="templates/proposta-comercial.html"><i>📄</i>Proposta comercial</a></li><li><a href="templates/contrato-modelo.html"><i>📑</i>Contrato modelo</a></li><li><a href="templates/briefing-onboarding.html"><i>📋</i>Briefing e onboarding</a></li><li><a href="templates/relatorio-mensal.html"><i>📊</i>Relatório mensal</a></li><li><a href="templates/auditoria-de-conta.html"><i>🔎</i>Auditoria de conta</a></li><li><a href="templates/scripts-de-venda.html"><i>💬</i>Scripts de venda</a></li></ul><p class="bloco">Ferramenta</p><ul><li><a href="planilhas/calculadora-viabilidade.html"><i>🧮</i>Calculadora</a></li></ul>
+</aside>
+
+<main>
+  <article><h1>Tráfego Pago: do zero ao primeiro cliente pagante</h1>
+<p>Curso completo construído sob medida para: <strong>iniciante absoluto</strong>, verba de teste de <strong>R$ 300–1.000</strong>, objetivo de <strong>vender gestão de tráfego como serviço</strong>.</p>
+<p>Última atualização do conteúdo: <strong>setembro de 2026</strong>.</p>
+<hr />
+<h2>Leia isto antes de tudo</h2>
+<p>Três verdades que vão economizar meses da sua vida:</p>
+<p><strong>1. O jogo mudou em 2026 e a maioria dos cursos ainda ensina o jogo de 2022.</strong>
+Segmentação detalhada virou quase irrelevante no Meta. A IA da plataforma faz o trabalho que antigamente era o diferencial do gestor. Hoje o que separa quem ganha de quem perde é: <strong>oferta, criativo e qualidade de dado</strong>. Se alguém te vender "curso de segmentação secreta", está vendendo fóssil.</p>
+<p><strong>2. Você não vai ficar rico gerenciando tráfego. Você vai ficar bem pago resolvendo o problema do cliente.</strong>
+Cliente não compra "campanha otimizada". Compra "meu telefone tocando". Quem entende isso cobra 3x mais.</p>
+<p><strong>3. Você vai errar com dinheiro real.</strong> Não existe aprender tráfego sem queimar verba. Seus R$ 300–1.000 são mensalidade de faculdade, não investimento com retorno. Trate assim e a dor diminui.</p>
+<hr />
+<h2>Mapa do curso</h2>
+<h3>Bloco I — Fundamento (não pule, é aqui que 90% falha)</h3>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Fase</th>
+<th>Arquivo</th>
+<th>O que você sai sabendo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>00</td>
+<td><a href="fase-00-fundamentos.html">Fundamentos</a></td>
+<td>O que é tráfego pago, como o leilão funciona, vocabulário completo, o que mudou em 2026</td>
+</tr>
+<tr>
+<td>01</td>
+<td><a href="fase-01-matematica.html">A matemática</a></td>
+<td>Calcular se a campanha dá lucro <strong>antes</strong> de gastar. A habilidade mais rara do mercado.</td>
+</tr>
+<tr>
+<td>02</td>
+<td><a href="fase-02-infraestrutura.html">Infraestrutura</a></td>
+<td>Criar contas do jeito certo, Business Manager, pixel, domínio, o que evita bloqueio</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Bloco II — Execução técnica</h3>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Fase</th>
+<th>Arquivo</th>
+<th>O que você sai sabendo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>03</td>
+<td><a href="fase-03-meta-ads.html">Meta Ads</a></td>
+<td>Do primeiro clique à campanha escalando. Seu carro-chefe.</td>
+</tr>
+<tr>
+<td>04</td>
+<td><a href="fase-04-google-ads.html">Google Ads</a></td>
+<td>Pesquisa, PMax, AI Max. Onde está a intenção de compra.</td>
+</tr>
+<tr>
+<td>05</td>
+<td><a href="fase-05-tiktok-kwai.html">TikTok e Kwai</a></td>
+<td>CPM barato, quando vale e quando é armadilha</td>
+</tr>
+<tr>
+<td>06</td>
+<td><a href="fase-06-criativo-copy-oferta.html">Criativo, copy e oferta</a></td>
+<td>O que hoje decide 80% do resultado</td>
+</tr>
+<tr>
+<td>07</td>
+<td><a href="fase-07-mensuracao.html">Mensuração</a></td>
+<td>Pixel, CAPI, GA4, UTM, atribuição. Sem isso você voa cego.</td>
+</tr>
+<tr>
+<td>08</td>
+<td><a href="fase-08-otimizacao-escala.html">Otimização e escala</a></td>
+<td>O que mexer, quando mexer, quando NÃO mexer</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Bloco III — O negócio (a parte que te paga)</h3>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Fase</th>
+<th>Arquivo</th>
+<th>O que você sai sabendo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>09</td>
+<td><a href="fase-09-vender-o-servico.html">Vender o serviço</a></td>
+<td>Prospecção, nicho, proposta, precificação, negociação</td>
+</tr>
+<tr>
+<td>10</td>
+<td><a href="fase-10-contrato-legal.html">Contrato e legal</a></td>
+<td>CNPJ, nota fiscal, contrato, LGPD, o que te protege</td>
+</tr>
+<tr>
+<td>11</td>
+<td><a href="fase-11-operacao-rotina.html">Operação e rotina</a></td>
+<td>Onboarding, rotina diária, relatório, retenção de cliente</td>
+</tr>
+<tr>
+<td>12</td>
+<td><a href="fase-12-problemas-reais.html">Problemas reais</a></td>
+<td>Conta bloqueada, cliente que não paga, campanha que não performa</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Ferramentas prontas</h3>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Arquivo</th>
+<th>Para quê</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🧮 <a href="planilhas/calculadora-viabilidade.html">Calculadora de viabilidade</a></td>
+<td><strong>Abra na frente do cliente.</strong> Dá CPA máximo, CPL alvo, verba necessária e um veredito de "fecha ou não fecha".</td>
+</tr>
+<tr>
+<td><a href="templates/proposta-comercial.html">Proposta comercial</a></td>
+<td>2 páginas, pronta para preencher e virar PDF</td>
+</tr>
+<tr>
+<td><a href="templates/contrato-modelo.html">Contrato modelo</a></td>
+<td>13 cláusulas, com as que te protegem marcadas ⭐</td>
+</tr>
+<tr>
+<td><a href="templates/briefing-onboarding.html">Briefing de onboarding</a></td>
+<td>Mensagem de acesso + 21 perguntas + checklist de estruturação</td>
+</tr>
+<tr>
+<td><a href="templates/relatorio-mensal.html">Relatório mensal</a></td>
+<td>Uma página, com o roteiro de como reportar mês ruim</td>
+</tr>
+<tr>
+<td><a href="templates/auditoria-de-conta.html">Auditoria de conta</a></td>
+<td>Versão de prospecção (sua isca) + versão completa</td>
+</tr>
+<tr>
+<td><a href="templates/scripts-de-venda.html">Scripts de venda</a></td>
+<td>Abordagem, reunião, 8 objeções, follow-up, indicação</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>A calculadora é um arquivo HTML — dê duplo clique e abre no navegador. Funciona offline, não precisa instalar nada.</p>
+</blockquote>
+<hr />
+<h2>Como estudar (plano de 90 dias)</h2>
+<p>Você tem R$ 300–1.000. Aqui está a alocação que eu recomendo:</p>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Período</th>
+<th>Foco</th>
+<th>Verba</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Dias 1–14</strong></td>
+<td>Fases 00, 01, 02. Zero anúncio rodando. Só estudo e setup.</td>
+<td>R$ 0</td>
+</tr>
+<tr>
+<td><strong>Dias 15–35</strong></td>
+<td>Fase 03. Primeira campanha real, no <strong>seu próprio</strong> negócio ou de alguém próximo.</td>
+<td>R$ 300</td>
+</tr>
+<tr>
+<td><strong>Dias 36–55</strong></td>
+<td>Fases 06, 07, 08. Otimizar o que está rodando. Documentar como case.</td>
+<td>R$ 200</td>
+</tr>
+<tr>
+<td><strong>Dias 56–75</strong></td>
+<td>Fases 09, 10. Prospecção ativa. Meta: 3 reuniões.</td>
+<td>R$ 0</td>
+</tr>
+<tr>
+<td><strong>Dias 76–90</strong></td>
+<td>Primeiro cliente. Fase 11 vira sua rotina.</td>
+<td>Verba do cliente</td>
+</tr>
+</tbody>
+</table></div>
+<p>Reserve R$ 200–300 do seu orçamento como <strong>caixa de emergência</strong> — vai aparecer um teste que você precisa fazer e não previu.</p>
+<hr />
+<h2>Regras da casa</h2>
+<ul>
+<li><strong>Não abra a fase seguinte sem executar a atual.</strong> Este material tem tarefas. Elas são o curso; o texto é só o manual.</li>
+<li><strong>Anote tudo num documento seu.</strong> CPM que você viu, criativo que funcionou, objeção que o cliente fez. Em 6 meses esse documento vale mais que o curso.</li>
+<li><strong>Números deste material são referência de mercado, não promessa.</strong> Seu nicho, sua região e seu criativo mudam tudo.</li>
+</ul>
+<hr />
+<h2>Versão site</h2>
+<p>O curso também existe como site navegável na pasta <code>site/</code> — abra <code>site/index.html</code> com duplo clique. Funciona offline, sem instalar nada.</p>
+<p>Se você editar qualquer <code>.md</code>, rode isto para o site refletir as mudanças:</p>
+<pre><code class="language-bash">python gerar-site.py
+</code></pre>
+<p>O conteúdo verdadeiro são os <code>.md</code> da raiz. A pasta <code>site/</code> é descartável e regerada do zero a cada execução.</p>
+<hr />
+<h2>Aviso honesto sobre expectativa</h2>
+<p>Tráfego pago é um mercado <strong>saturado na base e carente no topo</strong>. Existem milhares de pessoas cobrando R$ 500/mês e entregando mal. Existem poucas que entendem matemática de negócio, sabem ler um P&amp;L do cliente e conseguem defender um fee de R$ 5.000.</p>
+<p>O caminho é mais longo que o prometido por anúncio de curso, e mais curto do que parece quando você desiste. Estimativa realista com dedicação séria: <strong>3 a 6 meses até o primeiro cliente pagante decente</strong>, 12 a 18 meses até renda substituta de emprego.</p>
+<p>Se alguém te prometer 30 dias, está vendendo, não ensinando.</p>
+<hr />
+<p><strong>Comece por:</strong> <a href="fase-00-fundamentos.html">Fase 00 — Fundamentos</a></p></article>
+  <nav class="paginacao"><span></span><a class="nav-prox" href="fase-00-fundamentos.html"><span>Próximo →</span>00 · Fundamentos</a></nav>
+  <footer class="rodape">Curso de tráfego pago · conteúdo de setembro de 2026</footer>
+</main>
+</body>
+</html>

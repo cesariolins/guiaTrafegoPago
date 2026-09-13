@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Template — Auditoria de conta — Tráfego Pago</title>
+<link rel="stylesheet" href="../assets/estilo.css">
+<script>
+/* Roda antes do primeiro pixel, senão a página pisca no tema errado.
+   Sem argumento, alterna. localStorage em try/catch: file:// pode bloquear. */
+function tema(t){var h=document.documentElement;
+t=t||(h.dataset.tema=='escuro'?'claro':'escuro');h.dataset.tema=t;
+try{localStorage.setItem('tema',t)}catch(e){}}
+try{var _t=localStorage.getItem('tema')}catch(e){}
+document.documentElement.dataset.tema=_t||(matchMedia('(prefers-color-scheme:dark)').matches?'escuro':'claro');
+</script>
+</head>
+<body>
+<input type="checkbox" id="abrir-menu" hidden>
+<label for="abrir-menu" class="botao-menu" aria-label="Abrir menu">☰</label>
+<label for="abrir-menu" class="fundo-menu"></label>
+<button class="botao-tema" onclick="tema()" aria-label="Alternar tema claro/escuro"
+        title="Alternar tema claro/escuro"><span class="i-claro">🌙</span><span class="i-escuro">☀️</span></button>
+
+<aside>
+  <a class="marca" href="../index.html">Tráfego Pago<small>do zero ao primeiro cliente</small></a>
+  <ul class="topo"><li><a href="../index.html"><i>🏠</i>Início</a></li></ul><p class="bloco">Fundamento</p><ul><li><a href="../fase-00-fundamentos.html"><i>🧭</i>00 · Fundamentos</a></li><li><a href="../fase-01-matematica.html"><i>🧮</i>01 · A matemática</a></li><li><a href="../fase-02-infraestrutura.html"><i>🔧</i>02 · Infraestrutura</a></li></ul><p class="bloco">Execução técnica</p><ul><li><a href="../fase-03-meta-ads.html"><i>📱</i>03 · Meta Ads</a></li><li><a href="../fase-04-google-ads.html"><i>🔍</i>04 · Google Ads</a></li><li><a href="../fase-05-tiktok-kwai.html"><i>🎵</i>05 · TikTok e Kwai</a></li><li><a href="../fase-06-criativo-copy-oferta.html"><i>🎨</i>06 · Criativo e oferta</a></li><li><a href="../fase-07-mensuracao.html"><i>📊</i>07 · Mensuração</a></li><li><a href="../fase-08-otimizacao-escala.html"><i>📈</i>08 · Otimização e escala</a></li></ul><p class="bloco">O negócio</p><ul><li><a href="../fase-09-vender-o-servico.html"><i>💼</i>09 · Vender o serviço</a></li><li><a href="../fase-10-contrato-legal.html"><i>⚖️</i>10 · Contrato e legal</a></li><li><a href="../fase-11-operacao-rotina.html"><i>🔄</i>11 · Operação e rotina</a></li><li><a href="../fase-12-problemas-reais.html"><i>🚨</i>12 · Problemas reais</a></li></ul><p class="bloco">Templates</p><ul><li><a href="../templates/proposta-comercial.html"><i>📄</i>Proposta comercial</a></li><li><a href="../templates/contrato-modelo.html"><i>📑</i>Contrato modelo</a></li><li><a href="../templates/briefing-onboarding.html"><i>📋</i>Briefing e onboarding</a></li><li><a href="../templates/relatorio-mensal.html"><i>📊</i>Relatório mensal</a></li><li><a href="../templates/auditoria-de-conta.html" class="ativo"><i>🔎</i>Auditoria de conta</a></li><li><a href="../templates/scripts-de-venda.html"><i>💬</i>Scripts de venda</a></li></ul><p class="bloco">Ferramenta</p><ul><li><a href="../planilhas/calculadora-viabilidade.html"><i>🧮</i>Calculadora</a></li></ul>
+</aside>
+
+<main>
+  <article><h1>Template — Auditoria de conta</h1>
+<blockquote>
+<p><strong>Dois usos:</strong>
+1. <strong>Prospecção</strong> — versão curta (1 página), gratuita, usada como isca. É sua melhor ferramenta comercial.
+2. <strong>Onboarding</strong> — versão completa, feita na primeira semana de um cliente novo que já tem conta rodando.</p>
+</blockquote>
+<hr />
+<h1>PARTE A — Auditoria externa (prospecção)</h1>
+<blockquote>
+<p>Feita <strong>sem acesso à conta</strong>, só com o que é público. 30–40 minutos. É o que você manda de graça na abordagem fria (Fase 09).</p>
+</blockquote>
+<h2>Como levantar as informações</h2>
+<pre><code>1. Biblioteca de Anúncios do Meta (facebook.com/ads/library)
+   → filtre por Brasil + o nome do negócio
+   → quantos anúncios? há quanto tempo no ar? imagem ou vídeo?
+
+2. Google — pesquise o serviço + cidade
+   → ele aparece nos anúncios? o concorrente aparece?
+
+3. Site
+   → PageSpeed Insights (velocidade mobile)
+   → a página do anúncio é específica ou é a home?
+   → tem Política de Privacidade e banner de cookies?
+
+4. Instagram
+   → o perfil converte? bio clara? link funcional?
+</code></pre>
+<h2>O documento que você envia</h2>
+<pre><code>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ANÁLISE RÁPIDA — [Nome do Negócio]
+[Seu nome] · [data]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+O QUE VOCÊS JÁ FAZEM BEM
+  • [ponto real 1]
+  • [ponto real 2]
+
+  (Sempre comece por aqui. Sempre seja verdadeiro —
+   elogio genérico é pior que nenhum.)
+
+3 OPORTUNIDADES QUE EU VI
+
+  1. [PROBLEMA]
+     Por que importa: [impacto no negócio, em dinheiro
+                       ou em clientes perdidos]
+     O que eu faria: [ação concreta]
+
+  2. [PROBLEMA]
+     Por que importa:
+     O que eu faria:
+
+  3. [PROBLEMA]
+     Por que importa:
+     O que eu faria:
+
+ESTIMATIVA
+  Com verba de aproximadamente R$ [X] e os ajustes acima,
+  a faixa esperada seria de [Y] a [Z] contatos por mês,
+  a um custo entre R$ [A] e R$ [B] cada.
+
+  (Baseado em referência de mercado para o setor.
+   Não é garantia — é um cenário de trabalho.)
+
+Qualquer dúvida, estou à disposição.
+[nome] · [WhatsApp]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+</code></pre>
+<h2>Problemas visíveis de fora (e como traduzir)</h2>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>O que você vê</th>
+<th>Como escrever no documento</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 anúncio só, no ar há meses</td>
+<td><em>"O mesmo criativo está no ar há [N] meses. Isso costuma elevar bastante o custo por contato, porque as mesmas pessoas veem o anúncio repetidamente e param de reagir."</em></td>
+</tr>
+<tr>
+<td>Só imagem, nenhum vídeo</td>
+<td><em>"Todos os anúncios são estáticos. Vídeo curto normalmente entrega custo por contato menor no seu segmento."</em></td>
+</tr>
+<tr>
+<td>Foto de banco de imagem</td>
+<td><em>"As imagens parecem de banco de imagens. Fotos reais do espaço e da equipe costumam performar melhor porque geram identificação."</em></td>
+</tr>
+<tr>
+<td>Anúncio manda para a home</td>
+<td><em>"O anúncio leva para a página inicial em vez de uma página do serviço anunciado. Isso costuma derrubar a conversão pela metade, porque a pessoa precisa procurar o que veio buscar."</em></td>
+</tr>
+<tr>
+<td>Sem oferta clara</td>
+<td><em>"O anúncio comunica os serviços, mas não apresenta um motivo para agir agora. Uma oferta de entrada clara costuma ser o ajuste de maior impacto."</em></td>
+</tr>
+<tr>
+<td>Não anuncia no Google</td>
+<td><em>"Vocês não aparecem nos anúncios de busca. Quem pesquisa '[termo]' na sua cidade encontra [concorrente] primeiro."</em></td>
+</tr>
+<tr>
+<td>Site lento</td>
+<td><em>"O site leva [N] segundos para carregar no celular. Acima de 3 segundos, uma parte relevante das pessoas desiste antes de ver a página — e o clique já foi pago."</em></td>
+</tr>
+<tr>
+<td>Sem Política de Privacidade</td>
+<td><em>"O site não tem Política de Privacidade nem aviso de cookies, o que é exigência da LGPD e das próprias plataformas de anúncio."</em></td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<hr />
+<h1>PARTE B — Auditoria completa (cliente novo)</h1>
+<blockquote>
+<p>Com acesso à conta. Primeira semana do contrato. É aqui que você encontra as vitórias rápidas que justificam sua contratação.</p>
+</blockquote>
+<h2>1. Estrutura e segurança</h2>
+<pre><code>□ Quem é o titular do Business Manager? (deve ser o cliente)
+□ O cliente é administrador da própria conta?
+□ 2FA ativado?
+□ Quantos usuários e parceiros têm acesso? Algum antigo esquecido?
+□ Existe conta de anúncios reserva?
+□ Domínio verificado no Meta?
+□ Meio de pagamento válido, no nome do titular?
+□ Histórico de bloqueios ou restrições?
+</code></pre>
+<p><strong>Achados comuns:</strong> gestor anterior ainda com acesso total (remova); BM no nome do gestor anterior (problema sério — resolva primeiro).</p>
+<h2>2. Mensuração ⭐ <em>onde estão as maiores vitórias</em></h2>
+<pre><code>□ Pixel instalado e disparando? (Meta Pixel Helper)
+□ ⭐ EXISTE PIXEL DUPLICADO?
+□ Quantos pixels na conta? Qual está realmente em uso?
+□ Eventos de conversão configurados corretamente?
+□ O evento otimizado representa dinheiro, ou é só PageView?
+□ CAPI configurada? Qualidade da correspondência?
+□ Google Ads: conversões configuradas?
+□ Conversões duplicadas no Google? (mesma ação contada 2x)
+□ GA4 instalado e vinculado ao Google Ads?
+□ UTMs padronizadas?
+□ ⭐ O fluxo funciona? (teste você mesmo: preencha o formulário)
+</code></pre>
+<blockquote>
+<p><strong>Pixel duplicado e conversão duplicada são os achados mais frequentes em conta herdada.</strong> Ambos inflam os números e fazem o gestor otimizar com base em mentira. Encontrar isso na primeira semana é uma vitória imediata e fácil de demonstrar.</p>
+</blockquote>
+<h2>3. Campanhas — Meta</h2>
+<pre><code>□ Objetivo correto? (⭐ há campanha de venda rodando em Tráfego?)
+□ Quantas campanhas ativas? Verba fragmentada?
+□ Quantos conjuntos por campanha? Quantos anúncios por conjunto?
+□ Públicos sobrepostos competindo entre si?
+□ Segmentação detalhada restringindo sem necessidade? (2026)
+□ Advantage+ Creative: as variações geradas estão adequadas?
+□ Prévia dos posicionamentos: alguma peça deformada?
+□ Frequência acima de 3–4?
+□ Quantos criativos novos nos últimos 30 dias?
+□ Remarketing existe? Está excluindo quem já converteu?
+</code></pre>
+<h2>4. Campanhas — Google</h2>
+<pre><code>□ ⭐ Rede de Display marcada em campanha de Pesquisa?
+□ ⭐ Localização em &quot;interesse&quot; em vez de presença física?
+□ Correspondência das palavras-chave
+□ ⭐ Termos de pesquisa: quanto está sendo desperdiçado?
+□ Lista de negativas existe e é mantida?
+□ Índice de qualidade das principais palavras
+□ Recursos/extensões preenchidos?
+□ Existe campanha de marca?
+□ Estratégia de lance compatível com o volume de dado?
+□ ⭐ A conta foi migrada para AI Max em setembro/2026?
+□ Alguma DSA rodando? (aposentadoria a partir de fev/2027)
+□ PMax rodando sem exclusões de marca e URL?
+</code></pre>
+<h2>5. Destino e conversão</h2>
+<pre><code>□ Velocidade mobile (PageSpeed Insights)
+□ Página específica ou home genérica?
+□ A promessa do anúncio aparece no título da página?
+□ Quantos campos no formulário?
+□ Uma única ação principal por página?
+□ WhatsApp com mensagem pré-preenchida?
+□ Prova social acima da dobra?
+□ Política de Privacidade e banner de cookies?
+</code></pre>
+<h2>6. Números históricos</h2>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Métrica</th>
+<th>Últimos 30d</th>
+<th>30d anteriores</th>
+<th>Tendência</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Investimento</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>CPM</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>CTR</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Custo por resultado</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Frequência</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h2>7. Relatório de achados</h2>
+<p>Organize por impacto, não por ordem de descoberta:</p>
+<pre><code>🔴 CRÍTICO — corrigir esta semana
+   1. [problema] → [impacto estimado] → [correção]
+
+🟡 IMPORTANTE — corrigir este mês
+   1.
+
+🟢 MELHORIA — quando houver espaço
+   1.
+
+💰 DESPERDÍCIO IDENTIFICADO
+   Aproximadamente R$ [valor]/mês em [origem do desperdício]
+</code></pre>
+<blockquote>
+<p><strong>A linha de desperdício é a mais poderosa do documento.</strong> <em>"Encontrei R$ 640 por mês indo para termos de busca que nunca viram cliente"</em> é uma frase que justifica seu fee inteiro na primeira semana — e que o cliente repete para outras pessoas.</p>
+</blockquote></article>
+  <nav class="paginacao"><a class="nav-ant" href="../templates/relatorio-mensal.html"><span>← Anterior</span>Relatório mensal</a><a class="nav-prox" href="../templates/scripts-de-venda.html"><span>Próximo →</span>Scripts de venda</a></nav>
+  <footer class="rodape">Curso de tráfego pago · conteúdo de setembro de 2026</footer>
+</main>
+</body>
+</html>

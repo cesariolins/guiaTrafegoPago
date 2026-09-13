@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fase 00 — Fundamentos — Tráfego Pago</title>
+<link rel="stylesheet" href="assets/estilo.css">
+<script>
+/* Roda antes do primeiro pixel, senão a página pisca no tema errado.
+   Sem argumento, alterna. localStorage em try/catch: file:// pode bloquear. */
+function tema(t){var h=document.documentElement;
+t=t||(h.dataset.tema=='escuro'?'claro':'escuro');h.dataset.tema=t;
+try{localStorage.setItem('tema',t)}catch(e){}}
+try{var _t=localStorage.getItem('tema')}catch(e){}
+document.documentElement.dataset.tema=_t||(matchMedia('(prefers-color-scheme:dark)').matches?'escuro':'claro');
+</script>
+</head>
+<body>
+<input type="checkbox" id="abrir-menu" hidden>
+<label for="abrir-menu" class="botao-menu" aria-label="Abrir menu">☰</label>
+<label for="abrir-menu" class="fundo-menu"></label>
+<button class="botao-tema" onclick="tema()" aria-label="Alternar tema claro/escuro"
+        title="Alternar tema claro/escuro"><span class="i-claro">🌙</span><span class="i-escuro">☀️</span></button>
+
+<aside>
+  <a class="marca" href="index.html">Tráfego Pago<small>do zero ao primeiro cliente</small></a>
+  <ul class="topo"><li><a href="index.html"><i>🏠</i>Início</a></li></ul><p class="bloco">Fundamento</p><ul><li><a href="fase-00-fundamentos.html" class="ativo"><i>🧭</i>00 · Fundamentos</a></li><li><a href="fase-01-matematica.html"><i>🧮</i>01 · A matemática</a></li><li><a href="fase-02-infraestrutura.html"><i>🔧</i>02 · Infraestrutura</a></li></ul><p class="bloco">Execução técnica</p><ul><li><a href="fase-03-meta-ads.html"><i>📱</i>03 · Meta Ads</a></li><li><a href="fase-04-google-ads.html"><i>🔍</i>04 · Google Ads</a></li><li><a href="fase-05-tiktok-kwai.html"><i>🎵</i>05 · TikTok e Kwai</a></li><li><a href="fase-06-criativo-copy-oferta.html"><i>🎨</i>06 · Criativo e oferta</a></li><li><a href="fase-07-mensuracao.html"><i>📊</i>07 · Mensuração</a></li><li><a href="fase-08-otimizacao-escala.html"><i>📈</i>08 · Otimização e escala</a></li></ul><p class="bloco">O negócio</p><ul><li><a href="fase-09-vender-o-servico.html"><i>💼</i>09 · Vender o serviço</a></li><li><a href="fase-10-contrato-legal.html"><i>⚖️</i>10 · Contrato e legal</a></li><li><a href="fase-11-operacao-rotina.html"><i>🔄</i>11 · Operação e rotina</a></li><li><a href="fase-12-problemas-reais.html"><i>🚨</i>12 · Problemas reais</a></li></ul><p class="bloco">Templates</p><ul><li><a href="templates/proposta-comercial.html"><i>📄</i>Proposta comercial</a></li><li><a href="templates/contrato-modelo.html"><i>📑</i>Contrato modelo</a></li><li><a href="templates/briefing-onboarding.html"><i>📋</i>Briefing e onboarding</a></li><li><a href="templates/relatorio-mensal.html"><i>📊</i>Relatório mensal</a></li><li><a href="templates/auditoria-de-conta.html"><i>🔎</i>Auditoria de conta</a></li><li><a href="templates/scripts-de-venda.html"><i>💬</i>Scripts de venda</a></li></ul><p class="bloco">Ferramenta</p><ul><li><a href="planilhas/calculadora-viabilidade.html"><i>🧮</i>Calculadora</a></li></ul>
+</aside>
+
+<main>
+  <article><h1>Fase 00 — Fundamentos</h1>
+<blockquote>
+<p><strong>Pré-requisito:</strong> nenhum.
+<strong>Tempo:</strong> 3 a 5 dias de estudo.
+<strong>Verba:</strong> R$ 0. Não crie nenhum anúncio nesta fase.</p>
+</blockquote>
+<hr />
+<h2>1. O que é tráfego pago, de verdade</h2>
+<p>Tráfego pago é <strong>comprar atenção</strong>.</p>
+<p>Toda plataforma onde as pessoas passam tempo (Instagram, Google, YouTube, TikTok) tem um problema: precisa ganhar dinheiro. Ela resolve isso vendendo espaços entre o conteúdo. Você paga para que sua mensagem apareça ali.</p>
+<p>Isso é tudo. Não tem mágica, não tem hack, não tem "segredo dos gurus".</p>
+<h3>O que separa tráfego pago de tráfego orgânico</h3>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th></th>
+<th>Orgânico</th>
+<th>Pago</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Custo por pessoa alcançada</td>
+<td>R$ 0 direto (custa seu tempo)</td>
+<td>R$ 0,01 a R$ 0,50</td>
+</tr>
+<tr>
+<td>Velocidade</td>
+<td>Meses</td>
+<td>Minutos</td>
+</tr>
+<tr>
+<td>Previsibilidade</td>
+<td>Baixíssima</td>
+<td>Alta (depois de calibrado)</td>
+</tr>
+<tr>
+<td>Escala</td>
+<td>Limitada pelo algoritmo</td>
+<td>Limitada pelo seu bolso</td>
+</tr>
+<tr>
+<td>Para de funcionar quando</td>
+<td>Você para de postar (com atraso)</td>
+<td>Você para de pagar (na hora)</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>A frase que resume:</strong> orgânico é construir um poço; pago é comprar água. O poço é melhor a longo prazo. A água é o que mata a sede hoje.</p>
+<p>Você vai vender água.</p>
+<h3>O que tráfego pago NÃO faz</h3>
+<p>Isso aqui é a fonte de 80% dos clientes insatisfeitos. Grave:</p>
+<ul>
+<li>❌ <strong>Não conserta produto ruim.</strong> Anúncio bom para produto ruim = você acelera a descoberta de que o produto é ruim.</li>
+<li>❌ <strong>Não conserta preço fora de mercado.</strong> Se o concorrente vende igual por metade, nenhum criativo salva.</li>
+<li>❌ <strong>Não conserta atendimento ruim.</strong> Você gera 100 leads, o cliente responde 12 no WhatsApp, e depois diz que "o tráfego não funcionou".</li>
+<li>❌ <strong>Não cria demanda do zero para coisas que ninguém quer.</strong> Cria <em>desejo</em> por coisas que as pessoas já querem de alguma forma.</li>
+<li>❌ <strong>Não é imediato.</strong> Campanha nova leva de 3 a 14 dias para estabilizar. Quem desliga no dia 2 está jogando dinheiro fora.</li>
+</ul>
+<blockquote>
+<p><strong>Isso vira sua ferramenta de venda.</strong> Na reunião comercial, dizer "tráfego não conserta atendimento ruim, então vou precisar entender como vocês respondem os leads" te posiciona como consultor, não como operador de botão. Falaremos disso na Fase 09.</p>
+</blockquote>
+<hr />
+<h2>2. O leilão: o mecanismo por trás de tudo</h2>
+<p>Aqui está o conceito central. Se você entender isso de verdade, entende 70% de tudo que vem depois.</p>
+<p><strong>Toda vez que uma pessoa abre o Instagram, acontece um leilão em milissegundos</strong> para decidir qual anúncio ela vai ver. Você não está competindo pelo "espaço". Você está competindo <strong>por aquela pessoa específica, naquele segundo específico</strong>.</p>
+<h3>Quem ganha o leilão</h3>
+<p>Não é quem paga mais. Se fosse, as plataformas seriam inundadas de lixo caro e os usuários iriam embora.</p>
+<p>A fórmula, simplificada mas correta:</p>
+<pre><code>Valor Total do Anúncio  =  Seu Lance
+                        ×  Probabilidade de a pessoa agir
+                        +  Qualidade percebida (relevância, feedback)
+</code></pre>
+<p>Traduzindo para linguagem humana:</p>
+<blockquote>
+<p>A plataforma escolhe o anúncio que provavelmente vai <strong>render mais dinheiro para ela por exibição</strong>, considerando que um usuário irritado é um usuário que sai do app.</p>
+</blockquote>
+<h3>As três consequências práticas disso</h3>
+<p><strong>Consequência 1 — Criativo bom é desconto.</strong>
+Se seu anúncio tem alta taxa de clique e alta taxa de conversão, a plataforma prevê que você vai render bem, e te cobra <strong>menos</strong> para aparecer. Dois anunciantes com o mesmo lance pagam preços diferentes. O criativo é literalmente um cupom de desconto.</p>
+<p><strong>Consequência 2 — Você compete com todo mundo, não só com o concorrente.</strong>
+Uma clínica odontológica em Curitiba não compete só com outras clínicas. Compete com a Shopee, com a Netflix, com o infoproduto de emagrecimento — todos disputando os mesmos 3 segundos de atenção da mesma pessoa. Por isso o CPM sobe na Black Friday: a demanda pelo mesmo inventário explode.</p>
+<p><strong>Consequência 3 — A plataforma precisa de DADO para prever.</strong>
+Ela só sabe "quem provavelmente vai comprar" se ela puder ver quem comprou. Isso é o pixel (Fase 07). Sem dado, a plataforma chuta. Campanha sem mensuração correta é campanha rodando no escuro — e ainda assim cobrando de você.</p>
+<h3>O que isso significa para o seu trabalho</h3>
+<p>O gestor de tráfego iniciante acha que o trabalho é "mexer nos botões da campanha".
+O gestor de tráfego competente sabe que o trabalho é <strong>alimentar o leilão com o que ele premia</strong>: criativo relevante, oferta forte, dado limpo.</p>
+<hr />
+<h2>3. A anatomia de uma conta de anúncios</h2>
+<p>Todas as plataformas seguem a mesma lógica de três níveis. Muda o nome, não a ideia.</p>
+<pre><code>CAMPANHA          → Qual é o OBJETIVO?         (o &quot;porquê&quot;)
+  └─ CONJUNTO     → PARA QUEM e QUANTO?        (o &quot;quem&quot; e o &quot;quanto&quot;)
+      └─ ANÚNCIO  → O QUE a pessoa vê?         (o &quot;o quê&quot;)
+</code></pre>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Nível</th>
+<th>Meta Ads</th>
+<th>Google Ads</th>
+<th>TikTok</th>
+<th>O que você define</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Campanha</td>
+<td>Campanha</td>
+<td>Campanha</td>
+<td>Objetivo, orçamento total</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Conjunto de anúncios</td>
+<td>Grupo de anúncios</td>
+<td>Grupo de anúncios</td>
+<td>Público, verba diária, posicionamento, lance</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Anúncio</td>
+<td>Anúncio</td>
+<td>Anúncio</td>
+<td>Imagem/vídeo, texto, link</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Erro clássico de iniciante:</strong> criar 15 campanhas com 1 anúncio cada, em vez de 1 campanha com 15 anúncios. Isso fragmenta o aprendizado do algoritmo e queima verba. Você vai entender por quê na Fase 03.</p>
+<hr />
+<h2>4. Vocabulário obrigatório</h2>
+<p>Isso não é decoreba. É o idioma em que você vai negociar preço e defender resultado. Leia duas vezes.</p>
+<h3>Métricas de custo</h3>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Sigla</th>
+<th>Nome</th>
+<th>O que é</th>
+<th>Quando importa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CPM</strong></td>
+<td>Custo por Mil impressões</td>
+<td>Quanto você paga para aparecer 1.000 vezes</td>
+<td>Termômetro de competição do nicho</td>
+</tr>
+<tr>
+<td><strong>CPC</strong></td>
+<td>Custo por Clique</td>
+<td>Quanto custa cada clique</td>
+<td>Diagnóstico de criativo</td>
+</tr>
+<tr>
+<td><strong>CPL</strong></td>
+<td>Custo por Lead</td>
+<td>Quanto custa cada contato captado</td>
+<td>A métrica-rei de serviços</td>
+</tr>
+<tr>
+<td><strong>CPA</strong></td>
+<td>Custo por Aquisição</td>
+<td>Quanto custa cada conversão/venda</td>
+<td>A métrica-rei de e-commerce</td>
+</tr>
+<tr>
+<td><strong>CAC</strong></td>
+<td>Custo de Aquisição de Cliente</td>
+<td>CPA + todos os outros custos (comissão, equipe, ferramenta)</td>
+<td>A métrica-rei do <strong>negócio</strong></td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p><strong>Diferença CPA × CAC — cai em prova e em reunião.</strong> Se você gastou R$ 1.000 em anúncio e teve 10 vendas, seu CPA é R$ 100. Mas se o vendedor ganha R$ 50 de comissão por venda, o CAC real é R$ 150. Cliente que não sabe essa diferença acha que está lucrando quando não está. <strong>Você ensinar isso a ele é o que te transforma em parceiro, não fornecedor.</strong></p>
+</blockquote>
+<h3>Métricas de eficiência</h3>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Sigla</th>
+<th>Nome</th>
+<th>Como calcula</th>
+<th>Referência</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CTR</strong></td>
+<td>Taxa de Cliques</td>
+<td>Cliques ÷ Impressões × 100</td>
+<td>Meta: 1%+ bom / 2%+ ótimo. Google Pesquisa: 3,5–5,5% é a média BR em 2026</td>
+</tr>
+<tr>
+<td><strong>Taxa de Conversão</strong></td>
+<td>—</td>
+<td>Conversões ÷ Cliques × 100</td>
+<td>Landing page: 5–15%. WhatsApp: 20–40%</td>
+</tr>
+<tr>
+<td><strong>ROAS</strong></td>
+<td>Retorno sobre Investimento em Anúncio</td>
+<td>Receita ÷ Gasto em anúncio</td>
+<td>3x é comum. Mas veja o alerta abaixo</td>
+</tr>
+<tr>
+<td><strong>ROI</strong></td>
+<td>Retorno sobre Investimento</td>
+<td>(Lucro − Custo) ÷ Custo × 100</td>
+<td>O que realmente importa</td>
+</tr>
+<tr>
+<td><strong>Frequência</strong></td>
+<td>—</td>
+<td>Quantas vezes a mesma pessoa viu</td>
+<td>Acima de 3–4 em público pequeno = fadiga</td>
+</tr>
+<tr>
+<td><strong>LTV</strong></td>
+<td>Valor Vitalício do Cliente</td>
+<td>Quanto um cliente gasta ao longo do relacionamento</td>
+<td>Define quanto você PODE pagar por ele</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>⚠️ <strong>ROAS é a métrica mais mal usada do mercado.</strong> ROAS 4x parece ótimo. Mas se a margem do produto é 20%, ROAS 4x significa: vendeu R$ 4.000, gastou R$ 1.000 em anúncio, teve R$ 800 de margem bruta → <strong>prejuízo de R$ 200.</strong> A conta certa está na Fase 01. Aprenda antes de prometer ROAS para qualquer cliente.</p>
+</blockquote>
+<h3>Termos operacionais</h3>
+<ul>
+<li><strong>Pixel</strong> — código no site que avisa a plataforma o que a pessoa fez. É o olho do algoritmo.</li>
+<li><strong>CAPI (API de Conversões)</strong> — o pixel, mas enviado do servidor em vez do navegador. Sobrevive a bloqueadores e iOS. Hoje é obrigatório, não opcional (Fase 07).</li>
+<li><strong>Público frio / morno / quente</strong> — ver seção 5.</li>
+<li><strong>Lookalike (público semelhante)</strong> — a plataforma acha pessoas parecidas com sua lista de clientes.</li>
+<li><strong>Remarketing / Retargeting</strong> — anunciar de novo para quem já interagiu com você.</li>
+<li><strong>Fase de aprendizado</strong> — período inicial em que o algoritmo está calibrando. Resultados instáveis. Não mexa.</li>
+<li><strong>Criativo</strong> — a peça do anúncio (imagem, vídeo, carrossel).</li>
+<li><strong>Copy</strong> — o texto do anúncio.</li>
+<li><strong>Funil</strong> — o caminho da pessoa: descobre → considera → compra.</li>
+<li><strong>Landing page (LP)</strong> — página de destino feita para converter, não para navegar.</li>
+<li><strong>Verba / budget</strong> — o dinheiro do anúncio. <strong>Nunca</strong> é o mesmo que seu honorário.</li>
+<li><strong>Fee</strong> — seu honorário de gestão.</li>
+</ul>
+<hr />
+<h2>5. As três temperaturas de público</h2>
+<p>Modelo mental que você vai usar todo dia.</p>
+<pre><code>🥶 FRIO         🌤️ MORNO                🔥 QUENTE
+Não te conhece   Já te viu/interagiu     Já quase comprou
+                 (vídeo, perfil, site)   (carrinho, formulário)
+
+Volume: alto     Volume: médio           Volume: baixo
+CPM: baixo       CPM: médio              CPM: alto
+Conversão: baixa Conversão: média        Conversão: alta
+</code></pre>
+<p><strong>A regra:</strong> você precisa dos três. Só frio = você gasta muito para converter pouco. Só quente = você esgota o público em dias e a frequência explode.</p>
+<p><strong>Distribuição de verba de referência para começar:</strong></p>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Temperatura</th>
+<th>% da verba</th>
+<th>Objetivo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frio</td>
+<td>70%</td>
+<td>Encher o topo</td>
+</tr>
+<tr>
+<td>Morno</td>
+<td>20%</td>
+<td>Aquecer</td>
+</tr>
+<tr>
+<td>Quente (remarketing)</td>
+<td>10%</td>
+<td>Colher</td>
+</tr>
+</tbody>
+</table></div>
+<p>Negócio local muito pequeno (verba &lt; R$ 1.000/mês) muitas vezes roda <strong>só frio bem feito</strong> — não há volume para alimentar remarketing. Saber quando <em>não</em> fazer remarketing é sinal de maturidade.</p>
+<hr />
+<h2>6. O que mudou em 2026 — leia com atenção</h2>
+<p>Esta seção é o seu diferencial competitivo. Muita gente no mercado ainda opera com o manual de 3 anos atrás.</p>
+<h3>6.1 Meta: a segmentação morreu, o criativo reinou</h3>
+<p><strong>O que aconteceu:</strong>
+- Desde <strong>março de 2025</strong>, o Meta começou a remover as <strong>exclusões de segmentação detalhada</strong>. Campanhas antigas com essas opções pararam de veicular em <strong>15 de janeiro de 2026</strong>. Você não consegue mais dizer "não mostre para quem tem interesse em X".
+- Desde <strong>fevereiro de 2026</strong>, todas as novas campanhas de vendas, leads e apps nascem com <strong>Advantage+ Creative totalmente ativado por padrão</strong> — a IA gera variações de texto, corta imagem, muda proporção e até adiciona música, mostrando combinações diferentes para pessoas diferentes.</p>
+<p><strong>O que isso significa na prática:</strong></p>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Antes (2020–2023)</th>
+<th>Agora (2026)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O gestor escolhia interesses, idade, comportamento</td>
+<td>O gestor define objetivo de negócio e deixa a IA achar</td>
+</tr>
+<tr>
+<td>Diferencial = saber "segmentação secreta"</td>
+<td>Diferencial = <strong>portfólio de criativos + qualidade do dado</strong></td>
+</tr>
+<tr>
+<td>Testava 2 criativos e 8 públicos</td>
+<td>Testa 8 criativos e 1–2 públicos</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p><strong>A frase que resume 2026:</strong> <em>O gestor humano parou de definir público, criativo e lance. Passou a definir objetivo de negócio, qualidade de dado e portfólio criativo.</em></p>
+</blockquote>
+<p>Se você entrar numa reunião em 2026 vendendo "segmentação avançada", quem entende do assunto vai perceber que você está desatualizado.</p>
+<h3>6.2 Meta no Brasil ficou ~12% mais caro em janeiro de 2026</h3>
+<p>Desde janeiro de 2026, tributos (PIS/Cofins e ISS) passaram a ser cobrados <strong>diretamente do anunciante</strong> no Brasil, com impacto estimado de <strong>~12,15% no custo total dos anúncios</strong>.</p>
+<p><strong>Por que isso importa para você:</strong>
+1. Ao projetar resultado para cliente, <strong>inclua esse imposto na conta</strong>. Verba de R$ 1.000 não compra R$ 1.000 de mídia.
+2. Coloque isso no contrato: a verba é bruta, o imposto sai dela.
+3. É um ótimo ponto de conversa comercial — mostra que você acompanha o mercado.</p>
+<h3>6.3 Google: a era do AI Max</h3>
+<ul>
+<li><strong>AI Max</strong> saiu do beta em <strong>abril de 2026</strong>. É a evolução das campanhas de Pesquisa com três capacidades de IA: expansão de termos além das suas palavras-chave, reescrita automática dos seus textos, e escolha automática da página de destino.</li>
+<li><strong>Entre 1 e 30 de setembro de 2026</strong> (ou seja, <strong>agora</strong>), o Google está fazendo upgrade automático para AI Max em dois tipos de campanha: as que usam correspondência ampla no nível da campanha, e as que usam recursos criados automaticamente.</li>
+<li><strong>Dynamic Search Ads (DSA) está sendo aposentado</strong> e absorvido pelo AI Max. O cronograma de desligamento começa em <strong>fevereiro de 2027</strong>.</li>
+<li><strong>Performance Max</strong> ganhou relatórios e controles muito melhores — deixou de ser caixa-preta, mas passou a exigir gestão ativa para aproveitar isso.</li>
+</ul>
+<p><strong>Tradução:</strong> se você pegar uma conta de cliente agora, <strong>verifique se ela foi migrada para AI Max sem aviso</strong>. Campanhas que mudaram de comportamento em setembro de 2026 provavelmente foram atualizadas automaticamente. Saber disso é um diagnóstico que vale dinheiro.</p>
+<h3>6.4 A conclusão estratégica</h3>
+<p>O valor do gestor de tráfego migrou de <strong>operação</strong> para <strong>julgamento</strong>:</p>
+<pre><code>  Valor BAIXO (a IA já faz)          Valor ALTO (só humano faz)
+  ─────────────────────────          ──────────────────────────
+  Escolher interesses                Definir a oferta
+  Ajustar lance manual               Decidir o que medir
+  Criar 40 variações de texto        Ler o negócio do cliente
+  Apertar &quot;duplicar conjunto&quot;        Diagnosticar por que não vende
+                                     Dirigir o portfólio criativo
+                                     Traduzir número em decisão
+</code></pre>
+<p><strong>Quem só sabe operar será substituído — pela IA ou por alguém mais barato. Quem sabe julgar fica.</strong></p>
+<p>Este curso te ensina os dois, mas a ênfase está na coluna da direita.</p>
+<hr />
+<h2>7. Onde o dinheiro está: modelos de cliente</h2>
+<p>Você vai escolher um nicho na Fase 09, mas já vá pensando. Os quatro grandes tipos:</p>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Exemplos</th>
+<th>Verba típica</th>
+<th>Dificuldade</th>
+<th>Observação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Serviço local</strong></td>
+<td>Clínica, dentista, advogado, academia, estética</td>
+<td>R$ 500–5.000/mês</td>
+<td>🟢 Baixa</td>
+<td>Melhor porta de entrada. Métrica simples (lead + agendamento).</td>
+</tr>
+<tr>
+<td><strong>E-commerce</strong></td>
+<td>Loja virtual, dropshipping</td>
+<td>R$ 2.000–50.000/mês</td>
+<td>🟡 Média</td>
+<td>Métrica clara (ROAS), mas margem apertada e concorrência dura</td>
+</tr>
+<tr>
+<td><strong>Infoproduto</strong></td>
+<td>Curso, mentoria, lançamento</td>
+<td>R$ 3.000–100.000/mês</td>
+<td>🔴 Alta</td>
+<td>Maior verba, maior pressão, maior rotatividade de gestor</td>
+</tr>
+<tr>
+<td><strong>B2B / alto ticket</strong></td>
+<td>Software, consultoria, indústria</td>
+<td>R$ 3.000–30.000/mês</td>
+<td>🔴 Alta</td>
+<td>Ciclo de venda longo, atribuição difícil, mas fee alto e cliente estável</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Minha recomendação para você, começando agora:</strong> serviço local. Motivos:
+1. O dono do negócio decide sozinho e rápido (não tem comitê).
+2. O resultado é visível e binário: o telefone tocou ou não.
+3. A concorrência é de qualidade baixa — muita gente cobrando R$ 400 e entregando péssimo.
+4. Você consegue visitar presencialmente, o que é uma vantagem enorme que os "gestores de Instagram" não têm.</p>
+<hr />
+<h2>✅ Tarefas da Fase 00</h2>
+<p>Não pule. O texto é o manual; as tarefas são o curso.</p>
+<p><strong>1. Crie seu caderno de campo.</strong>
+Um documento (Notion, Google Docs, o que for). Estrutura mínima:
+- <code>Glossário</code> — reescreva as métricas da seção 4 <strong>com suas palavras</strong>. Escrever com as próprias palavras é o que fixa.
+- <code>Observações de mercado</code> — anúncios que você vê e por que funcionam
+- <code>Números que eu vi</code> — CPM, CPC, CTR reais que você encontrar
+- <code>Erros que eu cometi</code> — o arquivo mais valioso em 6 meses</p>
+<p><strong>2. Espionagem legalizada: Biblioteca de Anúncios.</strong>
+Acesse a <a href="https://www.facebook.com/ads/library">Biblioteca de Anúncios do Meta</a>. É pública e gratuita. Escolha <strong>3 negócios locais da sua cidade</strong> (dentista, academia, restaurante) e:
+- Veja quantos anúncios cada um roda
+- Anote: o anúncio é imagem ou vídeo? Quanto tempo está no ar?
+- <strong>Anúncio que roda há muitos meses = anúncio que dá lucro.</strong> Ninguém queima verba por prazer. Essa é a única "espionagem" que realmente importa.</p>
+<p><strong>3. Engenharia reversa de 5 anúncios.</strong>
+Role seu próprio Instagram/Facebook. Nos próximos 5 anúncios que aparecerem, anote:
+- Qual foi o <strong>primeiro segundo</strong>? (o que prendeu ou não prendeu)
+- Qual a <strong>promessa</strong>?
+- Qual a <strong>ação pedida</strong>?
+- Você clicaria? Por quê?</p>
+<p><strong>4. Autodiagnóstico escrito.</strong>
+Responda no caderno, de verdade:
+- Qual negócio eu conheço de perto e poderia ser meu primeiro case? (parente, amigo, ex-chefe)
+- Quanto dinheiro eu posso perder sem me endividar?
+- Quantas horas por semana eu consigo dedicar, honestamente?</p>
+<hr />
+<h2>Checagem de entendimento</h2>
+<p>Se você não responde estas três sem consultar, releia:</p>
+<ol>
+<li>Por que dois anunciantes com o mesmo lance podem pagar preços diferentes pela mesma pessoa?</li>
+<li>Um cliente diz "quero ROAS 4". Por que essa informação sozinha não é suficiente para você aceitar a meta?</li>
+<li>Qual foi a mudança estratégica central do Meta Ads em 2026 e o que ela fez com o papel do gestor?</li>
+</ol>
+<hr />
+<p><strong>Próxima:</strong> <a href="fase-01-matematica.html">Fase 01 — A matemática do tráfego</a> — a fase que separa amador de profissional.</p></article>
+  <nav class="paginacao"><a class="nav-ant" href="index.html"><span>← Anterior</span>Início</a><a class="nav-prox" href="fase-01-matematica.html"><span>Próximo →</span>01 · A matemática</a></nav>
+  <footer class="rodape">Curso de tráfego pago · conteúdo de setembro de 2026</footer>
+</main>
+</body>
+</html>

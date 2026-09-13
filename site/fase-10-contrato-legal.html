@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fase 10 — Contrato, CNPJ e questões legais — Tráfego Pago</title>
+<link rel="stylesheet" href="assets/estilo.css">
+<script>
+/* Roda antes do primeiro pixel, senão a página pisca no tema errado.
+   Sem argumento, alterna. localStorage em try/catch: file:// pode bloquear. */
+function tema(t){var h=document.documentElement;
+t=t||(h.dataset.tema=='escuro'?'claro':'escuro');h.dataset.tema=t;
+try{localStorage.setItem('tema',t)}catch(e){}}
+try{var _t=localStorage.getItem('tema')}catch(e){}
+document.documentElement.dataset.tema=_t||(matchMedia('(prefers-color-scheme:dark)').matches?'escuro':'claro');
+</script>
+</head>
+<body>
+<input type="checkbox" id="abrir-menu" hidden>
+<label for="abrir-menu" class="botao-menu" aria-label="Abrir menu">☰</label>
+<label for="abrir-menu" class="fundo-menu"></label>
+<button class="botao-tema" onclick="tema()" aria-label="Alternar tema claro/escuro"
+        title="Alternar tema claro/escuro"><span class="i-claro">🌙</span><span class="i-escuro">☀️</span></button>
+
+<aside>
+  <a class="marca" href="index.html">Tráfego Pago<small>do zero ao primeiro cliente</small></a>
+  <ul class="topo"><li><a href="index.html"><i>🏠</i>Início</a></li></ul><p class="bloco">Fundamento</p><ul><li><a href="fase-00-fundamentos.html"><i>🧭</i>00 · Fundamentos</a></li><li><a href="fase-01-matematica.html"><i>🧮</i>01 · A matemática</a></li><li><a href="fase-02-infraestrutura.html"><i>🔧</i>02 · Infraestrutura</a></li></ul><p class="bloco">Execução técnica</p><ul><li><a href="fase-03-meta-ads.html"><i>📱</i>03 · Meta Ads</a></li><li><a href="fase-04-google-ads.html"><i>🔍</i>04 · Google Ads</a></li><li><a href="fase-05-tiktok-kwai.html"><i>🎵</i>05 · TikTok e Kwai</a></li><li><a href="fase-06-criativo-copy-oferta.html"><i>🎨</i>06 · Criativo e oferta</a></li><li><a href="fase-07-mensuracao.html"><i>📊</i>07 · Mensuração</a></li><li><a href="fase-08-otimizacao-escala.html"><i>📈</i>08 · Otimização e escala</a></li></ul><p class="bloco">O negócio</p><ul><li><a href="fase-09-vender-o-servico.html"><i>💼</i>09 · Vender o serviço</a></li><li><a href="fase-10-contrato-legal.html" class="ativo"><i>⚖️</i>10 · Contrato e legal</a></li><li><a href="fase-11-operacao-rotina.html"><i>🔄</i>11 · Operação e rotina</a></li><li><a href="fase-12-problemas-reais.html"><i>🚨</i>12 · Problemas reais</a></li></ul><p class="bloco">Templates</p><ul><li><a href="templates/proposta-comercial.html"><i>📄</i>Proposta comercial</a></li><li><a href="templates/contrato-modelo.html"><i>📑</i>Contrato modelo</a></li><li><a href="templates/briefing-onboarding.html"><i>📋</i>Briefing e onboarding</a></li><li><a href="templates/relatorio-mensal.html"><i>📊</i>Relatório mensal</a></li><li><a href="templates/auditoria-de-conta.html"><i>🔎</i>Auditoria de conta</a></li><li><a href="templates/scripts-de-venda.html"><i>💬</i>Scripts de venda</a></li></ul><p class="bloco">Ferramenta</p><ul><li><a href="planilhas/calculadora-viabilidade.html"><i>🧮</i>Calculadora</a></li></ul>
+</aside>
+
+<main>
+  <article><h1>Fase 10 — Contrato, CNPJ e questões legais</h1>
+<blockquote>
+<p><strong>Pré-requisito:</strong> Fase 09, com uma proposta prestes a virar contrato.</p>
+<p>⚠️ <strong>Aviso necessário:</strong> este material é orientação prática de mercado, não consultoria jurídica ou contábil. Antes de assinar contrato ou abrir empresa, valide com um <strong>contador</strong> e, idealmente, com um <strong>advogado</strong>. O custo é baixo e evita problema caro. Regras tributárias mudam — confirme o que está vigente na data em que você for agir.</p>
+</blockquote>
+<hr />
+<h2>1. CNPJ: a decisão que você precisa acertar de primeira</h2>
+<h3>🚨 O ponto crítico: MEI não serve para gestão de tráfego</h3>
+<p>Este é o erro mais comum de quem está começando, e é caro de corrigir depois.</p>
+<p><strong>Gestão de tráfego não consta entre as atividades permitidas no MEI.</strong> Quem trabalha com isso precisa constituir outro tipo de empresa — normalmente <strong>ME (Microempresa)</strong>.</p>
+<p>Muita gente abre MEI com um CNAE aproximado e emite nota assim mesmo. Os riscos: desenquadramento retroativo, cobrança de diferença de tributos com multa, e nota fiscal contestada pelo cliente na hora de deduzir a despesa.</p>
+<p><strong>Confirme com um contador antes de abrir qualquer coisa.</strong> Esta é literalmente a primeira ligação que você deve fazer.</p>
+<h3>O caminho comum</h3>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Etapa</th>
+<th>O que é</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sem CNPJ</strong></td>
+<td>Só funciona no começo, com pessoa física, e limita clientes empresariais (que precisam de nota)</td>
+</tr>
+<tr>
+<td><strong>ME no Simples Nacional</strong></td>
+<td>O caminho padrão de quem trabalha com tráfego</td>
+</tr>
+<tr>
+<td><strong>Contabilidade online</strong></td>
+<td>R$ 100–300/mês, resolve abertura e rotina</td>
+</tr>
+</tbody>
+</table></div>
+<h3>CNAEs normalmente usados</h3>
+<p>Seu contador vai definir, mas os que costumam aparecer:</p>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>CNAE</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7319-0/02</td>
+<td>Promoção de vendas</td>
+</tr>
+<tr>
+<td>7311-4/00</td>
+<td>Agências de publicidade</td>
+</tr>
+<tr>
+<td>7319-0/03</td>
+<td>Marketing direto</td>
+</tr>
+<tr>
+<td>6204-0/00</td>
+<td>Consultoria em tecnologia da informação</td>
+</tr>
+<tr>
+<td>7020-4/00</td>
+<td>Consultoria em gestão empresarial</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>A escolha do CNAE afeta sua alíquota.</strong> Um contador que entende de negócios digitais pode fazer uma diferença de vários pontos percentuais no imposto — vale procurar um que já atenda gestores de tráfego.</p>
+<h3>Simples Nacional — a lógica</h3>
+<p>Prestação de serviço cai normalmente no <strong>Anexo III</strong> ou <strong>Anexo V</strong>, dependendo do <strong>Fator R</strong>:</p>
+<pre><code>Fator R = (folha de pagamento + pró-labore dos últimos 12 meses)
+          ÷ receita bruta dos últimos 12 meses
+
+Fator R ≥ 28%  →  Anexo III (alíquota inicial ~6%)
+Fator R &lt; 28%  →  Anexo V   (alíquota inicial ~15,5%)
+</code></pre>
+<p><strong>Tradução prática:</strong> pagar pró-labore pode reduzir sua alíquota drasticamente. Isso soa contraintuitivo — pagar a si mesmo para pagar menos imposto — mas é uma das otimizações mais comuns e legítimas do setor.</p>
+<p><strong>Peça ao contador para simular os dois cenários.</strong> A diferença entre 6% e 15,5% sobre R$ 10 mil/mês é quase R$ 1.000 mensais.</p>
+<h3>Nota fiscal</h3>
+<ul>
+<li><strong>Cliente pessoa jurídica:</strong> emita sempre. Ele precisa para deduzir a despesa, e não emitir te exclui de clientes maiores.</li>
+<li><strong>Cliente pessoa física:</strong> MEI é dispensado; ME normalmente emite.</li>
+<li><strong>Emissão:</strong> pelo portal da prefeitura (NFS-e) ou pelo sistema do seu contador.</li>
+</ul>
+<blockquote>
+<p>💰 <strong>Regra de ouro que separa amador de profissional: emita nota APENAS sobre o seu honorário, nunca sobre a verba de mídia.</strong></p>
+<p>A verba não é sua receita — é dinheiro do cliente indo para a plataforma. Se ela passar pela sua conta e entrar na sua nota, você paga imposto sobre dinheiro que não é seu, infla artificialmente seu faturamento (podendo estourar o limite do Simples) e cria confusão contábil.</p>
+<p><strong>Solução:</strong> cartão do cliente na conta de anúncios. Sempre. (Fase 02)</p>
+</blockquote>
+<hr />
+<h2>2. O contrato</h2>
+<h3>Por que você precisa de um, sempre</h3>
+<p>Não é desconfiança — é clareza. O contrato responde antecipadamente as perguntas que viram briga depois:</p>
+<ul>
+<li>O que exatamente está incluso?</li>
+<li>O que acontece se o resultado não vier?</li>
+<li>De quem é o pixel, a conta, os criativos?</li>
+<li>Quando e como eu recebo?</li>
+<li>Como termina?</li>
+</ul>
+<p><strong>Cliente sério não se incomoda com contrato. Cliente que se incomoda com contrato é exatamente quem você precisa de contrato para enfrentar.</strong></p>
+<h3>Obrigação de MEIO, não de FIM — a cláusula mais importante</h3>
+<p>Este é o conceito jurídico central da sua atividade.</p>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Obrigação de <strong>meio</strong></th>
+<th>Obrigação de <strong>fim</strong> (resultado)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Você se compromete com o <strong>processo</strong></td>
+<td>Você se compromete com o <strong>resultado</strong></td>
+</tr>
+<tr>
+<td>Empregar técnica, diligência e melhores práticas</td>
+<td>Entregar X vendas</td>
+</tr>
+<tr>
+<td>Médico, advogado, gestor de tráfego</td>
+<td>Construtora entregando uma obra</td>
+</tr>
+<tr>
+<td>🟢 Protege você</td>
+<td>🔴 Te expõe a ação de indenização</td>
+</tr>
+</tbody>
+</table></div>
+<p>Na maioria dos casos, contratos de tráfego pago são considerados <strong>obrigação de meio</strong>. Uma cláusula expressa nesse sentido protege o gestor, que não é obrigado a garantir captação de leads nem conversão em vendas.</p>
+<p><strong>Por quê:</strong> você não controla o produto, o preço, o atendimento, a concorrência, o leilão das plataformas nem a economia. Prometer resultado sobre variáveis que você não controla é assumir um risco desproporcional.</p>
+<p>⚠️ <strong>Atenção:</strong> se o seu material de venda promete resultado ("garanto 30 leads"), uma cláusula de meio no contrato pode não te proteger — a promessa feita na negociação pode ser considerada parte do acordo. <strong>Seja coerente entre o que você vende e o que você assina.</strong></p>
+<h3>As 12 cláusulas essenciais</h3>
+<p>Template completo em <a href="templates/contrato-modelo.html"><code>templates/contrato-modelo.md</code></a>. O que não pode faltar:</p>
+<p><strong>1. Objeto e escopo</strong>
+Detalhado e específico. Quais plataformas, quantas campanhas, quantos criativos por mês, qual frequência de relatório.</p>
+<p><strong>2. O que NÃO está incluso</strong> ⭐
+A cláusula mais subestimada. Evita 80% dos atritos:</p>
+<blockquote>
+<p><em>Não estão inclusos: criação de site ou landing page, produção de fotos e vídeos profissionais, gestão de redes sociais e conteúdo orgânico, atendimento aos leads gerados, design de identidade visual, verba de mídia.</em></p>
+</blockquote>
+<p><strong>3. Obrigação de meio</strong></p>
+<blockquote>
+<p><em>Os serviços constituem obrigação de meio, não de resultado. A CONTRATADA se compromete a empregar as melhores técnicas e diligência, não sendo responsável por garantir volume de leads, vendas ou faturamento, uma vez que tais resultados dependem de fatores fora de seu controle — incluindo produto, preço, atendimento comercial, concorrência e políticas das plataformas.</em></p>
+</blockquote>
+<p><strong>4. Verba de mídia — separada do honorário</strong></p>
+<blockquote>
+<p><em>A verba de mídia é de responsabilidade exclusiva do CONTRATANTE, custeada diretamente por ele junto às plataformas, e não integra a remuneração da CONTRATADA. Tributos incidentes sobre a veiculação são debitados da verba.</em></p>
+</blockquote>
+<p>Mencione explicitamente os tributos: desde janeiro de 2026, PIS/Cofins e ISS passaram a ser cobrados diretamente do anunciante no Brasil, com impacto de aproximadamente 12% no custo dos anúncios. <strong>O cliente precisa saber que R$ 1.000 de verba não compra R$ 1.000 de mídia.</strong></p>
+<p><strong>5. Propriedade dos ativos</strong></p>
+<blockquote>
+<p><em>Todas as contas, páginas, pixels e dados permanecem de titularidade do CONTRATANTE. A CONTRATADA atua mediante acesso concedido, que será revogado ao término do contrato.</em></p>
+</blockquote>
+<p><strong>6. Prazo, renovação e rescisão</strong>
+Prazo mínimo (90 dias é o padrão e é defensável tecnicamente), renovação automática, aviso prévio de 30 dias, multa proporcional se houver rescisão antes do prazo mínimo.</p>
+<p><strong>7. Pagamento</strong>
+Valor, dia do vencimento, forma, multa e juros por atraso, e — importante — <strong>suspensão dos serviços após X dias de inadimplência</strong>.</p>
+<p><strong>8. Responsabilidades do contratante</strong> ⭐
+Também subestimada, e é a que te salva quando o resultado não vem:</p>
+<blockquote>
+<p><em>O CONTRATANTE se compromete a: manter método de pagamento válido nas plataformas; responder os leads gerados em prazo razoável; fornecer as informações e materiais necessários; comunicar alterações relevantes no negócio (preço, capacidade de atendimento, promoções).</em></p>
+</blockquote>
+<p><strong>9. LGPD</strong>
+Ver seção 3.</p>
+<p><strong>10. Confidencialidade</strong>
+Mútua. Dados, números e estratégias de ambas as partes.</p>
+<p><strong>11. Uso do case</strong> ⭐</p>
+<blockquote>
+<p><em>O CONTRATANTE autoriza a CONTRATADA a mencionar a parceria e utilizar dados de desempenho de forma [identificada / anonimizada] em materiais de divulgação.</em></p>
+</blockquote>
+<p>Peça sempre. É como você constrói portfólio. Se o cliente recusar identificação, negocie a versão anonimizada ("clínica odontológica em Curitiba").</p>
+<p><strong>12. Riscos de plataforma</strong> ⭐</p>
+<blockquote>
+<p><em>A CONTRATADA não se responsabiliza por bloqueios, suspensões, reprovações de anúncio ou alterações de política das plataformas, que constituem risco externo ao serviço prestado. Nessas hipóteses, a CONTRATADA empreenderá os esforços cabíveis para restabelecimento, sem prazo garantido.</em></p>
+</blockquote>
+<p><strong>Essa cláusula vai te salvar.</strong> Conta bloqueada acontece com todo mundo, e sem ela você vira o culpado por uma decisão de um algoritmo da Meta.</p>
+<hr />
+<h2>3. LGPD na prática</h2>
+<p>Você trata dados pessoais de terceiros. Não é opcional e não é só burocracia.</p>
+<h3>Os papéis</h3>
+<pre><code>CLIENTE      = CONTROLADOR  (decide por que e como os dados são tratados)
+VOCÊ         = OPERADOR     (trata os dados em nome dele)
+PLATAFORMAS  = terceiros com quem os dados são compartilhados
+</code></pre>
+<p><strong>Isso precisa estar escrito no contrato</strong>, com finalidade, limites, sigilo, e o que acontece com os dados ao fim da relação.</p>
+<h3>O que precisa existir</h3>
+<p><strong>No site do cliente:</strong>
+- [ ] Política de Privacidade publicada
+- [ ] Banner de cookies com <strong>recusa real</strong> (não só "OK")
+- [ ] Tags de marketing disparando <strong>após</strong> consentimento
+- [ ] Finalidade declarada nos formulários
+- [ ] Canal para exclusão de dados</p>
+<p><strong>Na sua operação:</strong>
+- [ ] Não baixar nem armazenar listas de leads sem necessidade
+- [ ] Não compartilhar dados entre clientes (nem "para testar")
+- [ ] Ao encerrar o contrato, devolver ou eliminar o que tiver
+- [ ] Acessos individuais e com 2FA — nunca senha compartilhada</p>
+<h3>Por que isso importa concretamente</h3>
+<p><strong>Em incidente de segurança, as duas partes podem ser responsabilizadas.</strong> A cláusula de LGPD não elimina sua responsabilidade, mas define quem responde pelo quê — e demonstra diligência, que é o que conta numa eventual apuração.</p>
+<blockquote>
+<p><strong>É também argumento comercial.</strong> Cliente de porte médio pergunta sobre LGPD. Ter resposta pronta e uma cláusula bem redigida te coloca num patamar acima de 90% dos concorrentes.</p>
+</blockquote>
+<hr />
+<h2>4. Cobrança e inadimplência</h2>
+<h3>Como estruturar</h3>
+<pre><code>Cobrança:     ANTECIPADA (dia 1 do mês de serviço)
+Forma:        Pix ou boleto (recorrência, se possível)
+Vencimento:   dia fixo, sempre o mesmo
+Setup:        100% antes de iniciar
+Atraso:       multa de 2% + juros de 1% ao mês
+Suspensão:    após 10 dias corridos de atraso
+</code></pre>
+<p><strong>Cobre antecipado.</strong> Você presta serviço contínuo; receber depois é financiar o cliente. Se ele não pode pagar no dia 1, provavelmente não deveria estar investindo em tráfego.</p>
+<h3>O protocolo de inadimplência</h3>
+<pre><code>Dia 1  do atraso  → Mensagem leve. (&quot;Oi [nome], vi que o boleto
+                     de setembro está em aberto — deve ter passado
+                     batido. Consegue dar uma olhada?&quot;)
+Dia 5             → Cobrança formal por escrito, com o valor e a multa
+Dia 10            → Aviso de suspensão + suspensão efetiva
+Dia 30            → Rescisão + protesto ou cobrança judicial
+</code></pre>
+<p><strong>Não trabalhe de graça esperando "resolver na conversa".</strong> Gestor de tráfego inadimplente por 3 meses é um gestor que perdeu 3 meses de faturamento e vai perder o cliente de qualquer forma.</p>
+<h3>A pergunta que previne inadimplência</h3>
+<p>Na reunião de fechamento:</p>
+<blockquote>
+<p><em>"Como funciona o pagamento aí? Quem aprova e em que dia do mês costuma sair?"</em></p>
+</blockquote>
+<p>A resposta te diz se ele tem processo financeiro ou se paga por impulso. E te permite ajustar o vencimento ao ciclo dele — o que reduz atraso pela metade.</p>
+<hr />
+<h2>5. Encerramento de contrato</h2>
+<p>Como você sai define se o cliente te indica ou te difama. <strong>Saia bem, sempre.</strong></p>
+<pre><code>□ Aviso prévio conforme o contrato
+□ Entregar relatório final consolidado
+□ Documentar o que está rodando e por quê (para o próximo gestor)
+□ Remover seus acessos (não espere que ele remova)
+□ Devolver ou eliminar dados pessoais em sua posse
+□ Deixar campanhas pausadas ou funcionando, conforme combinado
+□ Pedir depoimento se a relação foi boa
+</code></pre>
+<blockquote>
+<p><strong>O gestor que entrega uma documentação organizada na saída é o gestor que recebe indicação mesmo depois de sair.</strong> O mercado local é pequeno e todo mundo se conhece. Sua reputação de saída vale mais que um mês de fee.</p>
+</blockquote>
+<hr />
+<h2>✅ Tarefas da Fase 10</h2>
+<ol>
+<li><strong>Ligue para um contador</strong> (procure um que atenda negócios digitais) e confirme: tipo de empresa, CNAE, anexo do Simples e simulação de Fator R. <strong>Esta é a tarefa mais importante da fase.</strong></li>
+<li><strong>Adapte o contrato modelo</strong> de <code>templates/contrato-modelo.md</code> para a sua realidade</li>
+<li><strong>Peça a um advogado para revisar</strong> — uma revisão de contrato simples custa pouco e você usa o mesmo documento por anos</li>
+<li>Defina sua <strong>política de pagamento</strong> e escreva-a</li>
+<li>Monte seu <strong>checklist de encerramento</strong> (seção 5)</li>
+<li>Verifique se os sites dos seus clientes-alvo têm Política de Privacidade e banner de cookies — <strong>é item de auditoria e argumento de venda</strong></li>
+</ol>
+<hr />
+<h2>Checagem de entendimento</h2>
+<ol>
+<li>Por que emitir nota sobre a verba de mídia é um erro caro?</li>
+<li>Cliente cancela no mês 2 dizendo que "não veio resultado". Quais cláusulas te protegem?</li>
+<li>Você abriu MEI com CNAE de "promoção de vendas" e está emitindo nota há 6 meses. Qual o risco?</li>
+</ol>
+<details>
+<summary>Respostas</summary>
+<p><strong>1.</strong> Porque a verba não é sua receita — é dinheiro do cliente destinado à plataforma. Incluí-la na nota faz você pagar imposto sobre dinheiro alheio, infla artificialmente seu faturamento (podendo te aproximar ou estourar o limite do Simples) e cria confusão contábil difícil de desfazer. A solução correta é o cartão do cliente na conta de anúncios.</p>
+<p><strong>2.</strong> Quatro: (a) <strong>obrigação de meio</strong> — você se comprometeu com o processo, não com o resultado; (b) <strong>prazo mínimo de 90 dias</strong> com multa proporcional — 2 meses não é tempo suficiente para julgar uma campanha; (c) <strong>responsabilidades do contratante</strong> — se ele não respondeu os leads, o descumprimento é dele; (d) <strong>escopo e exclusões</strong> — se ele esperava algo que nunca esteve incluso, está escrito que não estava.</p>
+<p><strong>3.</strong> Gestão de tráfego não é atividade permitida no MEI. Os riscos são desenquadramento (inclusive retroativo), cobrança da diferença de tributos com multa e juros, e notas contestadas por clientes na hora de deduzir a despesa. <strong>Procure um contador imediatamente</strong> para avaliar a migração para ME e regularizar o período.</p>
+</details>
+<hr />
+<p><strong>Próxima:</strong> <a href="fase-11-operacao-rotina.html">Fase 11 — Operação e rotina</a></p></article>
+  <nav class="paginacao"><a class="nav-ant" href="fase-09-vender-o-servico.html"><span>← Anterior</span>09 · Vender o serviço</a><a class="nav-prox" href="fase-11-operacao-rotina.html"><span>Próximo →</span>11 · Operação e rotina</a></nav>
+  <footer class="rodape">Curso de tráfego pago · conteúdo de setembro de 2026</footer>
+</main>
+</body>
+</html>

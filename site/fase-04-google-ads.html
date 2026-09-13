@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fase 04 — Google Ads — Tráfego Pago</title>
+<link rel="stylesheet" href="assets/estilo.css">
+<script>
+/* Roda antes do primeiro pixel, senão a página pisca no tema errado.
+   Sem argumento, alterna. localStorage em try/catch: file:// pode bloquear. */
+function tema(t){var h=document.documentElement;
+t=t||(h.dataset.tema=='escuro'?'claro':'escuro');h.dataset.tema=t;
+try{localStorage.setItem('tema',t)}catch(e){}}
+try{var _t=localStorage.getItem('tema')}catch(e){}
+document.documentElement.dataset.tema=_t||(matchMedia('(prefers-color-scheme:dark)').matches?'escuro':'claro');
+</script>
+</head>
+<body>
+<input type="checkbox" id="abrir-menu" hidden>
+<label for="abrir-menu" class="botao-menu" aria-label="Abrir menu">☰</label>
+<label for="abrir-menu" class="fundo-menu"></label>
+<button class="botao-tema" onclick="tema()" aria-label="Alternar tema claro/escuro"
+        title="Alternar tema claro/escuro"><span class="i-claro">🌙</span><span class="i-escuro">☀️</span></button>
+
+<aside>
+  <a class="marca" href="index.html">Tráfego Pago<small>do zero ao primeiro cliente</small></a>
+  <ul class="topo"><li><a href="index.html"><i>🏠</i>Início</a></li></ul><p class="bloco">Fundamento</p><ul><li><a href="fase-00-fundamentos.html"><i>🧭</i>00 · Fundamentos</a></li><li><a href="fase-01-matematica.html"><i>🧮</i>01 · A matemática</a></li><li><a href="fase-02-infraestrutura.html"><i>🔧</i>02 · Infraestrutura</a></li></ul><p class="bloco">Execução técnica</p><ul><li><a href="fase-03-meta-ads.html"><i>📱</i>03 · Meta Ads</a></li><li><a href="fase-04-google-ads.html" class="ativo"><i>🔍</i>04 · Google Ads</a></li><li><a href="fase-05-tiktok-kwai.html"><i>🎵</i>05 · TikTok e Kwai</a></li><li><a href="fase-06-criativo-copy-oferta.html"><i>🎨</i>06 · Criativo e oferta</a></li><li><a href="fase-07-mensuracao.html"><i>📊</i>07 · Mensuração</a></li><li><a href="fase-08-otimizacao-escala.html"><i>📈</i>08 · Otimização e escala</a></li></ul><p class="bloco">O negócio</p><ul><li><a href="fase-09-vender-o-servico.html"><i>💼</i>09 · Vender o serviço</a></li><li><a href="fase-10-contrato-legal.html"><i>⚖️</i>10 · Contrato e legal</a></li><li><a href="fase-11-operacao-rotina.html"><i>🔄</i>11 · Operação e rotina</a></li><li><a href="fase-12-problemas-reais.html"><i>🚨</i>12 · Problemas reais</a></li></ul><p class="bloco">Templates</p><ul><li><a href="templates/proposta-comercial.html"><i>📄</i>Proposta comercial</a></li><li><a href="templates/contrato-modelo.html"><i>📑</i>Contrato modelo</a></li><li><a href="templates/briefing-onboarding.html"><i>📋</i>Briefing e onboarding</a></li><li><a href="templates/relatorio-mensal.html"><i>📊</i>Relatório mensal</a></li><li><a href="templates/auditoria-de-conta.html"><i>🔎</i>Auditoria de conta</a></li><li><a href="templates/scripts-de-venda.html"><i>💬</i>Scripts de venda</a></li></ul><p class="bloco">Ferramenta</p><ul><li><a href="planilhas/calculadora-viabilidade.html"><i>🧮</i>Calculadora</a></li></ul>
+</aside>
+
+<main>
+  <article><h1>Fase 04 — Google Ads</h1>
+<blockquote>
+<p><strong>Pré-requisito:</strong> Fase 03 com uma campanha já rodada.
+<strong>Tempo:</strong> 2 a 3 semanas.
+<strong>Verba:</strong> R$ 200–300 (ou verba do primeiro cliente).</p>
+</blockquote>
+<hr />
+<h2>1. A diferença que muda tudo</h2>
+<p>Esta é a primeira coisa que você precisa entender, e é o que você vai explicar ao cliente na reunião:</p>
+<pre><code>META ADS                          GOOGLE ADS
+─────────                         ──────────
+Você INTERROMPE                   Você ATENDE
+A pessoa não estava procurando    A pessoa está procurando AGORA
+Você cria o desejo                Você captura a intenção
+
+&quot;Olha que legal isso aqui&quot;        &quot;Você procurou isso? Aqui está&quot;
+
+CPM baixo, conversão baixa        CPC alto, conversão alta
+Escala fácil                      Escala limitada pela demanda
+Ótimo para descoberta             Ótimo para colheita
+</code></pre>
+<h3>A analogia que vende</h3>
+<p>Use isso na reunião comercial, funciona sempre:</p>
+<blockquote>
+<p><em>"Meta Ads é o outdoor na avenida: muita gente passa, algumas se interessam, é barato aparecer. Google Ads é a placa na porta da loja quando a pessoa já está com a chave na mão procurando onde entrar — custa mais caro aparecer, mas quem chega já quer comprar.</em></p>
+<p><em>Você precisa dos dois. O Google colhe quem já está pronto. O Meta cria quem vai estar pronto no mês que vem. Se você só faz Google, você depende de uma demanda que não cresce. Se você só faz Meta, você deixa dinheiro fácil na mesa."</em></p>
+</blockquote>
+<h3>Quando priorizar Google</h3>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Priorize Google se...</th>
+<th>Priorize Meta se...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Existe busca ativa pelo serviço ("dentista perto de mim")</td>
+<td>O produto é por impulso ou desejo</td>
+</tr>
+<tr>
+<td>Urgência ("chaveiro 24h", "encanador")</td>
+<td>Ninguém procura ativamente ("curso de oratória")</td>
+</tr>
+<tr>
+<td>Ticket alto que compensa CPC caro</td>
+<td>Verba baixa (&lt; R$ 1.000/mês)</td>
+</tr>
+<tr>
+<td>B2B e serviços técnicos</td>
+<td>Visual é o argumento (moda, estética, comida)</td>
+</tr>
+<tr>
+<td>Marca já conhecida (defender o próprio nome)</td>
+<td>Precisa de volume de topo de funil</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Teste rápido:</strong> digite no Google o que o cliente vende. Se aparecem 4 anúncios competindo, há demanda e dinheiro rodando ali. Se não aparece nenhum, ou não há busca, ou ninguém descobriu ainda — <strong>verifique o volume antes de assumir que é oportunidade.</strong></p>
+<hr />
+<h2>2. Os tipos de campanha</h2>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Onde aparece</th>
+<th>Intenção</th>
+<th>Use quando</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Pesquisa (Search)</strong></td>
+<td>Resultados de busca</td>
+<td>🔥 Altíssima</td>
+<td>🎯 Sempre comece aqui</td>
+</tr>
+<tr>
+<td><strong>Performance Max (PMax)</strong></td>
+<td>Todos os canais do Google</td>
+<td>Variada</td>
+<td>E-commerce com feed; depois de ter dado</td>
+</tr>
+<tr>
+<td><strong>Display</strong></td>
+<td>Sites parceiros, banners</td>
+<td>❄️ Baixa</td>
+<td>Remarketing barato</td>
+</tr>
+<tr>
+<td><strong>YouTube / Vídeo</strong></td>
+<td>YouTube</td>
+<td>🌤️ Média</td>
+<td>Topo de funil, marca</td>
+</tr>
+<tr>
+<td><strong>Shopping</strong></td>
+<td>Aba de compras, com foto e preço</td>
+<td>🔥 Alta</td>
+<td>E-commerce, obrigatório</td>
+</tr>
+<tr>
+<td><strong>Demand Gen</strong></td>
+<td>YouTube, Discover, Gmail</td>
+<td>🌤️ Média</td>
+<td>Alternativa "estilo Meta" dentro do Google</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Para 90% dos seus primeiros clientes: Pesquisa.</strong> É a mais simples de entender, a mais fácil de defender com números, e onde o dinheiro do serviço local está.</p>
+<hr />
+<h2>3. Palavras-chave: o coração do Google</h2>
+<h3>3.1 Os tipos de correspondência</h3>
+<p>Isso determina quando seu anúncio aparece. Erro aqui custa metade da verba.</p>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Como escreve</th>
+<th>Aciona para</th>
+<th>Controle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ampla</strong></td>
+<td><code>dentista curitiba</code></td>
+<td>Qualquer coisa que o Google ache relacionado: "clareamento", "plano odontológico", "faculdade de odontologia"</td>
+<td>🔴 Baixo</td>
+</tr>
+<tr>
+<td><strong>Frase</strong></td>
+<td><code>"dentista curitiba"</code></td>
+<td>Buscas que contenham a ideia: "melhor dentista curitiba centro"</td>
+<td>🟡 Médio</td>
+</tr>
+<tr>
+<td><strong>Exata</strong></td>
+<td><code>[dentista curitiba]</code></td>
+<td>Só essa busca ou variações muito próximas</td>
+<td>🟢 Alto</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Regra para iniciante:</strong> comece com <strong>Frase</strong> e <strong>Exata</strong>. Ampla só quando você já tem dado de conversão e uma lista sólida de palavras negativas. Ampla numa conta nova é a forma mais rápida de queimar R$ 500 em cliques de "curso de dentista".</p>
+<blockquote>
+<p>⚠️ <strong>Atenção 2026:</strong> se você usar correspondência ampla no nível da campanha, ela pode ter sido migrada automaticamente para <strong>AI Max</strong> entre 1 e 30 de setembro de 2026. Veja a seção 7.</p>
+</blockquote>
+<h3>3.2 Palavras-chave negativas — onde o dinheiro é salvo</h3>
+<p>Tão importante quanto escolher as certas é <strong>bloquear as erradas</strong>.</p>
+<p>Lista negativa básica para praticamente todo cliente:</p>
+<pre><code>grátis          gratuito        como fazer
+o que é         significado     download
+curso           apostila        tutorial
+reclamação      reclame aqui    processo
+salário         vaga            emprego
+concurso        faculdade       PDF
+[nome dos concorrentes]
+</code></pre>
+<p><strong>Rotina obrigatória:</strong> toda semana, vá em <strong>Palavras-chave → Termos de pesquisa</strong>. Ali você vê o que as pessoas realmente digitaram. Adicione como negativa tudo que não é cliente.</p>
+<p>Isso é, literalmente, a tarefa que mais economiza dinheiro do cliente no Google Ads. Uma conta sem manutenção de negativas desperdiça de 20% a 40% da verba. <strong>E é isso que você mostra numa auditoria para fechar contrato.</strong></p>
+<h3>3.3 Como encontrar palavras-chave</h3>
+<ol>
+<li><strong>Planejador de Palavras-chave</strong> (dentro do Google Ads, gratuito) — volume e concorrência</li>
+<li><strong>Autocompletar do Google</strong> — digite o serviço e veja as sugestões</li>
+<li><strong>"As pessoas também perguntam"</strong> — nos resultados de busca</li>
+<li><strong>Pergunte ao cliente</strong>: <em>"quando alguém te liga, que palavras a pessoa usa?"</em></li>
+</ol>
+<p><strong>A palavra que o cliente usa ≠ a palavra que o mercado usa.</strong> O dentista diz "reabilitação oral"; o paciente digita "colocar dente novo". Anuncie na linguagem de quem busca.</p>
+<hr />
+<h2>4. Índice de Qualidade: o desconto do Google</h2>
+<p>O Google dá nota de <strong>1 a 10</strong> para cada palavra-chave, baseada em três coisas:</p>
+<pre><code>1. CTR esperado          — seu anúncio costuma ser clicado?
+2. Relevância do anúncio — o texto tem a ver com a busca?
+3. Experiência na página — a landing entrega o que prometeu, rápido?
+</code></pre>
+<p><strong>Por que importa:</strong> nota alta = você paga menos por posição melhor. Nota 3 pode custar <strong>2 a 4 vezes</strong> mais caro que nota 8 pela mesma posição.</p>
+<p><strong>Como melhorar (a receita simples):</strong></p>
+<pre><code>Busca: &quot;clareamento dental curitiba&quot;
+        ↓
+Anúncio: título contém &quot;Clareamento Dental em Curitiba&quot;
+        ↓
+Página: título da página é &quot;Clareamento Dental em Curitiba&quot;
+</code></pre>
+<p><strong>Coerência entre busca → anúncio → página.</strong> É isso. Se a pessoa busca clareamento e cai na home genérica da clínica, sua nota despenca e seu CPC sobe.</p>
+<blockquote>
+<p>Esse é o motivo técnico de landing pages específicas por serviço — e um ótimo serviço extra para vender ao cliente (R$ 500–1.500 por página).</p>
+</blockquote>
+<hr />
+<h2>5. Estrutura de conta</h2>
+<p>O princípio: <strong>cada grupo de anúncios trata de UM tema</strong>.</p>
+<pre><code>📁 CAMPANHA: [PESQUISA] Clinica - Curitiba - Set26
+    │  Orçamento: R$ 30/dia
+    │  Local: Curitiba + 15km
+    │  Lance: Maximizar conversões
+    │
+    ├── 📂 GRUPO: Implante
+    │     [implante dentario curitiba]
+    │     &quot;implante dentario preco&quot;
+    │     &quot;quanto custa implante dentario&quot;
+    │     └─ Anúncio: &quot;Implante Dentário em Curitiba | Avaliação Grátis&quot;
+    │     └─ Destino: /implante-dentario
+    │
+    ├── 📂 GRUPO: Clareamento
+    │     [clareamento dental curitiba]
+    │     &quot;clareamento dental preco&quot;
+    │     └─ Anúncio: &quot;Clareamento Dental em Curitiba | Resultado em 1 Sessão&quot;
+    │     └─ Destino: /clareamento
+    │
+    └── 📂 GRUPO: Marca
+          [nome da clinica]
+          └─ Defende o próprio nome (CPC baratíssimo, conversão altíssima)
+</code></pre>
+<h3>A campanha de marca — dinheiro fácil que quase ninguém faz</h3>
+<p>Anunciar no <strong>próprio nome do cliente</strong> parece besteira ("ele já apareceria organicamente"). Mas:</p>
+<ul>
+<li>CPC é baixíssimo (R$ 0,10–0,50), porque só você é relevante para o seu nome</li>
+<li>Conversão altíssima (a pessoa já quer você)</li>
+<li><strong>Impede o concorrente de comprar seu nome</strong> e roubar seu cliente na porta da loja</li>
+<li>Você controla a mensagem e o destino</li>
+</ul>
+<p>É a primeira campanha que eu ligo em qualquer cliente que tenha alguma marca. Custa R$ 3/dia e sempre dá o melhor ROAS da conta. <strong>E é uma vitória rápida para mostrar no primeiro relatório.</strong></p>
+<hr />
+<h2>6. Primeira campanha de Pesquisa — passo a passo</h2>
+<h3>Passo 1 — Configurar conversão ANTES de tudo</h3>
+<p>🚨 <strong>Não crie campanha sem conversão configurada.</strong> É como dirigir sem velocímetro.</p>
+<p><code>Ferramentas → Medição → Conversões → + Nova ação de conversão</code></p>
+<p>Ações típicas: envio de formulário, clique no WhatsApp, ligação, compra.</p>
+<p>Instalação via Google Tag Manager — detalhado na <a href="fase-07-mensuracao.html">Fase 07</a>.</p>
+<h3>Passo 2 — Criar a campanha</h3>
+<pre><code>+ Nova campanha
+→ Objetivo: Leads (ou Vendas)
+→ Tipo: Pesquisa
+→ Resultado desejado: Envios de formulário / Chamadas
+</code></pre>
+<h3>Passo 3 — Configurações</h3>
+<pre><code>Nome:        [PESQUISA] Clinica - Curitiba - Set26
+Redes:       ✅ Pesquisa
+             ❌ Rede de Display        ← DESMARQUE. Sempre.
+             ❌ Parceiros de pesquisa  ← desmarque no início
+
+Local:       Curitiba + 15km
+             ⚙️ Opções de local → &quot;Presença: pessoas que ESTÃO ou
+                visitam regularmente&quot;  ← não é o padrão, mude
+Idioma:      Português
+
+Lance:       Maximizar cliques (primeiros 15 dias, sem dado)
+             → depois: Maximizar conversões
+             → com 30+ conversões/mês: CPA desejado
+
+Orçamento:   R$ 30/dia
+</code></pre>
+<blockquote>
+<p>🔴 <strong>O erro mais caro de iniciante no Google:</strong> deixar "Rede de Display" marcada numa campanha de Pesquisa. O Google marca por padrão. Sua verba vaza para banners aleatórios em sites de notícia, com conversão quase zero. <strong>Sempre desmarque.</strong></p>
+<p>🔴 <strong>Segundo erro mais caro:</strong> deixar o local em "Interesse". O padrão do Google inclui pessoas <em>interessadas</em> naquele local — você paga por alguém em Manaus pesquisando sobre Curitiba. Mude para <strong>presença física</strong>.</p>
+</blockquote>
+<h3>Passo 4 — Grupo de anúncios e palavras</h3>
+<p>Um tema por grupo. 5 a 15 palavras. Comece com Frase e Exata.</p>
+<h3>Passo 5 — Anúncio Responsivo de Pesquisa (RSA)</h3>
+<p>Você fornece peças; o Google monta as combinações.</p>
+<pre><code>Títulos (até 15, faça no mínimo 8) — 30 caracteres cada
+  1. Implante Dentário Curitiba      ← contém a palavra-chave
+  2. Implante em Até 12x Sem Juros   ← oferta
+  3. Avaliação Gratuita Hoje         ← CTA
+  4. Clínica com 15 Anos no Batel    ← autoridade
+  5. Agende em 2 Minutos             ← facilidade
+  6. Implante com Garantia Vitalícia ← diferencial
+  7. +2.000 Implantes Realizados     ← prova social
+  8. Atendimento no Mesmo Dia        ← urgência
+
+Descrições (até 4) — 90 caracteres cada
+  1. Implante dentário com tecnologia 3D e recuperação rápida. Agende sua avaliação.
+  2. Parcelamos em até 12x. Primeira consulta gratuita. Fale com a gente agora.
+</code></pre>
+<p><strong>Recursos (extensões) — preencha TODOS, são gratuitos e aumentam o CTR:</strong></p>
+<ul>
+<li>✅ <strong>Sitelinks</strong> (4+) — links extras para outras páginas</li>
+<li>✅ <strong>Frases de destaque</strong> — "Estacionamento Grátis", "Atendimento Sábado"</li>
+<li>✅ <strong>Snippets estruturados</strong> — lista de serviços</li>
+<li>✅ <strong>Chamada</strong> — telefone clicável</li>
+<li>✅ <strong>Local</strong> — vincule o Perfil da Empresa no Google</li>
+<li>✅ <strong>Formulário de lead</strong> — captura direto no anúncio</li>
+</ul>
+<p>Recursos ocupam mais espaço na tela e empurram o concorrente para baixo. <strong>É espaço grátis. Não deixe vazio.</strong></p>
+<hr />
+<h2>7. AI Max — a grande mudança de 2026</h2>
+<p>Você precisa dominar isso, porque está acontecendo agora e a maioria dos gestores ainda não entendeu.</p>
+<h3>O que é</h3>
+<p><strong>AI Max</strong> saiu do beta em <strong>abril de 2026</strong>. É a camada de IA sobre as campanhas de Pesquisa, com três capacidades:</p>
+<ol>
+<li><strong>Correspondência de termos de pesquisa</strong> — a IA vai além da sua lista de palavras-chave e exibe seu anúncio em buscas relacionadas que ela prevê que vão converter</li>
+<li><strong>Personalização de texto</strong> — o Google gera novas versões do seu texto com base nos seus anúncios, palavras-chave e páginas de destino</li>
+<li><strong>Expansão de URL final</strong> — o Google escolhe qual página do site é mais relevante para cada busca</li>
+</ol>
+<h3>O que está acontecendo AGORA</h3>
+<ul>
+<li><strong>1 a 30 de setembro de 2026:</strong> o Google faz upgrade automático para AI Max em campanhas de Pesquisa que usam (a) correspondência ampla no nível da campanha ou (b) recursos criados automaticamente.</li>
+<li><strong>Dynamic Search Ads (DSA)</strong> está sendo aposentado e absorvido pelo AI Max. O desligamento com upgrade automático começa em <strong>fevereiro de 2027</strong>.</li>
+</ul>
+<h3>O que fazer na prática</h3>
+<p><strong>Se você assumir uma conta existente agora, faça este diagnóstico:</strong></p>
+<pre><code>□ A campanha de Pesquisa mudou de comportamento em setembro?
+□ Usa correspondência ampla no nível da campanha?
+□ Tem &quot;recursos criados automaticamente&quot; ativado?
+□ Existe alguma DSA rodando? (planeje migração)
+□ Os relatórios de termos de pesquisa mostram buscas fora da lista de palavras?
+</code></pre>
+<p>Se sim para as primeiras, a conta provavelmente foi migrada <strong>sem o cliente saber</strong>.</p>
+<p><strong>Como isso vira dinheiro:</strong> essa é a auditoria mais vendável do momento. O dono do negócio viu o custo mudar em setembro e não sabe por quê. Você explica. Você fecha.</p>
+<h3>AI Max: ligar ou não?</h3>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Ligue quando</th>
+<th>Evite quando</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A conta já tem histórico de conversão limpo</td>
+<td>Conta nova, sem dado de conversão</td>
+</tr>
+<tr>
+<td>O site tem várias páginas boas e específicas</td>
+<td>Site de página única (expansão de URL não tem para onde ir)</td>
+</tr>
+<tr>
+<td>Você quer descobrir demanda nova</td>
+<td>Setor regulado, onde texto gerado por IA é risco</td>
+</tr>
+<tr>
+<td>Você tem lista sólida de negativas</td>
+<td>Verba apertada e zero margem para desperdício</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Controles que você não pode deixar de usar com AI Max ligado:</strong>
+- Lista de palavras-chave <strong>negativas</strong> robusta (continua funcionando e fica mais importante)
+- <strong>Exclusões de URL</strong> (impedir que a IA mande tráfego para páginas erradas — blog, carreiras, política de privacidade)
+- Revisão <strong>semanal</strong> do relatório de termos de pesquisa</p>
+<blockquote>
+<p><strong>A regra:</strong> IA sem coleira gasta a verba do seu cliente descobrindo coisas. Coleira = negativas + exclusões + revisão semanal.</p>
+</blockquote>
+<hr />
+<h2>8. Performance Max</h2>
+<p>PMax roda em todos os canais do Google ao mesmo tempo (Pesquisa, Display, YouTube, Gmail, Maps, Discover) a partir de um conjunto de recursos que você fornece.</p>
+<p><strong>A boa notícia de 2026:</strong> o PMax deixou de ser caixa-preta — ganhou relatórios e controles de verdade. <strong>A má notícia:</strong> por isso mesmo, agora exige gestão ativa. Deixar rodando sozinho não é mais desculpa aceitável.</p>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Use PMax quando</th>
+<th>Evite quando</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E-commerce com feed de produtos</td>
+<td>Conta nova sem histórico de conversão</td>
+</tr>
+<tr>
+<td>A conta já tem 30+ conversões/mês</td>
+<td>Verba baixa (&lt; R$ 2.000/mês)</td>
+</tr>
+<tr>
+<td>Já existe Pesquisa rodando bem</td>
+<td>Você precisa de controle fino</td>
+</tr>
+<tr>
+<td>Quer escalar além do limite da Pesquisa</td>
+<td>Cliente exige saber exatamente onde o dinheiro foi</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Regra de ouro:</strong> <strong>nunca comece por PMax.</strong> Ele precisa de dado para funcionar. Sem dado, ele gasta a verba coletando dado — com o dinheiro do seu cliente.</p>
+<p><strong>Controles que você deve usar sempre:</strong>
+- <strong>Exclusões de marca</strong> — impede o PMax de canibalizar suas buscas de marca (que custariam R$ 0,20 e ele cobra R$ 3)
+- <strong>Exclusões de URL</strong>
+- <strong>Sinais de público</strong> — não é segmentação, é uma dica de partida para a IA
+- <strong>Grupos de recursos separados</strong> por linha de produto</p>
+<hr />
+<h2>9. Lances: qual escolher e quando</h2>
+<p>A evolução natural conforme a conta amadurece:</p>
+<pre><code>Sem dado nenhum          → Maximizar cliques (com limite de CPC)
+                            Objetivo: gerar volume e aprender
+                            ↓ 15–30 dias
+15+ conversões           → Maximizar conversões
+                            Objetivo: o Google busca quem converte
+                            ↓ 30+ conversões/mês
+Dado estável             → CPA desejado (tCPA)
+                            Objetivo: controlar custo por lead
+                            ↓ e-commerce com valores diferentes
+Receita variável         → ROAS desejado (tROAS)
+</code></pre>
+<p>⚠️ <strong>Não pule etapas.</strong> Colocar tCPA numa conta sem dado faz o Google simplesmente não entregar — ele não encontra volume no custo que você pediu, e a campanha fica parada gastando R$ 2/dia.</p>
+<hr />
+<h2>10. Erros comuns no Google</h2>
+<ol>
+<li><strong>Deixar Rede de Display marcada</strong> na campanha de Pesquisa → vazamento silencioso da verba</li>
+<li><strong>Local em "interesse"</strong> em vez de presença física</li>
+<li><strong>Correspondência ampla sem negativas</strong> → paga por "curso de", "grátis", "salário"</li>
+<li><strong>Não revisar termos de pesquisa</strong> semanalmente</li>
+<li><strong>Começar por PMax</strong> sem dado</li>
+<li><strong>Uma página de destino genérica</strong> para todos os grupos → índice de qualidade despenca</li>
+<li><strong>Deixar recursos/extensões vazios</strong> → desperdiça espaço grátis na tela</li>
+<li><strong>Não fazer campanha de marca</strong> → entrega seu cliente ao concorrente na porta</li>
+<li><strong>Mudar estratégia de lance toda semana</strong> → cada mudança reinicia o aprendizado</li>
+<li><strong>Ignorar a migração para AI Max</strong> em setembro de 2026</li>
+</ol>
+<hr />
+<h2>✅ Tarefas da Fase 04</h2>
+<ol>
+<li>Crie sua conta MCC (se ainda não fez na Fase 02) e vincule uma conta de teste</li>
+<li><strong>Configure uma conversão</strong> antes de qualquer campanha</li>
+<li>Use o Planejador de Palavras-chave: levante 30 palavras do seu nicho, com volume e CPC estimado</li>
+<li>Monte sua <strong>lista de negativas base</strong> (seção 3.2) e salve como lista compartilhada</li>
+<li>Suba <strong>uma campanha de Pesquisa</strong>: 1 campanha, 2–3 grupos temáticos, RSA com 8+ títulos, todos os recursos preenchidos</li>
+<li>Rode 14 dias com R$ 15–20/dia</li>
+<li><strong>Toda semana:</strong> abra Termos de Pesquisa e adicione negativas. Anote quanto você economizou.</li>
+<li><strong>Compare Meta × Google</strong> no seu caderno: CPL, qualidade do lead, esforço de gestão. Essa comparação é argumento de venda.</li>
+</ol>
+<hr />
+<h2>Checagem de entendimento</h2>
+<ol>
+<li>Cliente vende curso de inglês online. Google ou Meta primeiro? Por quê?</li>
+<li>Você vê no relatório que a campanha está gastando com "curso de dentista" e "salário de dentista". O que aconteceu e como resolve?</li>
+<li>Por que uma campanha só no nome da própria empresa quase sempre tem o melhor ROAS da conta?</li>
+</ol>
+<details>
+<summary>Respostas</summary>
+<p><strong>1.</strong> Depende da busca. Verifique no Planejador: "curso de inglês online" tem volume alto → Google Pesquisa funciona bem. Mas o volume é limitado e caro (nicho disputado). A escala está no Meta, criando desejo em quem não estava procurando. <strong>Resposta madura:</strong> Google para colher a demanda existente, Meta para escalar além dela. Se a verba só dá para um e o cliente precisa de volume, comece por Meta.</p>
+<p><strong>2.</strong> Correspondência ampla (ou AI Max) sem negativas suficientes. Resolva em três passos: (a) adicione "curso", "salário", "vaga", "faculdade" como negativas imediatamente; (b) mude as palavras para Frase/Exata enquanto a conta não tem dado; (c) crie rotina semanal de revisão de termos.</p>
+<p><strong>3.</strong> Porque combina o CPC mais barato da conta (você é o único anunciante realmente relevante para o seu nome, então o índice de qualidade é máximo) com a intenção mais quente possível (quem digita o nome da empresa já decidiu). Além disso, defende contra concorrentes que compram seu nome.</p>
+</details>
+<hr />
+<p><strong>Próxima:</strong> <a href="fase-05-tiktok-kwai.html">Fase 05 — TikTok e Kwai</a></p></article>
+  <nav class="paginacao"><a class="nav-ant" href="fase-03-meta-ads.html"><span>← Anterior</span>03 · Meta Ads</a><a class="nav-prox" href="fase-05-tiktok-kwai.html"><span>Próximo →</span>05 · TikTok e Kwai</a></nav>
+  <footer class="rodape">Curso de tráfego pago · conteúdo de setembro de 2026</footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fase 08 — Otimização e escala — Tráfego Pago</title>
+<link rel="stylesheet" href="assets/estilo.css">
+<script>
+/* Roda antes do primeiro pixel, senão a página pisca no tema errado.
+   Sem argumento, alterna. localStorage em try/catch: file:// pode bloquear. */
+function tema(t){var h=document.documentElement;
+t=t||(h.dataset.tema=='escuro'?'claro':'escuro');h.dataset.tema=t;
+try{localStorage.setItem('tema',t)}catch(e){}}
+try{var _t=localStorage.getItem('tema')}catch(e){}
+document.documentElement.dataset.tema=_t||(matchMedia('(prefers-color-scheme:dark)').matches?'escuro':'claro');
+</script>
+</head>
+<body>
+<input type="checkbox" id="abrir-menu" hidden>
+<label for="abrir-menu" class="botao-menu" aria-label="Abrir menu">☰</label>
+<label for="abrir-menu" class="fundo-menu"></label>
+<button class="botao-tema" onclick="tema()" aria-label="Alternar tema claro/escuro"
+        title="Alternar tema claro/escuro"><span class="i-claro">🌙</span><span class="i-escuro">☀️</span></button>
+
+<aside>
+  <a class="marca" href="index.html">Tráfego Pago<small>do zero ao primeiro cliente</small></a>
+  <ul class="topo"><li><a href="index.html"><i>🏠</i>Início</a></li></ul><p class="bloco">Fundamento</p><ul><li><a href="fase-00-fundamentos.html"><i>🧭</i>00 · Fundamentos</a></li><li><a href="fase-01-matematica.html"><i>🧮</i>01 · A matemática</a></li><li><a href="fase-02-infraestrutura.html"><i>🔧</i>02 · Infraestrutura</a></li></ul><p class="bloco">Execução técnica</p><ul><li><a href="fase-03-meta-ads.html"><i>📱</i>03 · Meta Ads</a></li><li><a href="fase-04-google-ads.html"><i>🔍</i>04 · Google Ads</a></li><li><a href="fase-05-tiktok-kwai.html"><i>🎵</i>05 · TikTok e Kwai</a></li><li><a href="fase-06-criativo-copy-oferta.html"><i>🎨</i>06 · Criativo e oferta</a></li><li><a href="fase-07-mensuracao.html"><i>📊</i>07 · Mensuração</a></li><li><a href="fase-08-otimizacao-escala.html" class="ativo"><i>📈</i>08 · Otimização e escala</a></li></ul><p class="bloco">O negócio</p><ul><li><a href="fase-09-vender-o-servico.html"><i>💼</i>09 · Vender o serviço</a></li><li><a href="fase-10-contrato-legal.html"><i>⚖️</i>10 · Contrato e legal</a></li><li><a href="fase-11-operacao-rotina.html"><i>🔄</i>11 · Operação e rotina</a></li><li><a href="fase-12-problemas-reais.html"><i>🚨</i>12 · Problemas reais</a></li></ul><p class="bloco">Templates</p><ul><li><a href="templates/proposta-comercial.html"><i>📄</i>Proposta comercial</a></li><li><a href="templates/contrato-modelo.html"><i>📑</i>Contrato modelo</a></li><li><a href="templates/briefing-onboarding.html"><i>📋</i>Briefing e onboarding</a></li><li><a href="templates/relatorio-mensal.html"><i>📊</i>Relatório mensal</a></li><li><a href="templates/auditoria-de-conta.html"><i>🔎</i>Auditoria de conta</a></li><li><a href="templates/scripts-de-venda.html"><i>💬</i>Scripts de venda</a></li></ul><p class="bloco">Ferramenta</p><ul><li><a href="planilhas/calculadora-viabilidade.html"><i>🧮</i>Calculadora</a></li></ul>
+</aside>
+
+<main>
+  <article><h1>Fase 08 — Otimização e escala</h1>
+<blockquote>
+<p><strong>Pré-requisito:</strong> campanha rodando há pelo menos 14 dias.
+<strong>Tempo:</strong> contínuo.</p>
+</blockquote>
+<hr />
+<h2>A regra que define o profissional</h2>
+<blockquote>
+<h2>A maior habilidade em otimização é saber quando NÃO mexer.</h2>
+</blockquote>
+<p>Iniciante mexe todo dia porque mexer parece trabalho. Cada mexida reinicia a fase de aprendizado, queima a verba já investida em aprendizado, e desestabiliza o que estava estabilizando.</p>
+<p><strong>O gestor que "não fez nada esta semana" porque a campanha estava boa entregou mais valor que o gestor que mexeu em tudo.</strong></p>
+<p>O problema: o cliente não vê isso. Ele associa movimento a trabalho. Por isso você precisa <strong>relatar o que observou</strong>, não só o que mudou. "Analisei os cortes por posicionamento e idade e decidi manter — a campanha está estável e qualquer ajuste agora reiniciaria o aprendizado" é um relatório de trabalho feito.</p>
+<h3>As três perguntas antes de qualquer alteração</h3>
+<pre><code>1. Eu tenho DADO suficiente para essa decisão?
+   (mínimo: 3–5 dias + ~50 cliques ou 10 conversões)
+
+2. Essa mudança vai REINICIAR o aprendizado?
+   (se sim, o ganho esperado compensa o custo?)
+
+3. Eu vou conseguir saber se DEU CERTO?
+   (mudou uma coisa só, ou três de uma vez?)
+</code></pre>
+<p>Se você não responde as três, não mexa.</p>
+<hr />
+<h2>1. A rotina de trabalho</h2>
+<h3>Diária — 10 minutos por cliente</h3>
+<pre><code>□ As campanhas estão veiculando? (erro de pagamento, anúncio reprovado)
+□ Algum gasto anormal? (verba disparou ou travou)
+□ Algum anúncio reprovado?
+□ Leads estão chegando? (teste você mesmo uma vez por semana)
+</code></pre>
+<p><strong>Só isso.</strong> Sem análise, sem alteração. É uma checagem de sinais vitais.</p>
+<h3>Semanal — 30 a 60 minutos por cliente</h3>
+<pre><code>□ Comparar semana vs. semana anterior
+□ Revisar criativos: pausar os piores, promover o vencedor
+□ Google: revisar TERMOS DE PESQUISA e adicionar negativas
+□ Checar frequência (fadiga?)
+□ Ajustar verba se houver justificativa (±20%)
+□ Anotar no caderno: o que mudou e por quê
+</code></pre>
+<h3>Mensal — 2 a 3 horas por cliente</h3>
+<pre><code>□ Relatório para o cliente
+□ Reunião de alinhamento
+□ Planejar criativos do próximo mês
+□ Revisar a matemática (CPL vs. meta da Fase 01)
+□ Checar se a oferta ainda faz sentido
+□ Pedir o número de VENDAS ao cliente (não só leads)
+</code></pre>
+<blockquote>
+<p>💡 <strong>A pergunta mensal mais importante:</strong> <em>"das 78 pessoas que eu te mandei, quantas viraram cliente e quanto isso faturou?"</em> Sem essa resposta você está otimizando para lead, não para dinheiro. E é essa resposta que justifica seu aumento de fee.</p>
+</blockquote>
+<hr />
+<h2>2. Árvore de decisão diagnóstica</h2>
+<p>Imprima. É a ferramenta que você mais vai usar.</p>
+<pre><code>                    Campanha com problema
+                            │
+                  ┌─────────┴─────────┐
+              CPM alto?            CPM normal
+                  │                     │
+       ┌──────────┴────────┐      ┌─────┴──────┐
+   Público           Sazonalidade  CTR baixo?   CTR ok
+   restrito?          /concorrência    │           │
+       │                   │           │      ┌────┴────┐
+   Abrir público      Aceitar ou   CRIATIVO  Conversão  Conversão
+   (amplo)            reduzir      ou OFERTA  baixa?     boa
+                      verba            │         │          │
+                                   Trocar    PÁGINA      CPL alto
+                                   ÂNGULO    ou OFERTA   mesmo assim?
+                                                │            │
+                                            Auditar LP   Revisar a
+                                            (Fase 06)    matemática
+                                                         (Fase 01)
+</code></pre>
+<h3>A tabela de diagnóstico rápido</h3>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Sintoma</th>
+<th>Causa provável</th>
+<th>Ação</th>
+<th>⚠️ NÃO faça</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPM subindo</td>
+<td>Competição, fadiga, público pequeno</td>
+<td>Criativo novo, abrir público</td>
+<td>Não aumente lance</td>
+</tr>
+<tr>
+<td>CTR &lt; 1%</td>
+<td>Criativo ou oferta fracos</td>
+<td><strong>Trocar ângulo</strong> do criativo</td>
+<td>Não mexa no público</td>
+</tr>
+<tr>
+<td>CTR bom, sem lead</td>
+<td>Página ou formulário</td>
+<td>Auditar LP, encurtar formulário</td>
+<td>Não troque o criativo</td>
+</tr>
+<tr>
+<td>Leads ruins</td>
+<td>Oferta genérica demais ou atendimento</td>
+<td>Qualificar no formulário; checar tempo de resposta</td>
+<td>Não culpe o algoritmo</td>
+</tr>
+<tr>
+<td>Tudo bom, CPL alto</td>
+<td>Matemática do nicho</td>
+<td>Revisar CPA máximo com o cliente</td>
+<td>Não prometa milagre</td>
+</tr>
+<tr>
+<td>Caiu de repente</td>
+<td>Fadiga, mudança de plataforma, concorrente novo</td>
+<td>Verificar frequência e mudanças recentes</td>
+<td>Não reinicie tudo em pânico</td>
+</tr>
+<tr>
+<td>Frequência &gt; 4</td>
+<td>Público esgotado</td>
+<td>Abrir público, criativo novo</td>
+<td>Não aumente verba</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>3. Quanto dado é suficiente?</h2>
+<p>Decisão tomada sobre dado insuficiente é aposta com nome técnico.</p>
+<h3>Mínimos práticos para decidir</h3>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Decisão</th>
+<th>Mínimo antes de agir</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pausar um criativo</td>
+<td>1.000+ impressões ou 3 dias</td>
+</tr>
+<tr>
+<td>Declarar vencedor entre criativos</td>
+<td>50+ cliques em cada, ou 3–5 conversões</td>
+</tr>
+<tr>
+<td>Mudar estratégia de lance</td>
+<td>30+ conversões</td>
+</tr>
+<tr>
+<td>Declarar que a campanha falhou</td>
+<td>7 dias completos + verba ≥ 3× o CPA alvo por dia</td>
+</tr>
+<tr>
+<td>Escalar verba</td>
+<td>3+ dias estáveis com CPL dentro da meta</td>
+</tr>
+</tbody>
+</table></div>
+<h3>O teste de sanidade que evita erro bobo</h3>
+<pre><code>Criativo A: 2 conversões em 40 cliques  → 5,0%
+Criativo B: 1 conversão em 45 cliques   → 2,2%
+</code></pre>
+<p>Parece que A é o dobro de B. <strong>Não é.</strong> Com números tão pequenos, uma única conversão a mais ou a menos inverte o resultado. Isso é ruído, não sinal.</p>
+<p><strong>Regra prática:</strong> se a diferença some quando você tira <strong>uma</strong> conversão do vencedor, você não tem resultado — tem coincidência. Continue rodando.</p>
+<hr />
+<h2>4. Escala: crescer sem quebrar</h2>
+<h3>Escala vertical — mais verba no que funciona</h3>
+<pre><code>✅ +20% a cada 2–3 dias
+✅ Dar 48–72h para estabilizar antes do próximo aumento
+✅ Se o CPL subir muito, volte ao valor anterior e espere
+
+❌ Dobrar de uma vez → reinicia aprendizado, CPL dispara
+❌ Aumentar todo dia → nunca estabiliza
+</code></pre>
+<p><strong>Por que o aumento agressivo quebra:</strong> com mais verba, o algoritmo precisa alcançar gente menos qualificada para gastar tudo. Aumentos graduais dão tempo para ele expandir o público mantendo a qualidade.</p>
+<h3>Escala horizontal — mais frentes</h3>
+<p>Quando o vertical trava, abra frentes novas:</p>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Movimento</th>
+<th>Como fazer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nova geografia</strong></td>
+<td>Duplicar o conjunto vencedor para outra cidade/região</td>
+</tr>
+<tr>
+<td><strong>Novos criativos, mesmo ângulo</strong></td>
+<td>O ângulo venceu; produza 5 peças diferentes dele</td>
+</tr>
+<tr>
+<td><strong>Novo público</strong></td>
+<td>Lookalike dos convertidos, remarketing mais profundo</td>
+</tr>
+<tr>
+<td><strong>Nova plataforma</strong></td>
+<td>Meta funcionando → adicionar Google (ou vice-versa)</td>
+</tr>
+<tr>
+<td><strong>Nova oferta</strong></td>
+<td>Outro serviço do mesmo cliente</td>
+</tr>
+<tr>
+<td><strong>Novo posicionamento</strong></td>
+<td>Testar canais ainda não explorados</td>
+</tr>
+</tbody>
+</table></div>
+<h3>O teto natural</h3>
+<p>Todo negócio local tem um teto: a demanda da região. Uma clínica em cidade de 80 mil habitantes não absorve R$ 20 mil/mês de mídia — não há gente suficiente procurando.</p>
+<p><strong>Reconhecer o teto e dizer isso ao cliente é sinal de maturidade profissional.</strong> A alternativa honesta:
+- Expandir geografia
+- Aumentar o ticket (vender tratamento mais completo)
+- Atacar outro serviço da mesma empresa
+- Melhorar a taxa de fechamento em vez de comprar mais leads</p>
+<blockquote>
+<p><strong>Essa conversa é ouro comercial.</strong> <em>"A gente chegou no teto de leads da sua região. Aumentar verba agora só encarece o lead. O próximo ganho não está em comprar mais gente — está em fechar melhor a gente que já chega. Quer que eu te ajude a olhar isso?"</em> Você acabou de propor um projeto novo em vez de perder o cliente por estagnação.</p>
+</blockquote>
+<hr />
+<h2>5. Quando matar uma campanha</h2>
+<p>Critérios objetivos, definidos <strong>antes</strong> de começar (isso evita decisão emocional):</p>
+<pre><code>□ 7 dias completos rodando
+□ Verba diária ≥ 3× o CPA alvo
+□ CPL acima de 2× a meta, sem tendência de queda
+□ Já testou pelo menos 3 ângulos de criativo diferentes
+□ Página e rastreamento verificados e funcionando
+</code></pre>
+<p>Cinco marcados? Pause e reconstrua do zero, começando pela <strong>oferta</strong>.</p>
+<p>⚠️ <strong>Cuidado com o "só mais um dia".</strong> Sem critério definido antes, você prorroga indefinidamente e queima a verba do cliente por esperança. Defina o critério no início e siga.</p>
+<hr />
+<h2>6. Sazonalidade: o que esperar do calendário</h2>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Período</th>
+<th>CPM</th>
+<th>O que fazer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Janeiro</td>
+<td>🟢 Baixo</td>
+<td>Ótimo para testar. Anunciantes voltando devagar.</td>
+</tr>
+<tr>
+<td>Fevereiro (carnaval)</td>
+<td>🟢 Baixo</td>
+<td>Atenção ao consumo do público</td>
+</tr>
+<tr>
+<td>Março–Maio</td>
+<td>🟡 Normal</td>
+<td>Operação padrão</td>
+</tr>
+<tr>
+<td>Junho–Julho</td>
+<td>🟡 Normal</td>
+<td>Férias escolares afetam alguns nichos</td>
+</tr>
+<tr>
+<td>Agosto–Outubro</td>
+<td>🟡 Subindo</td>
+<td>Aquecimento pré-Black Friday</td>
+</tr>
+<tr>
+<td><strong>Novembro (BF)</strong></td>
+<td>🔴 <strong>Muito alto</strong></td>
+<td>CPM pode dobrar. Reserve verba ou saia do leilão.</td>
+</tr>
+<tr>
+<td>Dezembro</td>
+<td>🔴 Alto</td>
+<td>Natal. Cai forte após o dia 24.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>O que fazer com isso:</strong>
+1. <strong>Avise o cliente em outubro</strong> que novembro vai custar mais caro. Cliente avisado não reclama; cliente surpreendido cancela.
+2. Se o negócio não se beneficia da Black Friday, <strong>reduza a verba em novembro</strong> e reinvista em janeiro, quando o leilão está barato. Isso é gestão de verdade.
+3. Prepare os criativos sazonais com 3 semanas de antecedência.</p>
+<hr />
+<h2>7. Checklist de otimização semanal</h2>
+<p>Copie para seu processo. Faça na mesma ordem, sempre.</p>
+<pre><code>CONTA
+□ Tudo veiculando? Anúncio reprovado? Pagamento ok?
+□ Gasto na pista do orçamento planejado do mês?
+
+PERFORMANCE
+□ Comparar com a semana anterior (não com ontem)
+□ CPM, CPC, CTR, CPL: qual mudou e por quê?
+□ Frequência acima de 3–4?
+
+CRIATIVOS
+□ Ranking: qual o melhor, qual o pior?
+□ Pausar o pior (com dado suficiente)
+□ Algum criativo dando sinal de fadiga?
+□ Tenho criativo novo pronto para subir?
+
+GOOGLE (se aplicável)
+□ Termos de pesquisa revisados
+□ Negativas adicionadas
+□ Índice de qualidade caiu em alguma palavra?
+
+MENSURAÇÃO
+□ Pixel disparando? (testar o fluxo eu mesmo)
+□ Números da plataforma batem com o GA4 na tendência?
+
+NEGÓCIO
+□ O cliente está respondendo os leads rápido?
+□ Os leads estão virando venda?
+□ CPL dentro da meta da Fase 01?
+
+REGISTRO
+□ Anotei o que mudei e por quê
+</code></pre>
+<p>O último item é o que menos parece importante e mais te salva. Em três meses, quando o cliente perguntar "por que mudou isso em outubro?", você terá a resposta.</p>
+<hr />
+<h2>✅ Tarefas da Fase 08</h2>
+<ol>
+<li><strong>Monte sua rotina</strong> (diária/semanal/mensal) como checklist reutilizável</li>
+<li><strong>Defina os critérios de morte</strong> da sua campanha de teste — por escrito, antes de precisar</li>
+<li>Rode <strong>um ciclo completo de otimização semanal</strong> na sua campanha e registre cada decisão</li>
+<li><strong>Faça uma escala vertical controlada:</strong> +20%, espere 72h, meça. Anote o que aconteteceu com o CPL.</li>
+<li><strong>Monte seu calendário de sazonalidade</strong> do nicho que você vai atacar</li>
+</ol>
+<hr />
+<h2>Checagem de entendimento</h2>
+<ol>
+<li>Criativo A: 3 conversões / 60 cliques. Criativo B: 1 conversão / 55 cliques. Pode pausar o B?</li>
+<li>CPL dobrou de uma semana para outra, sem que você tenha mexido em nada. Quais as 3 primeiras coisas que você verifica?</li>
+<li>Cliente quer dobrar a verba amanhã porque "está indo bem". Como você responde?</li>
+</ol>
+<details>
+<summary>Respostas</summary>
+<p><strong>1.</strong> Ainda não. Tire uma conversão de A e ele vira 2/60 — praticamente empatado com B. A diferença desaparece com uma única conversão, então é ruído. Continue rodando até ter 3–5 conversões em cada, ou 50+ cliques com separação clara.</p>
+<p><strong>2.</strong> (a) <strong>Frequência</strong> — subiu? É fadiga de criativo ou público esgotado. (b) <strong>Mudança externa</strong> — feriado, evento, Black Friday, concorrente novo agressivo no leilão. (c) <strong>Rastreamento</strong> — o pixel ainda dispara? Uma atualização do site pode ter quebrado a conversão, fazendo parecer que o CPL subiu quando na verdade você parou de medir.</p>
+<p><strong>3.</strong> <em>"Ótimo que está indo bem — e é exatamente por isso que eu não quero quebrar. Dobrar de uma vez força o algoritmo a buscar gente menos qualificada de repente, e o CPL costuma disparar. Vou subir 20% hoje, esperar 72h, e repetir. Em duas semanas a gente chega no dobro com o CPL mantido, em vez de chegar lá amanhã e ter que reconstruir do zero."</em> Você disse sim ao objetivo dele e não ao método — e explicou o porquê em linguagem de negócio.</p>
+</details>
+<hr />
+<p><strong>Bloco II concluído.</strong> Você sabe operar.</p>
+<p><strong>Próxima:</strong> <a href="fase-09-vender-o-servico.html">Fase 09 — Vender o serviço</a> — a parte que te paga.</p></article>
+  <nav class="paginacao"><a class="nav-ant" href="fase-07-mensuracao.html"><span>← Anterior</span>07 · Mensuração</a><a class="nav-prox" href="fase-09-vender-o-servico.html"><span>Próximo →</span>09 · Vender o serviço</a></nav>
+  <footer class="rodape">Curso de tráfego pago · conteúdo de setembro de 2026</footer>
+</main>
+</body>
+</html>

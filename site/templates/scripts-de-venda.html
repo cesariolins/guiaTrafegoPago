@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Template — Scripts de venda — Tráfego Pago</title>
+<link rel="stylesheet" href="../assets/estilo.css">
+<script>
+/* Roda antes do primeiro pixel, senão a página pisca no tema errado.
+   Sem argumento, alterna. localStorage em try/catch: file:// pode bloquear. */
+function tema(t){var h=document.documentElement;
+t=t||(h.dataset.tema=='escuro'?'claro':'escuro');h.dataset.tema=t;
+try{localStorage.setItem('tema',t)}catch(e){}}
+try{var _t=localStorage.getItem('tema')}catch(e){}
+document.documentElement.dataset.tema=_t||(matchMedia('(prefers-color-scheme:dark)').matches?'escuro':'claro');
+</script>
+</head>
+<body>
+<input type="checkbox" id="abrir-menu" hidden>
+<label for="abrir-menu" class="botao-menu" aria-label="Abrir menu">☰</label>
+<label for="abrir-menu" class="fundo-menu"></label>
+<button class="botao-tema" onclick="tema()" aria-label="Alternar tema claro/escuro"
+        title="Alternar tema claro/escuro"><span class="i-claro">🌙</span><span class="i-escuro">☀️</span></button>
+
+<aside>
+  <a class="marca" href="../index.html">Tráfego Pago<small>do zero ao primeiro cliente</small></a>
+  <ul class="topo"><li><a href="../index.html"><i>🏠</i>Início</a></li></ul><p class="bloco">Fundamento</p><ul><li><a href="../fase-00-fundamentos.html"><i>🧭</i>00 · Fundamentos</a></li><li><a href="../fase-01-matematica.html"><i>🧮</i>01 · A matemática</a></li><li><a href="../fase-02-infraestrutura.html"><i>🔧</i>02 · Infraestrutura</a></li></ul><p class="bloco">Execução técnica</p><ul><li><a href="../fase-03-meta-ads.html"><i>📱</i>03 · Meta Ads</a></li><li><a href="../fase-04-google-ads.html"><i>🔍</i>04 · Google Ads</a></li><li><a href="../fase-05-tiktok-kwai.html"><i>🎵</i>05 · TikTok e Kwai</a></li><li><a href="../fase-06-criativo-copy-oferta.html"><i>🎨</i>06 · Criativo e oferta</a></li><li><a href="../fase-07-mensuracao.html"><i>📊</i>07 · Mensuração</a></li><li><a href="../fase-08-otimizacao-escala.html"><i>📈</i>08 · Otimização e escala</a></li></ul><p class="bloco">O negócio</p><ul><li><a href="../fase-09-vender-o-servico.html"><i>💼</i>09 · Vender o serviço</a></li><li><a href="../fase-10-contrato-legal.html"><i>⚖️</i>10 · Contrato e legal</a></li><li><a href="../fase-11-operacao-rotina.html"><i>🔄</i>11 · Operação e rotina</a></li><li><a href="../fase-12-problemas-reais.html"><i>🚨</i>12 · Problemas reais</a></li></ul><p class="bloco">Templates</p><ul><li><a href="../templates/proposta-comercial.html"><i>📄</i>Proposta comercial</a></li><li><a href="../templates/contrato-modelo.html"><i>📑</i>Contrato modelo</a></li><li><a href="../templates/briefing-onboarding.html"><i>📋</i>Briefing e onboarding</a></li><li><a href="../templates/relatorio-mensal.html"><i>📊</i>Relatório mensal</a></li><li><a href="../templates/auditoria-de-conta.html"><i>🔎</i>Auditoria de conta</a></li><li><a href="../templates/scripts-de-venda.html" class="ativo"><i>💬</i>Scripts de venda</a></li></ul><p class="bloco">Ferramenta</p><ul><li><a href="../planilhas/calculadora-viabilidade.html"><i>🧮</i>Calculadora</a></li></ul>
+</aside>
+
+<main>
+  <article><h1>Template — Scripts de venda</h1>
+<blockquote>
+<p>Adapte para a sua voz. <strong>Script decorado soa falso; script internalizado soa preparado.</strong> Leia em voz alta até sair natural.</p>
+</blockquote>
+<hr />
+<h2>1. Rede pessoal (seu melhor canal hoje)</h2>
+<p>Mensagem individual. Nunca em grupo, nunca copiada e colada sem ajuste.</p>
+<pre><code>Oi [Nome], tudo bem?
+
+Estou começando a trabalhar com anúncios no Instagram e
+Google para negócios locais e lembrei de vocês.
+
+Sem compromisso nenhum: posso dar uma olhada em como está
+a divulgação de vocês e te mandar 2 ou 3 observações?
+
+Se fizer sentido a gente conversa, se não fizer, fica
+valendo a ajuda. 🙂
+</code></pre>
+<p><strong>Taxa de resposta típica: 30–50%.</strong></p>
+<hr />
+<h2>2. Abordagem fria (com auditoria)</h2>
+<p>Depois de fazer a análise da Biblioteca de Anúncios.</p>
+<pre><code>Oi [Nome], tudo bem?
+
+Vi que a [Empresa] está anunciando no Instagram.
+
+Dei uma olhada e notei duas coisas: [observação específica 1]
+e [observação específica 2].
+
+Fiz uma análise rápida de 1 página com o que eu ajustaria.
+Posso te mandar? É de graça e sem compromisso, mesmo que a
+gente não trabalhe junto.
+</code></pre>
+<h3>Se responder "pode mandar"</h3>
+<p>Mande <strong>na hora</strong>. Depois:</p>
+<pre><code>Mandei! Qualquer dúvida sobre algum ponto, é só chamar.
+
+Se quiser, a gente marca 30 minutos pra eu te mostrar como
+eu atacaria isso na prática. Mas sem pressa — dá uma olhada
+primeiro.
+</code></pre>
+<h3>Se não responder em 4 dias</h3>
+<pre><code>Oi [Nome], só passando pra saber se chegou a ver a análise
+que mandei. Qualquer coisa que não tenha ficado clara, me chama!
+</code></pre>
+<p><strong>Depois disso, pare.</strong> Volte em 60 dias. Insistir queima a ponte.</p>
+<hr />
+<h2>3. Presencial (comércio local)</h2>
+<p>Vá pessoalmente. Quase ninguém faz — por isso funciona tão bem.</p>
+<pre><code>&quot;Oi, bom dia! O [dono] está?
+
+[quando falar com o dono]
+
+Meu nome é [nome], eu trabalho com anúncios na internet aqui
+na região. Não vim vender nada agora — passei porque vi que
+vocês anunciam no Instagram e notei um ponto que acho que
+está fazendo vocês gastarem mais do que precisam.
+
+Você tem 2 minutos? Se não for hora boa, eu volto outro dia
+ou te mando por WhatsApp.&quot;
+</code></pre>
+<p><strong>Se ele der os 2 minutos:</strong> fale UM ponto específico, ofereça a análise gratuita, pegue o WhatsApp e vá embora. <strong>Não tente vender na hora.</strong></p>
+<hr />
+<h2>4. A reunião de diagnóstico</h2>
+<p><em>Roteiro completo na <a href="../fase-09-vender-o-servico.html#5-a-reunião-diagnóstico-não-pitch">Fase 09</a>. Resumo aqui.</em></p>
+<h3>Abertura</h3>
+<pre><code>&quot;Obrigado pelo tempo. Minha ideia hoje é entender o negócio
+de vocês antes de propor qualquer coisa — não quero te
+empurrar um pacote pronto que talvez nem faça sentido.
+
+Vou fazer algumas perguntas e no final eu te dou minha
+leitura honesta, inclusive se eu achar que não é hora de
+investir em tráfego. Pode ser?&quot;
+</code></pre>
+<h3>As perguntas (70% do tempo)</h3>
+<p><strong>Contexto</strong></p>
+<pre><code>• Me conta como funciona o negócio de vocês hoje
+• Como os clientes chegam até vocês atualmente?
+• O que funcionou melhor até agora? E o que não funcionou?
+• ⭐ Já trabalharam com alguém de tráfego antes? Como foi?
+  E por que terminou?
+</code></pre>
+<p><strong>Números</strong></p>
+<pre><code>• Qual o ticket médio de um cliente novo?
+• De cada 10 pessoas que entram em contato, quantas fecham?
+• Quanto sobra, mais ou menos, de cada venda?
+• Esse cliente volta? Com que frequência?
+• ⭐ Quantos clientes novos por mês vocês conseguem ATENDER?
+• ⭐ Quem responde os contatos e em quanto tempo?
+</code></pre>
+<p><strong>Objetivo</strong></p>
+<pre><code>• Aonde você quer chegar nos próximos 6 meses?
+• Quantos clientes novos por mês seria bom? E seria ótimo?
+• Quanto você já pensou em investir?
+• ⭐ O que precisaria acontecer para você considerar que valeu?
+</code></pre>
+<h3>A devolutiva (onde a venda acontece)</h3>
+<pre><code>&quot;Deixa eu fazer uma conta com você.
+
+Ticket de R$ [X], margem de [Y]%: sobram R$ [Z] por cliente.
+Uma regra saudável é o anúncio consumir de 30% a 40% disso —
+então dá pra pagar até uns R$ [A] por cliente novo.
+
+Você fecha 1 a cada [N] contatos. Então o contato pode custar
+até R$ [B] e o negócio continua muito saudável. No seu
+segmento, isso costuma sair entre R$ [C] e R$ [D] — ou seja,
+a conta fecha.
+
+Pra chegar nos [meta] clientes novos que você falou, a gente
+precisa de [N] contatos. A R$ [B], isso dá R$ [verba] de verba.
+
+Faz sentido pra você?&quot;
+</code></pre>
+<h3>Fechamento</h3>
+<pre><code>&quot;Pelo que conversamos, eu consigo te ajudar. Minha proposta
+seria [escopo resumido], com investimento de R$ [fee] de
+gestão mais R$ [verba] de verba.
+
+Posso te mandar isso por escrito hoje ainda?&quot;
+</code></pre>
+<p><strong>Depois do valor: fique em silêncio.</strong> Deixe ele responder primeiro. Falar para preencher o silêncio é o erro mais comum — e quase sempre termina em desconto não pedido.</p>
+<hr />
+<h2>5. Objeções</h2>
+<h3>"Está caro"</h3>
+<pre><code>&quot;Entendo. Deixa eu colocar em perspectiva: a gente calculou
+que cada cliente novo te deixa R$ [X] de margem. O
+investimento se paga com [N] clientes no mês, e a meta que
+traçamos é [meta].
+
+Agora, se o valor não cabe no orçamento AGORA, isso é outra
+conversa e eu prefiro ser honesto: em vez de fazer uma versão
+capenga, a gente pode começar com escopo menor — só [Meta],
+sem [Google] — por R$ [valor menor], e amplia quando estiver
+girando. Prefere assim?&quot;
+</code></pre>
+<p><strong>Nunca desconto puro. Sempre reduza o escopo junto.</strong></p>
+<h3>"Vou pensar"</h3>
+<pre><code>&quot;Claro. Só pra eu te ajudar melhor: o que especificamente
+você quer avaliar? É o valor, o prazo, ou você quer alinhar
+com alguém antes?&quot;
+</code></pre>
+<h3>"Já tentei e não funcionou"</h3>
+<pre><code>&quot;Que bom que você me contou. Posso perguntar o que aconteceu?
+
+[OUÇA DE VERDADE]
+
+Isso que você descreveu é bem comum, e geralmente tem uma
+causa específica — quase sempre uma dessas três: a oferta
+não estava clara, os leads não eram respondidos rápido, ou
+desligaram antes da campanha estabilizar.
+
+Antes de eu te propor qualquer coisa, deixa eu olhar a conta
+antiga. Se eu identificar que o problema era algo que eu
+também não resolveria, eu te falo — e não vendo nada pra você.&quot;
+</code></pre>
+<h3>"Meu sobrinho faz por R$ 300"</h3>
+<pre><code>&quot;Faz sentido, e pode até funcionar pra começar. A diferença
+é o que acontece quando não funciona: quem vai saber se o
+problema é o criativo, a oferta, a página ou o atendimento?
+É pra isso que eu sou pago — não por apertar botões, mas por
+saber onde está o vazamento quando o dinheiro está indo embora.
+
+Minha sugestão honesta: se você nunca testou, comece com ele.
+Quando quiser escalar de verdade e o erro ficar caro, me chama.&quot;
+</code></pre>
+<h3>"Você garante resultado?"</h3>
+<pre><code>&quot;Não, e desconfie de quem garantir. Eu não controlo seu
+atendimento, seu preço, seu concorrente nem o leilão das
+plataformas.
+
+O que eu garanto é o processo: campanhas estruturadas,
+criativos novos toda semana, relatório mensal com números
+reais e otimização contínua. E garanto transparência — se eu
+achar que não está valendo pra você, eu vou ser o primeiro
+a falar.
+
+O que a gente pode fazer é combinar metas claras e revisar
+em 90 dias com dado na mão.&quot;
+</code></pre>
+<h3>"Trabalha por comissão?"</h3>
+<pre><code>&quot;Entendo a lógica, mas não trabalho assim — e vou te explicar
+por quê, porque é melhor pra você também.
+
+Meu trabalho é entregar oportunidade qualificada até a porta.
+O que acontece depois — atendimento, negociação, fechamento —
+é do seu time, e eu não controlo. Se eu ganhasse só na venda,
+eu estaria apostando na equipe comercial de vocês, não no meu
+próprio trabalho.
+
+O que eu posso fazer: um fee menor no começo com um bônus por
+meta batida. Aí nós dois temos pele em jogo naquilo que cada
+um controla.&quot;
+</code></pre>
+<h3>"E se eu quiser cancelar?"</h3>
+<pre><code>&quot;Sem multa depois do terceiro mês, com 30 dias de aviso.
+
+Os três primeiros meses são de fidelidade porque é o tempo
+mínimo para a campanha sair do aprendizado e gerar dado
+confiável — cancelar antes é jogar fora o investimento que
+você já fez.
+
+Depois disso, você fica porque está valendo a pena, não
+porque está preso.&quot;
+</code></pre>
+<h3>"Preciso falar com meu sócio"</h3>
+<pre><code>&quot;Perfeito. Quer que eu participe dessa conversa? Assim eu
+respondo as dúvidas técnicas na hora e você não precisa ser
+o intermediário. Tenho [dia] e [dia] livres.&quot;
+</code></pre>
+<h3>"Me manda uma proposta"</h3>
+<pre><code>&quot;Mando sim. Só pra eu não te mandar uma proposta genérica:
+pelo que conversamos, o foco seria [X] com verba em torno de
+[Y], certo? E tem algum ponto que você já sabe que precisa
+estar na proposta?&quot;
+</code></pre>
+<hr />
+<h2>6. Follow-up da proposta</h2>
+<h3>Dia seguinte ao envio — ligue</h3>
+<pre><code>&quot;Oi [Nome], mandei a proposta ontem. Conseguiu dar uma olhada?
+Tem alguma dúvida que eu possa esclarecer?&quot;
+</code></pre>
+<h3>3 dias depois</h3>
+<pre><code>&quot;Oi [Nome]! Passando pra saber se você teve chance de avaliar
+a proposta. Se precisar de algum ajuste no escopo ou no
+formato, me fala que eu adapto.&quot;
+</code></pre>
+<h3>7 dias — a mensagem de encerramento</h3>
+<pre><code>&quot;Oi [Nome], imagino que a rotina esteja corrida. Vou deixar a
+proposta em aberto do meu lado.
+
+Se mudar algo aí e fizer sentido retomar, é só me chamar —
+sem pressa nenhuma. Sucesso aí! 🙂&quot;
+</code></pre>
+<p><strong>Depois disso, pare e reative em 60–90 dias.</strong> Uma mensagem leve de retomada converte mais que cinco de insistência.</p>
+<hr />
+<h2>7. Pedindo indicação (o canal mais barato que existe)</h2>
+<p>Após um bom resultado ou uma reunião mensal positiva:</p>
+<pre><code>&quot;[Nome], fico feliz que esteja funcionando.
+
+Posso te pedir uma coisa? Se você conhecer algum outro
+[tipo de negócio] que esteja precisando disso, me indica?
+
+Eu trabalho com poucos clientes pra conseguir dar atenção,
+então quase tudo que eu pego vem por indicação de quem já
+trabalha comigo.
+
+E claro: quem vier por você, eu te dou [1 mês de desconto /
+comissão de X%].&quot;
+</code></pre>
+<h3>Pedindo depoimento</h3>
+<pre><code>&quot;[Nome], posso te pedir 2 minutos? Queria gravar (ou escrever)
+um depoimento rápido sobre o trabalho.
+
+Podem ser 3 perguntas simples:
+  • Como estava a captação de clientes antes?
+  • O que mudou?
+  • O que você diria pra quem está em dúvida?
+
+Pode ser por áudio no WhatsApp mesmo, bem informal.&quot;
+</code></pre>
+<hr />
+<h2>📌 Princípios que valem mais que os scripts</h2>
+<ol>
+<li><strong>Dê antes de pedir.</strong> Auditoria gratuita converte mais que qualquer pitch.</li>
+<li><strong>Pergunte mais do que fale.</strong> 70/30 na reunião.</li>
+<li><strong>Faça a conta na frente dele.</strong> É sua maior vantagem competitiva.</li>
+<li><strong>Nunca prometa resultado.</strong> Prometa processo e transparência.</li>
+<li><strong>Silêncio depois do preço.</strong> Quem fala primeiro, perde.</li>
+<li><strong>Recuse cliente ruim.</strong> Custa o mesmo tempo e destrói sua reputação.</li>
+<li><strong>Follow-up é onde a venda acontece.</strong> Proposta sem follow-up converte perto de zero.</li>
+<li><strong>Saia bem sempre.</strong> O mercado local é pequeno e todo mundo se conhece.</li>
+</ol></article>
+  <nav class="paginacao"><a class="nav-ant" href="../templates/auditoria-de-conta.html"><span>← Anterior</span>Auditoria de conta</a></nav>
+  <footer class="rodape">Curso de tráfego pago · conteúdo de setembro de 2026</footer>
+</main>
+</body>
+</html>

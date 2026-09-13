@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fase 02 — Infraestrutura — Tráfego Pago</title>
+<link rel="stylesheet" href="assets/estilo.css">
+<script>
+/* Roda antes do primeiro pixel, senão a página pisca no tema errado.
+   Sem argumento, alterna. localStorage em try/catch: file:// pode bloquear. */
+function tema(t){var h=document.documentElement;
+t=t||(h.dataset.tema=='escuro'?'claro':'escuro');h.dataset.tema=t;
+try{localStorage.setItem('tema',t)}catch(e){}}
+try{var _t=localStorage.getItem('tema')}catch(e){}
+document.documentElement.dataset.tema=_t||(matchMedia('(prefers-color-scheme:dark)').matches?'escuro':'claro');
+</script>
+</head>
+<body>
+<input type="checkbox" id="abrir-menu" hidden>
+<label for="abrir-menu" class="botao-menu" aria-label="Abrir menu">☰</label>
+<label for="abrir-menu" class="fundo-menu"></label>
+<button class="botao-tema" onclick="tema()" aria-label="Alternar tema claro/escuro"
+        title="Alternar tema claro/escuro"><span class="i-claro">🌙</span><span class="i-escuro">☀️</span></button>
+
+<aside>
+  <a class="marca" href="index.html">Tráfego Pago<small>do zero ao primeiro cliente</small></a>
+  <ul class="topo"><li><a href="index.html"><i>🏠</i>Início</a></li></ul><p class="bloco">Fundamento</p><ul><li><a href="fase-00-fundamentos.html"><i>🧭</i>00 · Fundamentos</a></li><li><a href="fase-01-matematica.html"><i>🧮</i>01 · A matemática</a></li><li><a href="fase-02-infraestrutura.html" class="ativo"><i>🔧</i>02 · Infraestrutura</a></li></ul><p class="bloco">Execução técnica</p><ul><li><a href="fase-03-meta-ads.html"><i>📱</i>03 · Meta Ads</a></li><li><a href="fase-04-google-ads.html"><i>🔍</i>04 · Google Ads</a></li><li><a href="fase-05-tiktok-kwai.html"><i>🎵</i>05 · TikTok e Kwai</a></li><li><a href="fase-06-criativo-copy-oferta.html"><i>🎨</i>06 · Criativo e oferta</a></li><li><a href="fase-07-mensuracao.html"><i>📊</i>07 · Mensuração</a></li><li><a href="fase-08-otimizacao-escala.html"><i>📈</i>08 · Otimização e escala</a></li></ul><p class="bloco">O negócio</p><ul><li><a href="fase-09-vender-o-servico.html"><i>💼</i>09 · Vender o serviço</a></li><li><a href="fase-10-contrato-legal.html"><i>⚖️</i>10 · Contrato e legal</a></li><li><a href="fase-11-operacao-rotina.html"><i>🔄</i>11 · Operação e rotina</a></li><li><a href="fase-12-problemas-reais.html"><i>🚨</i>12 · Problemas reais</a></li></ul><p class="bloco">Templates</p><ul><li><a href="templates/proposta-comercial.html"><i>📄</i>Proposta comercial</a></li><li><a href="templates/contrato-modelo.html"><i>📑</i>Contrato modelo</a></li><li><a href="templates/briefing-onboarding.html"><i>📋</i>Briefing e onboarding</a></li><li><a href="templates/relatorio-mensal.html"><i>📊</i>Relatório mensal</a></li><li><a href="templates/auditoria-de-conta.html"><i>🔎</i>Auditoria de conta</a></li><li><a href="templates/scripts-de-venda.html"><i>💬</i>Scripts de venda</a></li></ul><p class="bloco">Ferramenta</p><ul><li><a href="planilhas/calculadora-viabilidade.html"><i>🧮</i>Calculadora</a></li></ul>
+</aside>
+
+<main>
+  <article><h1>Fase 02 — Infraestrutura</h1>
+<blockquote>
+<p><strong>Pré-requisito:</strong> Fases 00 e 01.
+<strong>Tempo:</strong> 3 a 5 dias.
+<strong>Verba:</strong> R$ 0 (mas cadastre o cartão).</p>
+</blockquote>
+<hr />
+<h2>Por que esta fase existe</h2>
+<p>Duas histórias reais que se repetem todo mês em grupos de gestores:</p>
+<blockquote>
+<p><em>"Perdi a conta de anúncios. O Meta bloqueou e não consigo recurso. Três clientes parados há 11 dias."</em></p>
+<p><em>"O cliente me demitiu e levou tudo. O pixel estava no meu Business Manager, a fanpage era minha, e agora ele quer que eu transfira. Ou eu transfiro de graça ou ele vai me processar."</em></p>
+</blockquote>
+<p>As duas são <strong>100% evitáveis</strong> — com 40 minutos de setup correto.</p>
+<p>Esta é a fase mais chata do curso e a que mais te protege. Faça direito.</p>
+<hr />
+<h2>1. A regra de ouro da propriedade dos ativos</h2>
+<p>Escreva isso e cole no monitor:</p>
+<blockquote>
+<h2>🔒 O CLIENTE É DONO DOS ATIVOS. VOCÊ TEM ACESSO.</h2>
+</blockquote>
+<p><strong>Ativos que são do cliente, sempre, sem exceção:</strong>
+- Business Manager (BM) / Conta de Gerenciador
+- Conta de anúncios
+- Página do Facebook e Instagram
+- Pixel / conjunto de dados
+- Domínio e site
+- Conta do Google Ads e GA4
+- Catálogo de produtos
+- Listas de público e clientes</p>
+<p><strong>O que é seu:</strong>
+- Seu próprio Business Manager (que recebe acesso aos dele)
+- Seu conhecimento, seus processos, seus templates
+- Sua verba de testes</p>
+<h3>Por que isso, se parece pior para você?</h3>
+<p>Parece que segurar os ativos te dá poder sobre o cliente. Na prática:</p>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Você segura os ativos</th>
+<th>Cliente é dono, você acessa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cliente sente que está refém → desconfia</td>
+<td>Cliente se sente seguro → confia</td>
+</tr>
+<tr>
+<td>Você carrega risco jurídico (LGPD, dados de terceiros na sua conta)</td>
+<td>Risco fica com o titular</td>
+</tr>
+<tr>
+<td>Se <strong>sua</strong> BM é bloqueada, <strong>todos</strong> os clientes param juntos</td>
+<td>Bloqueio isolado, um cliente afetado</td>
+</tr>
+<tr>
+<td>Cliente grande recusa contratar você</td>
+<td>Cliente grande te contrata</td>
+</tr>
+<tr>
+<td>Saída vira briga</td>
+<td>Saída vira uma remoção de acesso</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Retenção não vem de sequestrar ativo. Vem de resultado.</strong> E quem depende de sequestro para reter cliente já perdeu o cliente.</p>
+<blockquote>
+<p>⚠️ <strong>A exceção que confirma a regra:</strong> o cliente que <em>não tem</em> nada e não quer criar. Nesse caso, você cria tudo <strong>no nome dele, com o e-mail dele, na frente dele</strong>, com você adicionado como parceiro. Leva 20 minutos a mais e evita 100% dos problemas futuros. Coloque isso no contrato (Fase 10).</p>
+</blockquote>
+<hr />
+<h2>2. Meta: montando sua estrutura</h2>
+<h3>2.1 Anatomia do ecossistema Meta</h3>
+<p>Isso confunde todo iniciante. O mapa:</p>
+<pre><code>CONTA PESSOAL DO FACEBOOK  (você, pessoa física — não pode ser perfil falso)
+   │
+   └── BUSINESS MANAGER  (a &quot;empresa&quot; dentro do Meta — o cofre)
+         ├── Contas de anúncios     ← onde a verba roda
+         ├── Páginas (FB/Instagram) ← a identidade que publica
+         ├── Conjuntos de dados (pixel)
+         ├── Pessoas (sua equipe)
+         ├── Parceiros (outras BMs — é assim que você acessa a do cliente)
+         └── Domínios verificados
+</code></pre>
+<p><strong>Ponto que quase todo mundo erra:</strong> o Business Manager <strong>não é</strong> sua conta pessoal. Sua conta pessoal é só a chave que abre o cofre. Se sua conta pessoal cair, você perde acesso a tudo — por isso a seção 5 (segurança) não é opcional.</p>
+<h3>2.2 Criando seu Business Manager — passo a passo</h3>
+<ol>
+<li>Acesse <strong>business.facebook.com</strong> com seu Facebook pessoal real</li>
+<li><strong>Criar conta</strong> → nome da sua empresa (pode ser seu nome se ainda não tem CNPJ), seu nome, e-mail <strong>profissional</strong></li>
+<li>Confirme o e-mail</li>
+<li><strong>Configurações do negócio → Informações do negócio</strong> → preencha tudo: endereço, CNPJ (quando tiver), site. Perfil completo = menos chance de bloqueio.</li>
+<li><strong>Segurança:</strong> ative autenticação de dois fatores <strong>obrigatória para todos</strong></li>
+</ol>
+<blockquote>
+<p>💡 <strong>Use um e-mail de domínio próprio</strong> (<code>voce@suaagencia.com.br</code>) em vez de Gmail. Custa ~R$ 40/ano com o domínio e aumenta perceptivelmente a confiança do Meta e do cliente. Essa é a primeira coisa que separa profissional de amador aos olhos de ambos.</p>
+</blockquote>
+<h3>2.3 Como pegar acesso à conta do cliente — o jeito certo</h3>
+<p>🚨 <strong>NUNCA peça a senha do Facebook do cliente.</strong> Isso é:
+- Violação dos termos do Meta (pode derrubar as duas contas)
+- Risco jurídico seu (você opera como se fosse ele)
+- Sinal de amadorismo (cliente que entende do assunto some na hora)</p>
+<p><strong>O jeito certo — Acesso de Parceiro (Partner Access):</strong></p>
+<p>Peça ao cliente que faça isto (mande como passo a passo, não peça "me dá acesso"):</p>
+<pre><code>1. Entre em business.facebook.com
+2. Configurações do Negócio → Usuários → Parceiros
+3. Clique em &quot;Adicionar&quot; → &quot;Conceder acesso a um parceiro&quot;
+4. Cole o ID do parceiro:  [SEU ID DE BM AQUI]
+5. Selecione os ativos:
+     ✓ Conta de anúncios        → Gerenciar campanhas (acesso total)
+     ✓ Página                   → Criar conteúdo + Anúncios
+     ✓ Conjunto de dados/Pixel  → Ver e gerenciar
+     ✓ Catálogo (se houver)
+6. Confirmar
+</code></pre>
+<p>Seu ID de BM está em <strong>Configurações do Negócio → Informações do Negócio</strong>. É um número longo. Deixe ele salvo numa nota — você vai colar toda semana.</p>
+<blockquote>
+<p>📋 <strong>Isso já está pronto em <a href="templates/briefing-onboarding.html"><code>templates/briefing-onboarding.md</code></a></strong> — copiar, colar, enviar. Cliente adora receber instrução mastigada; é o primeiro sinal de que você é organizado.</p>
+</blockquote>
+<h3>2.4 Se o cliente não tem Business Manager</h3>
+<p>Guie-o pela criação (mesmos passos de 2.2) usando <strong>o e-mail dele</strong>. Faça por chamada de vídeo com ele compartilhando a tela — 15 minutos, e você:
+- Garante que o titular é ele (proteção jurídica sua)
+- Já ensina algo (percepção de valor antes mesmo de começar)
+- Evita o pesadelo de transferência futura</p>
+<h3>2.5 Método de pagamento — decisão comercial importante</h3>
+<p>Quem coloca o cartão?</p>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Modelo</th>
+<th>Como funciona</th>
+<th>Prós</th>
+<th>Contras</th>
+<th>Recomendo?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cartão do cliente</strong></td>
+<td>Cliente cadastra o próprio cartão na conta dele</td>
+<td>Zero risco financeiro seu, zero antecipação de caixa, transparência total</td>
+<td>Cartão recusado = campanha parada e você depende dele resolver</td>
+<td>✅ <strong>Sim, sempre no início</strong></td>
+</tr>
+<tr>
+<td>Seu cartão, repassa</td>
+<td>Você paga a mídia e cobra depois</td>
+<td>Controle total, cliente acha prático</td>
+<td>Você vira banco. Inadimplência = seu prejuízo. Risco fiscal (dinheiro que não é seu passando por você)</td>
+<td>❌ Não no início</td>
+</tr>
+<tr>
+<td>Agência com crédito</td>
+<td>Linha de crédito do Meta em nome da agência</td>
+<td>Escala grande</td>
+<td>Só para operação madura com CNPJ e volume</td>
+<td>Depois</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Regra para você agora:</strong> verba <strong>sempre</strong> no cartão do cliente. Seu fee é cobrado separado, por boleto ou Pix, com nota fiscal. Nunca misture verba de mídia com honorário — nem na conta, nem na conversa, nem no contrato.</p>
+<hr />
+<h2>3. Google: Google Ads, Tag e GA4</h2>
+<h3>3.1 Conta de gerenciador (MCC)</h3>
+<p>O equivalente do Business Manager no Google chama-se <strong>Conta de Administrador</strong> (MCC — My Client Center).</p>
+<ol>
+<li>Acesse <strong>ads.google.com/home/tools/manager-accounts</strong></li>
+<li>Crie sua conta de administrador</li>
+<li>Anote seu <strong>ID de 10 dígitos</strong> (formato <code>123-456-7890</code>)</li>
+</ol>
+<p><strong>Para acessar a conta do cliente:</strong> você envia uma solicitação de vínculo pelo ID da conta dele, e ele aprova dentro da conta dele. Mesma filosofia do Meta: ele é dono, você acessa.</p>
+<blockquote>
+<p>Google Ads → Administrador → Contas → <strong>+</strong> → "Vincular conta existente" → insira o ID do cliente.</p>
+</blockquote>
+<h3>3.2 O trio de mensuração do Google</h3>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Ferramenta</th>
+<th>Para que serve</th>
+<th>Obrigatório?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Google Ads</strong></td>
+<td>Rodar as campanhas</td>
+<td>Sim</td>
+</tr>
+<tr>
+<td><strong>Google Analytics 4 (GA4)</strong></td>
+<td>Entender o comportamento no site</td>
+<td>Sim, sempre</td>
+</tr>
+<tr>
+<td><strong>Google Tag Manager (GTM)</strong></td>
+<td>Instalar e gerenciar todos os códigos de rastreamento sem mexer no site</td>
+<td>Muito recomendado</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Por que GTM muda sua vida:</strong> sem ele, toda vez que você precisar adicionar um pixel novo, você depende do desenvolvedor do cliente. Com ele, você instala <strong>uma vez</strong> e depois gerencia tudo sozinho pelo painel. Em agência, isso é a diferença entre entregar em 10 minutos e esperar 3 semanas por um dev que não responde.</p>
+<p>Detalhamento de instalação e configuração de conversões está na <strong>Fase 07 — Mensuração</strong>. Aqui você só cria as contas.</p>
+<h3>3.3 Atenção especial — setembro de 2026</h3>
+<p>Se você assumir uma conta Google existente <strong>agora</strong>, verifique imediatamente:</p>
+<ul>
+<li>🔍 A campanha foi <strong>migrada automaticamente para AI Max</strong>? O Google está fazendo upgrade automático entre 1 e 30 de setembro de 2026 em campanhas de Pesquisa que usam correspondência ampla no nível da campanha ou recursos criados automaticamente.</li>
+<li>🔍 Existe alguma <strong>Dynamic Search Ads (DSA)</strong> rodando? Ela será aposentada e absorvida pelo AI Max, com desligamento a partir de fevereiro de 2027. Planeje a migração com antecedência.</li>
+</ul>
+<p><strong>Como isso vira dinheiro para você:</strong> uma auditoria que identifica "sua campanha mudou de comportamento em setembro porque o Google migrou ela sem avisar" é exatamente o tipo de diagnóstico que faz um dono de negócio te contratar na hora. Ninguém mais falou isso para ele.</p>
+<hr />
+<h2>4. Domínio, site e verificação</h2>
+<h3>4.1 Verificação de domínio (Meta) — não pule</h3>
+<p>Sem domínio verificado você perde:
+- Controle sobre quais eventos de conversão priorizar
+- Boa parte da capacidade de mensuração pós-iOS 14
+- Credibilidade aos olhos da plataforma</p>
+<p><strong>Como fazer:</strong> Business Manager → Configurações do Negócio → Segurança da Marca → Domínios → Adicionar. Três métodos disponíveis: meta-tag no HTML, registro DNS TXT, ou upload de arquivo. O método DNS é o mais estável.</p>
+<p>Se o cliente usa um construtor de sites (Wix, Shopify, WordPress), há integração nativa — procure "verificação de domínio Facebook" na ajuda da plataforma dele.</p>
+<h3>4.2 O site do cliente precisa de mínimos</h3>
+<p>Antes de rodar qualquer campanha, cheque:</p>
+<ul>
+<li>[ ] <strong>Carrega em menos de 3 segundos no celular</strong> (teste em PageSpeed Insights). Página lenta queima verba em cliques que nunca chegam.</li>
+<li>[ ] <strong>Responsivo</strong> — mais de 85% do tráfego de Meta Ads é mobile</li>
+<li>[ ] <strong>HTTPS ativo</strong> (cadeado). Sem isso, algumas plataformas nem aprovam o anúncio.</li>
+<li>[ ] <strong>Política de Privacidade publicada</strong> — exigência de plataforma <strong>e</strong> da LGPD</li>
+<li>[ ] <strong>Contato visível</strong> — telefone, WhatsApp, endereço se for local</li>
+<li>[ ] <strong>Uma única ação principal por página</strong> — se tem 6 botões diferentes, converte menos</li>
+</ul>
+<blockquote>
+<p>Se o cliente não tem site, <strong>não é impeditivo</strong>. Campanhas de mensagem para WhatsApp e formulário instantâneo (Lead Ads) funcionam bem para serviço local — às vezes melhor. Cobre um extra para montar uma landing page simples e você adiciona R$ 500–1.500 ao contrato inicial.</p>
+</blockquote>
+<hr />
+<h2>5. Segurança e prevenção de bloqueio</h2>
+<p>A dor #1 do gestor de tráfego. Vamos prevenir.</p>
+<h3>5.1 Por que contas são bloqueadas</h3>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Causa</th>
+<th>Frequência</th>
+<th>Evitável?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Conta nova gastando muito rápido</td>
+<td>Alta</td>
+<td>✅ Sim</td>
+</tr>
+<tr>
+<td>Perfil pessoal sem histórico/atividade</td>
+<td>Alta</td>
+<td>✅ Sim</td>
+</tr>
+<tr>
+<td>Política violada no anúncio (saúde, dinheiro, promessa)</td>
+<td>Alta</td>
+<td>✅ Sim</td>
+</tr>
+<tr>
+<td>Mudança brusca de IP / país</td>
+<td>Média</td>
+<td>✅ Sim</td>
+</tr>
+<tr>
+<td>Página com muitos comentários negativos</td>
+<td>Média</td>
+<td>✅ Sim</td>
+</tr>
+<tr>
+<td>Cartão recusado repetidamente</td>
+<td>Média</td>
+<td>✅ Sim</td>
+</tr>
+<tr>
+<td>Falso positivo do sistema automático</td>
+<td>Média</td>
+<td>⚠️ Parcial</td>
+</tr>
+</tbody>
+</table></div>
+<h3>5.2 Regras de higiene — siga todas</h3>
+<p><strong>Da sua conta pessoal:</strong>
+- ✅ Perfil real, com foto, amigos e alguma atividade. Perfil criado ontem e usado só para anúncio é sinal vermelho.
+- ✅ <strong>2FA ativado</strong> (obrigatório)
+- ✅ Sempre do mesmo dispositivo e mesma rede. Nada de VPN trocando de país.
+- ✅ Nunca compre ou alugue conta "aquecida". É a forma mais rápida de perder tudo, e é fraude.</p>
+<p><strong>Do aquecimento de conta nova:</strong></p>
+<p>Conta nova que tenta gastar R$ 500/dia na primeira semana é derrubada. Rampa segura:</p>
+<pre><code>Dias 1–3    R$ 10–20/dia    objetivo simples (tráfego/alcance)
+Dias 4–7    R$ 30–50/dia
+Semana 2    R$ 70–100/dia
+Semana 3+   aumentos de até 20–30% a cada 2–3 dias
+</code></pre>
+<p><strong>Do pagamento:</strong>
+- ✅ Cartão de crédito com limite folgado, <strong>titular = titular da conta</strong>
+- ✅ Pague faturas em dia. Histórico de pagamento limpo aumenta o limite de gasto da conta.
+- ❌ Evite cartão pré-pago ou virtual descartável — gera recusa e recusa gera bloqueio</p>
+<p><strong>Das políticas de anúncio:</strong></p>
+<p>Categorias com regras rígidas (leia a política antes de anunciar):
+- 🏥 Saúde, estética, emagrecimento → proibido "antes e depois", proibido apontar defeito no corpo
+- 💰 Finanças, crédito, investimento → promessa de retorno é proibida
+- 🎓 Emprego, habitação, crédito → <strong>Categoria Especial de Anúncio</strong>, com segmentação restrita por lei
+- 🔞 Conteúdo adulto, apostas, armas → restrito ou proibido</p>
+<p><strong>O teste de 3 segundos:</strong> leia seu anúncio e pergunte <em>"isso promete resultado, aponta insegurança pessoal, ou faz afirmação sobre a condição da pessoa?"</em>. Se sim, reescreva.</p>
+<p>Exemplos:
+- ❌ "Você está acima do peso? Emagreça 10kg em 30 dias!" → afirma condição + promete resultado
+- ✅ "Conheça o método que já ajudou 2.000 pessoas a mudarem sua relação com a alimentação"</p>
+<h3>5.3 O plano de contingência (monte hoje, use um dia)</h3>
+<p>Bloqueio vai acontecer com você em algum momento. Tenha isto pronto <strong>antes</strong>:</p>
+<ul>
+<li>[ ] <strong>Duas contas de anúncio</strong> dentro do BM do cliente (uma reserva, sem uso)</li>
+<li>[ ] Um <strong>segundo administrador</strong> em cada BM (o próprio cliente)</li>
+<li>[ ] <strong>Backup semanal</strong> dos criativos e das configurações (pasta no Drive, por cliente)</li>
+<li>[ ] Documento com todos os IDs (BM, conta, pixel) de cada cliente</li>
+<li>[ ] <strong>Cláusula no contrato</strong> dizendo que bloqueio de plataforma é risco externo e o prazo de resolução não depende de você (Fase 10) ← isso te salva de uma briga</li>
+</ul>
+<p>Procedimento de recurso quando acontecer: Fase 12.</p>
+<hr />
+<h2>6. Suas ferramentas</h2>
+<p>Mínimo viável para começar. Não compre nada além disso agora.</p>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Função</th>
+<th>Ferramenta</th>
+<th>Custo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Design de criativo</td>
+<td><strong>Canva</strong> (grátis serve)</td>
+<td>R$ 0–35/mês</td>
+</tr>
+<tr>
+<td>Edição de vídeo</td>
+<td><strong>CapCut</strong></td>
+<td>R$ 0</td>
+</tr>
+<tr>
+<td>Planilhas e relatórios</td>
+<td><strong>Google Sheets / Looker Studio</strong></td>
+<td>R$ 0</td>
+</tr>
+<tr>
+<td>Organização de clientes</td>
+<td><strong>Notion</strong> ou <strong>Trello</strong></td>
+<td>R$ 0</td>
+</tr>
+<tr>
+<td>Espionagem de concorrente</td>
+<td><strong>Biblioteca de Anúncios do Meta</strong></td>
+<td>R$ 0</td>
+</tr>
+<tr>
+<td>Encurtador com UTM</td>
+<td><strong>Bitly</strong> ou planilha própria</td>
+<td>R$ 0</td>
+</tr>
+<tr>
+<td>Velocidade de site</td>
+<td><strong>PageSpeed Insights</strong></td>
+<td>R$ 0</td>
+</tr>
+<tr>
+<td>Armazenamento</td>
+<td><strong>Google Drive</strong></td>
+<td>R$ 0–10/mês</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Custo total para começar: praticamente zero.</strong> Ferramenta paga (relatório automatizado, espionagem avançada, automação) só faz sentido a partir de 4–5 clientes. Comprar ferramenta antes de ter cliente é procrastinação disfarçada de preparação.</p>
+<h3>Organização de pastas (faça agora)</h3>
+<pre><code>Meu Drive/
+├── _AGENCIA/
+│   ├── Templates/         (proposta, contrato, relatório)
+│   ├── Meus criativos/    (banco de peças reutilizáveis)
+│   └── Financeiro/
+└── CLIENTES/
+    └── [Nome do Cliente]/
+        ├── 00-acessos-e-ids.md      (IDs de BM, conta, pixel)
+        ├── 01-briefing.md
+        ├── 02-criativos/
+        ├── 03-relatorios/
+        └── 04-contrato-e-nf/
+</code></pre>
+<p>Parece exagero com zero clientes. Com cinco, é o que impede você de perder uma tarde procurando um arquivo.</p>
+<hr />
+<h2>✅ Tarefas da Fase 02</h2>
+<ol>
+<li><strong>Crie seu Business Manager</strong> e ative 2FA. Anote seu ID de BM em local fácil.</li>
+<li><strong>Crie sua conta de administrador do Google Ads (MCC).</strong> Anote o ID de 10 dígitos.</li>
+<li><strong>Registre um domínio</strong> (<code>.com.br</code> sai por ~R$ 40/ano no Registro.br) e configure um e-mail profissional. Faça isso mesmo sem site — o e-mail sozinho já vale.</li>
+<li><strong>Monte a estrutura de pastas</strong> no Drive.</li>
+<li><strong>Crie seu documento de contingência</strong> com a lista da seção 5.3.</li>
+<li><strong>Leia as políticas de anúncio do Meta</strong>, focando na categoria do nicho que você quer atacar. Uma hora de leitura hoje evita uma semana de conta bloqueada depois.</li>
+<li><strong>Escolha o negócio do seu primeiro teste</strong> (seu, de parente, de amigo) e monte a estrutura completa nele: BM no nome do dono, conta de anúncios, página, pixel instalado. <strong>Não ligue campanha ainda.</strong></li>
+</ol>
+<hr />
+<h2>Checagem de entendimento</h2>
+<ol>
+<li>O cliente te manda a senha do Facebook dele por WhatsApp. O que você responde?</li>
+<li>Por que ter o pixel do cliente dentro do SEU Business Manager é um risco para você, e não uma vantagem?</li>
+<li>Conta de anúncios criada hoje. O cliente quer começar com R$ 300/dia amanhã. O que você faz?</li>
+</ol>
+<details>
+<summary>Respostas</summary>
+<p><strong>1.</strong> Você não usa. Responde agradecendo, pede que ele <strong>troque a senha imediatamente por segurança</strong>, e envia o passo a passo de acesso de parceiro. Isso te protege juridicamente, protege ele, e é a primeira demonstração concreta de que você é profissional. Cliente lembra desse momento.</p>
+<p><strong>2.</strong> Três motivos: (a) risco jurídico — você vira controlador de dados pessoais de terceiros sob a LGPD; (b) risco operacional — se sua BM cair, todos os clientes param juntos; (c) risco comercial — vira ponto de conflito na saída e afasta clientes maiores, que exigem propriedade dos próprios ativos.</p>
+<p><strong>3.</strong> Você explica a rampa de aquecimento e propõe: começar em R$ 20–30/dia por 3 dias, subir gradualmente, chegando em R$ 300/dia em ~3 semanas. Se ele insistir, registre por escrito que o risco de bloqueio foi comunicado. Ceder sem registrar é assumir a culpa por um problema que você previu.</p>
+</details>
+<hr />
+<p><strong>Próxima:</strong> <a href="fase-03-meta-ads.html">Fase 03 — Meta Ads</a> — sua primeira campanha de verdade.</p></article>
+  <nav class="paginacao"><a class="nav-ant" href="fase-01-matematica.html"><span>← Anterior</span>01 · A matemática</a><a class="nav-prox" href="fase-03-meta-ads.html"><span>Próximo →</span>03 · Meta Ads</a></nav>
+  <footer class="rodape">Curso de tráfego pago · conteúdo de setembro de 2026</footer>
+</main>
+</body>
+</html>

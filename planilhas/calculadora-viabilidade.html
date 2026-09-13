@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Calculadora de Viabilidade — Tráfego Pago</title>
+<style>
+  /* light-dark() resolve pelo color-scheme: os dois temas numa lista só. */
+  :root{
+    color-scheme:light dark;
+    --bg:light-dark(#f6f7f9,#12151a);
+    --card:light-dark(#fff,#1a1e26);
+    --ink:light-dark(#14171c,#e9ecf1);
+    --muted:light-dark(#667085,#98a2b3);
+    --line:light-dark(#e4e7ec,#2a3038);
+    --accent:light-dark(#1a56db,#84a9ff);
+    --ok:light-dark(#027a48,#75e0a7);
+    --warn:light-dark(#b54708,#fdb022);
+    --bad:light-dark(#b42318,#fda29b);
+  }
+  :root[data-tema=claro]{color-scheme:light}
+  :root[data-tema=escuro]{color-scheme:dark}
+  .botao-tema{position:fixed;top:12px;right:12px;width:36px;height:36px;z-index:9;
+    display:flex;align-items:center;justify-content:center;padding:0;line-height:1;
+    background:var(--card);border:1px solid var(--line);border-radius:9px;
+    font-size:15px;cursor:pointer;color:var(--ink)}
+  .botao-tema:hover{border-color:var(--accent)}
+  .botao-tema .i-escuro{display:none}
+  [data-tema=escuro] .botao-tema .i-claro{display:none}
+  [data-tema=escuro] .botao-tema .i-escuro{display:inline}
+  *{box-sizing:border-box}
+  body{margin:0;padding:24px 16px;background:var(--bg);color:var(--ink);
+       font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+  .wrap{max-width:940px;margin:0 auto}
+  h1{font-size:22px;margin:0 0 4px}
+  .sub{color:var(--muted);margin:0 0 24px;font-size:14px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px}
+  .card h2{font-size:13px;text-transform:uppercase;letter-spacing:.06em;
+           color:var(--muted);margin:0 0 14px;font-weight:600}
+  label{display:block;margin-bottom:12px}
+  label span{display:block;font-size:13px;margin-bottom:5px;color:var(--muted)}
+  input{width:100%;padding:9px 11px;border:1px solid var(--line);border-radius:7px;
+        background:var(--bg);color:var(--ink);font-size:15px;font-variant-numeric:tabular-nums}
+  input:focus{outline:2px solid var(--accent);outline-offset:-1px;border-color:transparent}
+  .row{display:flex;justify-content:space-between;align-items:baseline;
+       padding:9px 0;border-bottom:1px solid var(--line);gap:12px}
+  .row:last-child{border-bottom:0}
+  .row b{font-variant-numeric:tabular-nums;font-size:16px;white-space:nowrap}
+  .row small{color:var(--muted);font-weight:400;display:block;font-size:12px}
+  .hero{background:var(--accent);color:#fff;border:0}
+  .hero h2{color:rgba(255,255,255,.75)}
+  .hero .row{border-color:rgba(255,255,255,.2)}
+  .hero small{color:rgba(255,255,255,.7)}
+  .verdict{margin-top:16px;padding:14px;border-radius:9px;font-size:14px;
+           border:1px solid var(--line);background:var(--card)}
+  .verdict.ok{border-color:var(--ok);color:var(--ok)}
+  .verdict.warn{border-color:var(--warn);color:var(--warn)}
+  .verdict.bad{border-color:var(--bad);color:var(--bad)}
+  .verdict b{display:block;margin-bottom:3px}
+  footer{margin-top:24px;color:var(--muted);font-size:12.5px;line-height:1.6}
+  code{background:var(--bg);padding:1px 5px;border-radius:4px;font-size:12px}
+</style>
+<script>
+/* Mesmo esquema (e mesma chave) do site, para os dois ficarem no mesmo tema. */
+function tema(t){var h=document.documentElement;
+t=t||(h.dataset.tema=='escuro'?'claro':'escuro');h.dataset.tema=t;
+try{localStorage.setItem('tema',t)}catch(e){}}
+try{var _t=localStorage.getItem('tema')}catch(e){}
+document.documentElement.dataset.tema=_t||(matchMedia('(prefers-color-scheme:dark)').matches?'escuro':'claro');
+</script>
+</head>
+<body>
+<button class="botao-tema" onclick="tema()" aria-label="Alternar tema claro/escuro"
+        title="Alternar tema claro/escuro"><span class="i-claro">🌙</span><span class="i-escuro">☀️</span></button>
+<div class="wrap">
+  <h1>Calculadora de Viabilidade</h1>
+  <p class="sub">Preencha com os números do cliente. Tudo recalcula sozinho. — Fase 01 do curso</p>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Números do cliente</h2>
+      <label><span>Ticket médio da primeira compra (R$)</span>
+        <input id="ticket" type="number" value="2500" min="0" step="10"></label>
+      <label><span>Margem de contribuição (%)<br>
+        <small style="color:var(--muted)">o que sobra depois de custo, comissão e taxa</small></span>
+        <input id="margem" type="number" value="40" min="0" max="100" step="1"></label>
+      <label><span>Fecha 1 a cada quantos contatos?</span>
+        <input id="fecha" type="number" value="5" min="1" step="1"></label>
+      <label><span>Quantas vezes o cliente compra por ano?<br>
+        <small style="color:var(--muted)">1 = compra única</small></span>
+        <input id="recompra" type="number" value="1" min="1" step="0.5"></label>
+    </div>
+
+    <div class="card">
+      <h2>Mercado e meta</h2>
+      <label><span>CPL estimado do nicho (R$)<br>
+        <small style="color:var(--muted)">quanto custa um contato hoje</small></span>
+        <input id="cpl" type="number" value="60" min="1" step="5"></label>
+      <label><span>% da margem que o anúncio pode consumir<br>
+        <small style="color:var(--muted)">30–50% é o saudável</small></span>
+        <input id="agressividade" type="number" value="40" min="5" max="100" step="5"></label>
+      <label><span>Meta de faturamento adicional (R$/mês)</span>
+        <input id="meta" type="number" value="50000" min="0" step="1000"></label>
+    </div>
+
+    <div class="card hero">
+      <h2>Seus limites</h2>
+      <div class="row"><span>Margem bruta por cliente</span><b id="r-margem">—</b></div>
+      <div class="row"><span>CPA máximo <small>empate — acima disso é prejuízo</small></span><b id="r-cpamax">—</b></div>
+      <div class="row"><span>CPA alvo <small>meta de trabalho</small></span><b id="r-cpaalvo">—</b></div>
+      <div class="row"><span>CPL alvo <small>o número que você persegue</small></span><b id="r-cplalvo">—</b></div>
+      <div class="row"><span>CPA máximo por LTV <small>considerando recompra</small></span><b id="r-ltv">—</b></div>
+    </div>
+
+    <div class="card">
+      <h2>Para bater a meta</h2>
+      <div class="row"><span>Vendas necessárias</span><b id="r-vendas">—</b></div>
+      <div class="row"><span>Contatos necessários</span><b id="r-leads">—</b></div>
+      <div class="row"><span>Verba de mídia/mês</span><b id="r-verba">—</b></div>
+      <div class="row"><span>CPA real que isso gera</span><b id="r-cpareal">—</b></div>
+      <div class="row"><span>Anúncio consome da margem</span><b id="r-consumo">—</b></div>
+    </div>
+
+    <div class="card">
+      <h2>Tradução em ROAS <small style="font-weight:400;text-transform:none;letter-spacing:0">(e-commerce)</small></h2>
+      <div class="row"><span>ROAS de empate <small>abaixo disso é prejuízo</small></span><b id="r-roasemp">—</b></div>
+      <div class="row"><span>ROAS alvo <small>com lucro real</small></span><b id="r-roasalvo">—</b></div>
+      <div class="row"><span>Verba diária mínima <small>CPL alvo × 3, para sair do aprendizado</small></span><b id="r-diaria">—</b></div>
+    </div>
+  </div>
+
+  <div id="verdict" class="verdict"></div>
+
+  <footer>
+    <b>Como usar na reunião:</b> preencha os 4 campos do primeiro cartão com o cliente falando, e vire a tela.
+    A conversa muda no segundo em que ele vê o próprio negócio em números.<br><br>
+    <b>Atenção:</b> o CPL de mercado no Brasil em 2026 varia muito por nicho. Saúde, finanças e B2B pagam acima da média.
+    Considere também que anunciar no Brasil ficou ~12% mais caro desde janeiro/2026 com os tributos cobrados direto do anunciante — a verba não compra o valor cheio em mídia.<br><br>
+    Abra o console do navegador (<code>F12</code>) para ver o autoteste das fórmulas.
+  </footer>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+const brl = v => isFinite(v) ? v.toLocaleString('pt-BR',{style:'currency',currency:'BRL',maximumFractionDigits:0}) : '—';
+const num = v => isFinite(v) ? Math.ceil(v).toLocaleString('pt-BR') : '—';
+
+// Núcleo do cálculo. Separado da UI para poder testar.
+function calcular({ticket, margemPct, fechaACada, recompraAno, cpl, agressividadePct, meta}) {
+  const margemBruta = ticket * (margemPct / 100);
+  const cpaMax      = margemBruta;
+  const cpaAlvo     = margemBruta * (agressividadePct / 100);
+  const taxaFech    = 1 / fechaACada;
+  const cplAlvo     = cpaAlvo * taxaFech;
+  const cpaLtv      = margemBruta * recompraAno;
+
+  const vendas      = meta / ticket;
+  const leads       = vendas / taxaFech;
+  const verba       = leads * cpl;
+  const cpaReal     = vendas > 0 ? verba / vendas : NaN;
+  const consumoPct  = margemBruta > 0 ? (cpaReal / margemBruta) * 100 : NaN;
+
+  return {
+    margemBruta, cpaMax, cpaAlvo, cplAlvo, cpaLtv,
+    vendas, leads, verba, cpaReal, consumoPct,
+    roasEmpate: ticket / cpaMax,
+    roasAlvo:   ticket / cpaAlvo,
+    // Regra da Fase 03: verba diária ≈ 3× o custo do evento OTIMIZADO.
+    // Em campanha de lead o evento é o contato, então a base é o CPL, não o CPA.
+    diariaMin:  cplAlvo * 3
+  };
+}
+
+function render() {
+  const e = {
+    ticket:          +$('ticket').value,
+    margemPct:       +$('margem').value,
+    fechaACada:      +$('fecha').value,
+    recompraAno:     +$('recompra').value,
+    cpl:             +$('cpl').value,
+    agressividadePct:+$('agressividade').value,
+    meta:            +$('meta').value
+  };
+  const r = calcular(e);
+
+  $('r-margem').textContent  = brl(r.margemBruta);
+  $('r-cpamax').textContent  = brl(r.cpaMax);
+  $('r-cpaalvo').textContent = brl(r.cpaAlvo);
+  $('r-cplalvo').textContent = brl(r.cplAlvo);
+  $('r-ltv').textContent     = brl(r.cpaLtv);
+
+  $('r-vendas').textContent  = num(r.vendas);
+  $('r-leads').textContent   = num(r.leads);
+  $('r-verba').textContent   = brl(r.verba);
+  $('r-cpareal').textContent = brl(r.cpaReal);
+  $('r-consumo').textContent = isFinite(r.consumoPct) ? r.consumoPct.toFixed(0) + '%' : '—';
+
+  $('r-roasemp').textContent  = isFinite(r.roasEmpate) ? r.roasEmpate.toFixed(2) + 'x' : '—';
+  $('r-roasalvo').textContent = isFinite(r.roasAlvo)   ? r.roasAlvo.toFixed(2) + 'x'   : '—';
+  $('r-diaria').textContent   = brl(r.diariaMin) + '/dia';
+
+  // Veredito
+  const v = $('verdict');
+  if (!isFinite(r.cplAlvo) || r.cplAlvo <= 0) { v.className='verdict'; v.innerHTML=''; return; }
+  const folga = r.cplAlvo / e.cpl;
+  if (folga >= 1.3) {
+    v.className = 'verdict ok';
+    v.innerHTML = '<b>✅ A conta fecha com folga.</b>Você pode pagar até ' + brl(r.cplAlvo) +
+      ' por contato e o mercado cobra cerca de ' + brl(e.cpl) + '. Margem de segurança de ' +
+      ((folga-1)*100).toFixed(0) + '%. Pode propor com confiança.';
+  } else if (folga >= 1) {
+    v.className = 'verdict warn';
+    v.innerHTML = '<b>⚠️ Fecha, mas apertado.</b>Seu teto é ' + brl(r.cplAlvo) +
+      ' e o mercado cobra ' + brl(e.cpl) + '. Dá para trabalhar, mas sem margem para erro. ' +
+      'Antes de fechar: melhore a taxa de fechamento dele, aumente o ticket, ou reveja a margem.';
+  } else {
+    v.className = 'verdict bad';
+    v.innerHTML = '<b>🚫 A conta não fecha.</b>Você só pode pagar ' + brl(r.cplAlvo) +
+      ' por contato, e o mercado cobra ' + brl(e.cpl) + '. ' +
+      'Rodar assim dá prejuízo para o cliente. Ataque primeiro: taxa de fechamento, ticket médio ou recompra. ' +
+      'Ou proponha uma consultoria de setup em vez de gestão mensal.';
+  }
+}
+
+['ticket','margem','fecha','recompra','cpl','agressividade','meta']
+  .forEach(id => $(id).addEventListener('input', render));
+render();
+
+// ── Autoteste das fórmulas ───────────────────────────────────────────
+(function autoteste(){
+  const aprox = (a,b,tol=0.01) => Math.abs(a-b) < tol;
+  const falhas = [];
+
+  // Caso 1: clínica da Fase 01 — ticket 2500, margem 40%, fecha 1/5, agressividade 40%
+  const c = calcular({ticket:2500, margemPct:40, fechaACada:5, recompraAno:1,
+                      cpl:60, agressividadePct:40, meta:50000});
+  if (!aprox(c.margemBruta, 1000)) falhas.push('margem bruta deveria ser 1000, deu ' + c.margemBruta);
+  if (!aprox(c.cpaAlvo, 400))      falhas.push('CPA alvo deveria ser 400, deu ' + c.cpaAlvo);
+  if (!aprox(c.cplAlvo, 80))       falhas.push('CPL alvo deveria ser 80, deu ' + c.cplAlvo);
+  if (!aprox(c.vendas, 20))        falhas.push('vendas deveriam ser 20, deu ' + c.vendas);
+  if (!aprox(c.leads, 100))        falhas.push('leads deveriam ser 100, deu ' + c.leads);
+  if (!aprox(c.verba, 6000))       falhas.push('verba deveria ser 6000, deu ' + c.verba);
+  if (!aprox(c.diariaMin, 240))    falhas.push('diária mínima deveria ser 240 (CPL alvo × 3), deu ' + c.diariaMin);
+  // Sanidade: a diária mínima tem que ser da mesma ordem da verba necessária/30.
+  if (c.diariaMin > (c.verba / 30) * 3)
+    falhas.push('diária mínima desproporcional à verba mensal — fórmula usando a base errada');
+
+  // Caso 2: a armadilha do ROAS — ticket 180, margem 32.8%
+  const d = calcular({ticket:180, margemPct:32.8, fechaACada:1, recompraAno:1,
+                      cpl:25, agressividadePct:42, meta:18000});
+  if (!aprox(d.roasEmpate, 180/59.04, 0.02))
+    falhas.push('ROAS de empate incorreto: ' + d.roasEmpate);
+  if (d.roasEmpate <= 3)
+    falhas.push('ROAS de empate deveria ser >3x — é o ponto da Fase 01');
+
+  // Caso 3: LTV multiplica o CPA máximo
+  const e = calcular({ticket:3000, margemPct:60, fechaACada:4, recompraAno:8,
+                      cpl:200, agressividadePct:30, meta:30000});
+  if (!aprox(e.cpaLtv, 14400))
+    falhas.push('CPA por LTV deveria ser 14400, deu ' + e.cpaLtv);
+
+  if (falhas.length) console.error('❌ Autoteste falhou:\n' + falhas.join('\n'));
+  else console.log('✅ Autoteste das fórmulas: 3 cenários da Fase 01 conferem.');
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fase 06 — Criativo, copy e oferta — Tráfego Pago</title>
+<link rel="stylesheet" href="assets/estilo.css">
+<script>
+/* Roda antes do primeiro pixel, senão a página pisca no tema errado.
+   Sem argumento, alterna. localStorage em try/catch: file:// pode bloquear. */
+function tema(t){var h=document.documentElement;
+t=t||(h.dataset.tema=='escuro'?'claro':'escuro');h.dataset.tema=t;
+try{localStorage.setItem('tema',t)}catch(e){}}
+try{var _t=localStorage.getItem('tema')}catch(e){}
+document.documentElement.dataset.tema=_t||(matchMedia('(prefers-color-scheme:dark)').matches?'escuro':'claro');
+</script>
+</head>
+<body>
+<input type="checkbox" id="abrir-menu" hidden>
+<label for="abrir-menu" class="botao-menu" aria-label="Abrir menu">☰</label>
+<label for="abrir-menu" class="fundo-menu"></label>
+<button class="botao-tema" onclick="tema()" aria-label="Alternar tema claro/escuro"
+        title="Alternar tema claro/escuro"><span class="i-claro">🌙</span><span class="i-escuro">☀️</span></button>
+
+<aside>
+  <a class="marca" href="index.html">Tráfego Pago<small>do zero ao primeiro cliente</small></a>
+  <ul class="topo"><li><a href="index.html"><i>🏠</i>Início</a></li></ul><p class="bloco">Fundamento</p><ul><li><a href="fase-00-fundamentos.html"><i>🧭</i>00 · Fundamentos</a></li><li><a href="fase-01-matematica.html"><i>🧮</i>01 · A matemática</a></li><li><a href="fase-02-infraestrutura.html"><i>🔧</i>02 · Infraestrutura</a></li></ul><p class="bloco">Execução técnica</p><ul><li><a href="fase-03-meta-ads.html"><i>📱</i>03 · Meta Ads</a></li><li><a href="fase-04-google-ads.html"><i>🔍</i>04 · Google Ads</a></li><li><a href="fase-05-tiktok-kwai.html"><i>🎵</i>05 · TikTok e Kwai</a></li><li><a href="fase-06-criativo-copy-oferta.html" class="ativo"><i>🎨</i>06 · Criativo e oferta</a></li><li><a href="fase-07-mensuracao.html"><i>📊</i>07 · Mensuração</a></li><li><a href="fase-08-otimizacao-escala.html"><i>📈</i>08 · Otimização e escala</a></li></ul><p class="bloco">O negócio</p><ul><li><a href="fase-09-vender-o-servico.html"><i>💼</i>09 · Vender o serviço</a></li><li><a href="fase-10-contrato-legal.html"><i>⚖️</i>10 · Contrato e legal</a></li><li><a href="fase-11-operacao-rotina.html"><i>🔄</i>11 · Operação e rotina</a></li><li><a href="fase-12-problemas-reais.html"><i>🚨</i>12 · Problemas reais</a></li></ul><p class="bloco">Templates</p><ul><li><a href="templates/proposta-comercial.html"><i>📄</i>Proposta comercial</a></li><li><a href="templates/contrato-modelo.html"><i>📑</i>Contrato modelo</a></li><li><a href="templates/briefing-onboarding.html"><i>📋</i>Briefing e onboarding</a></li><li><a href="templates/relatorio-mensal.html"><i>📊</i>Relatório mensal</a></li><li><a href="templates/auditoria-de-conta.html"><i>🔎</i>Auditoria de conta</a></li><li><a href="templates/scripts-de-venda.html"><i>💬</i>Scripts de venda</a></li></ul><p class="bloco">Ferramenta</p><ul><li><a href="planilhas/calculadora-viabilidade.html"><i>🧮</i>Calculadora</a></li></ul>
+</aside>
+
+<main>
+  <article><h1>Fase 06 — Criativo, copy e oferta</h1>
+<blockquote>
+<p><strong>Pré-requisito:</strong> Fase 03.
+<strong>Tempo:</strong> contínuo. Esta fase você nunca "termina".
+<strong>Verba:</strong> R$ 0 para aprender.</p>
+</blockquote>
+<hr />
+<h2>A hierarquia do que importa</h2>
+<p>Se você só puder lembrar de uma coisa deste curso inteiro, que seja esta pirâmide:</p>
+<pre><code>              ┌─────────────┐
+              │   OFERTA    │   ← 50% do resultado
+              └─────────────┘      Se está errada, nada salva
+           ┌───────────────────┐
+           │     CRIATIVO      │   ← 30%
+           └───────────────────┘      O que para o dedo
+        ┌─────────────────────────┐
+        │          COPY           │   ← 15%
+        └─────────────────────────┘      O que convence
+     ┌───────────────────────────────┐
+     │   SEGMENTAÇÃO / CONFIGURAÇÃO  │   ← 5% em 2026
+     └───────────────────────────────┘      A IA já resolve
+</code></pre>
+<p><strong>Em 2020, a base era o topo.</strong> Segmentação era o diferencial do gestor.</p>
+<p><strong>Em 2026, inverteu.</strong> O Meta removeu as exclusões de segmentação detalhada e ativou Advantage+ Creative por padrão. A plataforma decide melhor que você quem deve ver o anúncio. O que ela <strong>não</strong> faz é inventar uma oferta boa.</p>
+<blockquote>
+<p><strong>A consequência para a sua carreira:</strong> o gestor que só sabe configurar campanha vale cada vez menos. O gestor que sabe construir oferta e dirigir criativo vale cada vez mais. <strong>Esta fase é o seu seguro de emprego.</strong></p>
+</blockquote>
+<hr />
+<h2>1. A oferta: onde a batalha é vencida</h2>
+<h3>Oferta não é o produto</h3>
+<pre><code>PRODUTO:  &quot;Consulta odontológica&quot;
+OFERTA:   &quot;Avaliação completa com raio-X panorâmico e plano de
+           tratamento personalizado, sem custo, com horário no
+           mesmo dia. Se você fechar o tratamento, o valor da
+           documentação entra como desconto.&quot;
+</code></pre>
+<p>Mesmo produto. Oferta completamente diferente. A segunda vende 5x mais com o mesmo criativo e a mesma verba.</p>
+<h3>A equação do valor percebido</h3>
+<pre><code>                Resultado desejado  ×  Probabilidade percebida de dar certo
+VALOR  =  ─────────────────────────────────────────────────────────────────
+                   Tempo até o resultado  ×  Esforço e sacrifício
+</code></pre>
+<p>Para aumentar o valor da oferta, você mexe em quatro alavancas:</p>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Alavanca</th>
+<th>Como aumentar</th>
+<th>Exemplo prático</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>⬆️ <strong>Resultado</strong></td>
+<td>Deixar o benefício final vívido e específico</td>
+<td>"sorriso que você não esconde nas fotos" &gt; "dentes bonitos"</td>
+</tr>
+<tr>
+<td>⬆️ <strong>Probabilidade</strong></td>
+<td>Prova, garantia, autoridade, números</td>
+<td>"2.400 implantes realizados", "garantia de 5 anos"</td>
+</tr>
+<tr>
+<td>⬇️ <strong>Tempo</strong></td>
+<td>Encurtar ou parcelar a entrega</td>
+<td>"primeiro resultado na primeira sessão"</td>
+</tr>
+<tr>
+<td>⬇️ <strong>Esforço</strong></td>
+<td>Remover fricção e risco</td>
+<td>"agende pelo WhatsApp em 1 minuto", "sem entrada"</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Quando a campanha não performa e o criativo já foi trocado 3 vezes, o problema é quase sempre aqui.</strong> Voltar ao cliente e reconstruir a oferta é um trabalho de consultor — e é cobrável.</p>
+<h3>Os 7 componentes de uma oferta forte</h3>
+<p>Use como checklist ao montar qualquer campanha:</p>
+<ol>
+<li><strong>Promessa específica</strong> — "agende sua avaliação" é fraco; "descubra em 30 minutos quanto custaria seu tratamento completo, com raio-X incluso" é forte</li>
+<li><strong>Prova</strong> — números, depoimentos, casos, tempo de mercado</li>
+<li><strong>Redução de risco</strong> — garantia, gratuidade inicial, "sem compromisso"</li>
+<li><strong>Facilidade</strong> — o próximo passo tem que ser ridiculamente fácil</li>
+<li><strong>Escassez ou urgência real</strong> — "8 vagas nesta semana". ⚠️ Se for mentira, destrói a confiança e viola política</li>
+<li><strong>Bônus</strong> — algo a mais que custa pouco e vale muito para quem recebe</li>
+<li><strong>Chamada única e clara</strong> — um caminho, não cinco</li>
+</ol>
+<h3>Ofertas que funcionam por tipo de negócio</h3>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Negócio</th>
+<th>Oferta fraca</th>
+<th>Oferta forte</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clínica</td>
+<td>"Agende sua consulta"</td>
+<td>"Avaliação + raio-X grátis, resultado no mesmo dia"</td>
+</tr>
+<tr>
+<td>Academia</td>
+<td>"Matricule-se"</td>
+<td>"7 dias grátis, sem cartão, sem fidelidade"</td>
+</tr>
+<tr>
+<td>Advogado</td>
+<td>"Consultoria jurídica"</td>
+<td>"Análise gratuita do seu caso em 24h por WhatsApp"</td>
+</tr>
+<tr>
+<td>E-commerce</td>
+<td>"Compre agora"</td>
+<td>"Frete grátis acima de R$ 199 + troca em 30 dias"</td>
+</tr>
+<tr>
+<td>Estética</td>
+<td>"Agende"</td>
+<td>"Primeira sessão pela metade + avaliação de pele"</td>
+</tr>
+<tr>
+<td>Curso</td>
+<td>"Inscreva-se"</td>
+<td>"Aula 1 liberada agora + garantia de 7 dias"</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>💡 <strong>Pergunta que você faz ao cliente na reunião de onboarding:</strong> <em>"O que você pode oferecer que seja valioso para o cliente e barato para você?"</em> A resposta dele é a sua oferta de topo de funil. Normalmente ninguém nunca perguntou isso a ele.</p>
+</blockquote>
+<hr />
+<h2>2. O criativo: parar o dedo</h2>
+<h3>A física da atenção</h3>
+<pre><code>0,0s ──── 1,5s ──────────── 5s ─────────────── fim
+  │         │                │
+  │         │                └─ Aqui ele decide clicar
+  │         └─ Aqui ele decide continuar assistindo
+  └─ Aqui ele decide parar de rolar
+</code></pre>
+<p>Você tem <strong>1,5 segundo</strong>. Se falhar ali, nada mais importa — nem sua copy brilhante, nem sua oferta perfeita.</p>
+<h3>Anatomia do vídeo que converte</h3>
+<pre><code>┌──────────────────────────────────────────────┐
+│ 0–2s   GANCHO                                │
+│        Movimento, rosto, texto grande,        │
+│        pergunta incômoda, cena inesperada     │
+├──────────────────────────────────────────────┤
+│ 2–8s   PROBLEMA                              │
+│        Nomear a dor específica.               │
+│        &quot;Ah, é comigo&quot;                         │
+├──────────────────────────────────────────────┤
+│ 8–20s  SOLUÇÃO + PROVA                       │
+│        Como funciona + por que acreditar      │
+├──────────────────────────────────────────────┤
+│ 20–30s OFERTA + CTA                          │
+│        O que fazer agora, explicitamente      │
+└──────────────────────────────────────────────┘
+</code></pre>
+<h3>12 ganchos que funcionam (roube e adapte)</h3>
+<ol>
+<li><strong>Pergunta direta</strong> — "Você sente dor ao mastigar do lado direito?"</li>
+<li><strong>Erro comum</strong> — "Se você faz isso com seu aparelho, pare agora"</li>
+<li><strong>Contraste</strong> — "Todo mundo diz X. Está errado."</li>
+<li><strong>Número específico</strong> — "Descobrimos isso depois de 2.400 atendimentos"</li>
+<li><strong>Antes/depois de situação</strong> (não do corpo — política!) — "De 3 lojas a 14 em dois anos"</li>
+<li><strong>Confissão</strong> — "Eu perdi R$ 40 mil antes de entender isso"</li>
+<li><strong>Urgência real</strong> — "Última semana com essa condição"</li>
+<li><strong>Curiosidade</strong> — "Ninguém te contou isso sobre financiamento"</li>
+<li><strong>Demonstração</strong> — mostrar o processo funcionando, sem falar</li>
+<li><strong>Depoimento cru</strong> — cliente real, celular, sem edição</li>
+<li><strong>Bastidor</strong> — "Como a gente faz isso aqui dentro"</li>
+<li><strong>Objeção frontal</strong> — "Acha caro? Olha essa conta."</li>
+</ol>
+<h3>Regras técnicas que você não pode errar</h3>
+<ul>
+<li>✅ <strong>Vertical 9:16</strong> para Reels/Stories/TikTok, <strong>1:1 ou 4:5</strong> para Feed</li>
+<li>✅ <strong>Legenda queimada no vídeo</strong> — a maioria assiste sem som</li>
+<li>✅ <strong>Texto grande e legível em tela pequena</strong> — teste no seu próprio celular, de longe</li>
+<li>✅ <strong>Primeiro quadro já com movimento ou rosto</strong></li>
+<li>✅ <strong>Elementos importantes longe das bordas</strong> — a interface do app cobre topo e rodapé</li>
+<li>❌ <strong>Nada de banco de imagem genérico</strong> — a pessoa reconhece e o cérebro ignora</li>
+<li>❌ <strong>Nada de logo gigante no início</strong> — ninguém para o dedo por um logotipo</li>
+</ul>
+<hr />
+<h2>3. Testar ÂNGULOS, não cores</h2>
+<p>O erro mais comum de quem produz criativo: fazer 5 versões da mesma ideia com fundo de cor diferente.</p>
+<p><strong>Isso não é teste. Isso é decoração.</strong></p>
+<p>Teste de verdade é de <strong>ângulo</strong> — a ideia central que justifica a compra:</p>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Ângulo</th>
+<th>O que ataca</th>
+<th>Exemplo (clínica odontológica)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Dor</strong></td>
+<td>O problema atual</td>
+<td>"Cansado de esconder o sorriso nas fotos?"</td>
+</tr>
+<tr>
+<td><strong>Desejo</strong></td>
+<td>O resultado sonhado</td>
+<td>"Volte a sorrir sem pensar duas vezes"</td>
+</tr>
+<tr>
+<td><strong>Objeção de preço</strong></td>
+<td>"É caro"</td>
+<td>"Implante cabe no orçamento: veja a parcela real"</td>
+</tr>
+<tr>
+<td><strong>Objeção de medo</strong></td>
+<td>"Dói"</td>
+<td>"Sedação consciente: você nem percebe"</td>
+</tr>
+<tr>
+<td><strong>Objeção de tempo</strong></td>
+<td>"Demora"</td>
+<td>"Dente fixo no mesmo dia"</td>
+</tr>
+<tr>
+<td><strong>Prova social</strong></td>
+<td>Confiança</td>
+<td>"2.400 pacientes. Veja o que eles dizem."</td>
+</tr>
+<tr>
+<td><strong>Autoridade</strong></td>
+<td>Credibilidade</td>
+<td>"15 anos, especialização em implantodontia"</td>
+</tr>
+<tr>
+<td><strong>Comparação</strong></td>
+<td>Alternativas</td>
+<td>"Prótese móvel × implante: a diferença real"</td>
+</tr>
+<tr>
+<td><strong>Educativo</strong></td>
+<td>Desconhecimento</td>
+<td>"3 sinais de que você já precisa de implante"</td>
+</tr>
+<tr>
+<td><strong>Urgência</strong></td>
+<td>Adiamento</td>
+<td>"Cada mês sem o dente perde osso. Entenda."</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Como usar na prática:</strong> teste 5 ângulos diferentes. O vencedor te diz <strong>o que move aquele mercado</strong>. Aí você produz 5 variações <em>daquele ângulo</em>.</p>
+<pre><code>Rodada 1 → 5 ângulos diferentes        → descobre que &quot;objeção de preço&quot; ganha
+Rodada 2 → 5 criativos sobre preço     → descobre o formato que funciona
+Rodada 3 → 5 variações do vencedor     → escala
+</code></pre>
+<p>Isso é o método. Não é sorte, não é inspiração — é sistema.</p>
+<hr />
+<h2>4. Copy: as estruturas que funcionam</h2>
+<h3>AIDA (a mais versátil)</h3>
+<pre><code>ATENÇÃO   → Você sabia que 7 em cada 10 pessoas que perdem um dente
+            perdem osso no lugar em menos de um ano?
+
+INTERESSE → Isso significa que esperar não é neutro — o tratamento
+            fica mais complexo e mais caro a cada mês.
+
+DESEJO    → Com implante no mesmo dia, você sai daqui com o dente
+            fixo, sem prótese móvel, e volta a comer normalmente.
+
+AÇÃO      → Avaliação com raio-X gratuita esta semana.
+            Toque em &quot;Saiba mais&quot; e escolha seu horário.
+</code></pre>
+<h3>PAS (a mais rápida — ideal para anúncio curto)</h3>
+<pre><code>PROBLEMA  → Você evita sorrir nas fotos.
+AGITAÇÃO  → E cada vez que alguém pega o celular, você já sabe
+            onde vai colocar a mão.
+SOLUÇÃO   → Em 3 sessões isso acaba. Avaliação gratuita.
+</code></pre>
+<h3>BAB (ótima para transformação)</h3>
+<pre><code>ANTES   → Hoje você planilha 40 pedidos na mão toda semana.
+PONTE   → Com o sistema, eles caem prontos no seu painel.
+DEPOIS  → Sua terça-feira volta a ter 4 horas livres.
+</code></pre>
+<h3>Regras de copy que valem para tudo</h3>
+<ul>
+<li><strong>Primeira linha é tudo</strong> — o Meta corta em ~125 caracteres com "ver mais". Toda a força vai ali.</li>
+<li><strong>Escreva para UMA pessoa</strong> — "você", não "vocês", nunca "nossos clientes"</li>
+<li><strong>Benefício antes de característica</strong> — "dente fixo no mesmo dia" (benefício) em vez de "sistema de carga imediata" (característica)</li>
+<li><strong>Frases curtas.</strong> Ponto final. Muito ponto final.</li>
+<li><strong>Números específicos vencem redondos</strong> — "2.437 atendimentos" soa mais verdade que "mais de 2.000"</li>
+<li><strong>Uma única chamada</strong> — dois CTAs diferentes = nenhum CTA</li>
+<li><strong>Leia em voz alta</strong> — se travar na leitura, o cliente trava também</li>
+</ul>
+<h3>🚫 O que NÃO escrever (políticas de plataforma)</h3>
+<p>Isso derruba anúncio e pode derrubar conta:</p>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>❌ Nunca escreva</th>
+<th>✅ Escreva assim</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"Você está acima do peso?"</td>
+<td>"Conheça o método que mudou a rotina de 2.000 pessoas"</td>
+</tr>
+<tr>
+<td>"Emagreça 10kg em 30 dias"</td>
+<td>"Veja como a Ana reorganizou sua alimentação"</td>
+</tr>
+<tr>
+<td>"Está endividado?"</td>
+<td>"Entenda as opções para reorganizar suas finanças"</td>
+</tr>
+<tr>
+<td>"Cure sua ansiedade"</td>
+<td>"Ferramentas para lidar melhor com a ansiedade"</td>
+</tr>
+<tr>
+<td>"Ganhe R$ 5.000/mês garantidos"</td>
+<td>"Conheça o modelo de trabalho que estamos ensinando"</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>A regra:</strong> não <strong>afirme</strong> a condição pessoal de quem lê, e não <strong>garanta</strong> resultado. Fale do método, da jornada, da possibilidade — nunca da pessoa nem da promessa.</p>
+<hr />
+<h2>5. Produção sem orçamento</h2>
+<p>Você não precisa de câmera, estúdio ou designer. Precisa de método.</p>
+<h3>Ferramentas (todas gratuitas)</h3>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Função</th>
+<th>Ferramenta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Design estático</td>
+<td><strong>Canva</strong></td>
+</tr>
+<tr>
+<td>Edição de vídeo</td>
+<td><strong>CapCut</strong> (legenda automática — use sempre)</td>
+</tr>
+<tr>
+<td>Legenda</td>
+<td>CapCut → Texto → Legendas automáticas</td>
+</tr>
+<tr>
+<td>Gravação</td>
+<td>Celular + luz natural (janela na frente do rosto)</td>
+</tr>
+<tr>
+<td>Áudio</td>
+<td>Fone com microfone. <strong>Áudio ruim mata vídeo bom.</strong></td>
+</tr>
+<tr>
+<td>Banco de peças</td>
+<td>Pasta no Drive com tudo que você já produziu</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Como fazer o CLIENTE produzir (a habilidade que escala seu negócio)</h3>
+<p>Aqui está um problema real: você não tem tempo de produzir 8 criativos por mês para 8 clientes. E o cliente não sabe o que gravar.</p>
+<p><strong>A solução é um roteiro de gravação.</strong> Você manda, ele grava no celular, você edita em 20 minutos.</p>
+<p>Modelo que você envia por WhatsApp:</p>
+<pre><code>Oi [Nome]! Preciso de 4 vídeos curtos esta semana.
+Grave com o celular na VERTICAL, com boa luz (de frente
+para a janela). Não precisa decorar, pode errar e repetir.
+
+VÍDEO 1 (20s) — O erro mais comum
+  &quot;O maior erro que eu vejo as pessoas cometerem quando
+   procuram [serviço] é ___. O certo é ___.&quot;
+
+VÍDEO 2 (20s) — Bastidor
+  Mostre o ambiente/processo e explique o que está fazendo.
+
+VÍDEO 3 (30s) — Depoimento
+  Peça a um cliente satisfeito. Pergunte: &quot;como era antes,
+  o que mudou, o que você diria para quem está em dúvida?&quot;
+
+VÍDEO 4 (20s) — A objeção
+  &quot;Muita gente acha que [objeção]. Na verdade ___.&quot;
+
+Pode mandar tudo bruto no WhatsApp que eu edito. 🙂
+</code></pre>
+<blockquote>
+<p><strong>Isso muda seu negócio.</strong> Você deixa de ser gargalo de produção, o cliente se envolve (e clientes envolvidos cancelam menos), e o material fica mais autêntico do que qualquer coisa que você produziria de fora. <strong>Coloque essa entrega no seu contrato como diferencial.</strong></p>
+</blockquote>
+<hr />
+<h2>6. A matriz de teste</h2>
+<p>Organize seus testes assim, sempre:</p>
+<pre><code>              CRIATIVO A   CRIATIVO B   CRIATIVO C
+              (dor)        (preço)      (prova social)
+COPY CURTA       ①            ②            ③
+COPY LONGA       ④            ⑤            ⑥
+</code></pre>
+<p><strong>Regra de ouro: uma variável por vez.</strong> Se você mudar criativo e copy juntos, o resultado não te ensina nada — você não sabe qual dos dois causou a diferença.</p>
+<h3>Ciclo de vida do criativo</h3>
+<pre><code>Semana 1-2   ████████████  Pico de performance
+Semana 3-4   ████████░░░░  Começa a cair (frequência sobe)
+Semana 5-6   █████░░░░░░░  Fadiga clara
+Semana 7+    ██░░░░░░░░░░  Queimado
+</code></pre>
+<p><strong>Taxa de renovação saudável:</strong> 2 a 4 criativos novos por mês, por cliente. No TikTok, mais.</p>
+<p><strong>Sinal claro de fadiga:</strong> frequência subindo <strong>e</strong> CPL subindo ao mesmo tempo, com o resto igual. Aí não adianta mexer em verba ou público. <strong>É criativo novo.</strong></p>
+<hr />
+<h2>7. Landing page: o elo que mais vaza</h2>
+<p>Não adianta criativo excelente mandar para uma página ruim. Checklist da página que converte:</p>
+<ul>
+<li>[ ] <strong>Carrega em menos de 3s no 4G</strong> (teste em PageSpeed Insights)</li>
+<li>[ ] <strong>Título repete a promessa do anúncio</strong> — se o anúncio diz "implante no mesmo dia", o título da página diz isso. Quebra de promessa = abandono.</li>
+<li>[ ] <strong>Uma única ação</strong> — sem menu, sem links para o blog, sem "conheça nossa história"</li>
+<li>[ ] <strong>Formulário curto</strong> — nome, WhatsApp. Cada campo extra derruba a conversão.</li>
+<li>[ ] <strong>Prova social acima da dobra</strong> — depoimento, número, selo</li>
+<li>[ ] <strong>Botão visível sem rolar</strong> e repetido ao longo da página</li>
+<li>[ ] <strong>Mobile primeiro</strong> — mais de 85% do tráfego</li>
+<li>[ ] <strong>WhatsApp com mensagem pré-preenchida</strong> (<code>wa.me/55DDDNUMERO?text=Olá, vi o anúncio sobre...</code>)</li>
+</ul>
+<blockquote>
+<p>💡 O parâmetro <code>?text=</code> do WhatsApp é um truque simples e poderoso: a pessoa chega com a mensagem escrita, só aperta enviar. Aumenta a taxa de contato e já <strong>identifica de qual anúncio ela veio</strong> — o que resolve metade do seu problema de atribuição em serviço local.</p>
+</blockquote>
+<hr />
+<h2>✅ Tarefas da Fase 06</h2>
+<ol>
+<li><strong>Reescreva a oferta</strong> do seu negócio de teste usando os 7 componentes da seção 1</li>
+<li><strong>Monte um banco de ganchos:</strong> colete 20 anúncios reais na Biblioteca de Anúncios e classifique cada um pelos 12 ganchos</li>
+<li><strong>Produza 5 criativos de ÂNGULOS diferentes</strong> (não cores diferentes) para o mesmo produto</li>
+<li><strong>Escreva 3 copies</strong> — uma AIDA, uma PAS, uma BAB — para a mesma oferta</li>
+<li><strong>Monte seu roteiro de gravação para cliente</strong> (seção 5) e salve em <code>templates/</code></li>
+<li><strong>Audite uma landing page</strong> com o checklist da seção 7 e liste os problemas. Esse documento é uma amostra grátis matadora para prospecção.</li>
+</ol>
+<hr />
+<h2>Checagem de entendimento</h2>
+<ol>
+<li>A campanha tem CTR 0,6% há duas semanas. Você já trocou o público duas vezes. Qual é o próximo passo correto?</li>
+<li>O cliente quer usar "Emagreça 12kg em 60 dias ou seu dinheiro de volta" como título. O que você faz?</li>
+<li>Por que testar 5 cores de fundo do mesmo criativo não é um teste válido?</li>
+</ol>
+<details>
+<summary>Respostas</summary>
+<p><strong>1.</strong> Pare de mexer no público — em 2026 ele quase não é a alavanca, e CTR baixo é sintoma de criativo ou oferta. Ordem correta: (a) trocar o <strong>ângulo</strong> do criativo, não só a peça; (b) se 3 ângulos diferentes falharem, o problema é a <strong>oferta</strong> — volte ao cliente e reconstrua com os 7 componentes.</p>
+<p><strong>2.</strong> Recuse e explique: afirma condição pessoal ("emagreça" direcionado ao leitor) e garante resultado — dupla violação de política, com risco de reprovação do anúncio e restrição na conta. Ofereça a alternativa: <em>"Veja o método que a Ana usou para mudar a relação dela com a alimentação"</em> + depoimento real. Mostre que a garantia pode viver <strong>na página</strong>, não no anúncio. Você protege o cliente e demonstra domínio.</p>
+<p><strong>3.</strong> Porque cor não é a variável que decide a compra — o <strong>ângulo</strong> é. Você vai gastar verba para descobrir que o azul ganhou por 0,1%, que é ruído estatístico, e sair sem nenhum aprendizado sobre o que move aquele mercado. Teste ideias concorrentes, não variações estéticas da mesma ideia.</p>
+</details>
+<hr />
+<p><strong>Próxima:</strong> <a href="fase-07-mensuracao.html">Fase 07 — Mensuração</a> — sem isso, tudo acima é chute.</p></article>
+  <nav class="paginacao"><a class="nav-ant" href="fase-05-tiktok-kwai.html"><span>← Anterior</span>05 · TikTok e Kwai</a><a class="nav-prox" href="fase-07-mensuracao.html"><span>Próximo →</span>07 · Mensuração</a></nav>
+  <footer class="rodape">Curso de tráfego pago · conteúdo de setembro de 2026</footer>
+</main>
+</body>
+</html>

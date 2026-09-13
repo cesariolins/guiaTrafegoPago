@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fase 07 — Mensuração — Tráfego Pago</title>
+<link rel="stylesheet" href="assets/estilo.css">
+<script>
+/* Roda antes do primeiro pixel, senão a página pisca no tema errado.
+   Sem argumento, alterna. localStorage em try/catch: file:// pode bloquear. */
+function tema(t){var h=document.documentElement;
+t=t||(h.dataset.tema=='escuro'?'claro':'escuro');h.dataset.tema=t;
+try{localStorage.setItem('tema',t)}catch(e){}}
+try{var _t=localStorage.getItem('tema')}catch(e){}
+document.documentElement.dataset.tema=_t||(matchMedia('(prefers-color-scheme:dark)').matches?'escuro':'claro');
+</script>
+</head>
+<body>
+<input type="checkbox" id="abrir-menu" hidden>
+<label for="abrir-menu" class="botao-menu" aria-label="Abrir menu">☰</label>
+<label for="abrir-menu" class="fundo-menu"></label>
+<button class="botao-tema" onclick="tema()" aria-label="Alternar tema claro/escuro"
+        title="Alternar tema claro/escuro"><span class="i-claro">🌙</span><span class="i-escuro">☀️</span></button>
+
+<aside>
+  <a class="marca" href="index.html">Tráfego Pago<small>do zero ao primeiro cliente</small></a>
+  <ul class="topo"><li><a href="index.html"><i>🏠</i>Início</a></li></ul><p class="bloco">Fundamento</p><ul><li><a href="fase-00-fundamentos.html"><i>🧭</i>00 · Fundamentos</a></li><li><a href="fase-01-matematica.html"><i>🧮</i>01 · A matemática</a></li><li><a href="fase-02-infraestrutura.html"><i>🔧</i>02 · Infraestrutura</a></li></ul><p class="bloco">Execução técnica</p><ul><li><a href="fase-03-meta-ads.html"><i>📱</i>03 · Meta Ads</a></li><li><a href="fase-04-google-ads.html"><i>🔍</i>04 · Google Ads</a></li><li><a href="fase-05-tiktok-kwai.html"><i>🎵</i>05 · TikTok e Kwai</a></li><li><a href="fase-06-criativo-copy-oferta.html"><i>🎨</i>06 · Criativo e oferta</a></li><li><a href="fase-07-mensuracao.html" class="ativo"><i>📊</i>07 · Mensuração</a></li><li><a href="fase-08-otimizacao-escala.html"><i>📈</i>08 · Otimização e escala</a></li></ul><p class="bloco">O negócio</p><ul><li><a href="fase-09-vender-o-servico.html"><i>💼</i>09 · Vender o serviço</a></li><li><a href="fase-10-contrato-legal.html"><i>⚖️</i>10 · Contrato e legal</a></li><li><a href="fase-11-operacao-rotina.html"><i>🔄</i>11 · Operação e rotina</a></li><li><a href="fase-12-problemas-reais.html"><i>🚨</i>12 · Problemas reais</a></li></ul><p class="bloco">Templates</p><ul><li><a href="templates/proposta-comercial.html"><i>📄</i>Proposta comercial</a></li><li><a href="templates/contrato-modelo.html"><i>📑</i>Contrato modelo</a></li><li><a href="templates/briefing-onboarding.html"><i>📋</i>Briefing e onboarding</a></li><li><a href="templates/relatorio-mensal.html"><i>📊</i>Relatório mensal</a></li><li><a href="templates/auditoria-de-conta.html"><i>🔎</i>Auditoria de conta</a></li><li><a href="templates/scripts-de-venda.html"><i>💬</i>Scripts de venda</a></li></ul><p class="bloco">Ferramenta</p><ul><li><a href="planilhas/calculadora-viabilidade.html"><i>🧮</i>Calculadora</a></li></ul>
+</aside>
+
+<main>
+  <article><h1>Fase 07 — Mensuração</h1>
+<blockquote>
+<p><strong>Pré-requisito:</strong> Fases 03 e 04.
+<strong>Tempo:</strong> 1 semana.
+<strong>Verba:</strong> R$ 0.</p>
+</blockquote>
+<hr />
+<h2>Por que esta fase vale mais do que parece</h2>
+<p>Mensuração serve para <strong>duas coisas</strong>, e as duas pagam seu salário:</p>
+<p><strong>1. Alimentar o algoritmo.</strong>
+A plataforma só encontra "pessoas parecidas com quem compra" se ela puder <strong>ver quem comprou</strong>. Sem pixel bem instalado, o algoritmo chuta — e cobra caro pelo chute. Pixel ruim é a causa silenciosa de metade das contas que "não performam".</p>
+<p><strong>2. Provar o seu trabalho.</strong>
+Sem número confiável, toda conversa com cliente vira opinião. E na disputa entre a opinião dele e a sua, ele ganha — é o dinheiro dele.</p>
+<blockquote>
+<p><strong>A frase que vale a fase inteira:</strong> <em>quem controla a mensuração controla a narrativa do resultado.</em> Um gestor que mostra dashboard próprio, com números que batem, renova contrato. Um gestor que só manda print do gerenciador é substituível.</p>
+</blockquote>
+<hr />
+<h2>1. O pixel do Meta</h2>
+<h3>O que é</h3>
+<p>Um pedaço de código no site que avisa o Meta o que a pessoa fez ali. Hoje o Meta chama de <strong>conjunto de dados</strong>.</p>
+<pre><code>Pessoa clica no anúncio → entra no site → pixel dispara
+    ↓
+&quot;Fulano visualizou produto&quot;
+&quot;Fulano adicionou ao carrinho&quot;
+&quot;Fulano comprou — R$ 340&quot;
+    ↓
+Meta aprende quem é comprador → encontra mais gente parecida
+</code></pre>
+<h3>Eventos padrão que você precisa conhecer</h3>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Evento</th>
+<th>Quando dispara</th>
+<th>Quem usa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PageView</code></td>
+<td>Qualquer página</td>
+<td>Todos (automático)</td>
+</tr>
+<tr>
+<td><code>ViewContent</code></td>
+<td>Página de produto/serviço</td>
+<td>E-commerce, serviço</td>
+</tr>
+<tr>
+<td><code>Lead</code></td>
+<td>Formulário enviado</td>
+<td>🎯 Serviço, B2B</td>
+</tr>
+<tr>
+<td><code>Contact</code></td>
+<td>Clique no WhatsApp/telefone</td>
+<td>🎯 Serviço local</td>
+</tr>
+<tr>
+<td><code>AddToCart</code></td>
+<td>Adicionou ao carrinho</td>
+<td>E-commerce</td>
+</tr>
+<tr>
+<td><code>InitiateCheckout</code></td>
+<td>Iniciou checkout</td>
+<td>E-commerce</td>
+</tr>
+<tr>
+<td><code>Purchase</code></td>
+<td>Compra concluída</td>
+<td>🎯 E-commerce</td>
+</tr>
+<tr>
+<td><code>CompleteRegistration</code></td>
+<td>Cadastro finalizado</td>
+<td>Infoproduto, SaaS</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Regra:</strong> o evento que você otimiza na campanha precisa ser o evento que representa <strong>dinheiro</strong>. Otimizar para <code>PageView</code> é otimizar para gente que visita e não compra.</p>
+<h3>Instalação</h3>
+<p><strong>Caminho mais comum (e mais seguro): via Google Tag Manager.</strong> Ver seção 3.</p>
+<p><strong>Caminho direto:</strong> Meta Events Manager → Conjuntos de dados → Adicionar → instalar código no <code>&lt;head&gt;</code> de todas as páginas.</p>
+<p><strong>Integração nativa:</strong> Shopify, WooCommerce, Nuvemshop, Wix e VTEX têm integração pronta. Use — é mais confiável que instalação manual.</p>
+<h3>Verificação (não pule)</h3>
+<p>Instale a extensão <strong>Meta Pixel Helper</strong> no Chrome. Entre no site do cliente e confirme:
+- [ ] O pixel dispara em todas as páginas
+- [ ] Não há pixel <strong>duplicado</strong> (dispara duas vezes → conversões infladas → decisão errada)
+- [ ] Os eventos de conversão disparam de verdade (teste você mesmo: preencha o formulário)
+- [ ] O ID do pixel é o correto (contas com histórico têm vários pixels antigos)</p>
+<blockquote>
+<p>🚨 <strong>Pixel duplicado é o erro mais comum em conta herdada.</strong> O cliente contratou 3 gestores nos últimos 2 anos, cada um instalou um pixel, e agora tudo conta em dobro. Encontrar isso numa auditoria é uma vitória imediata e visível.</p>
+</blockquote>
+<hr />
+<h2>2. CAPI — obrigatório, não opcional</h2>
+<h3>O problema que ela resolve</h3>
+<p>O pixel roda no <strong>navegador</strong> da pessoa. E o navegador hoje é um campo minado:</p>
+<pre><code>❌ Bloqueador de anúncio        → pixel não dispara
+❌ iOS / Safari (ITP)           → dados limitados
+❌ Modo anônimo                 → sem cookie
+❌ Cookies de terceiros mortos  → rastreamento quebrado
+</code></pre>
+<p>Resultado: você <strong>perde de 20% a 40% das conversões reais</strong>. O algoritmo aprende com dados incompletos e otimiza pior. E você reporta menos resultado do que realmente entregou.</p>
+<h3>A solução</h3>
+<p><strong>API de Conversões (CAPI)</strong> envia o evento do <strong>servidor</strong> direto para o Meta, sem passar pelo navegador.</p>
+<pre><code>        NAVEGADOR                    SERVIDOR
+           │                            │
+        Pixel ──────┐          ┌──── CAPI
+                    ↓          ↓
+                ┌───────────────────┐
+                │   META recebe os   │
+                │  dois, faz dedup   │
+                │   e fica com o     │
+                │   dado completo    │
+                └───────────────────┘
+</code></pre>
+<p>Os dois juntos (com <code>event_id</code> para deduplicação) dão a cobertura mais completa.</p>
+<h3>Como implementar, do mais fácil ao mais difícil</h3>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Dificuldade</th>
+<th>Quando usar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Integração de parceiro</strong> (Shopify, WooCommerce, Nuvemshop)</td>
+<td>🟢 Fácil</td>
+<td>Sempre que existir. É clicar e conectar.</td>
+</tr>
+<tr>
+<td><strong>Conversions API Gateway</strong></td>
+<td>🟡 Médio</td>
+<td>Site próprio, sem dev</td>
+</tr>
+<tr>
+<td><strong>Google Tag Manager server-side</strong></td>
+<td>🔴 Avançado</td>
+<td>Operação grande</td>
+</tr>
+<tr>
+<td><strong>Implementação manual via dev</strong></td>
+<td>🔴 Avançado</td>
+<td>Sistema próprio</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Para seus primeiros clientes:</strong> use a integração nativa da plataforma deles. Resolve 90% dos casos em 20 minutos.</p>
+<h3>Qualidade da correspondência de eventos</h3>
+<p>No Events Manager, o Meta dá uma nota de <strong>1 a 10</strong> para a qualidade da correspondência. Quanto mais dados de identificação você enviar (com consentimento), melhor a correspondência e melhor a otimização.</p>
+<p>Campos que aumentam a nota: e-mail, telefone, nome, cidade, CEP, ID externo.</p>
+<p><strong>Meta prática:</strong> nota 6+. Abaixo disso, revise o que está sendo enviado.</p>
+<p>⚠️ <strong>LGPD:</strong> esses dados precisam ser enviados com base legal válida. Ver seção 7.</p>
+<hr />
+<h2>3. Google Tag Manager — a ferramenta que te liberta</h2>
+<h3>Por que você precisa</h3>
+<p><strong>Sem GTM:</strong> cada novo código de rastreamento exige mexer no site → depende do desenvolvedor do cliente → espera de semanas.</p>
+<p><strong>Com GTM:</strong> você instala <strong>um</strong> container uma vez, e depois gerencia todos os códigos pelo painel, sozinho, em minutos.</p>
+<p>Em agência, isso é a diferença entre entregar hoje e entregar mês que vem.</p>
+<h3>Os três conceitos</h3>
+<pre><code>TAG      = o que dispara      (pixel do Meta, conversão do Google, GA4)
+ACIONADOR = quando dispara    (visualizou página, clicou no botão)
+VARIÁVEL = informação usada   (valor da compra, URL, texto do clique)
+</code></pre>
+<h3>Setup básico</h3>
+<ol>
+<li><strong>tagmanager.google.com</strong> → criar conta e container Web</li>
+<li>Instalar os dois trechos de código no site (<code>&lt;head&gt;</code> e início do <code>&lt;body&gt;</code>)</li>
+<li>Criar as tags:
+   - Meta Pixel — Base (dispara em todas as páginas)
+   - Meta Pixel — Lead (dispara no acionador de formulário)
+   - Google Ads — Conversão
+   - GA4 — Configuração</li>
+<li><strong>Testar no modo Preview</strong> antes de publicar</li>
+<li>Publicar</li>
+</ol>
+<h3>Os dois acionadores que resolvem quase tudo em serviço local</h3>
+<p><strong>Clique no WhatsApp:</strong></p>
+<pre><code>Tipo: Clique — Apenas links
+Condição: Click URL contém &quot;wa.me&quot; OU &quot;api.whatsapp.com&quot;
+</code></pre>
+<p><strong>Envio de formulário:</strong></p>
+<pre><code>Tipo: Envio de formulário (ou Visualização da página de obrigado)
+Condição: URL contém &quot;/obrigado&quot;
+</code></pre>
+<blockquote>
+<p>💡 <strong>A página de obrigado é o método mais confiável de todos.</strong> Depois que a pessoa envia o formulário, ela é redirecionada para <code>/obrigado</code>. Você dispara a conversão nessa visualização de página. É simples, não quebra, e funciona em qualquer site. Quando puder escolher, escolha esse caminho.</p>
+</blockquote>
+<hr />
+<h2>4. GA4 — o quadro completo</h2>
+<p>O Google Analytics 4 mostra o que acontece <strong>depois</strong> do clique, unindo todas as fontes.</p>
+<h3>O que configurar</h3>
+<ol>
+<li>Criar propriedade em <strong>analytics.google.com</strong></li>
+<li>Instalar via GTM (tag "GA4 — Configuração")</li>
+<li><strong>Marcar os eventos-chave</strong> (antigas "conversões"): Admin → Eventos → marcar <code>gerar_lead</code>, <code>purchase</code>, etc.</li>
+<li><strong>Vincular ao Google Ads:</strong> Admin → Vinculação de produtos → Google Ads</li>
+</ol>
+<h3>Os relatórios que você realmente usa</h3>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Relatório</th>
+<th>Para quê</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Aquisição → Aquisição de tráfego</strong></td>
+<td>De onde vem o tráfego (aqui suas UTMs aparecem)</td>
+</tr>
+<tr>
+<td><strong>Engajamento → Páginas</strong></td>
+<td>Quais páginas retêm, quais expulsam</td>
+</tr>
+<tr>
+<td><strong>Monetização</strong></td>
+<td>Receita por canal (e-commerce)</td>
+</tr>
+<tr>
+<td><strong>Explorar → Funil</strong></td>
+<td>Onde exatamente as pessoas abandonam</td>
+</tr>
+<tr>
+<td><strong>Retenção</strong></td>
+<td>Se os clientes voltam (alimenta o LTV da Fase 01)</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>5. UTM — o padrão que evita caos</h2>
+<p>UTMs são parâmetros no link que identificam a origem do clique.</p>
+<pre><code>https://site.com.br/implante
+  ?utm_source=facebook
+  &amp;utm_medium=cpc
+  &amp;utm_campaign=implante-set26
+  &amp;utm_content=video-dor-v1
+  &amp;utm_term=amplo-25-55
+</code></pre>
+<h3>O padrão que você vai adotar (e nunca mudar)</h3>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Regra</th>
+<th>Exemplos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>utm_source</code></td>
+<td>Plataforma</td>
+<td><code>facebook</code>, <code>instagram</code>, <code>google</code>, <code>tiktok</code></td>
+</tr>
+<tr>
+<td><code>utm_medium</code></td>
+<td>Tipo de mídia</td>
+<td><code>cpc</code>, <code>paid-social</code>, <code>display</code></td>
+</tr>
+<tr>
+<td><code>utm_campaign</code></td>
+<td>Nome da campanha</td>
+<td><code>implante-set26</code></td>
+</tr>
+<tr>
+<td><code>utm_content</code></td>
+<td>Qual criativo</td>
+<td><code>video-dor-v1</code></td>
+</tr>
+<tr>
+<td><code>utm_term</code></td>
+<td>Público ou palavra</td>
+<td><code>amplo-25-55</code></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Regras inegociáveis:</strong>
+- ✅ Sempre <strong>minúsculas</strong> (UTM diferencia maiúscula — <code>Facebook</code> e <code>facebook</code> viram duas linhas no relatório)
+- ✅ <strong>Hífen</strong>, nunca espaço nem underline
+- ✅ <strong>Sem acento e sem caractere especial</strong>
+- ✅ <strong>Consistência absoluta</strong> entre clientes e campanhas</p>
+<blockquote>
+<p>Uma planilha com seu padrão de UTM, preenchida para cada campanha, vale ouro em 6 meses. Sem isso, seu GA4 vira uma lista de 200 origens diferentes que dizem a mesma coisa e não servem para nada.</p>
+</blockquote>
+<p><strong>Dica Meta:</strong> use parâmetros dinâmicos no campo de URL do anúncio para preencher automático:</p>
+<pre><code>utm_campaign={{campaign.name}}&amp;utm_content={{ad.name}}&amp;utm_term={{adset.name}}
+</code></pre>
+<hr />
+<h2>6. Atribuição: por que os números nunca batem</h2>
+<p><strong>Este é o assunto que mais gera conflito com cliente. Domine-o antes de precisar dele.</strong></p>
+<h3>A cena clássica</h3>
+<pre><code>Meta diz:      47 conversões
+Google diz:    23 conversões
+GA4 diz:       58 sessões com conversão
+Cliente diz:   &quot;fechei 12 vendas&quot;
+</code></pre>
+<p>Quatro números diferentes. O cliente conclui que você está inflando resultado. <strong>Você precisa saber explicar isso.</strong></p>
+<h3>Por que acontece</h3>
+<p><strong>1. Janela de atribuição.</strong> O Meta conta, por padrão, conversões em até 7 dias após o clique e 1 dia após a visualização. Se a pessoa clicou segunda e comprou sábado, o Meta credita a si mesmo. O cliente vê a venda de sábado e não conecta.</p>
+<p><strong>2. Modelo de atribuição.</strong> Cada plataforma se dá crédito pelo que participou. Se a pessoa viu o anúncio do Meta, depois pesquisou no Google e clicou lá, <strong>as duas</strong> contam a venda. Somar as duas é contar duas vezes.</p>
+<p><strong>3. Conversão fora do rastreamento.</strong> A pessoa vê o anúncio e liga direto para a clínica. O Meta não sabe. Você entregou o resultado e não recebe o crédito.</p>
+<p><strong>4. Problema técnico.</strong> Pixel duplicado infla; bloqueador esconde; CAPI ausente perde.</p>
+<h3>Como explicar ao cliente (roteiro pronto)</h3>
+<blockquote>
+<p><em>"Vou explicar por que os números não batem, e por que isso é normal em toda operação de tráfego.</em></p>
+<p><em>Cada plataforma mede o que ela influenciou, dentro da janela dela. Se uma pessoa vê seu anúncio no Instagram na segunda, pesquisa seu nome no Google na quinta e compra no sábado, o Meta e o Google contam essa mesma venda — os dois participaram de verdade. Somar os dois é contar duas vezes.</em></p>
+<p><em>Por isso a gente não usa o número da plataforma como verdade final. A gente usa </em><em>o seu faturamento</em><em>. As plataformas servem para eu decidir onde investir mais; o seu caixa serve para nós dois sabermos se está valendo a pena.</em></p>
+<p><em>Por isso eu vou te pedir uma coisa todo mês: quantas vendas entraram e quanto elas somaram. Com isso a gente fecha a conta de verdade."</em></p>
+</blockquote>
+<p><strong>O que esse roteiro faz:</strong>
+1. Elimina a suspeita de que você está inflando número
+2. Ancora a métrica no <strong>negócio</strong>, não na plataforma
+3. Cria a rotina de o cliente te passar o faturamento — o que te dá o dado para <strong>defender aumento de fee</strong> depois</p>
+<h3>A pergunta que resolve na prática</h3>
+<p>Para serviço local, o método mais confiável de atribuição é o mais simples:</p>
+<blockquote>
+<p><strong>"Como você nos conheceu?"</strong> — perguntado pelo atendente, registrado numa planilha.</p>
+</blockquote>
+<p>Combine com o WhatsApp pré-preenchido (<code>?text=Vi o anúncio sobre implante</code>) e você tem rastreamento melhor que qualquer dashboard.</p>
+<hr />
+<h2>7. LGPD — o mínimo que te protege</h2>
+<p>Você está tratando dados pessoais de terceiros. Não é opcional.</p>
+<h3>O básico obrigatório no site do cliente</h3>
+<ul>
+<li>[ ] <strong>Política de Privacidade</strong> publicada e acessível</li>
+<li>[ ] <strong>Banner de consentimento de cookies</strong> com opção real de recusar</li>
+<li>[ ] Tags de marketing <strong>só disparam após consentimento</strong> (o GTM tem modo de consentimento para isso)</li>
+<li>[ ] Formulário com <strong>finalidade declarada</strong> ("usaremos seu contato para retornar sobre o serviço")</li>
+<li>[ ] Canal para o titular solicitar exclusão dos dados</li>
+</ul>
+<h3>Sua posição jurídica</h3>
+<p>Você é, em regra, <strong>operador</strong> de dados — trata os dados em nome do cliente, que é o <strong>controlador</strong>. Isso precisa estar escrito no contrato, junto com:
+- Finalidade e limites do tratamento
+- Obrigação de sigilo
+- O que acontece com os dados ao fim do contrato
+- Responsabilidade de cada parte em caso de incidente</p>
+<p>⚠️ <strong>Em caso de incidente de segurança, as duas partes podem ser responsabilizadas.</strong> Por isso a cláusula de LGPD não é burocracia — é o que define quem responde pelo quê. Detalhamento na <a href="fase-10-contrato-legal.html">Fase 10</a>.</p>
+<blockquote>
+<p><strong>Mais um motivo prático para a regra da Fase 02:</strong> ativos no nome do cliente. Se o pixel e as listas de público estão no <strong>seu</strong> Business Manager, você está armazenando dados pessoais de clientes de terceiros sob sua titularidade. É exposição desnecessária.</p>
+</blockquote>
+<hr />
+<h2>8. Dashboard: como entregar o resultado</h2>
+<p>Print do Gerenciador não é relatório. Monte um dashboard no <strong>Looker Studio</strong> (gratuito):</p>
+<ol>
+<li>Conecte as fontes: Meta Ads, Google Ads, GA4</li>
+<li>Monte <strong>uma página só</strong>, com o essencial:</li>
+</ol>
+<pre><code>┌────────────────────────────────────────────────┐
+│  [Cliente] — Setembro 2026                     │
+├────────────┬────────────┬──────────┬───────────┤
+│ Investido  │   Leads    │   CPL    │  Vendas   │
+│  R$ 3.200  │     78     │  R$ 41   │    14     │
+├────────────┴────────────┴──────────┴───────────┤
+│  Evolução do CPL (gráfico de linha)             │
+│  Leads por plataforma (pizza)                   │
+│  Top 5 criativos (tabela)                       │
+└────────────────────────────────────────────────┘
+</code></pre>
+<ol start="3">
+<li>Compartilhe o link com o cliente — <strong>acesso permanente, atualização automática</strong></li>
+</ol>
+<blockquote>
+<p><strong>Por que isso retém cliente:</strong> transparência total remove a ansiedade. Cliente que pode olhar quando quiser para de mandar "e aí, como estão as campanhas?" no sábado à noite. E percebe valor continuamente, não só no dia do relatório.</p>
+</blockquote>
+<hr />
+<h2>✅ Tarefas da Fase 07</h2>
+<ol>
+<li>Instale o <strong>GTM</strong> no site do seu negócio de teste</li>
+<li>Configure via GTM: pixel do Meta (base + Lead), conversão do Google Ads, GA4</li>
+<li>Instale o <strong>Meta Pixel Helper</strong> e valide tudo — inclusive checando pixel duplicado</li>
+<li>Configure a <strong>CAPI</strong> pela integração nativa disponível</li>
+<li>Crie o <strong>acionador de clique no WhatsApp</strong> no GTM</li>
+<li>Monte sua <strong>planilha-padrão de UTM</strong> e comece a usar em todos os links</li>
+<li>Crie um <strong>dashboard no Looker Studio</strong> com Meta + Google + GA4</li>
+<li><strong>Escreva o roteiro de explicação de discrepância</strong> (seção 6) com suas palavras e decore. Você vai usar.</li>
+</ol>
+<hr />
+<h2>Checagem de entendimento</h2>
+<ol>
+<li>Meta reporta 40 vendas, GA4 reporta 25, cliente contou 18. Quem está mentindo?</li>
+<li>Por que a CAPI deixou de ser opcional?</li>
+<li>O cliente pede para otimizar a campanha para <code>PageView</code> porque "gera mais volume e fica mais barato". O que você responde?</li>
+</ol>
+<details>
+<summary>Respostas</summary>
+<p><strong>1.</strong> Ninguém. Meta usa janela de 7 dias pós-clique e 1 dia pós-visualização, creditando a si mesmo conversões que aconteceram depois; GA4 usa outro modelo e perde sessões por bloqueador e cookie; o cliente conta só o que fechou e reconheceu como vindo do anúncio. <strong>A verdade operacional é o faturamento do cliente.</strong> As plataformas servem para decidir onde investir, não para prestar contas de caixa.</p>
+<p><strong>2.</strong> Porque o rastreamento pelo navegador perde de 20% a 40% dos eventos (bloqueadores, ITP do Safari/iOS, fim dos cookies de terceiros). Sem CAPI, o algoritmo aprende com dado incompleto — otimiza pior e encarece o resultado — e você reporta menos do que realmente entregou.</p>
+<p><strong>3.</strong> Que ele está confundindo preço com custo. Otimizar para <code>PageView</code> faz o Meta buscar quem visita páginas, não quem compra — você terá mais volume, mais barato, e menos vendas. O número que importa é o custo por <strong>venda</strong>, não por visita. Mostre a conta da Fase 01: com CPA de R$ 80 e 10 vendas, R$ 800 gastos valem mais que R$ 400 gastos com 2 vendas.</p>
+</details>
+<hr />
+<p><strong>Próxima:</strong> <a href="fase-08-otimizacao-escala.html">Fase 08 — Otimização e escala</a></p></article>
+  <nav class="paginacao"><a class="nav-ant" href="fase-06-criativo-copy-oferta.html"><span>← Anterior</span>06 · Criativo e oferta</a><a class="nav-prox" href="fase-08-otimizacao-escala.html"><span>Próximo →</span>08 · Otimização e escala</a></nav>
+  <footer class="rodape">Curso de tráfego pago · conteúdo de setembro de 2026</footer>
+</main>
+</body>
+</html>

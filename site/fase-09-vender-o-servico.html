@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fase 09 — Vender o serviço — Tráfego Pago</title>
+<link rel="stylesheet" href="assets/estilo.css">
+<script>
+/* Roda antes do primeiro pixel, senão a página pisca no tema errado.
+   Sem argumento, alterna. localStorage em try/catch: file:// pode bloquear. */
+function tema(t){var h=document.documentElement;
+t=t||(h.dataset.tema=='escuro'?'claro':'escuro');h.dataset.tema=t;
+try{localStorage.setItem('tema',t)}catch(e){}}
+try{var _t=localStorage.getItem('tema')}catch(e){}
+document.documentElement.dataset.tema=_t||(matchMedia('(prefers-color-scheme:dark)').matches?'escuro':'claro');
+</script>
+</head>
+<body>
+<input type="checkbox" id="abrir-menu" hidden>
+<label for="abrir-menu" class="botao-menu" aria-label="Abrir menu">☰</label>
+<label for="abrir-menu" class="fundo-menu"></label>
+<button class="botao-tema" onclick="tema()" aria-label="Alternar tema claro/escuro"
+        title="Alternar tema claro/escuro"><span class="i-claro">🌙</span><span class="i-escuro">☀️</span></button>
+
+<aside>
+  <a class="marca" href="index.html">Tráfego Pago<small>do zero ao primeiro cliente</small></a>
+  <ul class="topo"><li><a href="index.html"><i>🏠</i>Início</a></li></ul><p class="bloco">Fundamento</p><ul><li><a href="fase-00-fundamentos.html"><i>🧭</i>00 · Fundamentos</a></li><li><a href="fase-01-matematica.html"><i>🧮</i>01 · A matemática</a></li><li><a href="fase-02-infraestrutura.html"><i>🔧</i>02 · Infraestrutura</a></li></ul><p class="bloco">Execução técnica</p><ul><li><a href="fase-03-meta-ads.html"><i>📱</i>03 · Meta Ads</a></li><li><a href="fase-04-google-ads.html"><i>🔍</i>04 · Google Ads</a></li><li><a href="fase-05-tiktok-kwai.html"><i>🎵</i>05 · TikTok e Kwai</a></li><li><a href="fase-06-criativo-copy-oferta.html"><i>🎨</i>06 · Criativo e oferta</a></li><li><a href="fase-07-mensuracao.html"><i>📊</i>07 · Mensuração</a></li><li><a href="fase-08-otimizacao-escala.html"><i>📈</i>08 · Otimização e escala</a></li></ul><p class="bloco">O negócio</p><ul><li><a href="fase-09-vender-o-servico.html" class="ativo"><i>💼</i>09 · Vender o serviço</a></li><li><a href="fase-10-contrato-legal.html"><i>⚖️</i>10 · Contrato e legal</a></li><li><a href="fase-11-operacao-rotina.html"><i>🔄</i>11 · Operação e rotina</a></li><li><a href="fase-12-problemas-reais.html"><i>🚨</i>12 · Problemas reais</a></li></ul><p class="bloco">Templates</p><ul><li><a href="templates/proposta-comercial.html"><i>📄</i>Proposta comercial</a></li><li><a href="templates/contrato-modelo.html"><i>📑</i>Contrato modelo</a></li><li><a href="templates/briefing-onboarding.html"><i>📋</i>Briefing e onboarding</a></li><li><a href="templates/relatorio-mensal.html"><i>📊</i>Relatório mensal</a></li><li><a href="templates/auditoria-de-conta.html"><i>🔎</i>Auditoria de conta</a></li><li><a href="templates/scripts-de-venda.html"><i>💬</i>Scripts de venda</a></li></ul><p class="bloco">Ferramenta</p><ul><li><a href="planilhas/calculadora-viabilidade.html"><i>🧮</i>Calculadora</a></li></ul>
+</aside>
+
+<main>
+  <article><h1>Fase 09 — Vender o serviço</h1>
+<blockquote>
+<p><strong>Pré-requisito:</strong> Fases 00 a 08, com pelo menos uma campanha própria rodada e documentada.
+<strong>Tempo:</strong> contínuo. Prospecção nunca para.</p>
+</blockquote>
+<hr />
+<h2>A verdade desconfortável</h2>
+<p><strong>Saber rodar tráfego não te dá clientes.</strong></p>
+<p>Existem milhares de pessoas tecnicamente competentes ganhando R$ 1.500/mês porque não sabem vender. E existem pessoas tecnicamente medianas faturando R$ 30 mil porque sabem.</p>
+<p>A boa notícia: vender esse serviço não exige carisma nem talento nato. Exige <strong>método</strong> e a <strong>matemática da Fase 01</strong>. É por isso que aquela fase veio tão cedo.</p>
+<hr />
+<h2>1. Escolha um nicho (a decisão que mais acelera tudo)</h2>
+<h3>Por que nicho</h3>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Generalista</th>
+<th>Especialista em nicho</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"Faço tráfego para qualquer empresa"</td>
+<td>"Faço tráfego para clínicas odontológicas"</td>
+</tr>
+<tr>
+<td>Compete por preço</td>
+<td>Compete por resultado</td>
+</tr>
+<tr>
+<td>Recomeça o aprendizado a cada cliente</td>
+<td>Reaproveita criativo, copy, benchmark</td>
+</tr>
+<tr>
+<td>Indicação rara</td>
+<td><strong>Indicação constante</strong> (o mercado se conhece)</td>
+</tr>
+<tr>
+<td>R$ 800/mês</td>
+<td>R$ 3.000/mês</td>
+</tr>
+</tbody>
+</table></div>
+<p>O argumento decisivo: <strong>o dentista quer contratar quem já resolveu o problema de outro dentista.</strong> Ele não quer ser sua cobaia. Especialização é o que remove o risco percebido — e risco removido é preço aumentado.</p>
+<h3>Como escolher o seu</h3>
+<p>Avalie candidatos por quatro critérios:</p>
+<pre><code>1. ACESSO      Eu conheço alguém nesse meio? Tenho porta de entrada?
+2. TICKET      O ticket médio suporta pagar bem por lead?
+3. VOLUME      Existem muitos negócios desse tipo na minha região?
+4. DOR         Eles sofrem por falta de cliente, ou já estão cheios?
+</code></pre>
+<h3>Nichos que funcionam bem para iniciante no Brasil</h3>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Nicho</th>
+<th>Ticket</th>
+<th>Volume</th>
+<th>Observação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Odontologia (implante, ortodontia, HOF)</td>
+<td>🟢 Alto</td>
+<td>🟢 Alto</td>
+<td>Melhor relação de todas. Muito concorrido entre gestores, mas o mercado comporta.</td>
+</tr>
+<tr>
+<td>Estética e dermato</td>
+<td>🟢 Alto</td>
+<td>🟢 Alto</td>
+<td>Cuidado redobrado com política de anúncio</td>
+</tr>
+<tr>
+<td>Advocacia (previdenciário, trabalhista)</td>
+<td>🟢 Alto</td>
+<td>🟢 Alto</td>
+<td>⚠️ Regras do Código de Ética da OAB — pesquise antes</td>
+</tr>
+<tr>
+<td>Arquitetura e reforma</td>
+<td>🟢 Alto</td>
+<td>🟡 Médio</td>
+<td>Ciclo longo, ticket ótimo</td>
+</tr>
+<tr>
+<td>Academia e estúdio</td>
+<td>🟡 Médio</td>
+<td>🟢 Alto</td>
+<td>Alta rotatividade, mas fácil de vender</td>
+</tr>
+<tr>
+<td>Pet (banho, clínica)</td>
+<td>🟡 Médio</td>
+<td>🟢 Alto</td>
+<td>Recompra alta = LTV bom</td>
+</tr>
+<tr>
+<td>Educação infantil</td>
+<td>🟢 Alto</td>
+<td>🟡 Médio</td>
+<td>Sazonalidade forte (matrícula)</td>
+</tr>
+<tr>
+<td>Imobiliária</td>
+<td>🟢 Alto</td>
+<td>🟡 Médio</td>
+<td>Ciclo longo, atribuição difícil</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Nichos a evitar no começo:</strong> infoproduto e lançamento (pressão extrema, rotatividade altíssima), dropshipping (margem apertada, cliente amador), MLM e pirâmide (risco reputacional e legal), qualquer coisa com promessa de renda.</p>
+<blockquote>
+<p>💡 <strong>Você pode começar generalista e nichar depois.</strong> É legítimo: pegue os 3 primeiros clientes onde der, veja qual você atendeu melhor e gostou mais, e especialize. O erro é ficar generalista para sempre por medo de recusar trabalho.</p>
+</blockquote>
+<hr />
+<h2>2. O primeiro cliente sem ter case</h2>
+<p>O problema do ovo e da galinha: precisa de case para vender, precisa vender para ter case.</p>
+<p>Cinco saídas, em ordem de eficácia:</p>
+<h3>1. O case que você já tem (Fase 03)</h3>
+<p>Você rodou R$ 300 num negócio conhecido. <strong>Isso é um case.</strong> Documente:</p>
+<pre><code>CASO: Clínica de estética — Curitiba
+Período: 14 dias | Investimento: R$ 280
+Resultado: 23 leads | CPL R$ 12,17 | 4 agendamentos
+O que foi feito: reestruturação da oferta, 5 criativos
+                 em ângulos diferentes, formulário com
+                 qualificação
+</code></pre>
+<p>Não precisa ser espetacular. Precisa ser <strong>real e específico</strong>. Com prints.</p>
+<h3>2. Trabalho gratuito com prazo e escopo definidos</h3>
+<p>Ofereça 30 dias grátis para <strong>um</strong> negócio, com regras claras por escrito:
+- Ele paga a verba de mídia (isso filtra quem não é sério)
+- Escopo definido e limitado
+- Ao fim: ou vira cliente pagante, ou libera um depoimento e o uso do case</p>
+<p>⚠️ <strong>Nunca faça grátis sem prazo definido e sem contrapartida.</strong> Vira exploração, você fica preso, e o cliente não valoriza. O prazo e a contrapartida fazem disso um investimento, não um favor.</p>
+<h3>3. Permuta</h3>
+<p>Troque gestão por algo que você precisa: contador, advogado, design, aulas, o que for. Você ganha case e economiza dinheiro. Funciona especialmente bem com prestadores de serviço.</p>
+<h3>4. Rede pessoal — o canal mais subestimado</h3>
+<p>Faça uma lista de <strong>30 pessoas</strong> que você conhece e que têm negócio ou trabalham em um. Mande mensagem individual — nunca em grupo, nunca copiada e colada:</p>
+<blockquote>
+<p><em>"Oi [nome], tudo bem? Estou começando a trabalhar com anúncios no Instagram e Google para negócios locais e lembrei de você. Sem compromisso nenhum: posso dar uma olhada em como está a divulgação de vocês e te mandar 2 ou 3 observações? Se fizer sentido a gente conversa, se não fizer, fica valendo a ajuda."</em></p>
+</blockquote>
+<p><strong>Taxa de resposta típica: 30–50%.</strong> É o canal de maior conversão que você tem agora, e o único que não custa nada.</p>
+<h3>5. Auditoria gratuita como isca (o melhor método frio)</h3>
+<p>Não ofereça serviço. Ofereça <strong>diagnóstico</strong>. Detalhado na seção 4.</p>
+<hr />
+<h2>3. Canais de prospecção</h2>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Canal</th>
+<th>Esforço</th>
+<th>Retorno</th>
+<th>Como fazer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Rede pessoal</strong></td>
+<td>🟢 Baixo</td>
+<td>🟢 Alto</td>
+<td>Lista de 30, mensagem individual</td>
+</tr>
+<tr>
+<td><strong>Auditoria gratuita</strong></td>
+<td>🟡 Médio</td>
+<td>🟢 Alto</td>
+<td>Biblioteca de Anúncios → achar quem já gasta → auditar → abordar</td>
+</tr>
+<tr>
+<td><strong>Indicação</strong></td>
+<td>🟢 Baixo</td>
+<td>🟢 Altíssimo</td>
+<td>Peça sempre. Ofereça comissão ou desconto.</td>
+</tr>
+<tr>
+<td><strong>Presencial</strong></td>
+<td>🟡 Médio</td>
+<td>🟢 Alto</td>
+<td>Vá até o comércio local. Quase ninguém faz — por isso funciona.</td>
+</tr>
+<tr>
+<td><strong>Instagram (conteúdo)</strong></td>
+<td>🔴 Alto</td>
+<td>🟡 Médio</td>
+<td>Longo prazo. Constrói autoridade.</td>
+</tr>
+<tr>
+<td><strong>LinkedIn</strong></td>
+<td>🟡 Médio</td>
+<td>🟡 Médio</td>
+<td>Bom para B2B e ticket alto</td>
+</tr>
+<tr>
+<td><strong>Grupos e comunidades</strong></td>
+<td>🟢 Baixo</td>
+<td>🟡 Médio</td>
+<td>Ajude de graça, gere reciprocidade</td>
+</tr>
+<tr>
+<td><strong>Cold e-mail</strong></td>
+<td>🟡 Médio</td>
+<td>🔴 Baixo</td>
+<td>Volume alto, conversão baixa</td>
+</tr>
+<tr>
+<td><strong>Anunciar seu serviço</strong></td>
+<td>🟢 Baixo</td>
+<td>🔴 Baixo no início</td>
+<td>Sem case e sem prova, queima verba</td>
+</tr>
+</tbody>
+</table></div>
+<h3>O método da Biblioteca de Anúncios (sua melhor ferramenta fria)</h3>
+<pre><code>1. Abra facebook.com/ads/library
+2. Filtre: Brasil + sua cidade
+3. Busque pelo nicho escolhido (&quot;clínica odontológica&quot;)
+4. Você verá quem ESTÁ ANUNCIANDO AGORA
+</code></pre>
+<p>Por que isso é ouro:
+- Eles <strong>já investem</strong> em tráfego → já entendem o valor, não precisa educar
+- Eles <strong>têm verba</strong> → não vão pedir desconto por não ter dinheiro
+- Você vê exatamente <strong>o que estão fazendo de errado</strong> → tem argumento específico</p>
+<p><strong>Sinais de conta mal gerida que você identifica de fora:</strong>
+- Um único anúncio rodando há muito tempo, sem variação → fadiga certa
+- Anúncios com foto de banco de imagem genérica
+- Sem oferta clara, só "conheça nossos serviços"
+- Anúncio manda para a home do site em vez de página específica
+- Nenhum vídeo, só imagem estática</p>
+<p>Cada um desses é uma frase da sua abordagem.</p>
+<hr />
+<h2>4. A abordagem que funciona</h2>
+<h3>❌ O que não fazer</h3>
+<blockquote>
+<p><em>"Olá! Sou gestor de tráfego e trabalho com Meta Ads e Google Ads. Faço campanhas de alta conversão para alavancar seu negócio. Tenho pacotes a partir de R$ 997. Quer saber mais?"</em></p>
+</blockquote>
+<p>Por que falha: fala de você, usa jargão vazio, não diz nada específico sobre <strong>ele</strong>, e pede algo antes de dar. É indistinguível dos outros 40 que ele recebeu este mês.</p>
+<h3>✅ O que fazer: dar antes de pedir</h3>
+<blockquote>
+<p><em>"Oi [Nome], tudo bem? Vi que a [Clínica X] está anunciando no Instagram.</em></p>
+<p><em>Dei uma olhada e notei duas coisas: vocês estão com o mesmo criativo no ar há uns 2 meses — o que normalmente faz o custo por lead subir bastante por fadiga — e o anúncio manda pra home do site em vez de uma página do serviço específico.</em></p>
+<p><em>Fiz uma análise rápida de 1 página com o que eu ajustaria. Posso te mandar? É de graça e sem compromisso, mesmo que a gente não trabalhe junto."</em></p>
+</blockquote>
+<p><strong>Por que funciona:</strong>
+1. Específico sobre <strong>ele</strong> — não é mensagem em massa e ele percebe isso
+2. Demonstra competência <strong>antes</strong> de pedir qualquer coisa
+3. Oferece valor real de graça
+4. Zero pressão — o que reduz a defesa
+5. Já te posiciona como quem entende, não como quem vende</p>
+<h3>A auditoria de 1 página</h3>
+<p>Estrutura (30–40 minutos de trabalho, e é sua melhor ferramenta comercial):</p>
+<pre><code>DIAGNÓSTICO — [Nome do Negócio]
+
+O QUE VOCÊS JÁ FAZEM BEM
+  • [1-2 pontos reais — sempre comece por aqui]
+
+3 OPORTUNIDADES QUE EU VI
+  1. [Problema] → [Impacto no negócio] → [O que eu faria]
+  2. ...
+  3. ...
+
+ESTIMATIVA
+  Com [verba X] e as correções acima, a faixa esperada
+  seria de [Y] leads/mês a um CPL entre [A] e [B].
+  (Baseado no benchmark do nicho — não é garantia.)
+
+Qualquer dúvida, me chama.
+[seu nome e contato]
+</code></pre>
+<blockquote>
+<p><strong>Por que isso converte tão bem:</strong> o dono do negócio nunca recebeu nada de graça de um fornecedor. Ele recebe pitch o dia inteiro. Quando alguém entrega trabalho real sem cobrar, a reciprocidade é automática — e você já provou competência sem precisar afirmar nada sobre si mesmo.</p>
+</blockquote>
+<hr />
+<h2>5. A reunião: diagnóstico, não pitch</h2>
+<p><strong>Erro fatal:</strong> chegar na reunião e apresentar seus serviços por 20 minutos.</p>
+<p><strong>O certo:</strong> passar 70% do tempo <strong>perguntando</strong>.</p>
+<h3>O roteiro (45 minutos)</h3>
+<p><strong>Bloco 1 — Contexto (10 min). Só ouça.</strong></p>
+<pre><code>• Me conta como funciona o negócio de vocês hoje
+• Como os clientes chegam até vocês atualmente?
+• O que funcionou melhor até agora? E o que não funcionou?
+• Já trabalharam com alguém de tráfego antes? Como foi?
+</code></pre>
+<p><em>Essa última pergunta é ouro. A resposta te diz exatamente o que evitar e qual medo você precisa desarmar.</em></p>
+<p><strong>Bloco 2 — Números (15 min). Aqui você faz a Fase 01 ao vivo.</strong></p>
+<pre><code>• Qual o ticket médio de um cliente novo?
+• De cada 10 pessoas que entram em contato, quantas fecham?
+• Quanto sobra, mais ou menos, de cada venda?
+• Esse cliente volta? Com que frequência?
+• Quantos clientes novos por mês vocês conseguem ATENDER?
+• Quem responde os contatos? Em quanto tempo?
+</code></pre>
+<p><strong>Bloco 3 — Objetivo (10 min)</strong></p>
+<pre><code>• Aonde você quer chegar nos próximos 6 meses?
+• Quantos clientes novos por mês seria bom? E seria ótimo?
+• Quanto você já pensou em investir?
+</code></pre>
+<p><strong>Bloco 4 — Devolutiva (10 min). Aqui você faz a conta na frente dele.</strong></p>
+<blockquote>
+<p><em>"Deixa eu fazer uma conta com você. Ticket de R$ 2.500, 40% de margem: sobram R$ 1.000 por paciente. Uma regra saudável é o anúncio consumir de 30% a 40% disso — então a gente pode pagar até uns R$ 400 por paciente novo.</em></p>
+<p><em>Você fecha 1 a cada 5 contatos. Então o lead pode custar até R$ 80 e o negócio continua muito saudável. No seu nicho, o lead costuma sair entre R$ 40 e R$ 70 — ou seja, a conta fecha com folga.</em></p>
+<p><em>Pra você chegar nos 10 pacientes novos por mês que falou, precisamos de 50 leads. A R$ 60, isso dá R$ 3.000 de verba.</em></p>
+<p><em>Faz sentido pra você?"</em></p>
+</blockquote>
+<p>🎯 <strong>Neste momento a venda já aconteceu.</strong> Você não vendeu serviço — construiu o raciocínio junto com ele e ele chegou à conclusão sozinho. Falar de preço depois disso é detalhe operacional.</p>
+<h3>As 3 perguntas que te salvam de cliente ruim</h3>
+<p>Faça sempre, e ouça com atenção:</p>
+<ol>
+<li>
+<p><strong>"Quantos clientes novos vocês conseguem ATENDER por mês?"</strong>
+   Se ele não tem capacidade, gerar leads vai criar um problema, não resolver um.</p>
+</li>
+<li>
+<p><strong>"Quem responde os leads e em quanto tempo?"</strong>
+   Se a resposta é "quando dá", você já sabe quem vai levar a culpa pelo resultado ruim. Trate isso <strong>antes</strong> de fechar.</p>
+</li>
+<li>
+<p><strong>"O que precisaria acontecer para você considerar que valeu a pena?"</strong>
+   Esta é a mais importante. Se a resposta for irreal ("triplicar o faturamento em 30 dias"), você tem duas opções: recalibrar ali mesmo, ou não fechar. <strong>Nunca aceite uma expectativa que você não pode cumprir — o barato sai caríssimo.</strong></p>
+</li>
+</ol>
+<hr />
+<h2>6. Precificação: quanto cobrar</h2>
+<h3>Os modelos</h3>
+<h4>1. Fee fixo mensal ⭐ recomendado para você</h4>
+<p>Valor fechado, independente da verba.</p>
+<pre><code>✅ Previsível para os dois lados
+✅ Fácil de explicar
+✅ Não penaliza o cliente por investir mais
+❌ Não escala junto com o crescimento dele
+</code></pre>
+<p><strong>Faixas praticadas no Brasil em 2026:</strong></p>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Perfil</th>
+<th>Fee mensal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Iniciante sem case</td>
+<td>R$ 300–800</td>
+</tr>
+<tr>
+<td>Iniciante com 2–3 cases</td>
+<td>R$ 800–1.500</td>
+</tr>
+<tr>
+<td>Intermediário</td>
+<td>R$ 1.500–3.000</td>
+</tr>
+<tr>
+<td>PME estabelecido (referência de mercado)</td>
+<td>R$ 1.500–8.000</td>
+</tr>
+<tr>
+<td>Especialista de nicho / contas grandes</td>
+<td>R$ 6.000–15.000+</td>
+</tr>
+</tbody>
+</table></div>
+<h4>2. Percentual sobre a verba</h4>
+<pre><code>Verbas médias e altas:    10% a 20%
+Verbas até R$ 10.000:     20% a 30%, ou fee mínimo
+</code></pre>
+<pre><code>✅ Escala com o cliente
+✅ Alinha interesses no crescimento
+❌ Verba pequena = honorário insustentável
+❌ Cria a suspeita de que você quer aumentar a verba por interesse
+</code></pre>
+<p><strong>Sempre use com piso:</strong> <em>"20% da verba, com mínimo de R$ 1.200"</em>. Sem o piso, um cliente que corta a verba pela metade te faz trabalhar igual por metade do valor.</p>
+<h4>3. Fee + variável por performance</h4>
+<pre><code>R$ 1.200 fixo + R$ 50 por venda fechada acima de 15/mês
+</code></pre>
+<pre><code>✅ Mostra confiança no próprio trabalho
+✅ Potencial de ganho alto
+❌ Exige que o cliente reporte vendas com honestidade
+❌ Exige rastreamento confiável (Fase 07)
+</code></pre>
+<p><strong>Só aceite performance se:</strong> o rastreamento é confiável, você confia no cliente, e existe um fixo que paga seu custo. Nunca 100% variável.</p>
+<h4>4. Setup + mensalidade</h4>
+<pre><code>Setup inicial: R$ 800–2.500 (uma vez)
+Mensalidade:   R$ 1.200+
+</code></pre>
+<p>Recomendo <strong>sempre cobrar setup</strong>. O primeiro mês é o de mais trabalho: estruturação de conta, pixel, criativos, landing page, briefing. Cobrar por isso é justo — e tem um efeito psicológico importante: <strong>cliente que pagou setup não some no mês 2.</strong></p>
+<h3>🚫 O modelo que você deve recusar</h3>
+<blockquote>
+<p><em>"Trabalha por comissão? Se vender, você ganha."</em></p>
+</blockquote>
+<p><strong>Não.</strong> Motivos:
+1. Você banca o risco de um negócio que não controla (produto, preço, atendimento, capacidade de entrega)
+2. Se o vendedor dele for ruim, você trabalha de graça
+3. Você não controla a variável que determina seu pagamento
+4. Sinaliza que o cliente não tem dinheiro ou não confia no serviço</p>
+<p><strong>Resposta pronta:</strong></p>
+<blockquote>
+<p><em>"Eu entendo a lógica, mas não trabalho assim, e vou te explicar por quê — é melhor pra você também. Meu trabalho é entregar oportunidade qualificada até a porta. O que acontece depois — o atendimento, a negociação, o fechamento — é do seu time, e eu não controlo. Se eu ganhasse só na venda, eu estaria apostando na equipe comercial de vocês, não no meu próprio trabalho.</em></p>
+<p><em>O que eu posso fazer: um fee menor no começo com um bônus por meta batida. Aí nós dois temos pele em jogo naquilo que cada um controla."</em></p>
+</blockquote>
+<h3>Como definir SEU preço agora</h3>
+<pre><code>1. Calcule seu CUSTO/hora
+   (custos fixos + quanto você quer ganhar) ÷ horas produtivas
+
+2. Estime as horas do cliente
+   Serviço local simples: 8–12h/mês
+   E-commerce:           15–25h/mês
+
+3. Multiplique → seu PISO
+
+4. Compare com o mercado (tabela acima)
+
+5. Cobre o maior dos dois
+</code></pre>
+<p><strong>Exemplo:</strong></p>
+<pre><code>Meta de renda: R$ 6.000 | Custos fixos: R$ 800
+Horas produtivas: 100/mês
+Custo/hora = 6.800 ÷ 100 = R$ 68/h
+
+Cliente de serviço local: 10h/mês
+Piso = R$ 680/mês
+
+Mercado para iniciante com case: R$ 800–1.500
+→ Cobre R$ 1.200
+</code></pre>
+<h3>Sinais de que você está cobrando pouco</h3>
+<ul>
+<li>🚩 Todo mundo aceita sua proposta sem pestanejar</li>
+<li>🚩 Você atende muitos clientes e ganha pouco</li>
+<li>🚩 Clientes te tratam como operador, não consultor</li>
+<li>🚩 Você tem medo de mencionar o valor em voz alta</li>
+</ul>
+<p><strong>Se 100% aceita, seu preço está baixo.</strong> Uma taxa de rejeição saudável fica entre 30% e 50%.</p>
+<hr />
+<h2>7. Objeções: as 8 que você vai ouvir</h2>
+<h3>"Está caro"</h3>
+<blockquote>
+<p><em>"Entendo. Deixa eu colocar em perspectiva: a gente calculou que cada paciente novo te deixa R$ 1.000 de margem. O investimento de R$ 1.500 se paga com </em><em>dois</em><em> pacientes no mês. A meta que a gente traçou é 10.</em></p>
+<p><em>Agora, se o valor não cabe no orçamento </em><em>agora</em><em>, isso é outra conversa e eu prefiro ser honesto: em vez de fazer uma versão capenga, a gente pode começar com um escopo menor — só Meta, sem Google — por R$ 900, e amplia quando estiver girando. Prefere assim?"</em></p>
+</blockquote>
+<p>Nunca dê desconto puro. <strong>Reduza o escopo junto com o preço.</strong> Desconto sem contrapartida ensina que seu preço era inventado.</p>
+<h3>"Vou pensar"</h3>
+<blockquote>
+<p><em>"Claro. Só pra eu te ajudar melhor: o que especificamente você quer avaliar? É o valor, o prazo, ou você quer alinhar com alguém antes?"</em></p>
+</blockquote>
+<p>Isso transforma um "não" educado numa objeção concreta que você pode tratar.</p>
+<h3>"Já tentei tráfego e não funcionou"</h3>
+<blockquote>
+<p><em>"Que bom que você me contou. Posso perguntar o que aconteceu? [ouça de verdade]</em></p>
+<p><em>Isso que você descreveu é bem comum, e normalmente tem uma causa específica — quase sempre uma dessas três: a oferta não estava clara, os leads não eram respondidos rápido, ou desligaram antes da campanha estabilizar.</em></p>
+<p><em>Antes de eu te propor qualquer coisa, deixa eu olhar a conta antiga. Se eu identificar que o problema era algo que eu também não resolveria, eu te falo — e não vendo nada pra você."</em></p>
+</blockquote>
+<p>Essa última frase fecha mais contrato que qualquer argumento de venda.</p>
+<h3>"Meu sobrinho faz por R$ 300"</h3>
+<blockquote>
+<p><em>"Faz sentido, e pode até funcionar pra começar. A diferença é o que acontece quando não funciona: quem vai saber se o problema é o criativo, a oferta, a página ou o atendimento? É pra isso que eu sou pago — não por apertar os botões, mas por saber onde está o vazamento quando o dinheiro está indo embora.</em></p>
+<p><em>Minha sugestão honesta: se você nunca testou, comece com ele. Quando você quiser escalar de verdade e o erro ficar caro, me chama."</em></p>
+</blockquote>
+<p>Não brigue por preço com quem cobra R$ 300. <strong>Você não quer esse cliente.</strong> E essa resposta digna faz ele voltar em 6 meses.</p>
+<h3>"Você garante resultado?"</h3>
+<blockquote>
+<p><em>"Não, e desconfie de quem garantir. Eu não controlo o seu atendimento, seu preço, seu concorrente nem o leilão das plataformas.</em></p>
+<p><em>O que eu garanto é o </em><em>processo</em><em>: campanhas estruturadas, criativos novos toda semana, relatório mensal com números reais, e otimização contínua. E garanto transparência — se eu achar que não está valendo pra você, eu vou ser o primeiro a falar.</em></p>
+<p><em>O que a gente pode fazer é combinar metas claras e revisar em 90 dias com dado na mão."</em></p>
+</blockquote>
+<p>Isso é <strong>obrigação de meio</strong>, e precisa estar no contrato (Fase 10).</p>
+<h3>"E se eu quiser cancelar?"</h3>
+<blockquote>
+<p><em>"Sem multa depois do terceiro mês, com 30 dias de aviso. Os três primeiros meses são de fidelidade porque é o tempo mínimo para a campanha sair do aprendizado e gerar dado confiável — cancelar antes disso é jogar fora o investimento que você já fez. Depois disso, você fica porque está valendo a pena, não porque está preso."</em></p>
+</blockquote>
+<h3>"Preciso falar com meu sócio"</h3>
+<blockquote>
+<p><em>"Perfeito. Quer que eu participe dessa conversa? Assim eu respondo as dúvidas técnicas na hora e você não precisa ser o intermediário. Tenho [dia] e [dia] livres."</em></p>
+</blockquote>
+<h3>"Me manda uma proposta"</h3>
+<p>Cuidado: muitas vezes é um "não" educado. Antes de mandar:</p>
+<blockquote>
+<p><em>"Mando sim. Só pra eu não te mandar uma proposta genérica: pelo que conversamos, o foco seria [X] com verba em torno de [Y], certo? E tem algum ponto que você já sabe que precisa estar na proposta?"</em></p>
+</blockquote>
+<hr />
+<h2>8. A proposta</h2>
+<p>Template completo em <a href="templates/proposta-comercial.html"><code>templates/proposta-comercial.md</code></a>. Princípios:</p>
+<ul>
+<li><strong>Máximo 2 páginas.</strong> Proposta de 12 slides não é lida.</li>
+<li><strong>Comece pelo problema dele</strong>, com as palavras que ele usou na reunião</li>
+<li><strong>Mostre a matemática</strong> que vocês fizeram juntos</li>
+<li><strong>Escopo explícito</strong> — e o que NÃO está incluso é tão importante quanto o que está</li>
+<li><strong>Uma única opção recomendada</strong> (ou no máximo três, com a do meio destacada)</li>
+<li><strong>Validade</strong> — "proposta válida por 7 dias" cria movimento sem pressão artificial</li>
+<li><strong>Próximo passo óbvio</strong> — diga exatamente o que ele deve fazer</li>
+</ul>
+<p><strong>Envie por WhatsApp ou e-mail e ligue no dia seguinte.</strong> Proposta enviada e não acompanhada tem conversão próxima de zero.</p>
+<hr />
+<h2>9. Erros de venda que custam caro</h2>
+<ol>
+<li><strong>Falar de técnica em vez de resultado</strong> — ninguém compra "CBO" e "lookalike"</li>
+<li><strong>Aceitar expectativa irreal para fechar</strong> — você está comprando um cancelamento com juros</li>
+<li><strong>Não fazer as contas na reunião</strong> — é a sua maior vantagem competitiva, use</li>
+<li><strong>Dar desconto sem reduzir escopo</strong> — ensina que seu preço era inventado</li>
+<li><strong>Aceitar cliente sem verba mínima</strong> — consome o mesmo tempo e destrói sua reputação</li>
+<li><strong>Não ter contrato</strong> (Fase 10)</li>
+<li><strong>Prometer resultado</strong> — juridicamente perigoso e comercialmente suicida</li>
+<li><strong>Sumir depois de mandar a proposta</strong> — follow-up é onde a venda acontece</li>
+<li><strong>Não perguntar quem atende os leads</strong> — você vai levar a culpa</li>
+<li><strong>Cobrar barato para "pegar experiência"</strong> — cliente barato é o mais exigente, sempre</li>
+</ol>
+<hr />
+<h2>✅ Tarefas da Fase 09</h2>
+<ol>
+<li><strong>Escolha seu nicho</strong> usando os 4 critérios da seção 1. Escreva a justificativa.</li>
+<li><strong>Documente seu case</strong> da Fase 03 em uma página, com prints</li>
+<li><strong>Monte a lista de 30 pessoas</strong> da sua rede e mande as mensagens individuais</li>
+<li><strong>Use a Biblioteca de Anúncios:</strong> liste 20 negócios do seu nicho que estão anunciando agora na sua região</li>
+<li><strong>Faça 5 auditorias gratuitas</strong> de 1 página e envie</li>
+<li><strong>Decore o roteiro de reunião</strong> (seção 5)</li>
+<li><strong>Defina seu preço</strong> com o cálculo da seção 6. Escreva o número e treine falar em voz alta sem hesitar.</li>
+<li><strong>Escreva suas respostas</strong> para as 8 objeções, com suas palavras</li>
+<li><strong>Meta concreta:</strong> 3 reuniões agendadas em 30 dias</li>
+</ol>
+<hr />
+<h2>Checagem de entendimento</h2>
+<ol>
+<li>Cliente com verba de R$ 600/mês, ticket de R$ 150, quer 50 clientes novos. O que você faz?</li>
+<li>Por que cobrar setup inicial reduz cancelamento no mês 2?</li>
+<li>Cliente diz "meu sobrinho faz por R$ 300". Qual é o objetivo real da sua resposta?</li>
+</ol>
+<details>
+<summary>Respostas</summary>
+<p><strong>1.</strong> Faça a conta na frente dele: 50 clientes × ticket R$ 150 = R$ 7.500 de faturamento. Com margem de, digamos, 40%, sobram R$ 3.000 — dos quais o anúncio poderia consumir uns R$ 1.000. Com R$ 600 de verba e um CPA realista, você entrega talvez 8 a 12 clientes, não 50. <strong>Recalibre a meta ou não feche.</strong> Alternativa elegante: venda uma consultoria de setup (R$ 800–1.500, uma vez), deixe tudo montado, ensine ele a operar, e volte quando ele tiver verba.</p>
+<p><strong>2.</strong> Três efeitos. (a) <strong>Compromisso</strong> — quem investiu na estrutura não abandona no primeiro mês instável. (b) <strong>Expectativa correta</strong> — separa explicitamente "montar" de "operar", então o cliente entende que o mês 1 é construção. (c) <strong>Seu caixa</strong> — o primeiro mês é o de maior trabalho; sem setup você trabalha o triplo pelo mesmo valor e cria ressentimento.</p>
+<p><strong>3.</strong> <strong>Não é ganhar a discussão de preço — é sair com dignidade e plantar o retorno.</strong> Esse cliente vai contratar o sobrinho de qualquer jeito. Sua resposta serve para (a) não desvalorizar seu preço brigando por ele, (b) plantar o critério pelo qual ele vai avaliar o sobrinho ("quem vai saber onde está o vazamento?"), e (c) deixar a porta aberta para quando não der certo. Metade dos clientes desse perfil volta em 6 meses — e volta sabendo o que está comprando.</p>
+</details>
+<hr />
+<p><strong>Próxima:</strong> <a href="fase-10-contrato-legal.html">Fase 10 — Contrato e legal</a></p></article>
+  <nav class="paginacao"><a class="nav-ant" href="fase-08-otimizacao-escala.html"><span>← Anterior</span>08 · Otimização e escala</a><a class="nav-prox" href="fase-10-contrato-legal.html"><span>Próximo →</span>10 · Contrato e legal</a></nav>
+  <footer class="rodape">Curso de tráfego pago · conteúdo de setembro de 2026</footer>
+</main>
+</body>
+</html>
