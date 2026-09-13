@@ -92,7 +92,9 @@ Reserve R$ 200–300 do seu orçamento como **caixa de emergência** — vai apa
 
 ## Versão site
 
-O curso também existe como site navegável na pasta `site/` — abra `site/index.html` com duplo clique. Funciona offline, sem instalar nada.
+**No ar:** <https://cesariolins.github.io/guiaTrafegoPago/> — abre em qualquer celular ou computador, sem baixar nada.
+
+Também funciona offline: abra `site/index.html` com duplo clique.
 
 Se você editar qualquer `.md`, rode isto para o site refletir as mudanças:
 
