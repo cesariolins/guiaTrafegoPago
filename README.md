@@ -49,6 +49,7 @@ Cliente não compra "campanha otimizada". Compra "meu telefone tocando". Quem en
 | 10 | [Contrato e legal](fase-10-contrato-legal.md) | CNPJ, nota fiscal, contrato, LGPD, o que te protege |
 | 11 | [Operação e rotina](fase-11-operacao-rotina.md) | Onboarding, rotina diária, relatório, retenção de cliente |
 | 12 | [Problemas reais](fase-12-problemas-reais.md) | Conta bloqueada, cliente que não paga, campanha que não performa |
+| 13 | [Pacote saúde + IA](fase-13-pacote-saude-ia.md) | Tráfego + agente de IA para clínicas: regras do CFO/CFM, LGPD, preço do pacote |
 
 ### Ferramentas prontas
 

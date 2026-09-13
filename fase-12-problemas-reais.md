@@ -362,6 +362,6 @@ NÃO PAGA
 
 ---
 
-**Fim do Bloco III.**
+**Próximo:** [Fase 13 — Pacote saúde + IA](fase-13-pacote-saude-ia.md), se o seu nicho for clínica.
 
-Volte ao [README](README.md) para o mapa completo, ou vá para os [templates](templates/).
+Ou volte ao [README](README.md) para o mapa completo, ou vá para os [templates](templates/).

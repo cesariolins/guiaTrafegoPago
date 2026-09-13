@@ -31,6 +31,7 @@ ORDEM = [
     ("fase-10-contrato-legal.md", "10 · Contrato e legal", "⚖️"),
     ("fase-11-operacao-rotina.md", "11 · Operação e rotina", "🔄"),
     ("fase-12-problemas-reais.md", "12 · Problemas reais", "🚨"),
+    ("fase-13-pacote-saude-ia.md", "13 · Pacote saúde + IA", "🦷"),
     ("templates/proposta-comercial.md", "Proposta comercial", "📄"),
     ("templates/contrato-modelo.md", "Contrato modelo", "📑"),
     ("templates/briefing-onboarding.md", "Briefing e onboarding", "📋"),
@@ -42,8 +43,8 @@ ORDEM = [
 BLOCOS = [
     ("Fundamento", 1, 4),      # índices em ORDEM (início, fim exclusivo)
     ("Execução técnica", 4, 10),
-    ("O negócio", 10, 14),
-    ("Templates", 14, 20),
+    ("O negócio", 10, 15),
+    ("Templates", 15, 21),
 ]
 
 
@@ -201,9 +202,11 @@ def gerar():
         print(f"  ok  {destino.relative_to(RAIZ)}")
 
     # Índice dos templates, para o link "templates/" do README ter destino.
+    # Fatia vem de BLOCOS para não dessincronizar quando uma fase nova entra no meio.
+    _, tpl_ini, tpl_fim = BLOCOS[-1]
     itens = "".join(
         f'<li><a href="{s.split("/")[1].replace(".md", ".html")}"><i>{e}</i>{r}</a></li>'
-        for s, r, e in ORDEM[14:20]
+        for s, r, e in ORDEM[tpl_ini:tpl_fim]
     )
     (SAIDA / "templates" / "index.html").write_text(
         PAGINA.format(

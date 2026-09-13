@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- Fora de busca. robots.txt não serve em site de projeto do GitHub Pages:
+     só vale na raiz do domínio. Para indexar um dia, apague esta linha. -->
+<meta name="robots" content="noindex, nofollow">
+<title>Fase 13 — Seu pacote: tráfego + agente de IA para clínicas — Tráfego Pago</title>
+<link rel="stylesheet" href="assets/estilo.css">
+<script>
+/* Roda antes do primeiro pixel, senão a página pisca no tema errado.
+   Sem argumento, alterna. localStorage em try/catch: file:// pode bloquear. */
+function tema(t){var h=document.documentElement;
+t=t||(h.dataset.tema=='escuro'?'claro':'escuro');h.dataset.tema=t;
+try{localStorage.setItem('tema',t)}catch(e){}}
+try{var _t=localStorage.getItem('tema')}catch(e){}
+document.documentElement.dataset.tema=_t||(matchMedia('(prefers-color-scheme:dark)').matches?'escuro':'claro');
+</script>
+</head>
+<body>
+<input type="checkbox" id="abrir-menu" hidden>
+<label for="abrir-menu" class="botao-menu" aria-label="Abrir menu">☰</label>
+<label for="abrir-menu" class="fundo-menu"></label>
+<button class="botao-tema" onclick="tema()" aria-label="Alternar tema claro/escuro"
+        title="Alternar tema claro/escuro"><span class="i-claro">🌙</span><span class="i-escuro">☀️</span></button>
+
+<aside>
+  <a class="marca" href="index.html">Tráfego Pago<small>do zero ao primeiro cliente</small></a>
+  <ul class="topo"><li><a href="index.html"><i>🏠</i>Início</a></li></ul><p class="bloco">Fundamento</p><ul><li><a href="fase-00-fundamentos.html"><i>🧭</i>00 · Fundamentos</a></li><li><a href="fase-01-matematica.html"><i>🧮</i>01 · A matemática</a></li><li><a href="fase-02-infraestrutura.html"><i>🔧</i>02 · Infraestrutura</a></li></ul><p class="bloco">Execução técnica</p><ul><li><a href="fase-03-meta-ads.html"><i>📱</i>03 · Meta Ads</a></li><li><a href="fase-04-google-ads.html"><i>🔍</i>04 · Google Ads</a></li><li><a href="fase-05-tiktok-kwai.html"><i>🎵</i>05 · TikTok e Kwai</a></li><li><a href="fase-06-criativo-copy-oferta.html"><i>🎨</i>06 · Criativo e oferta</a></li><li><a href="fase-07-mensuracao.html"><i>📊</i>07 · Mensuração</a></li><li><a href="fase-08-otimizacao-escala.html"><i>📈</i>08 · Otimização e escala</a></li></ul><p class="bloco">O negócio</p><ul><li><a href="fase-09-vender-o-servico.html"><i>💼</i>09 · Vender o serviço</a></li><li><a href="fase-10-contrato-legal.html"><i>⚖️</i>10 · Contrato e legal</a></li><li><a href="fase-11-operacao-rotina.html"><i>🔄</i>11 · Operação e rotina</a></li><li><a href="fase-12-problemas-reais.html"><i>🚨</i>12 · Problemas reais</a></li><li><a href="fase-13-pacote-saude-ia.html" class="ativo"><i>🦷</i>13 · Pacote saúde + IA</a></li></ul><p class="bloco">Templates</p><ul><li><a href="templates/proposta-comercial.html"><i>📄</i>Proposta comercial</a></li><li><a href="templates/contrato-modelo.html"><i>📑</i>Contrato modelo</a></li><li><a href="templates/briefing-onboarding.html"><i>📋</i>Briefing e onboarding</a></li><li><a href="templates/relatorio-mensal.html"><i>📊</i>Relatório mensal</a></li><li><a href="templates/auditoria-de-conta.html"><i>🔎</i>Auditoria de conta</a></li><li><a href="templates/scripts-de-venda.html"><i>💬</i>Scripts de venda</a></li></ul><p class="bloco">Ferramenta</p><ul><li><a href="planilhas/calculadora-viabilidade.html"><i>🧮</i>Calculadora</a></li></ul>
+</aside>
+
+<main>
+  <article><h1>Fase 13 — Seu pacote: tráfego + agente de IA para clínicas</h1>
+<blockquote>
+<p>Esta fase é sob medida para uma situação específica: <strong>ex-dentista, casado com médica, desenvolvedor que trabalha com automação.</strong> Se você não é essa pessoa, leia mesmo assim — a lógica de empacotar dois serviços em um se aplica a qualquer nicho.</p>
+</blockquote>
+<p>Conteúdo verificado em <strong>setembro de 2026</strong>. Regras de conselho mudam; confirme no seu CRO/CRM antes de publicar campanha.</p>
+<hr />
+<h2>1. O veredito, sem enrolação</h2>
+<p><strong>Sim, é um pacote muito bom.</strong> Melhor do que a maioria das combinações que existem no mercado.</p>
+<p>Mas provavelmente <strong>não pelo motivo que você está pensando.</strong></p>
+<p>O motivo fraco (e o que todo mundo vende):</p>
+<blockquote>
+<p><em>"A IA qualifica o lead e economiza o tempo da secretária."</em></p>
+</blockquote>
+<p>Isso é commodity. Existe agente de IA para WhatsApp a partir de R$ 99/mês, com setup em 30 minutos, vendido no autoatendimento. Se o seu argumento for esse, você está competindo por preço com um SaaS — e vai perder.</p>
+<p>O motivo forte, que é o seu:</p>
+<blockquote>
+<p><strong>Você é a única pessoa na mesa que entende, ao mesmo tempo, a cadeira, o leilão de anúncios e o código.</strong></p>
+</blockquote>
+<p>Guarde essa frase. Ela vale mais que qualquer técnica deste curso.</p>
+<hr />
+<h2>2. Seus três ativos e quanto cada um vale</h2>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Ativo</th>
+<th>O que ele destrava</th>
+<th>Vale quanto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ex-dentista</strong></td>
+<td>Fala a língua, conhece o fluxo da clínica, sabe a margem de cada procedimento, <strong>conhece as regras do CFO</strong></td>
+<td>Elimina a barreira de confiança, que é o que mais custa tempo na venda</td>
+</tr>
+<tr>
+<td><strong>Esposa médica</strong></td>
+<td>Acesso à rede médica — ticket maior, concorrência menor entre gestores</td>
+<td>Segunda onda, depois dos primeiros cases</td>
+</tr>
+<tr>
+<td><strong>Desenvolvedor</strong></td>
+<td>Constrói o agente em vez de revender</td>
+<td>Transforma custo em margem e cria dependência técnica saudável</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>O terceiro é o que quase ninguém tem.</strong> Gestor de tráfego que quer oferecer IA precisa revender uma plataforma: paga R$ 300–800/mês por cliente, repassa com margem magra e fica refém do roadmap de outra empresa. Você não paga essa taxa. Toda ela vira seu lucro.</p>
+<h3>⭐ O ativo escondido: você sabe o que NÃO pode ser anunciado</h3>
+<p>Dono de clínica tem medo do conselho. Medo real, de processo ético, de multa, de cassação. Quase todo gestor de tráfego ignora isso por desconhecimento — e o cliente sente o desconforto.</p>
+<p>Quando você chega numa reunião e diz:</p>
+<blockquote>
+<p><em>"Antes de falar de anúncio: aquele post de antes e depois que vocês publicaram ontem — vocês têm TCLE assinado do paciente? Porque sem ele, no CFO, é infração. E mesmo com ele, o Meta não aprova essa imagem em anúncio, é política deles, independente do conselho."</em></p>
+</blockquote>
+<p>...a reunião acabou. Você não vai mais precisar vender.</p>
+<hr />
+<h2>3. O que você está vendendo de verdade</h2>
+<p>Clínica não tem <strong>um</strong> problema de captação. Tem <strong>três vazamentos</strong> em série, e o dinheiro escorre nos três:</p>
+<pre><code>  ┌─────────────────────────────────────────────┐
+  │ VAZAMENTO 1 — Ninguém sabe que existem      │
+  │ Solução: tráfego pago                       │
+  │ O que quase todo gestor vende               │
+  └─────────────────────────────────────────────┘
+                      ↓
+  ┌─────────────────────────────────────────────┐
+  │ VAZAMENTO 2 — Lead chega e ninguém responde │
+  │ A secretária está com paciente na cadeira.  │
+  │ O lead espera 4 horas. Já foi no concorrente│
+  │ Solução: agente de IA, resposta em segundos │
+  └─────────────────────────────────────────────┘
+                      ↓
+  ┌─────────────────────────────────────────────┐
+  │ VAZAMENTO 3 — Marcou e não apareceu         │
+  │ Falta é cadeira vazia, custo fixo queimado  │
+  │ Solução: lembrete automático + confirmação  │
+  └─────────────────────────────────────────────┘
+</code></pre>
+<p>O gestor comum tapa o vazamento 1 e entrega o resultado nos outros dois para a sorte. Depois leva a culpa quando a conta não fecha.</p>
+<p><strong>Você tapa os três.</strong> É por isso que você cobra outro preço.</p>
+<hr />
+<h2>4. A matemática que muda tudo ⭐</h2>
+<p>Esta é a parte que transforma o agente de "conveniência" em "investimento com retorno calculável". Estude até saber de cor.</p>
+<p>Volte à <a href="fase-01-matematica.html">Fase 01</a>. O CPA efetivo é:</p>
+<pre><code>CPA = CPL ÷ taxa de conversão do lead em paciente
+</code></pre>
+<p>O gestor comum só sabe mexer no <strong>CPL</strong> — brigar por criativo, por leilão, por público. Difícil e com teto.</p>
+<p>Você mexe no <strong>denominador</strong>. E o denominador é onde está a alavanca.</p>
+<h3>Exemplo real de clínica odontológica</h3>
+<p>Mesma clínica da Fase 01: ticket R$ 2.500, margem 40% → <strong>R$ 1.000 de margem bruta</strong>, CPL alvo R$ 80.</p>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th></th>
+<th>Sem agente</th>
+<th>Com agente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Leads no mês</td>
+<td>50</td>
+<td>50</td>
+</tr>
+<tr>
+<td>Verba (50 × R$ 80)</td>
+<td>R$ 4.000</td>
+<td>R$ 4.000</td>
+</tr>
+<tr>
+<td>Tempo até a 1ª resposta</td>
+<td>2 a 6 horas</td>
+<td>30 segundos</td>
+</tr>
+<tr>
+<td>Lead vira consulta agendada</td>
+<td>30% → 15</td>
+<td>45% → 22</td>
+</tr>
+<tr>
+<td>Índice de falta</td>
+<td>35% → 5 faltas</td>
+<td>22% → 5 faltas</td>
+</tr>
+<tr>
+<td><strong>Consultas realizadas</strong></td>
+<td><strong>10</strong></td>
+<td><strong>17</strong></td>
+</tr>
+<tr>
+<td>Fecha tratamento (50%)</td>
+<td>5</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Faturamento</td>
+<td>R$ 12.500</td>
+<td>R$ 21.250</td>
+</tr>
+<tr>
+<td><strong>CPA efetivo</strong></td>
+<td><strong>R$ 800</strong></td>
+<td><strong>R$ 470</strong></td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>A queda de faltas usa a referência de mercado de <strong>30% a 40% de redução relativa</strong> no índice, obtida com confirmação e lembrete automáticos — não é "o no-show vai a zero".</p>
+</blockquote>
+<p><strong>Leia a última linha de novo.</strong> O CPA caiu de R$ 800 para R$ 470 <strong>sem mexer em um único anúncio</strong>.</p>
+<h3>Por que isso é a melhor arma de venda que existe</h3>
+<p>O cliente investiu os mesmos R$ 4.000 de verba e faturou R$ 8.750 a mais. Ou seja: <strong>o agente se paga em economia de mídia antes mesmo de você contar a história do no-show.</strong></p>
+<p>Para o cliente chegar nas mesmas 8 vendas sem o agente, precisaria de 80 leads em vez de 50 — R$ 6.400 de verba em vez de R$ 4.000. <strong>R$ 2.400/mês a mais em anúncio.</strong></p>
+<blockquote>
+<p><em>"Doutor, o meu honorário do agente é menor do que o que o senhor gastaria a mais em anúncio para chegar no mesmo lugar sem ele."</em></p>
+</blockquote>
+<p>Essa frase fecha contrato.</p>
+<hr />
+<h2>5. Dentista ou médico? Comece por dentista</h2>
+<p>Sua esposa é médica, então a tentação é começar por lá. <strong>Não comece.</strong></p>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th></th>
+<th>Odontologia</th>
+<th>Medicina</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Você é da área</td>
+<td>✅ Sim</td>
+<td>❌ Não</td>
+</tr>
+<tr>
+<td>Regra de publicidade</td>
+<td>Mais flexível desde 2025</td>
+<td>Mais restritiva (CFM 2.336/2023)</td>
+</tr>
+<tr>
+<td>Demanda precisa de anúncio?</td>
+<td>Sim, procura é eletiva e comparada</td>
+<td><strong>Muitas vezes não</strong> — agenda já lotada</td>
+</tr>
+<tr>
+<td>Ticket</td>
+<td>R$ 800 a R$ 15.000</td>
+<td>R$ 300 a R$ 30.000</td>
+</tr>
+<tr>
+<td>Concorrência entre clínicas</td>
+<td>Altíssima</td>
+<td>Média</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>O erro clássico:</strong> vender tráfego para médico com agenda cheia. Ele não precisa de paciente, precisa de paciente <em>melhor</em> — e isso é outro serviço. Você queima o contato e, pior, queima a indicação da sua esposa.</p>
+<h3>Ordem recomendada</h3>
+<pre><code>1. Dentistas (você é um) ──────────────── 2 a 4 primeiros clientes, gera os cases
+2. Especialidades odonto de ticket alto ─ implante, ortodontia, HOF, lentes
+3. Médicos eletivos/particular ────────── com case na mão + rede da esposa
+</code></pre>
+<p><strong>Médicos que realmente precisam de captação:</strong> estética, nutrologia, medicina do esporte, oftalmo (cirurgia refrativa), ortopedia particular, psiquiatria (com muito cuidado na copy), ginecologia particular, capilar.</p>
+<p><strong>Médicos que não precisam:</strong> qualquer especialidade com fila de espera, e todo consultório dependente de convênio — margem apertada, sem controle de preço, e frequentemente sem capacidade ociosa.</p>
+<blockquote>
+<p>⚠️ <strong>Pergunta obrigatória antes de vender, para os dois:</strong> <em>"Quantos pacientes novos por mês vocês conseguem ATENDER hoje?"</em> Encher a agenda de quem não tem cadeira livre é a forma mais rápida de perder um cliente e a indicação dele.</p>
+</blockquote>
+<hr />
+<h2>6. Regras de conselho: a tabela que vale dinheiro</h2>
+<p>⚠️ <strong>Aviso:</strong> o resumo abaixo é ponto de partida, não parecer jurídico. Regras mudam e há interpretação regional do CRO/CRM. Confirme antes de publicar.</p>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Prática</th>
+<th>Odontologia (CFO)</th>
+<th>Medicina (CFM 2.336/2023)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Antes e depois</td>
+<td>Permitido <strong>com TCLE</strong> e identificação do profissional; proibido se sensacionalista</td>
+<td>Imagem só com autorização expressa e específica; comunicação tem que ser educativa</td>
+</tr>
+<tr>
+<td>Divulgar preço</td>
+<td>Liberado desde a <strong>CFO-271/2025</strong> (decisão do CADE)</td>
+<td><strong>Proibido</strong> divulgar preço, desconto e promoção de forma que estimule consumo</td>
+</tr>
+<tr>
+<td>Desconto e promoção</td>
+<td>Liberado, mas o perfil não pode virar catálogo de ofertas</td>
+<td><strong>Proibido</strong></td>
+</tr>
+<tr>
+<td>Garantir resultado</td>
+<td>Proibido</td>
+<td>Proibido</td>
+</tr>
+<tr>
+<td>"O melhor", "referência"</td>
+<td>Proibido (autopromoção)</td>
+<td>Proibido</td>
+</tr>
+<tr>
+<td>Depoimento de paciente</td>
+<td>Proibido</td>
+<td>Proibido</td>
+</tr>
+<tr>
+<td>Influenciador não profissional</td>
+<td>Proibido</td>
+<td>Proibido</td>
+</tr>
+<tr>
+<td>Consulta/diagnóstico por rede social</td>
+<td>Proibido</td>
+<td><strong>Expressamente proibido</strong></td>
+</tr>
+<tr>
+<td>Equipamento sem respaldo científico</td>
+<td>Proibido</td>
+<td>Proibido</td>
+</tr>
+</tbody>
+</table></div>
+<h3>⭐ A assimetria que você precisa gravar</h3>
+<p><strong>Dentista pode anunciar preço. Médico não pode.</strong></p>
+<p>A CFO-271/2025, em junho de 2025, ajustou o Código de Ética Odontológica para cumprir decisão do CADE e liberou desconto e promoção — mas não revogou a CFO-196/2019, então a proibição de publicidade mercantilista continua de pé. O CFM não teve mudança equivalente.</p>
+<p>Consequência prática: <strong>você não pode reaproveitar o mesmo criativo entre os dois nichos.</strong> São duas bibliotecas de copy separadas. Quem não sabe disso entrega o mesmo anúncio para os dois e coloca o médico em risco.</p>
+<hr />
+<h2>7. O que o Meta proíbe, independente do conselho</h2>
+<p>Aqui é onde a maioria das campanhas de clínica morre reprovada, e o cliente não entende por quê.</p>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Regra do Meta</th>
+<th>O que acontece na prática</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Antes e depois é proibido em anúncio</strong></td>
+<td>Mesmo com TCLE e mesmo liberado pelo CFO. É política da plataforma.</td>
+</tr>
+<tr>
+<td><strong>Foco em parte isolada do corpo</strong></td>
+<td>Close de barriga, de dente, de rosto "com problema" → reprovado</td>
+</tr>
+<tr>
+<td><strong>Atributo pessoal implícito</strong></td>
+<td>Em 2026 o Meta ficou <strong>mais rigoroso</strong> na interpretação. Sugerir que a pessoa tem uma condição já reprova.</td>
+</tr>
+</tbody>
+</table></div>
+<h3>A regra de ouro da copy em saúde</h3>
+<blockquote>
+<p><strong>Fale do serviço, nunca da condição da pessoa.</strong></p>
+</blockquote>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>❌ Reprova</th>
+<th>✅ Aprova</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"Está com vergonha do seu sorriso?"</td>
+<td>"Lentes de contato dental: entenda como funciona"</td>
+</tr>
+<tr>
+<td>"Cansado de dor nas costas?"</td>
+<td>"Avaliação ortopédica com exame de imagem no mesmo dia"</td>
+</tr>
+<tr>
+<td>"Você tem ansiedade?"</td>
+<td>"Atendimento psiquiátrico particular, agenda em 48h"</td>
+</tr>
+<tr>
+<td>"Perdeu o dente? Veja o resultado"</td>
+<td>"Implante em sessão única: como é o procedimento"</td>
+</tr>
+</tbody>
+</table></div>
+<p>O padrão é sempre o mesmo: troque a pergunta que acusa a pessoa por uma afirmação que descreve o serviço.</p>
+<blockquote>
+<p>💡 Isto sozinho já é uma auditoria gratuita de prospecção. Abra a Biblioteca de Anúncios, ache três clínicas da sua cidade anunciando com copy de "atributo pessoal", e mande a observação. Veja o roteiro na <a href="fase-09-vender-o-servico.html">Fase 09</a>.</p>
+</blockquote>
+<hr />
+<h2>8. LGPD: o risco que vem junto com o agente</h2>
+<p>Isto não é burocracia. É o maior risco do seu pacote, e ele é <strong>seu</strong>, não só do cliente.</p>
+<p>Um agente que pergunta <em>"o que você está sentindo?"</em> coleta <strong>dado pessoal sensível de saúde</strong> (LGPD, art. 5º, II). Dado sensível exige consentimento <strong>específico e destacado</strong> (art. 11) — não serve o aceite genérico do site.</p>
+<h3>Seus papéis</h3>
+<pre><code>Clínica  = CONTROLADOR  (decide por que e como tratar o dado)
+Você     = OPERADOR     (trata em nome dela, seguindo instruções)
+</code></pre>
+<p>Como operador você responde solidariamente se tratar fora das instruções. Por isso o contrato tem que ter cláusula de operador. Veja a <a href="fase-10-contrato-legal.html">Fase 10</a>.</p>
+<h3>O mínimo obrigatório do seu agente</h3>
+<ul>
+<li>[ ] <strong>Primeira mensagem informa</strong> que é atendimento automatizado e pede consentimento para seguir</li>
+<li>[ ] <strong>Coleta só o necessário</strong> para agendar — nome, contato, procedimento de interesse, preferência de horário</li>
+<li>[ ] <strong>Nunca</strong> pergunta histórico clínico, medicação, diagnóstico anterior ou exame</li>
+<li>[ ] <strong>Prazo de retenção</strong> definido e purga automática</li>
+<li>[ ] Conversa fica na <strong>infraestrutura do cliente</strong> ou em conta segregada por cliente</li>
+<li>[ ] Transferência para humano disponível <strong>a qualquer momento</strong>, sem labirinto</li>
+</ul>
+<h3>🚫 As três coisas que o agente NUNCA pode fazer</h3>
+<ol>
+<li><strong>Dar diagnóstico ou hipótese diagnóstica.</strong> "Isso parece uma pulpite" = exercício ilegal e infração ética do profissional que assina a clínica.</li>
+<li><strong>Indicar tratamento ou medicação.</strong> Nem "provavelmente você vai precisar de canal".</li>
+<li><strong>Prometer resultado ou prazo de cura.</strong></li>
+</ol>
+<p>Guardrail obrigatório no prompt do agente:</p>
+<pre><code>Você agenda e informa. Você NUNCA avalia sintoma, sugere diagnóstico,
+indica tratamento ou estima resultado. Diante de qualquer pergunta
+clínica, responda que só o profissional pode avaliar e ofereça o
+agendamento. Se a pessoa descrever dor intensa, sangramento, trauma
+ou emergência, interrompa o fluxo e escale para humano imediatamente.
+</code></pre>
+<blockquote>
+<p>Teste esse guardrail com mensagens hostis antes de subir para o cliente. Pergunte "é canal ou extração?" de dez formas diferentes. Se o agente responder uma vez, não está pronto.</p>
+</blockquote>
+<hr />
+<h2>9. Arquitetura: um agente, N clientes</h2>
+<p>Conselho de desenvolvedor para desenvolvedor, porque este é o erro que mata a operação no cliente número 6:</p>
+<blockquote>
+<p><strong>Não construa um agente por cliente. Construa um agente e um arquivo de configuração por cliente.</strong></p>
+</blockquote>
+<pre><code>❌ Cliente novo = repositório novo = 6 clientes, 6 códigos, 6 manutenções
+✅ Cliente novo = um JSON novo = 6 clientes, 1 código, 1 manutenção
+</code></pre>
+<p>O que varia por cliente vira configuração, não código: procedimentos e ticket, horários e duração, regras de encaixe, tom de voz, o que escalar para humano, mensagens de lembrete, link da agenda.</p>
+<h3>Duas decisões técnicas que não são negociáveis</h3>
+<p><strong>1. API Oficial (Cloud API), nunca biblioteca não oficial.</strong>
+Baileys e similares funcionam até o número ser banido. Para uma clínica, perder o WhatsApp é perder a base inteira de pacientes — anos de histórico. Se isso acontecer por sua causa, acabou: o contrato, a indicação e a sua reputação na cidade.</p>
+<p><strong>2. Human-in-the-loop desde o dia 1.</strong>
+A secretária precisa ver a conversa e conseguir assumir. Agente que sequestra o atendimento gera revolta interna, e a equipe da clínica vai sabotar o projeto por dentro.</p>
+<hr />
+<h2>10. Seus custos reais por cliente</h2>
+<p>Aqui está por que a margem é tão boa — e a maior parte do mercado não sabe disso:</p>
+<h3>O detalhe que muda o jogo: a janela de 24 horas</h3>
+<p>Desde 1º de julho de 2025 o Meta cobra <strong>por mensagem de template entregue</strong>. Mas mensagens de <strong>atendimento</strong> — suas respostas dentro de 24h depois que o cliente escreveu primeiro — são <strong>gratuitas</strong>.</p>
+<p>Anúncio de Click-to-WhatsApp faz o lead escrever primeiro. <strong>Logo, toda a conversa de qualificação e agendamento do seu agente é de graça.</strong></p>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Custo</th>
+<th>Observação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Conversa de qualificação</td>
+<td><strong>R$ 0</strong></td>
+<td>Janela de atendimento de 24h</td>
+</tr>
+<tr>
+<td>Lembrete fora da janela (utilidade)</td>
+<td>~R$ 0,035/msg</td>
+<td>100 leads × 3 lembretes ≈ <strong>R$ 10/mês</strong></td>
+</tr>
+<tr>
+<td>Disparo de reativação (marketing)</td>
+<td>~R$ 0,32/msg</td>
+<td>Cobre à parte — 1.000 contatos = R$ 320</td>
+</tr>
+<tr>
+<td>LLM</td>
+<td>R$ 0,05 a R$ 0,38/interação</td>
+<td>Conversa inteira ≈ R$ 0,50–2,00/lead</td>
+</tr>
+<tr>
+<td>Infra</td>
+<td>R$ 50–150/mês</td>
+<td>Diluído entre todos os clientes</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Custo marginal por cliente: aproximadamente R$ 100 a R$ 350/mês.</strong></p>
+<p>Num pacote de R$ 3.000, isso é <strong>90% de margem bruta</strong> na parte de IA. O que consome de verdade é o seu tempo — e é o seu tempo que você precisa proteger, não o custo de servidor.</p>
+<blockquote>
+<p>⚠️ Cotações do Meta mudam. Confira a tabela oficial do Brasil antes de fechar preço e coloque no contrato que custo de plataforma é repassado.</p>
+</blockquote>
+<hr />
+<h2>11. A tabela de preços</h2>
+<p>Verba de anúncio <strong>sempre à parte</strong>, sempre no cartão do cliente. Veja a <a href="fase-10-contrato-legal.html">Fase 10</a> — você nunca emite nota sobre verba de mídia.</p>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Nível</th>
+<th>Entrega</th>
+<th>Implantação</th>
+<th>Mensal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1 · Captação</strong></td>
+<td>Tráfego Meta (+ Google), criativos, relatório mensal</td>
+<td>R$ 800–1.500</td>
+<td>R$ 1.200–2.000</td>
+</tr>
+<tr>
+<td><strong>2 · Captação + Atendimento</strong> ⭐</td>
+<td>Tudo do 1 + agente de IA qualificando e agendando no WhatsApp</td>
+<td>R$ 2.500–4.500</td>
+<td>R$ 2.500–4.000</td>
+</tr>
+<tr>
+<td><strong>3 · Operação</strong></td>
+<td>Tudo do 2 + integração com a agenda, lembrete anti-falta, reativação de base, dashboard</td>
+<td>R$ 4.000–7.000</td>
+<td>R$ 4.500–8.000</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Verba mínima para clínica:</strong> R$ 3.000/mês. Abaixo disso o volume de dado é insuficiente para otimizar e você vai brigar com a fase de aprendizado o mês inteiro (<a href="fase-03-meta-ads.html">Fase 03</a>).</p>
+<h3>Por que cobrar implantação alta e sem desconto</h3>
+<p>O setup do agente é trabalho de desenvolvimento real: fluxo, integração de agenda, treino nos procedimentos e valores da clínica, guardrails, teste, LGPD. Se você não cobrar, está financiando o cliente com o seu tempo mais caro.</p>
+<p>E vale o efeito psicológico da <a href="fase-09-vender-o-servico.html">Fase 09</a>: <strong>cliente que pagou implantação não some no mês 2.</strong></p>
+<h3>⭐ Separe as duas linhas na proposta</h3>
+<pre><code>Gestão de tráfego .................... R$ 1.500/mês
+Agente de atendimento e agendamento .. R$ 1.500/mês
+                                       ─────────────
+                                       R$ 3.000/mês
+</code></pre>
+<p>Três motivos, todos a seu favor:</p>
+<ol>
+<li><strong>Sobrevive ao corte.</strong> Janeiro chega, o cliente corta a verba de anúncio — o agente continua rodando e você continua recebendo metade. Gestor de tráfego puro perde o cliente inteiro.</li>
+<li><strong>Ancora melhor.</strong> R$ 1.500 de tráfego é preço de mercado; R$ 3.000 "de tráfego" parece caro. As duas linhas mostram que são dois produtos.</li>
+<li><strong>Permite subir degrau.</strong> Cliente entra no Nível 1 e sobe para o 2 quando vê o volume de lead sem resposta.</li>
+</ol>
+<h3>Percentual sobre a verba? Só com piso</h3>
+<p>Se o cliente tiver verba grande (acima de R$ 15.000/mês), vale <strong>15% da verba + mensalidade fixa do agente</strong>. Nunca percentual puro, nunca sem piso — a lógica está na <a href="fase-09-vender-o-servico.html">Fase 09</a>.</p>
+<hr />
+<h2>12. Como precificar o primeiro cliente</h2>
+<p>Você tem autoridade no nicho, mas <strong>não tem case em tráfego</strong>. Isso é honesto e você precisa lidar com isso sem se vender barato demais.</p>
+<p>A faixa "iniciante sem case" da Fase 09 (R$ 300–800) <strong>não é a sua.</strong> Ela é para quem não tem nada. Você tem dois produtos e conhece o nicho por dentro.</p>
+<h3>A oferta dos dois primeiros clientes</h3>
+<pre><code>Implantação ....... R$ 1.500  (não zere — nunca zere)
+Mensal ............ R$ 1.800  (Nível 2 completo)
+Prazo ............. 3 meses
+Em troca .......... depoimento em vídeo + autorização de uso dos números
+</code></pre>
+<p>E diga em voz alta o que está acontecendo:</p>
+<blockquote>
+<p><em>"Doutor, vou ser transparente: esse valor é de entrada, e ele é assim porque eu quero o seu caso documentado. Da minha tabela normal esse pacote sai por R$ 3.000. Depois dos três meses ele vai para R$ 2.500 e fica congelado por um ano. O que eu preciso é da sua autorização para mostrar os números e um vídeo curto seu no final, se o resultado for bom."</em></p>
+</blockquote>
+<p>Isso não é desconto. É <strong>troca</strong> — e transparência sobre o porquê protege o seu preço futuro. Desconto sem contrapartida ensina o cliente que seu preço é negociável para sempre.</p>
+<h3>Depois de 2 cases documentados</h3>
+<p>Vá direto para a tabela do item 11, sem pedir licença. E suba o fee dos primeiros clientes na renovação, com o roteiro da <a href="fase-11-operacao-rotina.html">Fase 11</a>.</p>
+<hr />
+<h2>13. O script de abertura</h2>
+<p>Adapte para a sua voz. O que não pode faltar é a ordem: <strong>credencial → problema deles → prova → pergunta.</strong></p>
+<pre><code>&quot;Doutor, eu fui dentista por [X] anos, clinicava em [lugar].
+Hoje eu trabalho com captação de paciente para clínica.
+
+Não vim vender anúncio. Anúncio o senhor já deve ter tentado.
+
+Eu olhei o Instagram de vocês e o que eu vi foi o problema
+que eu via na minha própria clínica: chega mensagem no
+WhatsApp às 14h, e a resposta sai às 18h — porque a Ana está
+com paciente na cadeira, e ela não pode largar o paciente
+para responder o celular.
+
+Nesse intervalo a pessoa mandou mensagem para mais três
+clínicas. Quem respondeu primeiro marcou.
+
+O que eu monto é isso: o anúncio traz a pessoa, e um
+atendimento automático responde em 30 segundos, qualifica,
+e já oferece o horário livre da agenda. Sem dar opinião
+clínica nenhuma — isso é do senhor.
+
+Posso te mostrar em 20 minutos como ficaria na sua agenda?&quot;
+</code></pre>
+<p><strong>Por que funciona:</strong> abre com a credencial que nenhum concorrente tem, descreve uma cena que ele vive toda semana, e antecipa a objeção ética antes que ele a formule.</p>
+<h3>As três objeções específicas deste nicho</h3>
+<p><strong>"Robô vai espantar meu paciente."</strong></p>
+<blockquote>
+<p><em>"Concordo, robô ruim espanta. Por isso ele não finge ser gente e não fica dando volta: ele diz que é atendimento automático, resolve o agendamento, e entrega para a sua secretária qualquer coisa fora disso. A sua equipe vê a conversa inteira e assume quando quiser. Quer testar no seu próprio número antes de decidir?"</em></p>
+</blockquote>
+<p><strong>"E a questão ética? Posso anunciar?"</strong></p>
+<blockquote>
+<p><em>"Pode, dentro de regra — e é justamente por isso que eu faço questão de cuidar da copy. [CFO/CFM] proíbe [garantia de resultado / preço / depoimento]. Eu escrevo dentro da norma e o senhor aprova tudo antes de subir. E tem uma coisa que quase ninguém sabe: antes e depois, mesmo com TCLE, o Meta não aprova em anúncio. É política da plataforma, não do conselho."</em></p>
+</blockquote>
+<p><strong>"Já tenho secretária."</strong></p>
+<blockquote>
+<p><em>"Ótimo, e ela continua. O agente não substitui a Ana — ele cobre o horário em que ela não pode atender, que é justamente quando o paciente manda mensagem. Ela chega de manhã com as consultas já marcadas em vez de 30 mensagens não lidas."</em></p>
+</blockquote>
+<hr />
+<h2>14. Erros que vão te custar caro</h2>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>Erro</th>
+<th>Consequência</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Usar API não oficial do WhatsApp</td>
+<td>Número da clínica banido, base de pacientes perdida, contrato e reputação junto</td>
+</tr>
+<tr>
+<td>Agente opinando sobre sintoma</td>
+<td>Infração ética para o cliente, responsabilidade sua</td>
+</tr>
+<tr>
+<td>Mesma copy para dentista e médico</td>
+<td>Médico exposto ao CRM por anúncio com preço</td>
+</tr>
+<tr>
+<td>Vender para clínica sem cadeira livre</td>
+<td>Cliente insatisfeito com resultado bom — e indicação queimada</td>
+</tr>
+<tr>
+<td>Um código por cliente</td>
+<td>Você vira refém da própria manutenção no 6º cliente</td>
+</tr>
+<tr>
+<td>Zerar a implantação</td>
+<td>Cliente sem compromisso, some no mês 2</td>
+</tr>
+<tr>
+<td>Prometer redução de falta em número fechado</td>
+<td>Referência de mercado é 30–40% de queda <strong>relativa</strong>, e depende da operação dele</td>
+</tr>
+<tr>
+<td>Cobrar tudo numa linha só</td>
+<td>Corte de verba leva o contrato inteiro embora</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>📌 Resumo</h2>
+<ol>
+<li>O pacote é forte — mas o argumento é <strong>CPA efetivo</strong>, não "economia de tempo".</li>
+<li>Seu diferencial é a tripla: clínica + tráfego + código. Ninguém copia isso rápido.</li>
+<li><strong>Comece por dentistas.</strong> Médicos na segunda onda, com case na mão.</li>
+<li>Dentista pode anunciar preço; médico não. Duas bibliotecas de copy.</li>
+<li>Antes e depois: o CFO permite com TCLE, <strong>o Meta não aprova em anúncio</strong>. Nunca.</li>
+<li>O agente nunca avalia sintoma. Guardrail testado antes de subir.</li>
+<li>Janela de 24h torna a qualificação gratuita. Margem de ~90% na parte de IA.</li>
+<li>Duas linhas na proposta: tráfego e agente. Sobrevive ao corte de verba.</li>
+<li>Primeiros dois clientes: R$ 1.500 + R$ 1.800/mês <strong>em troca de case</strong>, nunca de graça.</li>
+</ol>
+<hr />
+<h2>✅ Tarefa</h2>
+<ol>
+<li><strong>Liste 10 dentistas</strong> que você conhece pessoalmente. Marque os que têm agenda com buraco.</li>
+<li><strong>Abra a Biblioteca de Anúncios</strong> e ache 3 clínicas da sua cidade anunciando com copy de atributo pessoal ("está com vergonha...", "cansado de..."). Elas estão em risco de reprovação e não sabem.</li>
+<li><strong>Monte o agente para uma clínica fictícia</strong> e ataque com 10 perguntas clínicas hostis. Só vá para o cliente quando ele recusar as 10.</li>
+<li><strong>Faça a conta do item 4 com números reais</strong> de um dos 10 dentistas da sua lista. Leve impressa na reunião.</li>
+<li><strong>Escolha o cliente número 1</strong> e mande a mensagem hoje.</li>
+</ol>
+<details>
+<summary>Como saber se o cliente 1 é o certo</summary>
+<p>O cliente ideal para o primeiro case tem, ao mesmo tempo:</p>
+<ul>
+<li><strong>Capacidade ociosa</strong> — cadeira vazia em algum turno</li>
+<li><strong>Ticket acima de R$ 1.500</strong> — a conta fecha com folga</li>
+<li><strong>Atendimento particular</strong>, não dependente de convênio</li>
+<li><strong>Alguém que responde WhatsApp</strong> — se ninguém responde, nem o melhor agente salva</li>
+<li><strong>Relação pessoal com você</strong> — perdoa o erro do início</li>
+</ul>
+<p>Se o primeiro da lista não tem os cinco, vá para o segundo. O primeiro case é o ativo mais valioso que você vai construir este ano: escolha o que tem mais chance de dar certo, não o que paga mais.</p>
+</details>
+<hr />
+<p><strong>Anterior:</strong> <a href="fase-12-problemas-reais.html">Fase 12 — Problemas reais</a> · <strong>Ferramenta:</strong> <a href="planilhas/calculadora-viabilidade.html">Calculadora de viabilidade</a></p></article>
+  <nav class="paginacao"><a class="nav-ant" href="fase-12-problemas-reais.html"><span>← Anterior</span>12 · Problemas reais</a><a class="nav-prox" href="templates/proposta-comercial.html"><span>Próximo →</span>Proposta comercial</a></nav>
+  <footer class="rodape">Curso de tráfego pago · conteúdo de setembro de 2026</footer>
+</main>
+</body>
+</html>
