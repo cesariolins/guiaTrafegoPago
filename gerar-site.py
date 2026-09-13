@@ -121,6 +121,9 @@ PAGINA = """<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- Fora de busca. robots.txt não serve em site de projeto do GitHub Pages:
+     só vale na raiz do domínio. Para indexar um dia, apague esta linha. -->
+<meta name="robots" content="noindex, nofollow">
 <title>{titulo}</title>
 <link rel="stylesheet" href="{prefixo}assets/estilo.css">
 <script>
