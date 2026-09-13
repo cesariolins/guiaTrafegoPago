@@ -1,0 +1,70 @@
+{
+  "cliente": "Clínica Modelo Odontologia",
+  "conselho": "CFO",
+  "responsavel": "Dr. Nome Sobrenome · CRO-SP 00000",
+
+  "marca": {
+    "cor": "#12513f",
+    "cor2": "#07271e",
+    "tinta": "#ffffff"
+  },
+
+  "criativos": [
+    {
+      "id": "implante-educativo",
+      "layout": "bloco",
+      "chapeu": "Implante dentário",
+      "titulo": "Dente fixo em sessão única",
+      "apoio": "Avaliação com tomografia e plano de tratamento no mesmo dia.",
+      "cta": "Agendar avaliação"
+    },
+    {
+      "id": "implante-oquetem",
+      "layout": "lista",
+      "chapeu": "Primeira consulta",
+      "titulo": "O que está incluso na avaliação",
+      "itens": [
+        "Exame clínico completo",
+        "Tomografia na própria clínica",
+        "Plano de tratamento por escrito"
+      ],
+      "cta": "Quero agendar"
+    },
+    {
+      "id": "lentes-educativo",
+      "layout": "bloco",
+      "chapeu": "Lentes de contato dental",
+      "titulo": "Como funciona o procedimento, passo a passo",
+      "apoio": "Planejamento digital antes de qualquer desgaste.",
+      "cta": "Entender melhor"
+    },
+    {
+      "id": "orto-adulto",
+      "layout": "bloco",
+      "chapeu": "Ortodontia para adultos",
+      "titulo": "Alinhador transparente ou aparelho fixo?",
+      "apoio": "As duas opções resolvem. A escolha depende do seu caso e da sua rotina.",
+      "cta": "Falar com a clínica"
+    },
+    {
+      "id": "horario-estendido",
+      "layout": "lista",
+      "chapeu": "Atendimento",
+      "titulo": "Quem trabalha o dia inteiro também precisa de dentista",
+      "itens": [
+        "Atendimento até as 20h",
+        "Sábado pela manhã",
+        "Agendamento pelo WhatsApp"
+      ],
+      "cta": "Ver horários"
+    },
+    {
+      "id": "COPY-RUIM-DE-PROPOSITO",
+      "layout": "bloco",
+      "chapeu": "Implante",
+      "titulo": "Você está com vergonha do seu sorriso?",
+      "apoio": "Resultado garantido, veja o antes e depois dos nossos pacientes.",
+      "cta": "Aproveitar"
+    }
+  ]
+}

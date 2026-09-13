@@ -56,6 +56,7 @@ Cliente não compra "campanha otimizada". Compra "meu telefone tocando". Quem en
 | Arquivo | Para quê |
 |---|---|
 | 🧮 [Calculadora de viabilidade](planilhas/calculadora-viabilidade.html) | **Abra na frente do cliente.** Dá CPA máximo, CPL alvo, verba necessária e um veredito de "fecha ou não fecha". |
+| 🎨 [Gerador de criativos](criativos/gerar-criativos.py) | Estáticos em PNG nos 3 tamanhos do Meta, a partir de um JSON. Revisa a copy contra CFO/CFM/Meta antes de renderizar e bloqueia o que reprova. |
 | [Proposta comercial](templates/proposta-comercial.md) | 2 páginas, pronta para preencher e virar PDF |
 | [Contrato modelo](templates/contrato-modelo.md) | 13 cláusulas, com as que te protegem marcadas ⭐ |
 | [Briefing de onboarding](templates/briefing-onboarding.md) | Mensagem de acesso + 21 perguntas + checklist de estruturação |

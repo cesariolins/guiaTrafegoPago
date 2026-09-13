@@ -1,2 +1,6 @@
 __pycache__/
 *.pyc
+
+# saida de criativos e regerada pelo script
+criativos/saida/
+criativos/.render.html
