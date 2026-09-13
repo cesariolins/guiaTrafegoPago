@@ -106,18 +106,20 @@ Mesma clínica da Fase 01: ticket R$ 2.500, margem 40% → **R$ 1.000 de margem 
 | Índice de falta | 35% → 5 faltas | 22% → 5 faltas |
 | **Consultas realizadas** | **10** | **17** |
 | Fecha tratamento (50%) | 5 | 8 |
-| Faturamento | R$ 12.500 | R$ 21.250 |
-| **CPA efetivo** | **R$ 800** | **R$ 470** |
+| Faturamento | R$ 12.500 | R$ 20.000 |
+| **CPA efetivo** | **R$ 800** | **R$ 500** |
 
-> A queda de faltas usa a referência de mercado de **30% a 40% de redução relativa** no índice, obtida com confirmação e lembrete automáticos — não é "o no-show vai a zero".
+> A queda de faltas usa a referência de mercado de **30% a 40% de redução relativa** no índice, obtida com confirmação e lembrete automáticos — não é "o no-show vai a zero". Tratamentos estão **arredondados para baixo** (4,9 → 5 e 8,7 → 8): na frente do cliente, prometa menos do que a conta dá.
 
-**Leia a última linha de novo.** O CPA caiu de R$ 800 para R$ 470 **sem mexer em um único anúncio**.
+**Leia a última linha de novo.** O CPA caiu de R$ 800 para R$ 500 **sem mexer em um único anúncio**.
 
 ### Por que isso é a melhor arma de venda que existe
 
-O cliente investiu os mesmos R$ 4.000 de verba e faturou R$ 8.750 a mais. Ou seja: **o agente se paga em economia de mídia antes mesmo de você contar a história do no-show.**
+O cliente investiu os mesmos R$ 4.000 de verba e faturou R$ 7.500 a mais. Ou seja: **o agente se paga em economia de mídia antes mesmo de você contar a história do no-show.**
 
-Para o cliente chegar nas mesmas 8 vendas sem o agente, precisaria de 80 leads em vez de 50 — R$ 6.400 de verba em vez de R$ 4.000. **R$ 2.400/mês a mais em anúncio.**
+Faça a conta pelo outro lado, que é a que convence. Sem agente, cada lead vira tratamento em 9,75% dos casos (30% agenda × 65% comparece × 50% fecha). Para chegar nos mesmos 8 tratamentos, ele precisaria de **82 leads** em vez de 50 — R$ 6.560 de verba em vez de R$ 4.000.
+
+**R$ 2.500/mês a mais em anúncio, para chegar no mesmo lugar.**
 
 > *"Doutor, o meu honorário do agente é menor do que o que o senhor gastaria a mais em anúncio para chegar no mesmo lugar sem ele."*
 
