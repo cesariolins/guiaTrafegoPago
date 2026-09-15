@@ -125,6 +125,38 @@ Faça a conta pelo outro lado, que é a que convence. Sem agente, cada lead vira
 
 Essa frase fecha contrato.
 
+### ⭐ A segunda alavanca: devolver o desfecho para o Meta
+
+Esta é a parte que o concorrente não copia, porque ele não tem o dado.
+
+O gestor comum otimiza a campanha para o evento **"Lead"** — que, num anúncio de Click-to-WhatsApp, significa apenas *"alguém abriu a conversa"*. O Meta então vai atrás de gente que abre conversa. E gente que abre conversa e some é barata: o algoritmo acha aos montes.
+
+Seu agente sabe algo que ninguém mais sabe: **o que aconteceu depois.** Quem tinha perfil, quem marcou, quem compareceu.
+
+Devolva isso pela CAPI ([Fase 07](fase-07-mensuracao.md)) e o leilão muda de alvo:
+
+```
+Lead              → abriu a conversa
+LeadQualificado   → passou no filtro comercial do agente
+Agendou           → tem horário marcado na agenda
+Compareceu        → sentou na cadeira        ← o que realmente importa
+```
+
+Otimize para o **evento mais profundo que tenha volume**. A regra da [Fase 03](fase-03-meta-ads.md) continua valendo: abaixo de ~30–50 eventos por semana por conjunto, o aprendizado não fecha. Se "Compareceu" dá 8 por semana, otimize para "Agendou" e use "Compareceu" só como métrica de relatório.
+
+Repare no que acontece: o CPL sobe, e está tudo certo. Você está pagando mais caro por um lead que vale muito mais. **A métrica que manda é o CPA de paciente que compareceu**, não o custo do clique.
+
+### 🚫 O erro que vira problema de LGPD
+
+Nunca nomeie o evento pelo procedimento.
+
+| ❌ Nunca | ✅ Sempre |
+|---|---|
+| `LeadImplante`, `AgendouBotox` | `LeadQualificado`, `Agendou` |
+| Enviar sintoma ou queixa no payload | Só o nome do evento e os identificadores exigidos |
+
+`LeadImplante` associa uma pessoa identificável a um interesse de saúde — é dado sensível saindo da sua infraestrutura para uma plataforma de anúncios. Isso viola a política do próprio Meta e te expõe na LGPD. O segmento você guarda no **seu** relatório, não no pixel.
+
 ---
 
 ## 5. Dentista ou médico? Comece por dentista
@@ -430,13 +462,14 @@ Posso te mostrar em 20 minutos como ficaria na sua agenda?"
 
 1. O pacote é forte — mas o argumento é **CPA efetivo**, não "economia de tempo".
 2. Seu diferencial é a tripla: clínica + tráfego + código. Ninguém copia isso rápido.
-3. **Comece por dentistas.** Médicos na segunda onda, com case na mão.
-4. Dentista pode anunciar preço; médico não. Duas bibliotecas de copy.
-5. Antes e depois: o CFO permite com TCLE, **o Meta não aprova em anúncio**. Nunca.
-6. O agente nunca avalia sintoma. Guardrail testado antes de subir.
-7. Janela de 24h torna a qualificação gratuita. Margem de ~90% na parte de IA.
-8. Duas linhas na proposta: tráfego e agente. Sobrevive ao corte de verba.
-9. Primeiros dois clientes: R$ 1.500 + R$ 1.800/mês **em troca de case**, nunca de graça.
+3. O agente qualifica por **encaixe comercial**, nunca por condição clínica — e o desfecho volta para o Meta pela CAPI, com nome de evento neutro.
+4. **Comece por dentistas.** Médicos na segunda onda, com case na mão.
+5. Dentista pode anunciar preço; médico não. Duas bibliotecas de copy.
+6. Antes e depois: o CFO permite com TCLE, **o Meta não aprova em anúncio**. Nunca.
+7. O agente nunca avalia sintoma. Guardrail testado antes de subir.
+8. Janela de 24h torna a qualificação gratuita. Margem de ~90% na parte de IA.
+9. Duas linhas na proposta: tráfego e agente. Sobrevive ao corte de verba.
+10. Primeiros dois clientes: R$ 1.500 + R$ 1.800/mês **em troca de case**, nunca de graça.
 
 ---
 

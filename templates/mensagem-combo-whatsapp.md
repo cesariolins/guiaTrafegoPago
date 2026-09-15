@@ -67,21 +67,28 @@ Responde em segundos, a qualquer hora, com linguagem natural
 procedimento e o que está incluso, sem nunca opinar sobre
 caso clínico: isso é do profissional.
 
-*3️⃣ Agendamento direto na agenda*
+*3️⃣ Qualifica antes de ocupar a agenda*
+Entende o que a pessoa procura, se é particular ou convênio,
+se é da região e se quer resolver agora ou está pesquisando.
+Quem tem perfil vai para a agenda; quem não tem recebe uma
+resposta educada e não vira horário perdido. Nenhuma pergunta
+clínica: sintoma e diagnóstico são do profissional.
+
+*4️⃣ Agendamento direto na agenda*
 Mostra os horários livres e marca sozinho, no Google Calendar
 ou no sistema que a clínica já usa.
 
-*4️⃣ Transfere quando precisa*
+*5️⃣ Transfere quando precisa*
 Caso específico, reclamação ou negociação vai para a sua
 equipe — já com o resumo da conversa pronto. A recepção vê
 tudo e assume quando quiser.
 
-*5️⃣ Lembretes automáticos*
+*6️⃣ Lembretes automáticos*
 Confirma a consulta um dia antes e no dia. Se a pessoa
 desmarcar, já reagenda e libera o horário para outro
 paciente.
 
-*6️⃣ Avaliação no Google*
+*7️⃣ Avaliação no Google*
 Depois do atendimento, envia o link do Google Meu Negócio.
 Mais avaliação = a clínica aparece melhor na busca de quem
 procura na região.
@@ -90,9 +97,12 @@ procura na região.
 
 • Ninguém fica esperando resposta — nem às 22h, nem domingo
 • A recepção cuida de quem está na sala de espera
+• A agenda enche de gente com perfil, não de curioso
 • Menos falta, porque todo mundo é lembrado
 • Funciona 24h por dia, por uma fração do custo de um
   funcionário
+• *A campanha vai ficando melhor sozinha*: o anúncio aprende
+  com quem virou paciente de verdade, não com quem só clicou
 • *O mesmo dinheiro de anúncio rende mais*, porque nenhum
   contato se perde no meio do caminho
 • Você acompanha tudo: conversas, agendamentos, desistências
@@ -117,6 +127,35 @@ que não é hora de investir nisso.
 | "a recepção vê tudo e assume quando quiser" | Neutraliza o boicote interno da equipe |
 | "inclusive se eu achar que não é hora" | Sinaliza que você não é vendedor. É o que mais converte |
 | Nenhum número prometido | Promessa de resultado é proibida e te queima quando não bate |
+
+---
+
+## 3b. A linha que o agente não atravessa ao qualificar
+
+Qualificar em saúde é diferente de qualificar em qualquer outro nicho. A regra:
+
+> **Qualifique por encaixe comercial. Nunca por condição clínica.**
+
+| ✅ O agente pode perguntar | ❌ O agente nunca pergunta |
+|---|---|
+| Qual procedimento você procura? | O que você está sentindo? |
+| Particular ou convênio? | Há quanto tempo dói? |
+| Você é de [cidade/região]? | Já tomou algum remédio? |
+| Quer resolver agora ou está pesquisando? | Tem alguma doença ou toma medicação? |
+| Já é paciente da clínica? | Pode mandar uma foto do local? |
+| Prefere manhã, tarde ou noite? | Você acha que é [condição]? |
+
+A coluna da esquerda é **dado comercial**: filtra quem não tem encaixe e não gera risco. A da direita é **dado pessoal sensível de saúde** (LGPD, art. 5º II) e encosta em triagem — que é ato do profissional, não do robô.
+
+Se a pessoa descrever sintoma por conta própria — e vai descrever — o agente **não comenta**:
+
+```
+"Entendi. Quem vai poder avaliar isso é o Dr. [Nome], na
+consulta. Consigo te encaixar [dia] às [hora] ou [dia] às
+[hora] — qual fica melhor?"
+```
+
+E se aparecer dor intensa, sangramento, trauma ou qualquer sinal de urgência: **escala para humano na hora**, sem tentar resolver. Detalhes na [Fase 13](../fase-13-pacote-saude-ia.md).
 
 ---
 

@@ -188,6 +188,39 @@ document.documentElement.dataset.tema=_t||(matchMedia('(prefers-color-scheme:dar
 <p><em>"Doutor, o meu honorário do agente é menor do que o que o senhor gastaria a mais em anúncio para chegar no mesmo lugar sem ele."</em></p>
 </blockquote>
 <p>Essa frase fecha contrato.</p>
+<h3>⭐ A segunda alavanca: devolver o desfecho para o Meta</h3>
+<p>Esta é a parte que o concorrente não copia, porque ele não tem o dado.</p>
+<p>O gestor comum otimiza a campanha para o evento <strong>"Lead"</strong> — que, num anúncio de Click-to-WhatsApp, significa apenas <em>"alguém abriu a conversa"</em>. O Meta então vai atrás de gente que abre conversa. E gente que abre conversa e some é barata: o algoritmo acha aos montes.</p>
+<p>Seu agente sabe algo que ninguém mais sabe: <strong>o que aconteceu depois.</strong> Quem tinha perfil, quem marcou, quem compareceu.</p>
+<p>Devolva isso pela CAPI (<a href="fase-07-mensuracao.html">Fase 07</a>) e o leilão muda de alvo:</p>
+<pre><code>Lead              → abriu a conversa
+LeadQualificado   → passou no filtro comercial do agente
+Agendou           → tem horário marcado na agenda
+Compareceu        → sentou na cadeira        ← o que realmente importa
+</code></pre>
+<p>Otimize para o <strong>evento mais profundo que tenha volume</strong>. A regra da <a href="fase-03-meta-ads.html">Fase 03</a> continua valendo: abaixo de ~30–50 eventos por semana por conjunto, o aprendizado não fecha. Se "Compareceu" dá 8 por semana, otimize para "Agendou" e use "Compareceu" só como métrica de relatório.</p>
+<p>Repare no que acontece: o CPL sobe, e está tudo certo. Você está pagando mais caro por um lead que vale muito mais. <strong>A métrica que manda é o CPA de paciente que compareceu</strong>, não o custo do clique.</p>
+<h3>🚫 O erro que vira problema de LGPD</h3>
+<p>Nunca nomeie o evento pelo procedimento.</p>
+<div class="tabela-rolavel"><table>
+<thead>
+<tr>
+<th>❌ Nunca</th>
+<th>✅ Sempre</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>LeadImplante</code>, <code>AgendouBotox</code></td>
+<td><code>LeadQualificado</code>, <code>Agendou</code></td>
+</tr>
+<tr>
+<td>Enviar sintoma ou queixa no payload</td>
+<td>Só o nome do evento e os identificadores exigidos</td>
+</tr>
+</tbody>
+</table></div>
+<p><code>LeadImplante</code> associa uma pessoa identificável a um interesse de saúde — é dado sensível saindo da sua infraestrutura para uma plataforma de anúncios. Isso viola a política do próprio Meta e te expõe na LGPD. O segmento você guarda no <strong>seu</strong> relatório, não no pixel.</p>
 <hr />
 <h2>5. Dentista ou médico? Comece por dentista</h2>
 <p>Sua esposa é médica, então a tentação é começar por lá. <strong>Não comece.</strong></p>
@@ -611,6 +644,7 @@ Posso te mostrar em 20 minutos como ficaria na sua agenda?&quot;
 <ol>
 <li>O pacote é forte — mas o argumento é <strong>CPA efetivo</strong>, não "economia de tempo".</li>
 <li>Seu diferencial é a tripla: clínica + tráfego + código. Ninguém copia isso rápido.</li>
+<li>O agente qualifica por <strong>encaixe comercial</strong>, nunca por condição clínica — e o desfecho volta para o Meta pela CAPI, com nome de evento neutro.</li>
 <li><strong>Comece por dentistas.</strong> Médicos na segunda onda, com case na mão.</li>
 <li>Dentista pode anunciar preço; médico não. Duas bibliotecas de copy.</li>
 <li>Antes e depois: o CFO permite com TCLE, <strong>o Meta não aprova em anúncio</strong>. Nunca.</li>
