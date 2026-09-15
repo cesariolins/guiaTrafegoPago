@@ -63,6 +63,7 @@ Cliente não compra "campanha otimizada". Compra "meu telefone tocando". Quem en
 | [Relatório mensal](templates/relatorio-mensal.md) | Uma página, com o roteiro de como reportar mês ruim |
 | [Auditoria de conta](templates/auditoria-de-conta.md) | Versão de prospecção (sua isca) + versão completa |
 | [Scripts de venda](templates/scripts-de-venda.md) | Abordagem, reunião, 8 objeções, follow-up, indicação |
+| [Mensagem do combo (WhatsApp)](templates/mensagem-combo-whatsapp.md) | Apresentação do pacote Captação + Atendimento, pronta para colar |
 
 > A calculadora é um arquivo HTML — dê duplo clique e abre no navegador. Funciona offline, não precisa instalar nada.
 

@@ -38,13 +38,14 @@ ORDEM = [
     ("templates/relatorio-mensal.md", "Relatório mensal", "📊"),
     ("templates/auditoria-de-conta.md", "Auditoria de conta", "🔎"),
     ("templates/scripts-de-venda.md", "Scripts de venda", "💬"),
+    ("templates/mensagem-combo-whatsapp.md", "Mensagem do combo", "📲"),
 ]
 
 BLOCOS = [
     ("Fundamento", 1, 4),      # índices em ORDEM (início, fim exclusivo)
     ("Execução técnica", 4, 10),
     ("O negócio", 10, 15),
-    ("Templates", 15, 21),
+    ("Templates", 15, 22),
 ]
 
 
